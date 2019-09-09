@@ -58,7 +58,7 @@ export default class ContactPage extends React.Component {
           </p>
           <p>
             <label>
-              Your Email:{' '}
+              Your Email Address:{' '}
               <input type="email" name="email" onChange={this.handleChange} />
             </label>
           </p>
