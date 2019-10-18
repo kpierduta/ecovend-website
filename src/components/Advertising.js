@@ -17,7 +17,7 @@ const Conatiner = styled.div`
   }
 
   .top {
-    margin-top: 5rem;
+    margin: 4rem;
   }
 
   .text {
@@ -40,9 +40,9 @@ const Advertisment = () => (
   <Conatiner id="advertising">
     <section className="section">
       <div className="container">
-        <div className="columns  is-centered">
-          <div className="column is-two-thirds has-text-centered has-text-white	">
-            <h1 className="has-text-weight-medium top ">
+        <div className="columns is-centered">
+          <div className="column is-two-thirds has-text-centered has-text-white top">
+            <h1 className="has-text-weight-medium">
               BRAND MESSAGING, ADVERTISING IT&apos;S YOUR CHOICE?
             </h1>
             <p className="text">
@@ -56,7 +56,7 @@ const Advertisment = () => (
         </div>
       </div>
     </section>
-    <div className="columns   is-multiline  photos ">
+    <div className="columns is-multiline photos">
       <div className="column is-4 is-gapless is-marginless is-paddingless">
         <img src="/images/advertisment-one.jpg" alt="#" />
       </div>
