@@ -4,7 +4,7 @@ import config from '../utils/config';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import NewsHero from '../components/NewsHero';
-import BlogCard from '../components/BlogCard';
+import NewsContent from '../components/NewsConetnt';
 
 export default class NewsPage extends React.Component {
   render() {
@@ -16,10 +16,7 @@ export default class NewsPage extends React.Component {
           url={`${config.siteUrl}`}
         />
         <NewsHero />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        <NewsContent />
       </Layout>
     );
   }

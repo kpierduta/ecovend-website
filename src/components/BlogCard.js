@@ -5,11 +5,15 @@ import theme from '../utils/theme';
 
 const Section = styled.section`
   font-family: ${theme.primaryFontFamily};
+  padding: 0rem 0.5rem 2rem 0.5rem;
+  .card {
+    box-shadow: none;
+  }
   .image img {
-    height: 15rem;
+    height: 14rem;
   }
   .image.is-128x128 {
-    width: 244px;
+    width: 313px;
   }
   .button {
     font-weight: 400;
@@ -43,12 +47,10 @@ const BlogCard = () => (
                 <h1 className="title is-4">Updates regarding Eco-vend</h1>
                 <p>
                   Nunc tristique tellus quam, id ultrices urna rhoncus non. Cras
-                  rhoncus interdum arcu eget congue. Curabitur non justo velit
-                  Nunc tristique tellus quam, id ultrices urna rhoncus non. Cras
                   rhoncus interdum arcu eget congue. Curabitur non justo
                   velit....
                 </p>
-                <button type="submit" className="button is-link">
+                <button type="submit" className="button is-rounded">
                   Lerarn More
                   <span className="icon">
                     <i className="fas fa-chevron-right" />
