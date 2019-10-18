@@ -13,7 +13,7 @@ const Container = styled.section`
   }
 `;
 
-const ContactHero = () => (
+const NewsHero = () => (
   <Container className="section">
     <div className="container">
       <div className="columns">
@@ -22,9 +22,9 @@ const ContactHero = () => (
             <span className="icon">
               <i className="fas fa-home" />
             </span>
-            /Pages/Conatact us
+            /Pages/News
           </h1>
-          <h1 className="title is-3">CONTACT US</h1>
+          <h1 className="title is-3">LATEST NEWS</h1>
         </div>
         <div className="column second" />
       </div>
@@ -32,4 +32,4 @@ const ContactHero = () => (
   </Container>
 );
 
-export default ContactHero;
+export default NewsHero;
