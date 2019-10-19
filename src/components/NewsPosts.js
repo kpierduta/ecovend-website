@@ -8,6 +8,7 @@ const Section = styled.section`
   padding: 0rem 0.5rem 2rem 0.5rem;
   .text {
     color: ${theme.secondaryColor};
+    font-size: 1rem;
   }
 `;
 

@@ -6,7 +6,7 @@ import ContactForm from './ContactForm';
 
 const Container = styled.section`
   padding: 3rem 1.5rem 3rem 1.5rem;
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${theme.primaryFontFamily} !important;
 
   @media only screen and (max-width: 768px) {
     padding-bottom: 3rem;

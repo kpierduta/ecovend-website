@@ -4,23 +4,29 @@ import styled from 'styled-components';
 import theme from '../utils/theme';
 
 const Section = styled.section`
-  font-family: ${theme.primaryFontFamily};
-  padding: 0rem 0.5rem 2rem 0.5rem;
+  padding: 0rem 0.5rem 4.5rem 0.5rem;
+  .first {
+    background-image: url('/images/Advertisment-three.jpg');
+    background-size: cover;
+    border-radius: 1rem;
+  }
   .card {
     box-shadow: none;
   }
-  .image img {
-    height: 14rem;
+  .text {
+    color: ${theme.secondaryColor};
   }
-  .image.is-128x128 {
-    width: 313px;
+  .is-5 {
+    transition: color 0.2s;
+    :hover {
+      color: ${theme.secondaryColor};
+    }
   }
   .button {
     font-weight: 400;
     background-color: ${theme.secondaryColor};
     transition: opacity 0.2s;
     :hover {
-      background-color: ${theme.secondaryColor};
       color: #fff;
       opacity: 0.6;
     }
@@ -33,29 +39,34 @@ const Section = styled.section`
 const BlogCard = () => (
   <Section className="section">
     <div className="container">
-      <div className="card">
-        <div className="card-content">
-          <div className="media">
-            <div className="media-left">
-              <figure className="image is-128x128">
-                <img src="/images/Advertisment-three.jpg" />
-              </figure>
-            </div>
-            <div className="media-content">
-              <div className="content">
-                <p>Business / September 28, 2018</p>
-                <h1 className="title is-4">Updates regarding Eco-vend</h1>
-                <p>
-                  Nunc tristique tellus quam, id ultrices urna rhoncus non. Cras
-                  rhoncus interdum arcu eget congue. Curabitur non justo
-                  velit....
-                </p>
-                <button type="submit" className="button is-rounded">
-                  Lerarn More
-                  <span className="icon">
-                    <i className="fas fa-chevron-right" />
-                  </span>
-                </button>
+      <div className="columns">
+        <div className="column first" />
+        <div className="column">
+          <div className="card">
+            <div className="card-content">
+              <div className="media">
+                <div className="media-content">
+                  <div className="content">
+                    <p>
+                      <span className="text">Business</span> / September 28,
+                      2018
+                    </p>
+                    <h1 className="title is-5 has-text-weight-semibold">
+                      Updates regarding Eco-vend
+                    </h1>
+                    <p>
+                      Nunc tristique tellus quam, id ultrices urna rhoncus non.
+                      Cras rhoncus interdum arcu eget congue. Curabitur non
+                      justo velit....
+                    </p>
+                    <button type="submit" className="button is-rounded">
+                      Lerarn More
+                      <span className="icon">
+                        <i className="fas fa-chevron-right" />
+                      </span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

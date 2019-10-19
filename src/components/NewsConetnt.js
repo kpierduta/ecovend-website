@@ -8,11 +8,17 @@ import HelpCard from './HelpCard';
 import theme from '../utils/theme';
 
 const Section = styled.section`
+  font-family: ${theme.primaryFontFamily} !important;
   margin-bottom: 4rem;
   .input {
     border-radius: 2rem;
   }
+  p {
+    font-size: 0.92rem;
+  }
   .button {
+    font-family: ${theme.primaryFontFamily}
+    font-size: 1rem;
     color: #fff;
     background-color: ${theme.secondaryColor};
     transition: opacity 0.2s;
@@ -52,14 +58,14 @@ const NewsConetnt = () => (
   <Section className="section">
     <div className="container">
       <div className="columns">
-        <div className="column is-8">
+        <div className="column">
           <BlogCard />
           <BlogCard />
           <BlogCard />
           <BlogCard />
         </div>
-        <div className="column">
-          <h1 className="title is-4">Search</h1>
+        <div className="column is-4">
+          <h1 className="title is-5">Search</h1>
           <div className="field has-addons">
             <div className="control is-expanded">
               <input className="input" type="text" placeholder="Search " />
@@ -73,7 +79,7 @@ const NewsConetnt = () => (
             </div>
           </div>
           <div className="posts">
-            <h1 className="title is-4">Recent Posts</h1>
+            <h1 className="title is-5">Recent Posts</h1>
             <NewsPosts />
             <NewsPosts />
             <NewsPosts />
@@ -82,7 +88,7 @@ const NewsConetnt = () => (
             <HelpCard />
           </div>
           <div className="posts">
-            <h1 className="title is-4">Recent Posts</h1>
+            <h1 className="title is-5">Recent Posts</h1>
             <aside className="menu">
               <ul className="menu-list">
                 <li>
@@ -105,7 +111,7 @@ const NewsConetnt = () => (
             </aside>
           </div>
           <div className="posts">
-            <h1 className="title is-4">Our Photostream</h1>
+            <h1 className="title is-5">Our Photostream</h1>
             <figure className="image is-64x64 is-inline-block">
               <img src="/images/stream/first.jpg" />
             </figure>
