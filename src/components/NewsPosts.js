@@ -12,16 +12,13 @@ const Section = styled.section`
   }
 `;
 
-const NewsPosts = () => (
+const NewsPosts = props => (
   <Section className="section">
     <div className="container">
       <article className="media">
         <figure className="media-left">
-          <p className="image  is-96x96">
-            <img
-              className="is-rounded"
-              src="https://bulma.io/images/placeholders/64x64.png"
-            />
+          <p className="image is-96x96">
+            <img className="is-rounded" src={props.image} />
           </p>
         </figure>
         <div className="media-content">

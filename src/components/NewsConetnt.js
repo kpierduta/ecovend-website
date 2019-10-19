@@ -59,10 +59,10 @@ const NewsConetnt = () => (
     <div className="container">
       <div className="columns">
         <div className="column">
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
+          <BlogCard image="/images/news/one.jpg" />
+          <BlogCard image="/images/news/two.jpg" />
+          <BlogCard image="/images/news/three.jpg" />
+          <BlogCard image="/images/news/four.jpg" />
         </div>
         <div className="column is-4">
           <h1 className="title is-5">Search</h1>
@@ -80,9 +80,8 @@ const NewsConetnt = () => (
           </div>
           <div className="posts">
             <h1 className="title is-5">Recent Posts</h1>
-            <NewsPosts />
-            <NewsPosts />
-            <NewsPosts />
+            <NewsPosts image="/images/news/four.jpg" />
+            <NewsPosts image="/images/news/three.jpg" />
           </div>
           <div className="posts">
             <HelpCard />

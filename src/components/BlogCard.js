@@ -6,7 +6,7 @@ import theme from '../utils/theme';
 const Section = styled.section`
   padding: 0rem 0.5rem 4.5rem 0.5rem;
   .first {
-    background-image: url('/images/Advertisment-three.jpg');
+    background-image: url(${props => props.image});
     background-size: cover;
     border-radius: 1rem;
   }
@@ -36,8 +36,8 @@ const Section = styled.section`
   }
 `;
 
-const BlogCard = () => (
-  <Section className="section">
+const BlogCard = props => (
+  <Section className="section" image={props.image}>
     <div className="container">
       <div className="columns">
         <div className="column first" />
