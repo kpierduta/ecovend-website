@@ -5,19 +5,17 @@ import { Link } from 'gatsby';
 import theme from '../utils/theme';
 
 const Navbar = styled.div`
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${theme.primaryFontFamily}!important;
   padding-bottom: 1rem;
   .navbar-item img {
-    max-height: none;
+    max-height: 107px;
   }
-
   .is-active {
     color: #e1e8e9 !important;
     @media only screen and (max-width: 768px) {
       color: black !important;
     }
   }
-
   .navbar-item {
     transition: color 0.2s;
     :hover {
@@ -70,7 +68,7 @@ export default class Header extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <a href="/" className="navbar-item">
-              <img src="/images/logo.png" alt="ecovend-logo" />
+              <img className="logo" src="/images/logo.png" alt="ecovend-logo" />
             </a>
             <a
               className={view ? 'navbar-burger is-active' : 'navbar-burger '}
@@ -89,19 +87,19 @@ export default class Header extends React.Component {
               <LinkStyled to="/" className="navbar-item">
                 Home
               </LinkStyled>
-              <LinkStyled href="#advertising" className="navbar-item ">
+              <LinkStyled to="#" className="navbar-item ">
                 Advertising
               </LinkStyled>
-              <LinkStyled href="/" className="navbar-item">
+              <LinkStyled to="#" className="navbar-item">
                 Our Range
               </LinkStyled>
               <LinkStyled to="/news" className="navbar-item">
                 News
               </LinkStyled>
-              <LinkStyled href="#steps" className="navbar-item">
+              <LinkStyled to="#" className="navbar-item">
                 Case Studies
               </LinkStyled>
-              <LinkStyled href="#choose" className="navbar-item">
+              <LinkStyled to="#" className="navbar-item">
                 FAQ
               </LinkStyled>
               <LinkStyled to="/contact" className="navbar-item ">

@@ -6,7 +6,7 @@ import theme from '../utils/theme';
 const HeadingStyled = styled.div`
   margin-top: 2rem;
   .tabs ul {
-    padding-bottom: 2rem;
+    padding-bottom: 2.3rem;
     border-bottom: 1.25px solid ${theme.primaryColor};
   }
   .tabs a {

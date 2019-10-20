@@ -4,14 +4,13 @@ import styled from 'styled-components';
 import theme from '../utils/theme';
 
 const Conatiner = styled.div`
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${theme.secondaryFontFamily};
+  color: ${theme.primaryColor};
   padding-bottom: 10rem;
-
   .columns {
     margin-left: 0rem !important;
     margin-right: 0rem !important;
   }
-
   .text {
     color: ${theme.primaryColor};
     margin-top: 10rem;
@@ -21,12 +20,15 @@ const Conatiner = styled.div`
       margin-top: 5rem;
     }
   }
-
   .para {
-    color: ${theme.primaryColor};
     line-height: 1.75rem;
     font-size: ${theme.fontSize};
-    margin-top: 5rem;
+  }
+  .first {
+    margin-top: 3.95rem;
+  }
+  .second {
+    margin-top: 2rem;
   }
 `;
 
@@ -38,14 +40,16 @@ const DrsInfo = () => (
           <h4 className="subtitle is-4 text">
             HOW ARE REVERSE VENDING MACHINES BEING USED?
           </h4>
-          <p className="para">
-            RVMs have gained significant popularity in the last five years with
-            impressive levels of user engagement across Europe, Asia and the
-            Americas leading to up to 97% beverage container recycling waste in
-            some countries. Reverse Vending is particularly popular in places
-            that have mandatory recycling laws or container deposit legislation.
-            The UK government has recently announced plans for a national
-            deposit return scheme which will begin in 2021 starting in Scotland.
+          <p className="para first">
+            RVMs have gained signiﬁcant popularity in the last ﬁve years.
+            Impressive levels of user engagement across Europe has led to up to
+            97% beverage container recycling waste in some countries.
+          </p>
+          <p className="para second">
+            Reverse vending is particularly popular in places that have
+            mandatory recycling laws or container deposit legislation. The UK
+            government has recently announced plans for a national deposit
+            return scheme which will begin in 2020-21.
           </p>
         </div>
       </div>

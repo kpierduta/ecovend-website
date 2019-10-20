@@ -9,11 +9,11 @@ const Conatiner = styled.div`
   padding-bottom: 1rem;
   .title {
     color: ${theme.primaryColor};
-    font-weight: 500;
+    font-weight: 400;
   }
   .video {
-    width: 80%;
-    height: 34rem;
+    width: 61.3125rem;
+    height: 34.875rem;
     @media only screen and (max-width: 768px) {
       height: auto;
     }

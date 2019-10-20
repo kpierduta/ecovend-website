@@ -6,29 +6,23 @@ import theme from '../utils/theme';
 const Conatiner = styled.div`
   font-family: ${theme.primaryFontFamily};
   background-color: ${theme.secondaryColor};
-
   .columns {
     margin-left: 0rdem !important;
     margin-right: 0rem !important;
   }
-
   .section {
     padding: 3rem 1.5rem 0rem 1.5rem;
   }
-
   .top {
     margin: 4rem;
   }
-
   .text {
     margin-top: 3rem;
     line-height: 2;
   }
-
   .photos {
     margin-top: 3.5rem !important;
   }
-
   img {
     height: 100%;
     object-fit: cover;
@@ -43,14 +37,15 @@ const Advertisment = () => (
         <div className="columns is-centered">
           <div className="column is-two-thirds has-text-centered has-text-white top">
             <h1 className="has-text-weight-medium">
-              BRAND MESSAGING, ADVERTISING IT&apos;S YOUR CHOICE?
+              MARKETING & BRANDING REVENUE
             </h1>
             <p className="text">
-              Our audio visual video campaign is designed to engage, educate and
-              influence the perception of waste and encourage accountability and
-              positive motivation. These videos are supplied with each AV
-              machine and can be easily customised to accommodate the buyers
-              desired brand messaging or advertising needs.
+              Our Ecovend RVM range come with their own integrated advertising
+              space with up to 55 inch audio-visual screens and light box panels
+              on both sides to generate instant revenue from branding and
+              advertising. Our audio visual enabled range are supplied with
+              emotive videos to help you engage with users. We also provide
+              marketing packs to help you optimise your advertising space.
             </p>
           </div>
         </div>

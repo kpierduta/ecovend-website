@@ -11,22 +11,21 @@ const Container = styled.div`
   @media only screen and (max-width: 768px) {
     padding-top: 2rem;
   }
-
   .card {
-    height: 13rem;
-    width: 15rem;
+    height: 15rem;
+    width: 100%;
     padding: ${props => props.padding};
     @media only screen and (max-width: 768px) {
-      height: 18rem;
+      height: 15rem;
       width: 100%;
     }
   }
   .card-content {
+    padding-top: 3.5rem;
     @media only screen and (max-width: 768px) {
       padding: 5rem 2rem 0rem 1rem;
     }
   }
-
   .card-para {
     font-weight: 400;
     color: ${theme.primaryColor};
