@@ -5,9 +5,7 @@ import theme from '../utils/theme';
 
 const Section = styled.section`
   padding: 0rem 0.5rem 4.5rem 0.5rem;
-  .first {
-    background-image: url(${props => props.image});
-    background-size: cover;
+  img {
     border-radius: 1rem;
   }
   .card {
@@ -39,8 +37,10 @@ const Section = styled.section`
 const BlogCard = props => (
   <Section className="section" image={props.image}>
     <div className="container">
-      <div className="columns">
-        <div className="column first" />
+      <div className="columns is-gapless">
+        <div className="column is-5">
+          <img src={props.image} />
+        </div>
         <div className="column">
           <div className="card">
             <div className="card-content">
