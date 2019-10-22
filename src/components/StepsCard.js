@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { withPropsOnChange } from 'recompose';
 import theme from '../utils/theme';
 
 const Container = styled.div`

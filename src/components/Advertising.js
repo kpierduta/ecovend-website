@@ -52,7 +52,7 @@ const Advertisment = () => (
       </div>
     </section>
     <div className="columns is-multiline photos is-gapless">
-      <div className="column is-4  is-marginless">
+      <div className="column is-4 is-marginless">
         <img src="/images/advertisment-one.jpg" alt="#" />
       </div>
       <div className="column is-4">

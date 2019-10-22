@@ -62,7 +62,7 @@ const Customer = () => (
                 think and act greener.
               </p>
               <div className="content">
-                <dl type="* ">
+                <ul type="*">
                   <li>
                     With conveniently located RV machines it’s easy way to
                     recycle ‘on the go.’
@@ -81,7 +81,7 @@ const Customer = () => (
                     With less plastic on our streets everyone benefits from a
                     cleaner environment.
                   </li>
-                </dl>
+                </ul>
               </div>
             </div>
           </section>

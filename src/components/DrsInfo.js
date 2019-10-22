@@ -20,7 +20,7 @@ const Conatiner = styled.div`
       margin-top: 5rem;
     }
   }
-  .para {
+  .sub-text {
     line-height: 1.75rem;
     font-size: ${theme.fontSize};
   }
@@ -40,12 +40,12 @@ const DrsInfo = () => (
           <h4 className="subtitle is-4 text">
             HOW ARE REVERSE VENDING MACHINES BEING USED?
           </h4>
-          <p className="para first">
+          <p className="sub-text first">
             RVMs have gained signiﬁcant popularity in the last ﬁve years.
             Impressive levels of user engagement across Europe has led to up to
             97% beverage container recycling waste in some countries.
           </p>
-          <p className="para second">
+          <p className="sub-text second">
             Reverse vending is particularly popular in places that have
             mandatory recycling laws or container deposit legislation. The UK
             government has recently announced plans for a national deposit

@@ -32,7 +32,7 @@ const Container = styled.div`
     margin-top: 1rem;
   }
 
-  .para-two {
+  .sub-text {
     padding-bottom: 4rem;
   }
 `;
@@ -60,7 +60,7 @@ const About = () => (
               can be for example vouchers, discounts or even charitable
               donations.
             </p>
-            <p className="has-text-white text para-two">
+            <p className="has-text-white text sub-text">
               Our machines provide an automated function that collects, sorts,
               compacts and stores bottles and cans. This provides a simple and
               effective solution to beverage container waste.

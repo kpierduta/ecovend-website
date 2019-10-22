@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { compose, withProps } from 'recompose';
 import {
   withScriptjs,
@@ -7,10 +6,6 @@ import {
   GoogleMap,
   Marker,
 } from 'react-google-maps';
-
-const Container = styled.div`
-  background: red;
-`;
 
 const MyMapComponent = compose(
   withProps({

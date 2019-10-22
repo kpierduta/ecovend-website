@@ -5,6 +5,10 @@ import theme from '../utils/theme';
 import Stepscard from './StepsCard';
 import IconCard from './IconCard';
 
+import imgFirst from '../../static/images/Icons/Bottle.png';
+import imgSecond from '../../static/images/Icons/barcode.png';
+import imgThird from '../../static/images/Icons/crusher.png';
+
 const Container = styled.div`
   background-color: #f1f1f1;
   font-family: ${theme.primaryFontFamily};
@@ -52,7 +56,7 @@ const Steps = () => (
         </div>
         <div className="columns is-centered is-variable is-6">
           <div className="column rev is-4">
-            <IconCard Link="/images/Icons/Bottle.png" />
+            <IconCard Link={imgFirst} />
             <Stepscard
               title="STEP 1"
               description="Load empty beverage containers into the chute."
@@ -63,10 +67,10 @@ const Steps = () => (
               title="STEP 2"
               description="The bar code is scanned and logged."
             />
-            <IconCard Link="/images/Icons/barcode.png" />
+            <IconCard Link={imgSecond} />
           </div>
           <div className="column rev is-4">
-            <IconCard Link="/images/Icons/crusher.png" />
+            <IconCard Link={imgThird} />
             <Stepscard
               title="STEP 3"
               description="The machine issues a reward voucher or an electronic credit."

@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import theme from '../utils/theme';
 
+import img from '../../static/images/hero.jpg';
+
 const Container = styled.section`
   font-family: ${theme.primaryFontFamily};
   .columns {
@@ -39,18 +41,10 @@ const Hero = () => (
           </h5>
         </div>
         <div className="column has-text-right is-hidden-mobile">
-          <img
-            className="has-text-right"
-            src="/images/hero.jpg"
-            alt="vending machine"
-          />
+          <img className="has-text-right" src={img} alt="vending machine" />
         </div>
         <div className="column has-text-centered is-hidden-tablet">
-          <img
-            className="has-text-centered"
-            src="/images/hero.jpg"
-            alt="vending machine"
-          />
+          <img className="has-text-centered" src={img} alt="vending machine" />
         </div>
       </div>
     </div>
