@@ -16,7 +16,7 @@ const Conatiner = styled.section`
     margin-right: 0rem !important;
   }
   .section {
-    padding: 10rem 4rem 3rem 8.5rem;
+    padding: 10rem 5rem 3rem 5.5rem;
   }
   .Heading {
     font-size: ${theme.fontSizeMedium};
@@ -31,7 +31,6 @@ const Conatiner = styled.section`
     line-height: 1.5;
   }
   .content {
-    padding-left: 1rem;
     margin-top: 2rem;
     color: ${theme.secondaryColor};
     font-weight: 200;

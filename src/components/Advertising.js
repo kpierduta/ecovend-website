@@ -24,7 +24,7 @@ const Conatiner = styled.div`
     margin-top: 3.5rem !important;
   }
   img {
-    height: 100%;
+    height: 104%;
     object-fit: cover;
     width: 100%;
   }
@@ -51,23 +51,23 @@ const Advertisment = () => (
         </div>
       </div>
     </section>
-    <div className="columns is-multiline photos">
-      <div className="column is-4 is-gapless is-marginless is-paddingless">
+    <div className="columns is-multiline photos is-gapless">
+      <div className="column is-4  is-marginless">
         <img src="/images/advertisment-one.jpg" alt="#" />
       </div>
-      <div className="column is-4 is-paddingless">
+      <div className="column is-4">
         <img src="/images/advertisment-two.jpg" alt="#" />
       </div>
-      <div className="column is-4 is-paddingless">
+      <div className="column is-4">
         <img src="/images/advertisment-three.jpg" alt="#" />
       </div>
-      <div className="column is-4 is-paddingless">
+      <div className="column is-4">
         <img src="/images/advertisment-four.jpg" alt="#" />
       </div>
-      <div className="column is-4 is-paddingless">
+      <div className="column is-4">
         <img src="/images/advertisment-five.jpg" alt="#" />
       </div>
-      <div className="column is-4 is-paddingless">
+      <div className="column is-4">
         <img src="/images/advertisment-six.jpg" alt="#" />
       </div>
     </div>
