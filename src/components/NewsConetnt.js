@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 import BlogCard from './BlogCard';
 import NewsPosts from './NewsPosts';
@@ -71,11 +72,11 @@ const NewsConetnt = () => (
               <input className="input" type="text" placeholder="Search " />
             </div>
             <div className="control">
-              <a className="button  is-rounded">
-                <span className="icon search">
+              <button className="button is-rounded" type="button">
+                <span className="icon">
                   <i className="fas fa-search" />
                 </span>
-              </a>
+              </button>
             </div>
           </div>
           <div className="posts">
@@ -93,16 +94,16 @@ const NewsConetnt = () => (
                 <li>
                   <ul>
                     <li>
-                      <a>Recent</a>
+                      <Link to="/">Recent</Link>
                     </li>
                     <li>
-                      <a> Business</a>
+                      <Link to="/"> Business</Link>
                     </li>
                     <li>
-                      <a> PR</a>
+                      <Link to="/"> PR</Link>
                     </li>
                     <li>
-                      <a> Projects</a>
+                      <Link to="/"> Projects</Link>
                     </li>
                   </ul>
                 </li>
@@ -112,58 +113,62 @@ const NewsConetnt = () => (
           <div className="posts">
             <h1 className="title is-5">Our Photostream</h1>
             <figure className="image is-64x64 is-inline-block">
-              <img src="/images/stream/first.jpg" />
+              <img src="/images/stream/first.jpg" alt="" />
             </figure>
             <figure className="image is-64x64 is-inline-block">
-              <img src="/images/stream/second.jpg" />
+              <img src="/images/stream/second.jpg" alt="" />
             </figure>
             <figure className="image is-64x64 is-inline-block">
-              <img src="/images/stream/three.jpg" />
+              <img src="/images/stream/three.jpg" alt="" />
             </figure>
             <figure className="image is-64x64 is-inline-block">
-              <img src="/images/stream/four.jpg" />
+              <img src="/images/stream/four.jpg" alt="" />
             </figure>
             <figure className="image is-64x64 is-inline-block">
-              <img src="/images/stream/five.jpg" />
+              <img src="/images/stream/five.jpg" alt="" />
             </figure>
             <figure className="image is-64x64 is-inline-block">
-              <img src="/images/stream/seven.jpg" />
+              <img src="/images/stream/seven.jpg" alt="" />
             </figure>
             <figure className="image is-64x64 is-inline-block">
-              <img src="/images/stream/eight.jpg" />
+              <img src="/images/stream/eight.jpg" alt="" />
             </figure>
             <figure className="image is-64x64 is-inline-block">
-              <img src="/images/stream/nine.jpg" />
+              <img src="/images/stream/nine.jpg" alt="" />
             </figure>
           </div>
         </div>
       </div>
       <nav className="pagination" role="navigation" aria-label="pagination">
-        <a
+        <Link
+          to="/"
           className="pagination-previous"
           title="This is the first page"
           disabled>
           Previous
-        </a>
-        <a className="pagination-next">Next page</a>
+        </Link>
+        <Link to="/" className="pagination-next">
+          Next page
+        </Link>
         <ul className="pagination-list">
           <li>
-            <a
+            <Link
+              to="/"
               className="pagination-link is-current"
               aria-label="Page 1"
               aria-current="page">
               1
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="pagination-link" aria-label="Goto page 2">
+            <Link to="/" className="pagination-link" aria-label="Goto page 2">
               2
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="pagination-link" aria-label="Goto page 3">
+            <Link to="/" className="pagination-link" aria-label="Goto page 3">
               3
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
