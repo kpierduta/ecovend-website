@@ -3,12 +3,6 @@ import styled from 'styled-components';
 
 import theme from '../utils/theme';
 
-import firstImage from '';
-import secondImage from '/images/plant.png';
-import thirdImage from '/images/money.png';
-import fourthImage from '/images/business.png';
-import fifthImage from '/images/sound.png';
-
 const Conatiner = styled.div`
   font-family: ${theme.primaryFontFamily};
   background-color: #e90700;
