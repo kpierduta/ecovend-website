@@ -9,6 +9,13 @@ const Container = styled.section`
   .subtitle.is-5 {
     margin: 4rem 0rem;
   }
+  .text {
+    font-size: ${theme.fontSizeMedium};
+    color: ${theme.secondaryColor};
+    padding-right: 1rem;
+    line-height: unset;
+    margin-bottom: 0px;
+  }
   .is-4 {
     margin: 5rem 0rem;
   }
@@ -51,6 +58,24 @@ const Machines = () => (
             value="LOCATION:"
             description="internal or external (under cover)"
           />
+          <div className="columns is-gapless">
+            <div className="column is-3">
+              <h1 className="subtitle text">DIMENSIONS:</h1>
+            </div>
+            <div className="column is-6">
+              <p>RVM 100 1850 (H) x 650 (W) x 850mm (D)</p>
+              <p>RVM 100 1850 (H) x 650 (W) x 850mm (D)</p>
+              <p>RVM 300 1850 (H) x 1100 (W) x 950mm (D)</p>
+            </div>
+            <div className="column IS-3">
+              <h1 className="subtitle text">SCREEN SIZE:</h1>
+            </div>
+            <div className="column">
+              <p>10in</p>
+              <p>21in</p>
+              <p>19in</p>
+            </div>
+          </div>
           <Properties
             value="TOUCH SCREEN"
             description="simple and intuitive user operation"
