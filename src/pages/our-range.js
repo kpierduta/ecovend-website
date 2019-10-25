@@ -4,7 +4,7 @@ import config from '../utils/config';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import RangeHero from '../components/RangeHero';
-import RangeContent from '../components/RangeContent';
+import Machines from '../components/Machines';
 import Contact from '../components/Contact';
 
 export default class OurRange extends React.Component {
@@ -17,7 +17,7 @@ export default class OurRange extends React.Component {
           url={`${config.siteUrl}`}
         />
         <RangeHero />
-        <RangeContent />
+        <Machines />
         <Contact />
       </Layout>
     );

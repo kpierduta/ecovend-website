@@ -38,7 +38,7 @@ const Container = styled.section`
   }
 `;
 
-const RangeContent = () => (
+const Machines = () => (
   <Container className="section">
     <div className="container">
       <div className="columns is-multiline">
@@ -259,4 +259,4 @@ const RangeContent = () => (
   </Container>
 );
 
-export default RangeContent;
+export default Machines;
