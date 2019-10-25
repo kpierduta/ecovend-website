@@ -11,7 +11,7 @@ const Navbar = styled.div`
     max-height: 107px;
   }
   .is-active {
-    color: #e1e8e9 !important;
+    color: ${theme.secondaryColor}!important;
     @media only screen and (max-width: 768px) {
       color: black !important;
     }
@@ -20,7 +20,7 @@ const Navbar = styled.div`
     transition: color 0.2s;
     :hover {
       background: transparent;
-      color: #e1e8e9;
+      color: ${theme.secondaryColor}!important;
     }
     :focus-within {
       background: transparent;
@@ -90,13 +90,13 @@ export default class Header extends React.Component {
               <LinkStyled to="#" className="navbar-item ">
                 Advertising
               </LinkStyled>
-              <LinkStyled to="#" className="navbar-item">
+              <LinkStyled to="/our-range" className="navbar-item">
                 Our Range
               </LinkStyled>
               <LinkStyled to="/news" className="navbar-item">
                 News
               </LinkStyled>
-              <LinkStyled to="#" className="navbar-item">
+              <LinkStyled to="/case-study" className="navbar-item">
                 Case Studies
               </LinkStyled>
               <LinkStyled to="#" className="navbar-item">

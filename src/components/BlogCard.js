@@ -60,7 +60,7 @@ const BlogCard = props => (
                       justo velit....
                     </p>
                     <button type="submit" className="button is-rounded">
-                      Lerarn More
+                      Learn More
                       <span className="icon">
                         <i className="fas fa-chevron-right" />
                       </span>
