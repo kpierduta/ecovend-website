@@ -99,7 +99,7 @@ export default class Header extends React.Component {
               <LinkStyled to="/case-study" className="navbar-item">
                 Case Studies
               </LinkStyled>
-              <LinkStyled to="#" className="navbar-item">
+              <LinkStyled to="/faq" className="navbar-item">
                 FAQ
               </LinkStyled>
               <LinkStyled to="/contact" className="navbar-item ">
