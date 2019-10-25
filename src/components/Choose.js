@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 import theme from '../utils/theme';
 
-import firstImage from '../../static/images/Icons/earth.png';
-import secondImage from '../../static/images/Icons/plant.png';
-import thirdImage from '../../static/images/Icons/money.png';
-import fourthImage from '../../static/images/Icons/business.png';
-import fifthImage from '../../static/images/Icons/sound.png';
+import firstImage from '';
+import secondImage from '/images/plant.png';
+import thirdImage from '/images/money.png';
+import fourthImage from '/images/business.png';
+import fifthImage from '/images/sound.png';
 
 const Conatiner = styled.div`
   font-family: ${theme.primaryFontFamily};
@@ -38,31 +38,34 @@ const Choose = () => (
             </h1>
             <div className="columns">
               <div className="column  has-text-centered">
-                <img src={firstImage} alt="Save Earth" />
+                <img src="/images/icons/earth.png" alt="Save Earth" />
                 <h1 className="subtitle is-5 has-text-white has-text-weight-medium">
                   Help save the planet for generation to come
                 </h1>
               </div>
               <div className="column has-text-centered">
-                <ImageWrapper src={secondImage} alt="Support Us" />
+                <ImageWrapper src="/images/icons/plant.png" alt="Support Us" />
                 <h1 className="subtitle is-5 has-text-white has-text-weight-medium ">
                   Support Corporate Social Responsibility
                 </h1>
               </div>
               <div className="column has-text-centered">
-                <img src={thirdImage} alt="Attract Customer" />
+                <img src="/images/icons/money.png" alt="Attract Customer" />
                 <h1 className="subtitle is-5 has-text-white has-text-weight-medium ">
                   Attract and Engage with Customers
                 </h1>
               </div>
               <div className="column has-text-centered">
-                <ImageWrapper src={fourthImage} alt="Business Sense" />
+                <ImageWrapper
+                  src="/images/icons/business.png"
+                  alt="Business Sense"
+                />
                 <h1 className="subtitle is-5 has-text-white has-text-weight-medium ">
                   It&apos;s good business Sense
                 </h1>
               </div>
               <div className="column has-text-centered">
-                <ImageWrapper src={fifthImage} alt="Revenue" />
+                <ImageWrapper src="/images/icons/sound.png" alt="Revenue" />
                 <h1 className="subtitle is-5 has-text-white has-text-weight-medium ">
                   Enjoy an additional revenue stream
                 </h1>
