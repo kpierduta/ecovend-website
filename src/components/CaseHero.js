@@ -22,17 +22,17 @@ const CaseHero = () => (
       <div className="columns">
         <div className="column">
           <Link to="/case">
-            <CaseCard />
+            <CaseCard image="/images/case/truck.png" />
           </Link>
         </div>
         <div className="column">
           <Link to="/case">
-            <CaseCard />
+            <CaseCard image="/images/case/ceo.png" />
           </Link>
         </div>
         <div className="column">
           <Link to="/case">
-            <CaseCard />
+            <CaseCard image="/images/case/cardboard.png" />
           </Link>
         </div>
       </div>

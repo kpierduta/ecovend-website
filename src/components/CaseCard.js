@@ -13,18 +13,18 @@ const CaseCard = props => (
       <div className="card">
         <div className="card-image">
           <figure className="image is-4by3">
-            <img
-              src="/images/machines/ecovend-machine_350.png"
-              alt="Placeholder image"
-            />
+            <img src={props.image} alt="Placeholder image" />
           </figure>
         </div>
         <div className="card-content">
           <div className="content">
             <h1 className="subtitle is-6 is-capitalized">Lorem ipsum dolor</h1>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            nec iaculis mauris. <a>@bulmaio</a>.<a href="#">#css</a>{' '}
-            <a href="#">#responsive</a>
+            nec iaculis mauris.Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Phasellus nec iaculis mauris.Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit. Phasellus nec iaculis
+            mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus nec iaculis mauris.
             <br />
           </div>
         </div>
