@@ -15,7 +15,7 @@ const MyMapComponent = compose(
      * The key "AIzaSyBkNaAGLEVq0YLQMi-PYEMabFeREadYe1Q" can be ONLY used in this sandbox (no forked).
      */
     googleMapURL:
-      'https://maps.googleapis.com/maps/api/js?key=AIzaSyARq3lIWaDnlepdOd2alXdFzuTcd-PyGdY',
+      'https://maps.googleapis.com/maps/api/js?key=AIzaSyD4VzGKf4b6PZUwJCfD5twLBqFizOT_zXg',
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: (
       <div
