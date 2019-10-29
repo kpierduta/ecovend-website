@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 import theme from '../utils/theme';
-
+import BreadCrumbs from './BreadCrumbs';
 import CaseCard from './CaseCard';
 
 const Container = styled.section`
@@ -13,12 +13,7 @@ const Container = styled.section`
 const CaseHero = () => (
   <Container className="section">
     <div className="container">
-      <h1 className="subtitle is-6 is-capitalized">
-        <span className="icon">
-          <i className="fas fa-home" />
-        </span>
-        /Pages/Case Study
-      </h1>
+      <BreadCrumbs undelinetext="Case" simpletext=" Studies" />
       <div className="columns">
         <div className="column">
           <Link to="/case">

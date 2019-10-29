@@ -4,9 +4,6 @@ import styled from 'styled-components';
 import theme from '../utils/theme';
 
 const Container = styled.section`
-  .second {
-    font-family: ${theme.primaryFontFamily};
-  }
   .subtitle {
     margin-bottom: 4rem;
     letter-spacing: 0.2rem;
@@ -26,7 +23,6 @@ const ContactHero = () => (
           </h1>
           <h1 className="title is-3">CONTACT US</h1>
         </div>
-        <div className="column second" />
       </div>
     </div>
   </Container>
