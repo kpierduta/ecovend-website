@@ -20,7 +20,7 @@ const Navbar = styled.div`
     transition: color 0.2s;
     :hover {
       background: transparent;
-      color: ${theme.secondaryColor}!important;
+      color: ${theme.hovercolor}!important;
     }
     :focus-within {
       background: transparent;
@@ -87,7 +87,7 @@ export default class Header extends React.Component {
               <LinkStyled to="/" className="navbar-item">
                 Home
               </LinkStyled>
-              <LinkStyled to="#" className="navbar-item ">
+              <LinkStyled to="/advertising" className="navbar-item ">
                 Advertising
               </LinkStyled>
               <LinkStyled to="/our-range" className="navbar-item">
