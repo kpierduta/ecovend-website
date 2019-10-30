@@ -11,8 +11,7 @@ import Steps from '../components/Steps';
 import Choose from '../components/Choose';
 import Customer from '../components/Customer';
 import Advertisment from '../components/Advertising';
-import Contact from '../components/Contact';
-import MyMapComponent from '../components/GoogleMap';
+import ContactWrapper from '../components/ContactWrapper';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -31,8 +30,7 @@ export default class IndexPage extends React.Component {
         <Choose />
         <Customer />
         <Advertisment />
-        <Contact />
-        <MyMapComponent isMarkerShown className="is-hidden-mobile" />,
+        <ContactWrapper />
       </Layout>
     );
   }

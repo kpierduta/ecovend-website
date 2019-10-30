@@ -6,16 +6,13 @@ import ContactForm from './ContactForm';
 
 const Container = styled.section`
   position: relative;
-  background-color: #e1eff2 !important;
-  padding: 1.7rem 1.5rem 0.35rem 1.5rem;
   font-family: ${theme.primaryFontFamily} !important;
+  background-color: #ffff !important;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   @media only screen and (max-width: 768px) {
     padding-bottom: 3rem;
     margin-bottom: -2rem;
-  }
-  .columns {
-    padding: 3rem 0rem;
-    background-color: #ffff !important;
   }
   .text {
     color: ${theme.secondaryColor};

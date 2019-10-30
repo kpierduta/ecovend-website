@@ -7,7 +7,7 @@ const Conatiner = styled.section`
   font-family: ${theme.primaryFontFamily};
   font-size: 15px;
   background-color: #e1eff2;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
   .column {
     padding: 0 !important;
   }
@@ -47,7 +47,7 @@ const Conatiner = styled.section`
 `;
 
 const Customer = () => (
-  <Conatiner id="customer-engagement">
+  <Conatiner>
     <div>
       <div className="columns">
         <div className="column">
