@@ -117,13 +117,10 @@ const ContactForm = props => {
       <div className="has-text-centered">
         <button
           type="submit"
-          className="button is-link"
+          className="button  is-medium is-link is-fullwidth"
           disabled={isSubmitting}
-          style={{ marginTop: '2rem', borderRadius: '2rem' }}>
+          style={{ marginTop: '1.5rem' }}>
           Submit Now
-          <span className="icon">
-            <i className="fas fa-chevron-right" />
-          </span>
         </button>
       </div>
     </form>

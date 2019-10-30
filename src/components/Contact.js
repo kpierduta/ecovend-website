@@ -5,36 +5,36 @@ import theme from '../utils/theme';
 import ContactForm from './ContactForm';
 
 const Container = styled.section`
-  padding: 3rem 1.5rem 3rem 1.5rem;
+  position: relative;
+  background-color: #e1eff2 !important;
+  padding: 1.7rem 1.5rem 0.35rem 1.5rem;
   font-family: ${theme.primaryFontFamily} !important;
-
   @media only screen and (max-width: 768px) {
     padding-bottom: 3rem;
     margin-bottom: -2rem;
   }
-
+  .columns {
+    padding: 3rem 0rem;
+    background-color: #ffff !important;
+  }
   .text {
     color: ${theme.secondaryColor};
     letter-spacing: 0.1rem;
     line-height: 1.5rem;
   }
-
   .input {
     height: 2.5rem;
-    border: 1px solid ${theme.secondaryColor} !important;
+    border-bottom: 1px solid ${theme.secondaryColor} !important;
     background-color: #fff;
     border-color: #fff;
-    border-radius: 30px;
     box-shadow: none;
     ::placeholder {
       color: ${theme.secondaryColor};
       opacity: 1;
     }
   }
-
   textarea {
-    border: 1px solid ${theme.secondaryColor} !important;
-    border-radius: 30px;
+    border-bottom: 1px solid ${theme.secondaryColor} !important;
     background-color: #fff;
     border-color: #fff;
     border-radius: none;
@@ -44,7 +44,6 @@ const Container = styled.section`
       opacity: 1;
     }
   }
-
   .button {
     font-weight: 400;
     background-color: ${theme.secondaryColor};
@@ -55,19 +54,16 @@ const Container = styled.section`
       opacity: 0.6;
     }
   }
-
   .control {
     padding: 1rem;
     :hover {
       border-color: #fff;
     }
   }
-
   form,
   .field {
     width: 100%;
   }
-
   .icon {
     margin-left: 0rem !important;
     margin-right: 0.25rem !important;
@@ -75,10 +71,10 @@ const Container = styled.section`
 `;
 
 const Contact = () => (
-  <Container id="contact" className="section">
+  <Container className="section">
     <div className="container">
       <div className="columns">
-        <div className="column">
+        <div className="column has-text-centered">
           <h1 className="subtitle is-3">Our Address</h1>
           <h4 className="subtitle is-6 text">
             <span className="icon">

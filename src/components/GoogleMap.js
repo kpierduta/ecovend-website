@@ -15,14 +15,15 @@ const MyMapComponent = compose(
      * The key "AIzaSyBkNaAGLEVq0YLQMi-PYEMabFeREadYe1Q" can be ONLY used in this sandbox (no forked).
      */
     googleMapURL:
-      'https://maps.googleapis.com/maps/api/js?key=AIzaSyD4VzGKf4b6PZUwJCfD5twLBqFizOT_zXg',
+      'https://maps.googleapis.com/maps/api/js?key=AIzaSyACXe8HurUeBrn3796pbzGIr-KAT0StmNE',
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: (
       <div
-        className="is-hidden-mobile"
+        className="section is-hidden-mobile"
         style={{
           background: '#e1eff2',
           height: `40rem`,
+          padding: '0.5rem 5.25rem 2rem 5.25rem',
         }}
       />
     ),
