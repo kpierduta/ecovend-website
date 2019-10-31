@@ -30,10 +30,12 @@ const Conatiner = styled.div`
   .second {
     margin-top: 2rem;
   }
-  iframe {
-    margin-top: 1rem;
-    width: 30.3125rem;
-    height: 21.875rem;
+  video {
+    width: 61.3125rem;
+    height: 34.875rem;
+    @media only screen and (max-width: 768px) {
+      height: auto;
+    }
   }
 `;
 
@@ -58,7 +60,9 @@ const DrsInfo = () => (
       </div>
     </div>
     <div className="has-text-centered">
-      <iframe src="/videos/ACM_Reverse_Vending_on_the_BBC.mp4" />
+      <video width="560" height="415" controls>
+        <source src="/videos/RVM Animation Video.mp4" type="video/mp4" />
+      </video>
     </div>
   </Conatiner>
 );

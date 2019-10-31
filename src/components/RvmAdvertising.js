@@ -36,6 +36,13 @@ const Container = styled.section`
   .is-size-5 {
     margin: 1.5rem 0rem 4rem 0rem;
   }
+  video {
+    width: 61.3125rem;
+    height: 34.875rem;
+    @media only screen and (max-width: 768px) {
+      height: auto;
+    }
+  }
 `;
 
 const Rvm = () => (
@@ -76,16 +83,12 @@ const Rvm = () => (
       <h1 className="is-size-5 has-text-weight-semibold has-text-centered">
         Click to view the video
       </h1>
-      <figure className="image is-16by9">
-        <iframe
-          className="has-ratio"
-          width="640"
-          height="360"
-          src="/videos/RVM Animation Video.mp4"
-          frameBorder="0"
-          allowFullScreen
-        />
-      </figure>
+      <div className="has-text-centered">
+        <video width="560" height="415" controls>
+          <source src="/videos/RVM Animation Video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </Container>
 );
