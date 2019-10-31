@@ -65,7 +65,7 @@ const About = () => (
               compacts and stores bottles and cans. This provides a simple and
               effective solution to beverage container waste.
             </p>
-            <LinkStyled href="#contact" className="has-text-white">
+            <LinkStyled href="/contact" className="has-text-white">
               Contact
             </LinkStyled>
           </div>

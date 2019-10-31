@@ -19,6 +19,15 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `u8x19vgudvqf`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: 'GvWygYJM0m8XkDv6lkyz5sQ9SJTnbV7V0xMB53UbEso',
+        host: `preview.contentful.com`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         color: config.themeColor,
