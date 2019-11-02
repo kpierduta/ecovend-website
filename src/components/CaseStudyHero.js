@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import theme from '../utils/theme';
 
+import BreadCrumbs from './BreadCrumbs';
+
 const Container = styled.section`
   font-family: ${theme.primaryFontFamily};
 `;
@@ -10,7 +12,7 @@ const Container = styled.section`
 const CaseStudyHero = () => (
   <Container className="section">
     <div className="container">
-      <h1 className="subtitle is-3">Case Study: Project Name</h1>
+      <BreadCrumbs undelinetext="Case" simpletext=" Studies" />
     </div>
   </Container>
 );

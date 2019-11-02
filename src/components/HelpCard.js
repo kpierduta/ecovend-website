@@ -1,20 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import theme from '../utils/theme';
+
 const Section = styled.section`
-  padding: 0rem 1.5rem;
+  padding: 0rem 0.5rem;
   .card {
-    padding: 1rem 1rem;
-    background-color: #f1fbff;
+    padding: 1rem 0rem;
+    background-color: ${theme.secondaryColor};
   }
-  .is-large {
-    font-size: 4rem;
+  img {
+    width: 4rem;
   }
   button {
     margin-top: 1rem;
   }
   .arrow {
     margin-left: 0rem !important;
+  }
+  .is-rounded {
+    padding: 0rem 1.5rem;
+    color: ${theme.secondaryColor} !important;
+    background-color: white !important;
   }
 `;
 
@@ -23,15 +30,13 @@ const HelpCard = () => (
     <div className="container">
       <div className="card has-text-centered">
         <div className="card-image">
-          <span className="icon is-large">
-            <i className="fas fa-headphones-alt" />
-          </span>
-          <h1 className="title is-5">Need Help?</h1>
+          <img src="/images/icons/call.png" />
         </div>
-        <div className="card-content ">
-          <p>Call our award-winning support team 24/7</p>
-          <button type="submit" className="button  is-rounded">
-            Lerarn More
+        <div className="card-content has-text-white">
+          <p>Have a question, or need more infotrmation?</p>
+          <p>Get in touch today</p>
+          <button type="submit" className="button is-rounded is-inverted">
+            ENQUIRE
             <span className="icon arrow">
               <i className="fas fa-chevron-right" />
             </span>

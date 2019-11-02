@@ -15,17 +15,17 @@ const Container = styled.div`
 
 const CardWrapper = styled.div`
   margin: 2rem 0rem;
+  :first-child {
+    margin-top: 6rem;
+  }
 `;
 
 const FaqSection = () => (
   <Container className="section">
     <div className="Container">
       <div className="columns is-centered">
+        <BreadCrumbs undelinetext="FAQ" />
         <div className="column is-four-fifths">
-          <BreadCrumbs undelinetext="FAQ" />
-          <div className="has-text-centered">
-            <h2 className="title is-2">Frequently Asked Questions</h2>
-          </div>
           <CardWrapper>
             <FaqItem questions="What information do i need to supply to you to start my project ?" />
           </CardWrapper>
