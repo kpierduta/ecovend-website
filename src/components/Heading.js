@@ -19,21 +19,24 @@ const HeadingStyled = styled.div`
   }
 `;
 
-const Heading = () => (
-  <HeadingStyled>
-    <div className="container">
-      <div className="tabs">
-        <ul>
-          <li>
-            <a href="mailto:">info@eco-vend.co.uk</a>
-          </li>
-          <li>
-            <a href="tel:">08700 777 555</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </HeadingStyled>
-);
-
-export default Heading;
+export default class Heading extends React.Component {
+  render() {
+    const { heading } = this.props;
+    return (
+      <HeadingStyled>
+        <div className="container">
+          <div className="tabs">
+            <ul>
+              <li>
+                <a href="mailto:">{heading.email}</a>
+              </li>
+              <li>
+                <a href="tel:">{heading.mobileNumber}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </HeadingStyled>
+    );
+  }
+}

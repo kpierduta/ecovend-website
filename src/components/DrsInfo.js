@@ -7,6 +7,7 @@ const Conatiner = styled.div`
   font-family: ${theme.secondaryFontFamily};
   color: ${theme.primaryColor};
   padding-bottom: 10rem;
+
   .columns {
     margin-left: 0rem !important;
     margin-right: 0rem !important;
@@ -39,32 +40,33 @@ const Conatiner = styled.div`
   }
 `;
 
-const DrsInfo = () => (
-  <Conatiner id="drs" className="container">
-    <div className="columns  is-centered is-multiline has-text-centered">
-      <div className="column is-two-thirds">
-        <h4 className="subtitle is-4 text">
-          HOW ARE REVERSE VENDING MACHINES BEING USED?
-        </h4>
-        <p className="sub-text first">
-          RVMs have gained signiﬁcant popularity in the last ﬁve years.
-          Impressive levels of user engagement across Europe has led to up to
-          97% beverage container recycling waste in some countries.
-        </p>
-        <p className="sub-text second">
-          Reverse vending is particularly popular in places that have mandatory
-          recycling laws or container deposit legislation. The UK government has
-          recently announced plans for a national deposit return scheme which
-          will begin in 2020-21.
-        </p>
-      </div>
-    </div>
-    <div className="has-text-centered">
-      <video width="560" height="415" controls>
-        <source src="/videos/RVM Animation Video.mp4" type="video/mp4" />
-      </video>
-    </div>
-  </Conatiner>
-);
+class DrsInfo extends React.Component {
+  render() {
+    const { home } = this.props;
+    return (
+      <Conatiner id="drs" className="container">
+        <div className="columns  is-centered is-multiline has-text-centered">
+          <div className="column is-two-thirds">
+            <h4 className="subtitle is-4 is-capitalized text">
+              {home.orangeTitle}
+            </h4>
+            <p className="sub-text first">
+              {home.orangeParagraph.internal.content}
+            </p>
+            <p className="sub-text second">
+              {' '}
+              {home.orangeSecondPara.internal.content}
+            </p>
+          </div>
+        </div>
+        <div className="has-text-centered">
+          <video width="560" height="415" controls>
+            <source src="/videos/RVM Animation Video.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </Conatiner>
+    );
+  }
+}
 
 export default DrsInfo;

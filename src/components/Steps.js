@@ -5,10 +5,6 @@ import theme from '../utils/theme';
 import Stepscard from './StepsCard';
 import IconCard from './IconCard';
 
-import imgFirst from '../../static/images/Icons/Bottle.png';
-import imgSecond from '../../static/images/Icons/barcode.png';
-import imgThird from '../../static/images/Icons/crusher.png';
-
 const Container = styled.div`
   background-color: #f1f1f1;
   font-family: ${theme.primaryFontFamily};
@@ -38,48 +34,49 @@ const Container = styled.div`
   }
 `;
 
-const Steps = () => (
-  <Container id="steps">
-    <div className="columns is-centered ">
-      <div className="column is-three-quarters">
-        <div className="container">
-          <div className="has-text-centered">
-            <h1 className="title is-2 heading">
-              REVERSE VENDING, AS SIMPLE AS 1, 2, 3
-            </h1>
-            <p className="para">
-              Recycling used bottles and cans couldn&apos;t be easier. Here are
-              the three simple steps to using any of our EcoVend Reverse Vending
-              Machines
-            </p>
+class Steps extends React.Component {
+  render() {
+    const { home } = this.props;
+    return (
+      <Container id="steps">
+        <div className="columns is-centered ">
+          <div className="column is-three-quarters">
+            <div className="container">
+              <div className="has-text-centered">
+                <h1 className="title is-2 heading">{home.stepTitle}</h1>
+                <p className="para">
+                  {home.stepsSectionParagraph.internal.content}
+                </p>
+              </div>
+            </div>
+            <div className="columns is-centered is-variable is-6">
+              <div className="column rev is-4">
+                <IconCard Link={home.stepOneIcon.file.url} />
+                <Stepscard
+                  title={home.stepOneTitle}
+                  description={home.stepOneText}
+                />
+              </div>
+              <div className="column is-4">
+                <Stepscard
+                  title={home.stepTwoTitle}
+                  description={home.stepTwoText}
+                />
+                <IconCard Link={home.stepTwoIcon.file.url} />
+              </div>
+              <div className="column rev is-4">
+                <IconCard Link={home.stepThreeIcon.file.url} />
+                <Stepscard
+                  title={home.stepThreeTitle}
+                  description={home.stepThreeText}
+                />
+              </div>
+            </div>
           </div>
         </div>
-        <div className="columns is-centered is-variable is-6">
-          <div className="column rev is-4">
-            <IconCard Link={imgFirst} />
-            <Stepscard
-              title="STEP 1"
-              description="Load empty beverage containers into the chute."
-            />
-          </div>
-          <div className="column is-4">
-            <Stepscard
-              title="STEP 2"
-              description="The bar code is scanned and logged."
-            />
-            <IconCard Link={imgSecond} />
-          </div>
-          <div className="column rev is-4">
-            <IconCard Link={imgThird} />
-            <Stepscard
-              title="STEP 3"
-              description="The machine issues a reward voucher or an electronic credit."
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </Container>
-);
+      </Container>
+    );
+  }
+}
 
 export default Steps;

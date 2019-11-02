@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { Link } from 'gatsby';
 
 import theme from '../utils/theme';
 
@@ -24,55 +24,52 @@ const Container = styled.div`
     font-size: ${theme.fontSizeMedium} !important;
     font-weight: 500;
   }
-
   .text {
     font-weight: 400;
     letter-spacing: 1.1px;
     line-height: 2;
     margin-top: 1rem;
   }
-
   .sub-text {
     padding-bottom: 4rem;
   }
 `;
 
-const LinkStyled = styled(AnchorLink)`
+const LinkStyled = styled(Link)`
   font-family: ${theme.primaryFontFamily};
   background: transparent;
   border: none;
   font-size: ${theme.fontSize};
 `;
 
-const About = () => (
-  <Container id="about" className="container">
-    <section className="section">
-      <div className=" has-text-centered">
-        <h2 className="subtitle is-5 has-text-white">
-          WHAT IS AN ECOVEND REVERSE VENDING MACHINE?
-        </h2>
-        <div className="columns is-centered">
-          <div className="column is-three-quarters">
-            <p className="has-text-white text">
-              An Ecovend reverse vending machine or RVM is a recycling device
-              with integrated technology that accepts used (empty) beverage
-              containers in return for a monetary or non monetary reward – these
-              can be for example vouchers, discounts or even charitable
-              donations.
-            </p>
-            <p className="has-text-white text sub-text">
-              Our machines provide an automated function that collects, sorts,
-              compacts and stores bottles and cans. This provides a simple and
-              effective solution to beverage container waste.
-            </p>
-            <LinkStyled href="/contact" className="has-text-white">
-              Contact
-            </LinkStyled>
+class About extends React.Component {
+  render() {
+    const { home } = this.props;
+    return (
+      <Container id="about" className="container">
+        <section className="section">
+          <div className=" has-text-centered">
+            <h2 className="subtitle is-5 has-text-white is-capitalized">
+              {home.greyBlockTitle}
+            </h2>
+            <div className="columns is-centered">
+              <div className="column is-three-quarters">
+                <p className="has-text-white text">
+                  {home.greyBlockParagraph.internal.content}
+                </p>
+                <p className="has-text-white text sub-text">
+                  {home.greyBlockSecondPara.internal.content}
+                </p>
+                <LinkStyled to="/contact" className="has-text-white">
+                  Contact
+                </LinkStyled>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
-  </Container>
-);
+        </section>
+      </Container>
+    );
+  }
+}
 
 export default About;

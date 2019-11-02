@@ -21,55 +21,63 @@ const ImageWrapper = styled.img`
   padding: 1rem 0rem 0rem 0rem;
 `;
 
-const Choose = () => (
-  <Conatiner id="choose">
-    <section className="section">
-      <div className="container">
-        <div className="columns is-centered ">
-          <div className="column  is-four-fifths">
-            <h1 className="title is-1 has-text-white has-text-centered">
-              WHY CHOOSE REVERSE VENDING?
-            </h1>
-            <div className="columns">
-              <div className="column  has-text-centered">
-                <img src="/images/icons/earth.png" alt="Save Earth" />
-                <h1 className="subtitle is-5 has-text-white has-text-weight-medium">
-                  Help save the planet for generation to come
+class Choose extends React.Component {
+  render() {
+    const { home } = this.props;
+    return (
+      <Conatiner id="choose">
+        <section className="section">
+          <div className="container">
+            <div className="columns is-centered ">
+              <div className="column">
+                <h1 className="title is-1 has-text-white has-text-centered">
+                  {home.chooseTitle}
                 </h1>
-              </div>
-              <div className="column has-text-centered">
-                <ImageWrapper src="/images/icons/plant.png" alt="Support Us" />
-                <h1 className="subtitle is-5 has-text-white has-text-weight-medium ">
-                  Support Corporate Social Responsibility
-                </h1>
-              </div>
-              <div className="column has-text-centered">
-                <img src="/images/icons/money.png" alt="Attract Customer" />
-                <h1 className="subtitle is-5 has-text-white has-text-weight-medium ">
-                  Attract and Engage with Customers
-                </h1>
-              </div>
-              <div className="column has-text-centered">
-                <ImageWrapper
-                  src="/images/icons/business.png"
-                  alt="Business Sense"
-                />
-                <h1 className="subtitle is-5 has-text-white has-text-weight-medium ">
-                  It&apos;s good business Sense
-                </h1>
-              </div>
-              <div className="column has-text-centered">
-                <ImageWrapper src="/images/icons/sound.png" alt="Revenue" />
-                <h1 className="subtitle is-5 has-text-white has-text-weight-medium ">
-                  Enjoy an additional revenue stream
-                </h1>
+                <div className="columns">
+                  <div className="column  has-text-centered">
+                    <img src={home.iconOne.file.url} alt="Save Earth" />
+                    <h1 className="subtitle is-5 has-text-white has-text-weight-medium">
+                      {home.iconOneText}
+                    </h1>
+                  </div>
+                  <div className="column has-text-centered">
+                    <ImageWrapper
+                      src={home.iconTwo.file.url}
+                      alt="Support Us"
+                    />
+                    <h1 className="subtitle is-5 has-text-white has-text-weight-medium ">
+                      {home.iconTwoText}
+                    </h1>
+                  </div>
+                  <div className="column has-text-centered">
+                    <img src={home.iconThree.file.url} alt="Attract Customer" />
+                    <h1 className="subtitle is-5 has-text-white has-text-weight-medium ">
+                      {home.iconThreeText}
+                    </h1>
+                  </div>
+                  <div className="column has-text-centered">
+                    <ImageWrapper
+                      src={home.iconFour.file.url}
+                      alt="Business Sense"
+                    />
+                    <h1 className="subtitle is-5 has-text-white has-text-weight-medium ">
+                      {home.iconFourText}
+                    </h1>
+                  </div>
+                  <div className="column has-text-centered">
+                    <ImageWrapper src={home.iconFive.file.url} alt="Revenue" />
+                    <h1 className="subtitle is-5 has-text-white has-text-weight-medium ">
+                      {home.iconFiveText}
+                    </h1>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-  </Conatiner>
-);
+        </section>
+      </Conatiner>
+    );
+  }
+}
 
 export default Choose;
