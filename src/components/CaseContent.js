@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import theme from '../utils/theme';
-import Casecard from './Casecard';
+
+import CaseCard from './CaseCard';
 
 const Container = styled.section`
   font-family: ${theme.primaryFontFamily};
@@ -102,7 +103,7 @@ const CaseContent = () => (
         </div>
       </div>
     </section>
-    <Casecard />
+    <CaseCard />
     <section className="section">
       <div className="container">
         <div className="columns">

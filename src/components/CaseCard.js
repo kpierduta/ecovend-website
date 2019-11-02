@@ -28,7 +28,7 @@ const Conatiner = styled.div`
   }
 `;
 
-const Casecard = () => (
+const CaseCard = () => (
   <Conatiner>
     <section className="section">
       <div className="container">
@@ -55,4 +55,4 @@ const Casecard = () => (
   </Conatiner>
 );
 
-export default Casecard;
+export default CaseCard;
