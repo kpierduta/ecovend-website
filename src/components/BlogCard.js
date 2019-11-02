@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 import theme from '../utils/theme';
 
@@ -21,16 +22,19 @@ const Section = styled.section`
     }
   }
   .button {
-    font-weight: 400;
-    background-color: ${theme.secondaryColor};
-    transition: opacity 0.2s;
-    :hover {
-      color: #fff;
-      opacity: 0.6;
-    }
   }
   .icon {
     margin-left: 0rem !important;
+  }
+`;
+
+const LinkStyled = styled(Link)`
+  font-weight: 400;
+  background-color: ${theme.secondaryColor};
+  transition: opacity 0.2s;
+  :hover {
+    color: #fff;
+    opacity: 0.6;
   }
 `;
 
@@ -59,12 +63,12 @@ const BlogCard = props => (
                       Cras rhoncus interdum arcu eget congue. Curabitur non
                       justo velit....
                     </p>
-                    <button type="submit" className="button is-rounded">
+                    <LinkStyled to="/blog" className="button is-rounded">
                       Learn More
                       <span className="icon">
                         <i className="fas fa-chevron-right" />
                       </span>
-                    </button>
+                    </LinkStyled>
                   </div>
                 </div>
               </div>
