@@ -45,7 +45,7 @@ const Result = () => (
           </p>
         </div>
         <div className="column is-4">
-          <img src="/images/client.png" />
+          <img src="/images/case/ceo.jpg" />
         </div>
         <div className="column is-12">
           <p className="para">

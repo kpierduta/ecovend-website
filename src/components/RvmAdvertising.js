@@ -84,7 +84,7 @@ const Rvm = () => (
         Click to view the video
       </h1>
       <div className="has-text-centered">
-        <video width="560" height="415" controls>
+        <video width="560" height="415" controls poster="/images/poster.jpg">
           <source src="/videos/RVM Animation Video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

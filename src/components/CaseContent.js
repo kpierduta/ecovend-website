@@ -37,7 +37,7 @@ const CaseContent = () => (
         <div className="columns is-multiline">
           <div className="column is-7">
             <figure className="image">
-              <img src="/images/case/truck.png" />
+              <img src="/images/case/truck.jpg" />
             </figure>
           </div>
           <div className="column is-5">

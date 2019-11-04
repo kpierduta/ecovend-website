@@ -96,7 +96,7 @@ export default class Header extends React.Component {
               <LinkStyled to="/news" className="navbar-item">
                 News
               </LinkStyled>
-              <LinkStyled to="/case-study" className="navbar-item">
+              <LinkStyled to="/case" className="navbar-item">
                 Case Studies
               </LinkStyled>
               <LinkStyled to="/faq" className="navbar-item">
