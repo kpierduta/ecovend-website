@@ -19,6 +19,9 @@ const Container = styled.section`
   }
   .comment {
     padding: 4rem 0rem 0rem 0rem;
+    @media only screen and (max-width: 600px) {
+      padding: 0rem;
+    }
   }
   .text {
     text-align: right;
@@ -89,7 +92,7 @@ const CaseContent = () => (
             </p>
           </div>
           <div className="column is-5">
-            <p className="is-size-5 comment is-italic is-pulled-right has-text-orange text">
+            <p className="is-size-5 comment is-italic is-pulled-right-is-desktop has-text-orange text">
               “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna Tristique
               sollicitudin nibh sit amet. Quisque id diam vel quam

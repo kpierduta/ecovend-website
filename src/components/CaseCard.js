@@ -5,6 +5,7 @@ import theme from '../utils/theme';
 
 const Conatiner = styled.div`
   background-color: #f1f1f1;
+  margin-top: 2rem;
   font-family: ${theme.secondaryFontFamily};
   .title,
   .subtitle {

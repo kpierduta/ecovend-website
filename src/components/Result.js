@@ -88,7 +88,7 @@ const Result = () => (
           </p>
         </div>
       </Wrapper>
-      <Bottom className="columns is-multiline is-mobile">
+      <Bottom className="columns">
         <div className="column is-3">
           <ResultCounter text="1" />
           <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
