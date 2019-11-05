@@ -62,7 +62,7 @@ const NewsConetnt = () => (
   <Section className="section">
     <div className="container">
       <div className="test">
-        <BreadCrumbs undelinetext="News" />
+        <BreadCrumbs undelineText="News" />
       </div>
       <div className="columns">
         <div className="column">

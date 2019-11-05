@@ -133,13 +133,19 @@ const Machines = () => (
           <h1 className="subtitle is-4">
             <span>MODEL: ECOVEND RVM 100/200/300 </span>
           </h1>
-          <img src="/images/machines/ecovend-machine_100-200-300.png" />
+          <img
+            src="/images/machines/ecovend-machine_100-200-300.png"
+            alt="recycle machine"
+          />
         </div>
         <div className="column is-5 has-text-centered">
           <h1 className="subtitle is-4">
             <span>MODEL: ECOVEND RVM 350 </span>
           </h1>
-          <img src="/images/machines/ecovend-machine_350.png" />
+          <img
+            src="/images/machines/ecovend-machine_350.png"
+            alt="recycle machine"
+          />
         </div>
         <div className="column  ">
           <h1 className="subtitle is-5">
@@ -277,7 +283,10 @@ const Machines = () => (
           <h1 className="subtitle is-4">
             <span>MODEL: ECOVEND RVM 400 </span>
           </h1>
-          <img src="/images/machines/ecovend-machine_400.png" />
+          <img
+            src="/images/machines/ecovend-machine_400.png"
+            alt="Recycling Machine"
+          />
         </div>
       </div>
     </div>

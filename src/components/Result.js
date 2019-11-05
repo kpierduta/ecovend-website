@@ -45,7 +45,7 @@ const Result = () => (
           </p>
         </div>
         <div className="column is-4">
-          <img src="/images/case/ceo.jpg" />
+          <img src="/images/case/ceo.jpg" alt="Ceo Initiative" />
         </div>
         <div className="column is-12">
           <p className="para">
@@ -80,7 +80,7 @@ const Result = () => (
           </p>
         </div>
         <div className="column has-text-centered">
-          <img src="/images/result.png" />
+          <img src="/images/result.png" alt="our past work" />
         </div>
       </div>
     </div>

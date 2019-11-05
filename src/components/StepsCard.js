@@ -37,7 +37,7 @@ const StepsCard = ({ title, description }) => (
       <div className="card-content">
         <div className="has-text-centered">
           <h3 className="subtitle is-5 card-para">{title}</h3>
-          <h4 className="subtitle is-5  card-para">{description}</h4>
+          <h4 className="subtitle is-5 card-para">{description}</h4>
         </div>
       </div>
     </div>

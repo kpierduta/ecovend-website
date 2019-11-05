@@ -41,7 +41,7 @@ const NextBlog = () => (
           <article className="media">
             <figure className="media-left">
               <p className="image">
-                <img src="/images/news/two.jpg" />
+                <img src="/images/news/two.jpg" alt="Plastic Garbage" />
               </p>
             </figure>
             <div className="media-content">

@@ -22,21 +22,21 @@ const CardWrapper = styled.div`
 
 const FaqSection = () => (
   <Container className="section">
-    <div className="Container">
-      <div className="columns is-centered">
-        <BreadCrumbs undelinetext="FAQ" />
-        <div className="column is-four-fifths">
+    <div className="container">
+      <BreadCrumbs undelineText="FAQ" simpleText="s" />
+      <div className="columns">
+        <div className="column is-12">
           <CardWrapper>
-            <FaqItem questions="What information do i need to supply to you to start my project ?" />
+            <FaqItem questions="What information do i need to supply to you to start my project?" />
           </CardWrapper>
           <CardWrapper>
-            <FaqItem questions="What information do i need to supply to you to start my project ?" />
+            <FaqItem questions="What information do i need to supply to you to start my project?" />
           </CardWrapper>
           <CardWrapper>
-            <FaqItem questions="What information do i need to supply to you to start my project ?" />
+            <FaqItem questions="What information do i need to supply to you to start my project?" />
           </CardWrapper>
           <CardWrapper>
-            <FaqItem questions="What information do i need to supply to you to start my project ?" />
+            <FaqItem questions="What information do i need to supply to you to start my project?" />
           </CardWrapper>
         </div>
       </div>

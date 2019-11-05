@@ -30,7 +30,7 @@ const HelpCard = () => (
     <div className="container">
       <div className="card has-text-centered">
         <div className="card-image">
-          <img src="/images/icons/call.png" />
+          <img src="/images/icons/call.png" alt="call-to-get-information" />
         </div>
         <div className="card-content has-text-white">
           <p>Have a question, or need more infotrmation?</p>

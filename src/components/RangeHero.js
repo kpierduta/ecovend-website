@@ -16,7 +16,7 @@ const Container = styled.section`
 const RangeHero = () => (
   <Container className="section">
     <div className="container">
-      <BreadCrumbs undelinetext="Our" simpletext=" Range" />
+      <BreadCrumbs undelineText="Our" simpleText=" Range" />
       <p className="Para">
         The Ecovend range encompasses a variety of RVM models to suit your
         budget and commercial requirements. You can find our machine specifics

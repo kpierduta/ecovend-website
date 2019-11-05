@@ -18,7 +18,7 @@ const NewsPosts = props => (
       <article className="media">
         <figure className="media-left">
           <p className="image is-96x96">
-            <img className="is-rounded" src={props.image} />
+            <img className="is-rounded" src={props.image} alt={props.alt} />
           </p>
         </figure>
         <div className="media-content">

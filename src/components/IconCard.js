@@ -24,7 +24,7 @@ const Container = styled.div`
 const Iconcard = props => (
   <Container className="has-text-centered">
     <div className="card">
-      <div className="card-content my">
+      <div className="card-content">
         <div className="has-text-centered">
           <img src={props.Link} alt={props.alt} />
         </div>

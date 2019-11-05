@@ -21,7 +21,7 @@ const Container = styled.section`
 const Advertising = () => (
   <Container>
     <div className="container">
-      <BreadCrumbs undelinetext="Ad" simpletext="vertising" />
+      <BreadCrumbs undelineText="Ad" simpleText="vertising" />
       <section className="hero">
         <div className="hero-body">
           <div className="container">

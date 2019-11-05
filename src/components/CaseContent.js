@@ -37,13 +37,13 @@ const CaseContent = () => (
         <div className="columns is-multiline">
           <div className="column is-7">
             <figure className="image">
-              <img src="/images/case/truck.jpg" />
+              <img src="/images/case/truck.jpg" alt="carry truck" />
             </figure>
           </div>
           <div className="column is-5">
             <h1 className="title is-4 has-text-orange">BRAKES</h1>
             <p>
-              <span className="has-text-weight-semibold	 has-text-orange">
+              <span className="has-text-weight-semibold	has-text-orange">
                 Industry:
               </span>{' '}
               UK

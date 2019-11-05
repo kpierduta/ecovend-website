@@ -13,10 +13,10 @@ const Container = styled.h1`
   }
 `;
 
-const BreadCrumbs = props => (
+const BreadCrumbs = ({ undelineText, simpleText }) => (
   <Container className="has-text-weight-medium">
-    <span className="text">{props.undelinetext}</span>
-    {props.simpletext}
+    <span className="text">{undelineText}</span>
+    {simpleText}
   </Container>
 );
 

@@ -10,7 +10,6 @@ const Container = styled.div`
   font-size: ${theme.fontSize} !important;
   background-color: #aabcbf;
   padding-bottom: 2rem;
-
   .columns {
     margin-left: 0rem !important;
     margin-right: 0rem !important;

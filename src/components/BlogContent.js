@@ -27,7 +27,7 @@ const Container = styled.section`
 const BlogContent = () => (
   <Container className="section">
     <div className="container">
-      <BreadCrumbs undelinetext="BL" simpletext="OG" />
+      <BreadCrumbs undelineText="BL" simpleText="OG" />
       <div className="columns is-multiline">
         <div className="column is-8">
           <h1 className="title is-3">UPDATES REGARDING ECOVEND</h1>
@@ -51,7 +51,7 @@ const BlogContent = () => (
           </p>
         </div>
         <div className="column is-4">
-          <img src="/images/news/one.jpg" />
+          <img src="/images/news/one.jpg" alt="news" />
         </div>
         <div className="column is-12">
           <p className="para">

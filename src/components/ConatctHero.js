@@ -10,7 +10,7 @@ const ContactHero = () => (
     <div className="container">
       <div className="columns">
         <div className="column">
-          <BreadCrumbs undelinetext="CONTACT " simpletext="US" />
+          <BreadCrumbs simpleText="CONTACT US" />
         </div>
       </div>
     </div>
