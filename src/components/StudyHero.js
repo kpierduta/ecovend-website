@@ -12,27 +12,27 @@ const StudyHero = () => (
   <Container className="section">
     <div className="container">
       <BreadCrumbs undelineText="Case" simpleText=" Studies" />
-    </div>
-    <div className="columns is-multiline is-mobile">
-      <div className="column is-4">
-        <Link to="/case-study">
-          <StudyCard image="/images/case/ceo.jpg" />
-        </Link>
-      </div>
-      <div className="column is-4">
-        <Link to="/case-study">
-          <StudyCard image="/images/case/factory.jpg" />
-        </Link>
-      </div>
-      <div className="column is-4">
-        <Link to="/case-study">
-          <StudyCard image="/images/case/user.jpg" />
-        </Link>
-      </div>
-      <div className="column is-4">
-        <Link to="/case-study">
-          <StudyCard image="/images/case/truck.jpg" />
-        </Link>
+      <div className="columns is-multiline is-mobile">
+        <div className="column is-4">
+          <Link to="/case-study">
+            <StudyCard image="/images/case/ceo.jpg" />
+          </Link>
+        </div>
+        <div className="column is-4">
+          <Link to="/case-study">
+            <StudyCard image="/images/case/factory.jpg" />
+          </Link>
+        </div>
+        <div className="column is-4">
+          <Link to="/case-study">
+            <StudyCard image="/images/case/user.jpg" />
+          </Link>
+        </div>
+        <div className="column is-4">
+          <Link to="/case-study">
+            <StudyCard image="/images/case/truck.jpg" />
+          </Link>
+        </div>
       </div>
     </div>
   </Container>
