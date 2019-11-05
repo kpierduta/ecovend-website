@@ -2,13 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 import theme from '../utils/theme';
+import ResultStep from './ResultStep';
 
 const Container = styled.section`
   font-family: ${theme.primaryFontFamily};
-  .columns {
-    border-top: 4px solid ${theme.secondaryColor};
-    border-bottom: 4px solid ${theme.secondaryColor};
-  }
   .title.is-2 {
     padding-top: 2rem;
     color: ${theme.secondaryColor};
@@ -18,10 +15,20 @@ const Container = styled.section`
   }
 `;
 
+const Wrapper = styled.div`
+  border-top: 4px solid ${theme.secondaryColor};
+`;
+
+const Bottom = styled.div`
+  border-bottom: 4px solid ${theme.secondaryColor};
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+`;
+
 const Result = () => (
   <Container className="section">
     <div className="container">
-      <div className="columns is-multiline">
+      <Wrapper className="columns is-multiline">
         <div className="column is-8">
           <h1 className="title is-2">Result</h1>
           <p className="para">
@@ -79,10 +86,21 @@ const Result = () => (
             recycling solution for their business.
           </p>
         </div>
-        <div className="column has-text-centered">
-          <img src="/images/result.png" alt="our past work" />
+      </Wrapper>
+      <Bottom className="columns">
+        <div className="column">
+          <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
         </div>
-      </div>
+        <div className="column">
+          <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
+        </div>
+        <div className="column">
+          <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
+        </div>
+        <div className="column">
+          <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
+        </div>
+      </Bottom>
     </div>
   </Container>
 );
