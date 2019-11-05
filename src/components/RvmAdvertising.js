@@ -37,7 +37,7 @@ const Container = styled.section`
     margin: 1.5rem 0rem 4rem 0rem;
   }
   video {
-    width: 61.3125rem;
+    width: 100%;
     height: 34.875rem;
     @media only screen and (max-width: 768px) {
       height: auto;
@@ -84,7 +84,7 @@ const Rvm = () => (
         Click to view the video
       </h1>
       <div className="has-text-centered">
-        <video width="560" height="415" controls poster="/images/poster.jpg">
+        <video controls poster="/images/poster.jpg">
           <source src="/videos/RVM Animation Video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
