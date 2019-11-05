@@ -5,11 +5,10 @@ import theme from '../utils/theme';
 import BreadCrumbs from './BreadCrumbs';
 import FaqItem from './FaqItem';
 
-const Container = styled.div`
+const Container = styled.section`
   font-family: ${theme.primaryFontFamily}!important;
   .title {
     margin-bottom: 6rem;
-    font-size: 40px !important;
   }
 `;
 

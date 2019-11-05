@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import theme from '../utils/theme';
 import ResultStep from './ResultStep';
+import ResultCounter from './ResultCounter';
 
 const Container = styled.section`
   font-family: ${theme.primaryFontFamily};
@@ -87,17 +88,21 @@ const Result = () => (
           </p>
         </div>
       </Wrapper>
-      <Bottom className="columns">
-        <div className="column">
+      <Bottom className="columns is-multiline is-mobile">
+        <div className="column is-3">
+          <ResultCounter text="1" />
           <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
         </div>
-        <div className="column">
+        <div className="column is-3">
+          <ResultCounter text="2" />
           <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
         </div>
-        <div className="column">
+        <div className="column is-3">
+          <ResultCounter text="3" />
           <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
         </div>
-        <div className="column">
+        <div className="column is-3">
+          <ResultCounter text="4" />
           <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
         </div>
       </Bottom>
