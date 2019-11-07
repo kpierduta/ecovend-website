@@ -61,7 +61,10 @@ class DrsInfo extends React.Component {
         </div>
         <div className="has-text-centered">
           <video width="560" height="415" controls>
-            <source src="/videos/RVM Animation Video.mp4" type="video/mp4" />
+            <source
+              src="/videos/ACM_Reverse_Vending_on_the_BBC.mp4"
+              type="video/mp4"
+            />
           </video>
         </div>
       </Conatiner>

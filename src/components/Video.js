@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import theme from '../utils/theme';
+import firstVideo from '../../static/videos/Section 3 - RVM Sales Video.mp4';
 
 const Conatiner = styled.div`
   margin-top: 6rem;
@@ -32,7 +33,7 @@ class Video extends React.Component {
             width="560"
             height="415"
             className="video"
-            src={home.videoLink}
+            src={firstVideo}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
