@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-import StudyCard from './StudyCard1';
+import StudyCard from './StudyCard';
 
 import BreadCrumbs from './BreadCrumbs';
 
