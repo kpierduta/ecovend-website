@@ -15,22 +15,22 @@ const StudyHero = () => (
       <div className="columns is-multiline is-mobile">
         <div className="column is-4">
           <Link to="/case-study">
-            <StudyCard image="/images/case/ceo.jpg" />
+            <StudyCard imageTag="/images/case/ceo.jpg" />
           </Link>
         </div>
         <div className="column is-4">
           <Link to="/case-study">
-            <StudyCard image="/images/case/factory.jpg" />
+            <StudyCard imageTag="/images/case/factory.jpg" />
           </Link>
         </div>
         <div className="column is-4">
           <Link to="/case-study">
-            <StudyCard image="/images/case/user.jpg" />
+            <StudyCard imageTag="/images/case/user.jpg" />
           </Link>
         </div>
         <div className="column is-4">
           <Link to="/case-study">
-            <StudyCard image="/images/case/truck.jpg" />
+            <StudyCard imageTag="/images/case/truck.jpg" />
           </Link>
         </div>
       </div>
