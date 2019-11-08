@@ -49,7 +49,7 @@ class FaqItem extends React.Component {
         <div className="columns">
           <div className="column is-10">
             <TitleWrapper>
-              <h1 className="has-text-weight-bold">{questions}</h1>
+              <h1>{questions}</h1>
             </TitleWrapper>
           </div>
           <div className="column">
