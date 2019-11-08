@@ -13,7 +13,7 @@ const Conatiner = styled.div`
     color: ${theme.primaryColor};
     font-weight: 400;
   }
-  .video {
+  video {
     width: 61.3125rem;
     height: 34.875rem;
     @media only screen and (max-width: 768px) {
@@ -29,7 +29,7 @@ class Video extends React.Component {
       <Conatiner id="video" className="container">
         <div className="has-text-centered">
           <h1 className="title is-1 is-capitalized">{home.videoTitle}</h1>
-          <iframe
+          {/* <iframe
             width="560"
             height="415"
             className="video"
@@ -37,7 +37,10 @@ class Video extends React.Component {
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          />
+          /> */}
+          <video width="560" height="415" controls>
+            <source src={firstVideo} type="video/mp4" />
+          </video>
         </div>
       </Conatiner>
     );
