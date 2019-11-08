@@ -12,7 +12,7 @@ const Container = styled.section`
 const CaseStudyHero = () => (
   <Container className="section">
     <div className="container">
-      <BreadCrumbs underlineTezt="Case" simpleText=" Studies" />
+      <BreadCrumbs undelineText="Case" simpleText=" Studies" />
     </div>
   </Container>
 );

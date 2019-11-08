@@ -34,7 +34,7 @@ const NextBlog = () => (
       <div className="columns">
         <div className="column first">
           <h1 className="title is-5">SHARE THIS POST</h1>
-          <p className="title is-6">Facebbok</p>
+          <p className="title is-6">Facebook</p>
           <p className="title is-6">Twitter</p>
         </div>
         <div className="column second">
