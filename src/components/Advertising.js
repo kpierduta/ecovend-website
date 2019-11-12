@@ -30,48 +30,46 @@ const Conatiner = styled.div`
   }
 `;
 
-const Advertisment = () => (
-  <Conatiner id="advertising">
-    <section className="section">
-      <div className="container">
-        <div className="columns is-centered">
-          <div className="column is-two-thirds has-text-centered has-text-white top">
-            <h1 className="has-text-weight-medium">
-              MARKETING & BRANDING REVENUE
-            </h1>
-            <p className="text">
-              Our Ecovend RVM range come with their own integrated advertising
-              space with up to 55 inch audio-visual screens and light box panels
-              on both sides to generate instant revenue from branding and
-              advertising. Our audio visual enabled range are supplied with
-              emotive videos to help you engage with users. We also provide
-              marketing packs to help you optimise your advertising space.
-            </p>
+class Advertisment extends React.Component {
+  render() {
+    const { home } = this.props;
+    return (
+      <Conatiner id="advertising">
+        <section className="section">
+          <div className="container">
+            <div className="columns is-centered">
+              <div className="column is-two-thirds has-text-centered has-text-white top">
+                <h1 className="has-text-weight-medium">
+                  {home.marketingTitle}
+                </h1>
+                <p className="text">{home.marketingPara.marketingPara}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div className="columns is-multiline photos is-gapless">
+          <div className="column is-4 is-marginless">
+            <img src="/images/advertisment-one.jpg" alt="#" />
+          </div>
+          <div className="column is-4">
+            <img src="/images/advertisment-two.jpg" alt="#" />
+          </div>
+          <div className="column is-4">
+            <img src="/images/advertisment-three.jpg" alt="#" />
+          </div>
+          <div className="column is-4">
+            <img src="/images/advertisment-four.jpg" alt="#" />
+          </div>
+          <div className="column is-4">
+            <img src="/images/advertisment-five.jpg" alt="#" />
+          </div>
+          <div className="column is-4">
+            <img src="/images/advertisment-six.jpg" alt="#" />
           </div>
         </div>
-      </div>
-    </section>
-    <div className="columns is-multiline photos is-gapless">
-      <div className="column is-4 is-marginless">
-        <img src="/images/advertisment-one.jpg" alt="#" />
-      </div>
-      <div className="column is-4">
-        <img src="/images/advertisment-two.jpg" alt="#" />
-      </div>
-      <div className="column is-4">
-        <img src="/images/advertisment-three.jpg" alt="#" />
-      </div>
-      <div className="column is-4">
-        <img src="/images/advertisment-four.jpg" alt="#" />
-      </div>
-      <div className="column is-4">
-        <img src="/images/advertisment-five.jpg" alt="#" />
-      </div>
-      <div className="column is-4">
-        <img src="/images/advertisment-six.jpg" alt="#" />
-      </div>
-    </div>
-  </Conatiner>
-);
+      </Conatiner>
+    );
+  }
+}
 
 export default Advertisment;

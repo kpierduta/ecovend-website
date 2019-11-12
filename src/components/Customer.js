@@ -17,6 +17,9 @@ const Conatiner = styled.section`
   }
   .section {
     padding: 10rem 5rem 3rem 5.5rem;
+    @media only screen and (max-width: 600px) {
+      padding: 3rem 1.5rem;
+    }
   }
   .Heading {
     font-size: ${theme.fontSizeMedium};
@@ -40,56 +43,39 @@ const Conatiner = styled.section`
     margin-top: 2rem;
   }
   .column :last-child {
-    background-image: url('/images/customer.jpg');
+    background-image: url(${props => props.image});
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
 `;
 
-const Customer = () => (
-  <Conatiner>
-    <div>
-      <div className="columns">
-        <div className="column">
-          <section className="section">
-            <div className="container">
-              <h1 className="Heading">
-                REVERSE VENDING IS REALLY MAKING A DIFFERENCE
-              </h1>
-              <p className="text">
-                Reverse vending has an impressive proven track record with
-                customer take up. Here's why reverse vending is making the world
-                think and act greener.
-              </p>
-              <div className="content">
-                <ul type="*">
-                  <li>
-                    With conveniently located RV machines it’s easy way to
-                    recycle ‘on the go.’
-                  </li>
-                  <li>
-                    It’s fast and clean which motivates repeated use in
-                    combination with the instant reward.
-                  </li>
-                  <li>
-                    Not only are customers instantly rewarded for their efforts
-                    with a voucher, payment or charity donation they’ll also
-                    benefit from the satisfaction of knowing their bottle will
-                    go on to have many lives.
-                  </li>
-                  <li>
-                    With less plastic on our streets everyone benefits from a
-                    cleaner environment.
-                  </li>
-                </ul>
+class Customer extends React.Component {
+  render() {
+    const { home } = this.props;
+    return (
+      <Conatiner image={home.prImage.file.url}>
+        <div className="columns">
+          <div className="column">
+            <section className="section">
+              <div className="container">
+                <h1 className="Heading">{home.differenceTitle}</h1>
+                <p className="text">{home.differencePara}</p>
+                <div className="content">
+                  <ul type="*">
+                    <li>{home.firstPoint}</li>
+                    <li>{home.secondPoint}</li>
+                    <li>{home.thirdPoint}</li>
+                    <li>{home.fourthPoint}</li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
+          <div className="column" />
         </div>
-        <div className="column" />
-      </div>
-    </div>
-  </Conatiner>
-);
+      </Conatiner>
+    );
+  }
+}
 
 export default Customer;

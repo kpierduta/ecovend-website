@@ -107,6 +107,21 @@ export const indexQuery = graphql`
         }
       }
       iconFiveText
+      prImage {
+        file {
+          url
+        }
+      }
+      differenceTitle
+      differencePara
+      firstPoint
+      secondPoint
+      thirdPoint
+      fourthPoint
+      marketingTitle
+      marketingPara {
+        marketingPara
+      }
     }
   }
 `;
@@ -132,8 +147,8 @@ export default class IndexPage extends React.Component {
                 <DrsInfo home={home} />
                 <Steps home={home} />
                 <Choose home={home} />
-                <Customer />
-                <Advertisment />
+                <Customer home={home} />
+                <Advertisment home={home} />
                 <ContactWrapper />
               </React.Fragment>
             );
