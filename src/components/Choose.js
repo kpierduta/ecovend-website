@@ -23,7 +23,7 @@ class Choose extends React.Component {
   render() {
     const { home, choose } = this.props;
     return (
-      <Conatiner id="choose">
+      <Conatiner>
         <section className="section">
           <div className="container">
             <div className="columns is-centered">
