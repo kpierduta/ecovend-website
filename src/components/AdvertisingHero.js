@@ -18,28 +18,27 @@ const Container = styled.section`
   }
 `;
 
-const Advertising = () => (
-  <Container className="section">
-    <div className="container">
-      <BreadCrumbs undelineText="Ad" simpleText="vertising" />
-      <section className="hero">
-        <div className="hero-body">
-          <div className="container">
-            <h1 className="title">Enjoy an additional revenue stream</h1>
-            <h2 className="subtitle">
-              Our Ecovend RVMs come with their own integrated advertising space
-              with up to 55 inch audio-visual screens and light box panels on
-              both sides of the machine to generate instant revenue from
-              branding and advertising. As a leaseholder or owner of one of our
-              RVM’s you’ll receive media training and an advertising starter
-              pack to help you optimise and promote your advertising space and
-              get you on your way to enjoying a new source of income.
-            </h2>
-          </div>
+class Advertising extends React.Component {
+  render() {
+    const { adv } = this.props;
+    return (
+      <Container className="section">
+        <div className="container">
+          <BreadCrumbs undelineText="Ad" simpleText="vertising" />
+          <section className="hero">
+            <div className="hero-body">
+              <div className="container">
+                <h1 className="title">{adv.title}</h1>
+                <h2 className="subtitle">
+                  {adv.introParagrpah.introParagrpah}
+                </h2>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
-    </div>
-  </Container>
-);
+      </Container>
+    );
+  }
+}
 
 export default Advertising;

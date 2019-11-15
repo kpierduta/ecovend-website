@@ -21,7 +21,7 @@ const ImageWrapper = styled.img`
 
 class Choose extends React.Component {
   render() {
-    const { home } = this.props;
+    const { home, choose } = this.props;
     return (
       <Conatiner id="choose">
         <section className="section">
@@ -32,42 +32,17 @@ class Choose extends React.Component {
                   {home.chooseTitle}
                 </h1>
                 <div className="columns">
-                  <div className="column  has-text-centered">
-                    <img src={home.iconOne.file.url} alt="Save Earth" />
-                    <h1 className="subtitle is-5 has-text-white has-text-weight-medium">
-                      {home.iconOneText}
-                    </h1>
-                  </div>
-                  <div className="column has-text-centered">
-                    <ImageWrapper
-                      src={home.iconTwo.file.url}
-                      alt="Support Us"
-                    />
-                    <h1 className="subtitle is-5 has-text-white has-text-weight-medium ">
-                      {home.iconTwoText}
-                    </h1>
-                  </div>
-                  <div className="column has-text-centered">
-                    <img src={home.iconThree.file.url} alt="Attract Customer" />
-                    <h1 className="subtitle is-5 has-text-white has-text-weight-medium ">
-                      {home.iconThreeText}
-                    </h1>
-                  </div>
-                  <div className="column has-text-centered">
-                    <ImageWrapper
-                      src={home.iconFour.file.url}
-                      alt="Business Sense"
-                    />
-                    <h1 className="subtitle is-5 has-text-white has-text-weight-medium ">
-                      {home.iconFourText}
-                    </h1>
-                  </div>
-                  <div className="column has-text-centered">
-                    <ImageWrapper src={home.iconFive.file.url} alt="Revenue" />
-                    <h1 className="subtitle is-5 has-text-white has-text-weight-medium ">
-                      {home.iconFiveText}
-                    </h1>
-                  </div>
+                  {choose.map(item => (
+                    <div className="column  has-text-centered">
+                      <ImageWrapper
+                        src={item.node.image.file.url}
+                        alt="Save Earth"
+                      />
+                      <h1 className="subtitle is-5 has-text-white has-text-weight-medium">
+                        {item.node.title}
+                      </h1>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

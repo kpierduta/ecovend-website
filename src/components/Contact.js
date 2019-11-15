@@ -1,4 +1,5 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import theme from '../utils/theme';
@@ -67,41 +68,55 @@ const Container = styled.section`
   }
 `;
 
-const Contact = () => (
-  <Container className="section">
-    <div className="container">
-      <div className="columns">
-        <div className="column has-text-centered">
-          <h1 className="subtitle is-3">Our Address</h1>
-          <h4 className="subtitle is-6 text">
-            <span className="icon">
-              <i className="fas fa-map-marker-alt" />
-            </span>
-            ECO House, Lea Road, Waltham Abbey, Hertfordshire, EN9 1AS
-          </h4>
-          <h4 className="subtitle is-6 text">
-            <span className="icon">
-              <i className="fas fa-envelope" />
-            </span>
-            info@eco-vend.co.uk
-          </h4>
-          <h4 className="subtitle is-6 text">
-            <span className="icon">
-              <i className="fas fa-phone" />
-            </span>
-            08700 777 555
-          </h4>
-        </div>
-        <div className="column is-7">
-          <div className="field is-horizontal">
-            <div className="field-body">
-              <ContactForm />
+const Contact = () => {
+  const { contentfulContact } = useStaticQuery(
+    graphql`
+      query {
+        contentfulContact {
+          title
+          location
+          email
+          mobileNumber
+        }
+      }
+    `,
+  );
+  return (
+    <Container className="section">
+      <div className="container">
+        <div className="columns">
+          <div className="column has-text-centered">
+            <h1 className="subtitle is-3">{contentfulContact.title}</h1>
+            <h4 className="subtitle is-6 text">
+              <span className="icon">
+                <i className="fas fa-map-marker-alt" />
+              </span>
+              {contentfulContact.location}
+            </h4>
+            <h4 className="subtitle is-6 text">
+              <span className="icon">
+                <i className="fas fa-envelope" />
+              </span>
+              {contentfulContact.email}
+            </h4>
+            <h4 className="subtitle is-6 text">
+              <span className="icon">
+                <i className="fas fa-phone" />
+              </span>
+              {contentfulContact.mobileNumber}
+            </h4>
+          </div>
+          <div className="column is-7">
+            <div className="field is-horizontal">
+              <div className="field-body">
+                <ContactForm />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </Container>
-);
+    </Container>
+  );
+};
 
 export default Contact;

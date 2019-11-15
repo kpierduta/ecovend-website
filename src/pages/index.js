@@ -123,6 +123,19 @@ export const indexQuery = graphql`
         marketingPara
       }
     }
+    allContentfulHomepageChoose(sort: { fields: listingOrder }) {
+      edges {
+        node {
+          title
+          image {
+            title
+            file {
+              url
+            }
+          }
+        }
+      }
+    }
   }
 `;
 
@@ -138,7 +151,11 @@ export default class IndexPage extends React.Component {
         <StaticQuery
           query={indexQuery}
           render={data => {
-            const { contentfulHomepage: home } = data;
+            const {
+              contentfulHomepage: home,
+              allContentfulHomepageChoose: choose,
+              contentfulContact: contact,
+            } = data;
             return (
               <React.Fragment>
                 <Hero home={home} />
@@ -146,10 +163,10 @@ export default class IndexPage extends React.Component {
                 <Video home={home} />
                 <DrsInfo home={home} />
                 <Steps home={home} />
-                <Choose home={home} />
+                <Choose home={home} choose={choose.edges} />
                 <Customer home={home} />
                 <Advertisment home={home} />
-                <ContactWrapper />
+                <ContactWrapper contact={contact} />
               </React.Fragment>
             );
           }}

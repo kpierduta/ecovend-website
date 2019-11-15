@@ -3,8 +3,6 @@ import styled from 'styled-components';
 
 import theme from '../utils/theme';
 
-import img from '../../static/images/hero.jpg';
-
 const Container = styled.section`
   font-family: ${theme.primaryFontFamily};
   .container {
@@ -45,52 +43,62 @@ const Container = styled.section`
   }
 `;
 
-const Rvm = () => (
-  <Container className="section">
-    <div className="container">
-      <div className="columns">
-        <div className="column">
-          <h1 className="title is-3 is-capitalized text has-text-weight-light">
-            large intergral
+class Rvm extends React.Component {
+  render() {
+    const { adv } = this.props;
+    return (
+      <Container className="section">
+        <div className="container">
+          <div className="columns">
+            <div className="column">
+              <h1 className="title is-3 is-capitalized text has-text-weight-light">
+                large intergral
+              </h1>
+              <h1 className="title is-3 is-capitalized has-text-weight-light">
+                audio-video screen and
+              </h1>
+              <h1 className="title is-3 is-capitalized has-text-weight-light">
+                light box panels for
+              </h1>
+              <h1 className="title is-3 is-capitalized has-text-weight-medium">
+                instanr revenue from
+              </h1>
+              <h1 className="title is-3 is-capitalized has-text-weight-medium">
+                branding and
+              </h1>
+              <h1 className="title is-3 is-capitalized has-text-weight-medium">
+                advertising
+              </h1>
+            </div>
+            <div className="column has-text-right is-hidden-mobile">
+              <img
+                className="has-text-right"
+                src={adv.heroImage.file.url}
+                alt="vending machine"
+              />
+            </div>
+            <div className="column has-text-centered is-hidden-tablet">
+              <img
+                className="has-text-centered"
+                src={adv.heroImage.file.url}
+                alt="vending machine"
+              />
+            </div>
+          </div>
+          <p className="is-size-6 has-text-centered">{adv.videoTitle}</p>
+          <h1 className="is-size-5 has-text-weight-semibold has-text-centered">
+            Click to view the video
           </h1>
-          <h1 className="title is-3 is-capitalized has-text-weight-light">
-            audio-video screen and
-          </h1>
-          <h1 className="title is-3 is-capitalized has-text-weight-light">
-            light box panels for
-          </h1>
-          <h1 className="title is-3 is-capitalized has-text-weight-medium">
-            instanr revenue from
-          </h1>
-          <h1 className="title is-3 is-capitalized has-text-weight-medium">
-            branding and
-          </h1>
-          <h1 className="title is-3 is-capitalized has-text-weight-medium">
-            advertising
-          </h1>
+          <div className="has-text-centered">
+            <video controls poster={adv.videoPoster.file.url}>
+              <source src="/videos/RVM Animation Video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
-        <div className="column has-text-right is-hidden-mobile">
-          <img className="has-text-right" src={img} alt="vending machine" />
-        </div>
-        <div className="column has-text-centered is-hidden-tablet">
-          <img className="has-text-centered" src={img} alt="vending machine" />
-        </div>
-      </div>
-      <p className="is-size-6 has-text-centered">
-        All of our audio-visual enabled RVMs are supplied free of charge emotive
-        videos pre-installed to help you engage with users.{' '}
-      </p>
-      <h1 className="is-size-5 has-text-weight-semibold has-text-centered">
-        Click to view the video
-      </h1>
-      <div className="has-text-centered">
-        <video controls poster="/images/poster.jpg">
-          <source src="/videos/RVM Animation Video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-  </Container>
-);
+      </Container>
+    );
+  }
+}
 
 export default Rvm;
