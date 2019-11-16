@@ -52,17 +52,13 @@ const BlogCard = props => (
                 <div className="media-content">
                   <div className="content">
                     <p>
-                      <span className="text">Business</span> / September 28,
-                      2018
+                      <span className="text">{props.category}</span> /{' '}
+                      {props.date}
                     </p>
                     <h1 className="title is-5 has-text-weight-semibold">
-                      Updates regarding Eco-vend
+                      {props.title}
                     </h1>
-                    <p>
-                      Nunc tristique tellus quam, id ultrices urna rhoncus non.
-                      Cras rhoncus interdum arcu eget congue. Curabitur non
-                      justo velit....
-                    </p>
+                    <p>{props.para}</p>
                     <LinkStyled to="/blog" className="button is-rounded">
                       Learn More
                       <span className="icon">
