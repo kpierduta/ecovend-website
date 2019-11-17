@@ -11,6 +11,7 @@ export const newsQuery = graphql`
     allContentfulNewsPage(sort: { fields: date, order: ASC }) {
       edges {
         node {
+          slug
           order
           newsCategory
           date

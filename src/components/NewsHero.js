@@ -76,6 +76,7 @@ class NewsConetnt extends React.Component {
                   image={item.node.image.file.url}
                   title={item.node.newsTitle}
                   para={item.node.shortDescription.internal.content}
+                  to={`/blog/${item.node.slug}`}
                 />
               ))}
             </div>
