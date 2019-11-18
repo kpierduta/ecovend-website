@@ -26,14 +26,14 @@ const Container = styled.section`
 
 class BlogContent extends React.Component {
   render() {
-    const { page } = this.props;
+    const { news } = this.props;
     return (
       <Container className="section">
         <div className="container">
           <BreadCrumbs undelineText="BL" simpleText="OG" />
           <div className="columns is-multiline">
             <div className="column is-8">
-              <h1 className="title is-3">UPDATES REGARDING ECOVEND</h1>
+              <h1 className="title is-3">{news.slug}</h1>
               <h1 className="subtitle is-4">
                 Accorss 60 sites, over 50 water streams, 15000 tones of waste
               </h1>
@@ -54,7 +54,7 @@ class BlogContent extends React.Component {
               </p>
             </div>
             <div className="column is-4">
-              <img src="/images/news/one.jpg" alt="news" />
+              <img src={news.image.file.url} alt="news" />
             </div>
             <div className="column is-12">
               <p className="para">
