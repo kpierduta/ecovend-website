@@ -12,8 +12,8 @@ export default class OurRange extends React.Component {
     return (
       <Layout>
         <Seo
-          title="Contact"
-          description="Contact us today!"
+          title="Products"
+          description="Our Products"
           url={`${config.siteUrl}`}
         />
         <RangeHero />

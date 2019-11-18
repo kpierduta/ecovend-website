@@ -1,10 +1,10 @@
 const path = require('path');
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  return graphql(`
-    {
+  const result = await graphql(`
+    query {
       allContentfulNewsPage {
         edges {
           node {
@@ -32,26 +32,25 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(async result => {
-    if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString())); // eslint-disable-line
-      return Promise.reject(result.errors);
-    }
+  `);
 
-    // console.log('result', result);
-    result.data.allContentfulNewsPage.edges.forEach(({ node }) => {
-      // console.log('node', node);
-      const pagePath = `blog/${node.slug}`;
-      createPage({
-        path: pagePath,
-        component: path.resolve(`src/pages/blog.js`),
-        // additional data can be passed via context
-        context: {
-          slug: node.slug,
-        },
-      });
+  if (result.errors) {
+    return reporter.panicOnBuild('🚨 ERROR: Loading "createPages" query');
+  }
+
+  // console.log('result', result);
+  result.data.allContentfulNewsPage.edges.forEach(({ node }) => {
+    // console.log('node', node);
+    const pagePath = `blog/${node.slug}`;
+    createPage({
+      path: pagePath,
+      component: path.resolve(`src/pages/blog.js`),
+      // additional data can be passed via context
+      context: {
+        slug: node.slug,
+      },
     });
-
-    return null;
   });
+
+  return true;
 };

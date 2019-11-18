@@ -8,7 +8,7 @@ import BlogContent from '../components/BlogContent';
 import NextBlog from '../components/NextBlog';
 
 export const pageQuery = graphql`
-  query PageByPath($slug: String!) {
+  query PageByPath($slug: String) {
     contentfulNewsPage(slug: { eq: $slug }) {
       slug
       newsTitle
@@ -33,11 +33,7 @@ export default class page extends React.Component {
     } = this.props;
     return (
       <Layout>
-        <Seo
-          title="Contact"
-          description="Contact us today!"
-          url={`${config.siteUrl}`}
-        />
+        <Seo title="Blog" description="Blog" url={`${config.siteUrl}`} />
         <BlogContent news={news} />
         <NextBlog />
       </Layout>

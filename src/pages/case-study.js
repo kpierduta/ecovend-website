@@ -12,11 +12,7 @@ export default class Case extends React.Component {
   render() {
     return (
       <Layout>
-        <Seo
-          title="Contact"
-          description="Contact us today!"
-          url={`${config.siteUrl}`}
-        />
+        <Seo title="Case" description="Case study" url={`${config.siteUrl}`} />
         <CaseStudyHero />
         <CaseContent />
         <Result />

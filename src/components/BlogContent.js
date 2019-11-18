@@ -33,7 +33,7 @@ class BlogContent extends React.Component {
           <BreadCrumbs undelineText="BL" simpleText="OG" />
           <div className="columns is-multiline">
             <div className="column is-8">
-              <h1 className="title is-3">{news.slug}</h1>
+              <h1 className="title is-3">{news.newsTitle}</h1>
               <h1 className="subtitle is-4">
                 Accorss 60 sites, over 50 water streams, 15000 tones of waste
               </h1>

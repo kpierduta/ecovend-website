@@ -42,8 +42,8 @@ export default class NewsPage extends React.Component {
     return (
       <Layout>
         <Seo
-          title="Contact"
-          description="Contact us today!"
+          title="News"
+          description="News about Eco-vend"
           url={`${config.siteUrl}`}
         />{' '}
         <StaticQuery
