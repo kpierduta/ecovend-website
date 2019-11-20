@@ -33,50 +33,20 @@ class BlogContent extends React.Component {
           <BreadCrumbs undelineText="BL" simpleText="OG" />
           <div className="columns is-multiline">
             <div className="column is-8">
-              <h1 className="title is-3">{news.newsTitle}</h1>
+              <h1 className="title is-3 is-spaced">{news.newsTitle}</h1>
               <h1 className="subtitle is-4">
-                Accorss 60 sites, over 50 water streams, 15000 tones of waste
+                {news.shortDescription.internal.content}
               </h1>
-              <p className="para">
-                The Brakes Group have always been committed to reducing the
-                environmental impact its business has on the communities they
-                serve, with a three pillar approach to CSER in place to ensure
-                that not only to Brakes lead in food service but in
-                environmental affairs also.
-              </p>
-              <p className="para">
-                ACM became Brakes’ preferred waste and recycling service
-                provider in 2006. Now producing circa 15,000 tonnes of waste per
-                year across multiple sites, this significant environmental goal
-                would only be achieved by working in close partnership with both
-                the Group and individual sites to devise innovative and
-                environmentally focused initiatives.
-              </p>
+              <p className="para">{news.description.internal.content}</p>
             </div>
             <div className="column is-4">
               <img src={news.image.file.url} alt="news" />
             </div>
             <div className="column is-12">
-              <p className="para">
-                By obtaining maximum rebates for materials such cardboard,
-                polystyrene & plastics, diverting food waste to AD facilities
-                and further reducing the amount of waste going to landfill and
-                energy recovery ACM have been able to significantly reduce
-                costs. The utilization of ACM’s compaction technology, haulage
-                costs have been significantly reduced.
-              </p>
-              <p className="para">
-                Not only have ACM helped Brakes on the road to zero % to
-                landfill, we have worked hard to ensure the most sustainable end
-                point disposal methods are being utilized. Through the use of
-                innovative technological advances and the proper segregation of
-                all waste materials, Brakes have been able to achieve radical
-                savings through waste minimization and recycling initiatives,
-                benefiting Brakes in achieving ISO 14001 across all UK sites.
-              </p>
+              <p className="para">{news.description.internal.content}</p>
               <div className="author">
                 <p className="has-text-weight-bold">Author: EcoVend</p>
-                <p>Published: 01/12/2019</p>
+                <p>Published: {news.date}</p>
               </div>
             </div>
           </div>
