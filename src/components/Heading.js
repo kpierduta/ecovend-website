@@ -14,7 +14,6 @@ const HeadingStyled = styled.div`
   }
   .tabs a {
     border-bottom: transparent;
-    font-size: ${theme.fontSize};
     color: ${theme.primaryColor};
   }
 `;
@@ -25,7 +24,7 @@ export default class Heading extends React.Component {
     return (
       <HeadingStyled>
         <div className="container">
-          <div className="tabs">
+          <div className="tabs is-size-6">
             <ul>
               <li>
                 <a href="mailto:">{heading.email}</a>

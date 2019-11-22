@@ -174,7 +174,9 @@ export default class IndexPage extends React.Component {
                 <DrsInfo home={home} />
                 <Steps home={home} />
                 <Choose home={home} choose={choose.edges} />
+                {/** 
                 <Customer home={home} />
+                */}
                 <Advertisment home={home} />
                 <ContactWrapper contact={contact} />
               </React.Fragment>

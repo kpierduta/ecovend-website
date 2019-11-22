@@ -74,7 +74,8 @@ export default class Header extends React.Component {
               className={view ? 'navbar-burger is-active' : 'navbar-burger '}
               aria-label="menu"
               aria-expanded="false"
-              onClick={() => this.Menu()}>
+              onClick={() => this.Menu()}
+            >
               <span aria-hidden="true" />
               <span aria-hidden="true" />
               <span aria-hidden="true" />
@@ -82,27 +83,28 @@ export default class Header extends React.Component {
           </div>
           <div
             id="navbarBasicExample"
-            className={view ? 'navbar-menu is-active' : 'navbar-menu '}>
+            className={view ? 'navbar-menu is-active' : 'navbar-menu '}
+          >
             <div className="navbar-end">
-              <LinkStyled to="/" className="navbar-item">
+              <LinkStyled to="/" className="navbar-item is-size-6">
                 Home
               </LinkStyled>
-              <LinkStyled to="/advertising" className="navbar-item ">
+              <LinkStyled to="/advertising" className="navbar-item is-size-6">
                 Advertising
               </LinkStyled>
-              <LinkStyled to="/our-range" className="navbar-item">
+              <LinkStyled to="/our-range" className="navbar-item is-size-6">
                 Our Range
               </LinkStyled>
-              <LinkStyled to="/news" className="navbar-item">
+              <LinkStyled to="/news" className="navbar-item is-size-6">
                 News
               </LinkStyled>
-              <LinkStyled to="/case" className="navbar-item">
+              <LinkStyled to="/case" className="navbar-item is-size-6">
                 Case Studies
               </LinkStyled>
-              <LinkStyled to="/faq" className="navbar-item">
+              <LinkStyled to="/faq" className="navbar-item is-size-6">
                 FAQ
               </LinkStyled>
-              <LinkStyled to="/contact" className="navbar-item ">
+              <LinkStyled to="/contact" className="navbar-item is-size-6">
                 Contact
               </LinkStyled>
             </div>

@@ -81,6 +81,7 @@ class NewsConetnt extends React.Component {
               ))}
             </div>
             <div className="column is-4">
+              {/*
               <h1 className="title is-5">Search</h1>
               <div className="field has-addons">
                 <div className="control is-expanded">
@@ -94,16 +95,9 @@ class NewsConetnt extends React.Component {
                   </button>
                 </div>
               </div>
+            */}
               <div className="posts">
-                <h1 className="title is-5">Recent Posts</h1>
-                <NewsPosts image="/images/news/four.jpg" />
-                <NewsPosts image="/images/news/three.jpg" />
-              </div>
-              <div className="posts">
-                <HelpCard />
-              </div>
-              <div className="posts">
-                <h1 className="title is-5">Recent Posts</h1>
+                <h5 className="title is-5">Recent Posts</h5>
                 <aside className="menu">
                   <ul className="menu-list">
                     <li>
@@ -126,7 +120,16 @@ class NewsConetnt extends React.Component {
                 </aside>
               </div>
               <div className="posts">
-                <h1 className="title is-5">Our Photostream</h1>
+                <h5 className="title is-5">Recent Posts</h5>
+                <NewsPosts image="/images/news/four.jpg" />
+                <NewsPosts image="/images/news/three.jpg" />
+              </div>
+              <div className="posts">
+                <HelpCard />
+              </div>
+              {/*
+              <div className="posts">
+                <h5 className="title is-5">Our Photostream</h5>
                 <figure className="image is-64x64 is-inline-block">
                   <img src="/images/stream/first.jpg" alt="" />
                 </figure>
@@ -152,6 +155,7 @@ class NewsConetnt extends React.Component {
                   <img src="/images/stream/nine.jpg" alt="" />
                 </figure>
               </div>
+              */}
             </div>
           </div>
           <nav className="pagination" role="navigation" aria-label="pagination">

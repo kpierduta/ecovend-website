@@ -24,7 +24,6 @@ const Container = styled.div`
   .para {
     padding: 1rem 0rem 8rem 0rem;
     color: ${theme.primaryColor};
-    font-weight: 500;
   }
   .rev {
     @media only screen and (max-width: 768px) {
@@ -43,10 +42,10 @@ class Steps extends React.Component {
           <div className="column is-three-quarters">
             <div className="container">
               <div className="has-text-centered">
-                <h1 className="title is-2 heading">{home.stepTitle}</h1>
-                <p className="para">
+                <h2 className="title is-2 heading">{home.stepTitle}</h2>
+                <h5 className="subtitle is-5 para">
                   {home.stepsSectionParagraph.internal.content}
-                </p>
+                </h5>
               </div>
             </div>
             <div className="columns is-centered is-variable is-6">

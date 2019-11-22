@@ -86,25 +86,27 @@ const Contact = () => {
       <div className="container">
         <div className="columns">
           <div className="column has-text-centered">
-            <h1 className="subtitle is-3">{contentfulContact.title}</h1>
-            <h4 className="subtitle is-6 text">
+            <h2 className="title is-2 is-spaced has-text-weight-medium">
+              {contentfulContact.title}
+            </h2>
+            <h6 className="subtitle is-6 text">
               <span className="icon">
                 <i className="fas fa-map-marker-alt" />
               </span>
               {contentfulContact.location}
-            </h4>
-            <h4 className="subtitle is-6 text">
+            </h6>
+            <h6 className="subtitle is-6 text">
               <span className="icon">
                 <i className="fas fa-envelope" />
               </span>
               {contentfulContact.email}
-            </h4>
-            <h4 className="subtitle is-6 text">
+            </h6>
+            <h6 className="subtitle is-6 text">
               <span className="icon">
                 <i className="fas fa-phone" />
               </span>
               {contentfulContact.mobileNumber}
-            </h4>
+            </h6>
           </div>
           <div className="column is-7">
             <div className="field is-horizontal">

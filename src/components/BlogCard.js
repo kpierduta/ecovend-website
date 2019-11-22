@@ -55,9 +55,9 @@ const BlogCard = props => (
                       <span className="text">{props.category}</span> /{' '}
                       {props.date}
                     </p>
-                    <h1 className="title is-5 has-text-weight-semibold">
+                    <h5 className="title is-5 has-text-weight-semibold">
                       {props.title}
-                    </h1>
+                    </h5>
                     <p>{props.para}</p>
                     <LinkStyled to={props.to} className="button is-rounded">
                       Learn More

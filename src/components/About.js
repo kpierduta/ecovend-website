@@ -7,7 +7,6 @@ import theme from '../utils/theme';
 const Container = styled.div`
   margin-top: 1rem;
   font-family: ${theme.primaryFontFamily};
-  font-size: ${theme.fontSize} !important;
   background-color: #aabcbf;
   padding-bottom: 2rem;
   .columns {
@@ -15,13 +14,7 @@ const Container = styled.div`
     margin-right: 0rem !important;
   }
   .subtitle {
-    margin: 3rem;
-    font-weight: 500;
     line-height: 1.75;
-  }
-  .subtitle.is-5 {
-    font-size: ${theme.fontSizeMedium} !important;
-    font-weight: 500;
   }
   .text {
     font-weight: 400;
@@ -38,7 +31,6 @@ const LinkStyled = styled(Link)`
   font-family: ${theme.primaryFontFamily};
   background: transparent;
   border: none;
-  font-size: ${theme.fontSize};
 `;
 
 class About extends React.Component {
@@ -47,18 +39,18 @@ class About extends React.Component {
     return (
       <Container className="container">
         <section className="section has-text-centered">
-          <h2 className="subtitle is-5 has-text-white is-capitalized">
+          <h2 className="title is-3 has-text-weight-medium has-text-white is-capitalized">
             {home.greyBlockTitle}
           </h2>
           <div className="columns is-centered">
             <div className="column">
-              <p className="has-text-white text">
+              <h6 className="subtitle is-6 has-text-white text">
                 {home.greyBlockParagraph.internal.content}
-              </p>
-              <p className="has-text-white text sub-text">
+              </h6>
+              <h6 className="subtitle is-6 has-text-white text sub-text">
                 {home.greyBlockSecondPara.internal.content}
-              </p>
-              <LinkStyled to="/contact" className="has-text-white">
+              </h6>
+              <LinkStyled to="/contact" className="title is-5 has-text-white">
                 Contact
               </LinkStyled>
             </div>

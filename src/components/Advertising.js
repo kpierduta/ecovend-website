@@ -17,8 +17,8 @@ const Conatiner = styled.div`
     margin: 4rem;
   }
   .text {
-    margin-top: 3rem;
-    line-height: 2;
+    margin-top: 3rem !important;
+    line-height: 2 !important;
   }
   .photos {
     margin-top: 3.5rem !important;
@@ -38,11 +38,13 @@ class Advertisment extends React.Component {
         <section className="section">
           <div className="container">
             <div className="columns is-centered">
-              <div className="column is-two-thirds has-text-centered has-text-white top">
-                <h1 className="has-text-weight-medium">
+              <div className="column is-three-quarters has-text-centered has-text-white top">
+                <h1 className="title is-1 has-text-white has-text-weight-medium">
                   {home.marketingTitle}
                 </h1>
-                <p className="text">{home.marketingPara.marketingPara}</p>
+                <h5 className="subtitle is-6 has-text-white text">
+                  {home.marketingPara.marketingPara}
+                </h5>
               </div>
             </div>
           </div>

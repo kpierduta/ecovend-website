@@ -33,10 +33,10 @@ class BlogContent extends React.Component {
           <BreadCrumbs undelineText="BL" simpleText="OG" />
           <div className="columns is-multiline">
             <div className="column is-8">
-              <h1 className="title is-3 is-spaced">{news.newsTitle}</h1>
-              <h1 className="subtitle is-4">
+              <h3 className="title is-3 is-spaced">{news.newsTitle}</h3>
+              <h4 className="subtitle is-4">
                 {news.shortDescription.internal.content}
-              </h1>
+              </h4>
               <p className="para">{news.description.internal.content}</p>
             </div>
             <div className="column is-4">

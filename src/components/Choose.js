@@ -38,9 +38,9 @@ class Choose extends React.Component {
                         src={item.node.image.file.url}
                         alt="Save Earth"
                       />
-                      <h1 className="subtitle is-5 has-text-white has-text-weight-medium">
+                      <h5 className="subtitle is-5 has-text-white has-text-weight-medium">
                         {item.node.title}
-                      </h1>
+                      </h5>
                     </div>
                   ))}
                 </div>

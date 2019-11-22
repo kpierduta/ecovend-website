@@ -14,22 +14,19 @@ const Conatiner = styled.div`
   }
   .text {
     color: ${theme.primaryColor};
-    margin-top: 10rem;
+    margin-top: 7rem;
     font-weight: 500;
-    font-size: ${theme.fontSizeMedium};
     @media only screen and (max-width: 768px) {
       margin-top: 5rem;
     }
   }
-  .sub-text {
-    line-height: 1.75rem;
-    font-size: ${theme.fontSize};
-  }
   .first {
-    margin-top: 3.95rem;
+    color: ${theme.primaryColor};
+    margin-top: 3.95rem !important;
   }
   .second {
-    margin-top: 2rem;
+    color: ${theme.primaryColor};
+    margin-top: 2rem !important;
   }
   video {
     width: 61.3125rem;
@@ -44,19 +41,19 @@ class DrsInfo extends React.Component {
   render() {
     const { home } = this.props;
     return (
-      <Conatiner id="drs" className="container">
+      <Conatiner className="container">
         <div className="columns  is-centered is-multiline has-text-centered">
-          <div className="column is-two-thirds">
-            <h4 className="subtitle is-4 is-capitalized text">
+          <div className="column is-8">
+            <h4 className="title is-4 is-capitalized text">
               {home.orangeTitle}
             </h4>
-            <p className="sub-text first">
+            <h6 className="subtitle is-6 first">
               {home.orangeParagraph.internal.content}
-            </p>
-            <p className="sub-text second">
+            </h6>
+            <h6 className="subtitle is-6 second">
               {' '}
               {home.orangeSecondPara.internal.content}
-            </p>
+            </h6>
           </div>
         </div>
         <div className="has-text-centered">

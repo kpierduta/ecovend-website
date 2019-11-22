@@ -10,11 +10,7 @@ const Container = styled.section`
     padding: 3rem 0rem;
   }
   .title {
-    font-size: ${theme.fontSizeMedium};
     padding-bottom: 1rem;
-  }
-  .subtitle {
-    font-size: ${theme.fontSizeMedium};
   }
 `;
 
@@ -28,10 +24,10 @@ class Advertising extends React.Component {
           <section className="hero">
             <div className="hero-body">
               <div className="container">
-                <h1 className="title">{adv.title}</h1>
-                <h2 className="subtitle">
+                <h2 className="title is-3">{adv.title}</h2>
+                <h5 className="subtitle is-5">
                   {adv.introParagrpah.introParagrpah}
-                </h2>
+                </h5>
               </div>
             </div>
           </section>

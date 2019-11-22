@@ -35,6 +35,7 @@ const Container = styled.section`
     margin: 1.5rem 0rem 4rem 0rem;
   }
   video {
+    margin-top: 5rem;
     width: 100%;
     height: 34.875rem;
     @media only screen and (max-width: 768px) {
@@ -51,24 +52,24 @@ class Rvm extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column">
-              <h1 className="title is-3 is-capitalized text has-text-weight-light">
+              <h3 className="title is-3 is-capitalized text has-text-weight-light">
                 large intergral
-              </h1>
-              <h1 className="title is-3 is-capitalized has-text-weight-light">
+              </h3>
+              <h3 className="title is-3 is-capitalized has-text-weight-light">
                 audio-video screen and
-              </h1>
-              <h1 className="title is-3 is-capitalized has-text-weight-light">
+              </h3>
+              <h3 className="title is-3 is-capitalized has-text-weight-light">
                 light box panels for
-              </h1>
-              <h1 className="title is-3 is-capitalized has-text-weight-medium">
+              </h3>
+              <h3 className="title is-3 is-capitalized has-text-weight-medium">
                 instanr revenue from
-              </h1>
-              <h1 className="title is-3 is-capitalized has-text-weight-medium">
+              </h3>
+              <h3 className="title is-3 is-capitalized has-text-weight-medium">
                 branding and
-              </h1>
-              <h1 className="title is-3 is-capitalized has-text-weight-medium">
+              </h3>
+              <h3 className="title is-3 is-capitalized has-text-weight-medium">
                 advertising
-              </h1>
+              </h3>
             </div>
             <div className="column has-text-right is-hidden-mobile">
               <img
@@ -85,10 +86,10 @@ class Rvm extends React.Component {
               />
             </div>
           </div>
-          <p className="is-size-6 has-text-centered">{adv.videoTitle}</p>
-          <h1 className="is-size-5 has-text-weight-semibold has-text-centered">
+          <h5 className="is-size-5 has-text-centered">{adv.videoTitle}</h5>
+          <h4 className="is-size-4 has-text-weight-semibold has-text-centered">
             Click to view the video
-          </h1>
+          </h4>
           <div className="has-text-centered">
             <video controls autoplay="autoplay">
               <source src="/videos/TERMINATOR.mp4" type="video/mp4" />
