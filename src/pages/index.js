@@ -159,8 +159,18 @@ export default class IndexPage extends React.Component {
             return (
               <React.Fragment>
                 <Hero home={home} />
-                <About home={home} />
-                <Video home={home} />
+                <section className="section">
+                  <div className="container">
+                    <div className="columns is-gapless">
+                      <div className="column">
+                        <About home={home} />
+                      </div>
+                      <div className="column">
+                        <Video home={home} />
+                      </div>
+                    </div>
+                  </div>
+                </section>
                 <DrsInfo home={home} />
                 <Steps home={home} />
                 <Choose home={home} choose={choose.edges} />

@@ -5,7 +5,6 @@ import theme from '../utils/theme';
 import firstVideo from '../../static/videos/Section 3 - RVM Sales Video.mp4';
 
 const Conatiner = styled.div`
-  margin-top: 6rem;
   font-family: ${theme.primaryFontFamily};
   padding-bottom: 1rem;
 
@@ -15,7 +14,7 @@ const Conatiner = styled.div`
   }
   video {
     width: 61.3125rem;
-    height: 34.875rem;
+    height: 31.1rem;
     @media only screen and (max-width: 768px) {
       height: auto;
     }
@@ -26,9 +25,9 @@ class Video extends React.Component {
   render() {
     const { home } = this.props;
     return (
-      <Conatiner id="video" className="container">
-        <div className="has-text-centered">
-          <h1 className="title is-1 is-capitalized">{home.videoTitle}</h1>
+      <Conatiner className="container">
+        <section className="section has-text-centered">
+          <h1 className="title is-3 is-capitalized">{home.videoTitle}</h1>
           {/* <iframe
             width="560"
             height="415"
@@ -38,10 +37,10 @@ class Video extends React.Component {
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           /> */}
-          <video width="560" height="415" controls>
+          <video width="560" height="615" controls>
             <source src={firstVideo} type="video/mp4" />
           </video>
-        </div>
+        </section>
       </Conatiner>
     );
   }

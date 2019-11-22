@@ -90,8 +90,8 @@ class Rvm extends React.Component {
             Click to view the video
           </h1>
           <div className="has-text-centered">
-            <video controls poster={adv.videoPoster.file.url}>
-              <source src="/videos/RVM Animation Video.mp4" type="video/mp4" />
+            <video controls autoplay="autoplay">
+              <source src="/videos/TERMINATOR.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>

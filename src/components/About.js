@@ -45,24 +45,22 @@ class About extends React.Component {
   render() {
     const { home } = this.props;
     return (
-      <Container id="about" className="container">
-        <section className="section">
-          <div className=" has-text-centered">
-            <h2 className="subtitle is-5 has-text-white is-capitalized">
-              {home.greyBlockTitle}
-            </h2>
-            <div className="columns is-centered">
-              <div className="column is-three-quarters">
-                <p className="has-text-white text">
-                  {home.greyBlockParagraph.internal.content}
-                </p>
-                <p className="has-text-white text sub-text">
-                  {home.greyBlockSecondPara.internal.content}
-                </p>
-                <LinkStyled to="/contact" className="has-text-white">
-                  Contact
-                </LinkStyled>
-              </div>
+      <Container className="container">
+        <section className="section has-text-centered">
+          <h2 className="subtitle is-5 has-text-white is-capitalized">
+            {home.greyBlockTitle}
+          </h2>
+          <div className="columns is-centered">
+            <div className="column">
+              <p className="has-text-white text">
+                {home.greyBlockParagraph.internal.content}
+              </p>
+              <p className="has-text-white text sub-text">
+                {home.greyBlockSecondPara.internal.content}
+              </p>
+              <LinkStyled to="/contact" className="has-text-white">
+                Contact
+              </LinkStyled>
             </div>
           </div>
         </section>
