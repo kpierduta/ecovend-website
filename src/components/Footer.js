@@ -2,10 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-import theme from '../utils/theme';
-
 const Conatiner = styled.div`
-  background-color: ${theme.secondaryColor};
+  background-color: ${props => props.theme.secondaryColor};
   margin-top: -2rem;
 
   @media only screen and (max-width: 768px) {

@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-import theme from '../utils/theme';
-
 const Section = styled.section`
   padding: 0rem 0.5rem 4.5rem 0.5rem;
   img {
@@ -13,12 +11,12 @@ const Section = styled.section`
     box-shadow: none;
   }
   .text {
-    color: ${theme.secondaryColor};
+    color: ${props => props.theme.secondaryColor};
   }
   .is-5 {
     transition: color 0.2s;
     :hover {
-      color: ${theme.secondaryColor};
+      color: ${props => props.theme.secondaryColor};
     }
   }
   .button {
@@ -30,7 +28,7 @@ const Section = styled.section`
 
 const LinkStyled = styled(Link)`
   font-weight: 400;
-  background-color: ${theme.secondaryColor};
+  background-color: ${props => props.theme.secondaryColor};
   transition: opacity 0.2s;
   :hover {
     color: #fff;

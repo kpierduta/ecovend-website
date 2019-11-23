@@ -1,17 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
-
 const Container = styled.section`
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${props => props.theme.primaryFontFamily};
   padding-bottom: 3.5rem;
   .columns {
     margin-top: 1rem;
   }
   .title.is-5 {
     padding-top: 2rem;
-    color: ${theme.secondaryColor};
+    color: ${props => props.theme.secondaryColor};
   }
   .para {
     padding: 0rem 0rem 1rem 0rem;

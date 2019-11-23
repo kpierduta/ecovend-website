@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
-
 const Conatiner = styled.div`
-  font-family: ${theme.secondaryFontFamily};
-  color: ${theme.primaryColor};
+  font-family: ${props => props.theme.secondaryFontFamily};
+  color: ${props => props.theme.primaryColor};
   padding-bottom: 10rem;
 
   .columns {
@@ -13,7 +11,7 @@ const Conatiner = styled.div`
     margin-right: 0rem !important;
   }
   .text {
-    color: ${theme.primaryColor};
+    color: ${props => props.theme.primaryColor};
     margin-top: 7rem;
     font-weight: 500;
     @media only screen and (max-width: 768px) {
@@ -21,11 +19,11 @@ const Conatiner = styled.div`
     }
   }
   .first {
-    color: ${theme.primaryColor};
+    color: ${props => props.theme.primaryColor};
     margin-top: 3.95rem !important;
   }
   .second {
-    color: ${theme.primaryColor};
+    color: ${props => props.theme.primaryColor};
     margin-top: 2rem !important;
   }
   video {

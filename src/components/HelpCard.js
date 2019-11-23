@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
-
 const Section = styled.section`
   padding: 0rem 0.5rem;
   .card {
     padding: 1rem 0rem;
-    background-color: ${theme.secondaryColor};
+    background-color: ${props => props.theme.secondaryColor};
   }
   img {
     width: 4rem;
@@ -20,7 +18,7 @@ const Section = styled.section`
   }
   .is-rounded {
     padding: 0rem 1.5rem;
-    color: ${theme.secondaryColor} !important;
+    color: ${props => props.theme.secondaryColor} !important;
     background-color: white !important;
   }
 `;

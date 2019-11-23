@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
-
 const Container = styled.section`
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${props => props.theme.primaryFontFamily};
   .columns {
     margin-left: 0rem !important;
     margin-right: 0rem !important;

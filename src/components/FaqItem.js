@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
-
 const Container = styled.div`
-  font-family: ${theme.primaryFontFamily};
-  font-size: ${theme.fontSizeMedium} !important;
+  font-family: ${props => props.theme.primaryFontFamily};
+  font-size: ${props => props.theme.fontSizeMedium} !important;
   .Icon {
-    color: ${theme.primaryColor};
+    color: ${props => props.theme.primaryColor};
     font-size: 27px;
     margin: 0rem 2rem;
     @media only screen and (max-width: 600px) {
@@ -18,8 +16,8 @@ const Container = styled.div`
 
 const TitleWrapper = styled.div`
   h1 {
-    font-size: ${theme.fontSizeMedium};
-    color: ${theme.primaryColor};
+    font-size: ${props => props.theme.fontSizeMedium};
+    color: ${props => props.theme.primaryColor};
   }
 `;
 

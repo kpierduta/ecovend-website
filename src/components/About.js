@@ -2,11 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-import theme from '../utils/theme';
-
 const Container = styled.div`
   margin-top: 1rem;
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${props => props.theme.primaryFontFamily};
   background-color: #aabcbf;
   padding-bottom: 2rem;
   .columns {
@@ -28,7 +26,7 @@ const Container = styled.div`
 `;
 
 const LinkStyled = styled(Link)`
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${props => props.theme.primaryFontFamily};
   background: transparent;
   border: none;
 `;

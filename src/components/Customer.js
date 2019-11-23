@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
-
 const Conatiner = styled.section`
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${props => props.theme.primaryFontFamily};
   font-size: 15px;
   background-color: #e1eff2;
   padding-bottom: 0.75rem;
@@ -22,20 +20,20 @@ const Conatiner = styled.section`
     }
   }
   .Heading {
-    font-size: ${theme.fontSizeMedium};
+    font-size: ${props => props.theme.fontSizeMedium};
     margin-bottom: 4rem;
     font-weight: 500;
-    color: ${theme.secondaryColor};
+    color: ${props => props.theme.secondaryColor};
   }
   .text {
     margin-top: 2rem;
-    color: ${theme.secondaryColor};
+    color: ${props => props.theme.secondaryColor};
     font-weight: 200;
     line-height: 1.5;
   }
   .content {
     margin-top: 2rem;
-    color: ${theme.secondaryColor};
+    color: ${props => props.theme.secondaryColor};
     font-weight: 200;
     padding-bottom: 10rem;
   }

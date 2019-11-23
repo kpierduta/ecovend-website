@@ -1,14 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
-
 import CaseCard from './CaseCard';
 
 const Container = styled.section`
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${props => props.theme.primaryFontFamily};
   .has-text-orange {
-    color: ${theme.secondaryColor};
+    color: ${props => props.theme.secondaryColor};
   }
   .img {
     height: 25rem;
@@ -29,7 +27,7 @@ const Container = styled.section`
   .my-card {
     margin-top: 1rem;
     padding: 1rem 0.5rem;
-    background-color: ${theme.secondaryColor};
+    background-color: ${props => props.theme.secondaryColor};
   }
 `;
 

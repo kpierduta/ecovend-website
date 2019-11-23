@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import theme from '../utils/theme';
 
 const Conatiner = styled.div`
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${props => props.theme.primaryFontFamily};
   background-color: #e90700;
   .columns {
     margin-left: 0rem !important;

@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
-
 const Container = styled.div`
   font-family: 'Raleway', sans-serif;
   padding: ${props => props.card};
@@ -27,7 +25,7 @@ const Container = styled.div`
   }
   .card-para {
     font-weight: 400;
-    color: ${theme.primaryColor};
+    color: ${props => props.theme.primaryColor};
   }
 `;
 

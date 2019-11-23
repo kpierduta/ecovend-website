@@ -1,26 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
 import Properties from './Properties';
 
 const Container = styled.section`
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${props => props.theme.primaryFontFamily};
   .subtitle.is-5 {
     margin: 4rem 0rem;
   }
   .text {
-    font-size: ${theme.fontSizeMedium};
-    color: ${theme.secondaryColor};
+    font-size: ${props => props.theme.fontSizeMedium};
+    color: ${props => props.theme.secondaryColor};
     padding-right: 1rem;
     line-height: unset;
     margin-bottom: 0px;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    line-height: 2;
+    text-transform: uppercase;
   }
+
   .is-4 {
     margin: 5rem 0rem;
   }
   span {
-    color: ${theme.secondaryColor};
+    color: ${props => props.theme.secondaryColor};
   }
   .icon {
     padding-left: 1rem;
@@ -28,12 +32,12 @@ const Container = styled.section`
   }
   .button {
     margin-top: 2rem;
-    font-family: ${theme.primaryFontFamily};
+    font-family: ${props => props.theme.primaryFontFamily};
     color: #fff;
-    background-color: ${theme.secondaryColor};
+    background-color: ${props => props.theme.secondaryColor};
     transition: opacity 0.2s;
     :hover {
-      background-color: ${theme.secondaryColor};
+      background-color: ${props => props.theme.secondaryColor};
       color: #fff;
       opacity: 0.6;
     }
@@ -41,7 +45,7 @@ const Container = styled.section`
   .end {
     padding-bottom: 0.25rem;
     margin-bottom: 0.75rem;
-    border-bottom: 2px solid ${theme.secondaryColor} !important;
+    border-bottom: 2px solid ${props => props.theme.secondaryColor} !important;
   }
 `;
 
@@ -49,31 +53,39 @@ const Machines = () => (
   <Container className="section">
     <div className="container">
       <div className="columns is-multiline">
-        <div className="column is-7">
+        <div className="column is-8">
           {/** ** **************** first machine ************************************ */}
           <h1 className="subtitle is-5">
-            <span>SPECIFICATIONS - </span>MODEL: ECOVEND RVM 100/200/300
+            <span>SPECIFICATIONS - </span>MODEL:ECOVEND RVM 100/200/300
           </h1>
           <Properties
             value="LOCATION:"
             description="internal or external (under cover)"
           />
           <div className="columns is-gapless">
-            <div className="column is-3">
+            <div className="column is-4">
               <h1 className="subtitle text">DIMENSIONS:</h1>
             </div>
             <div className="column is-6">
-              <p>RVM 100 1850 (H) x 650 (W) x 850mm (D)</p>
-              <p>RVM 100 1850 (H) x 650 (W) x 850mm (D)</p>
-              <p>RVM 300 1850 (H) x 1100 (W) x 950mm (D)</p>
+              <p className="subtitle is-6">
+                RVM 100 1850 (H) x 650 (W) x 850mm (D)
+              </p>
+              <p className="subtitle is-6">
+                RVM 100 1850 (H) x 650 (W) x 850mm (D)
+              </p>
+              <p className="subtitle is-6">
+                RVM 300 1850 (H) x 1100 (W) x 950mm (D)
+              </p>
             </div>
-            <div className="column IS-3">
-              <h1 className="subtitle text">SCREEN SIZE:</h1>
+          </div>
+          <div className="columns is-gapless">
+            <div className="column is-4">
+              <h1 className="subtitle text">SCREEN Size:</h1>
             </div>
-            <div className="column">
-              <p>10in</p>
-              <p>21in</p>
-              <p>19in</p>
+            <div className="column is-6">
+              <p className="subtitle is-6">10 in</p>
+              <p className="subtitle is-6">21 in</p>
+              <p className="subtitle is-6">19in</p>
             </div>
           </div>
           <Properties
@@ -129,7 +141,7 @@ const Machines = () => (
             </span>
           </button>
         </div>
-        <div className="column is-5 has-text-centered">
+        <div className="column is-4 has-text-centered">
           <h1 className="subtitle is-4">
             <span>MODEL: ECOVEND RVM 100/200/300 </span>
           </h1>
@@ -149,7 +161,7 @@ const Machines = () => (
         </div>
         <div className="column  ">
           <h1 className="subtitle is-5">
-            {/* ******************** second machine ******************* */}
+            {/* ********************** second machine ******************************* */}
             <span>SPECIFICATIONS -</span> MODEL: ECOVEND 350
           </h1>
           <Properties

@@ -3,14 +3,13 @@ import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import config from '../utils/config';
-import theme from '../utils/theme';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import BreadCrumbs from '../components/BreadCrumbs';
 import Question from '../components/Questionwrapper';
 
 const Container = styled.section`
-  font-family: ${theme.primaryFontFamily}!important;
+  font-family: ${props => props.theme.primaryFontFamily}!important;
   .title {
     margin-bottom: 6rem;
   }

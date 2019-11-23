@@ -1,15 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
 import ResultStep from './ResultStep';
 import ResultCounter from './ResultCounter';
 
 const Container = styled.section`
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${props => props.theme.primaryFontFamily};
   .title.is-2 {
     padding-top: 2rem;
-    color: ${theme.secondaryColor};
+    color: ${props => props.theme.secondaryColor};
   }
   .para {
     padding: 0rem 0rem 1rem 0rem;
@@ -17,11 +16,11 @@ const Container = styled.section`
 `;
 
 const Wrapper = styled.div`
-  border-top: 4px solid ${theme.secondaryColor};
+  border-top: 4px solid ${props => props.theme.secondaryColor};
 `;
 
 const Bottom = styled.div`
-  border-bottom: 4px solid ${theme.secondaryColor};
+  border-bottom: 4px solid ${props => props.theme.secondaryColor};
   margin-top: 2rem;
   padding-bottom: 2rem;
 `;

@@ -2,16 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-import theme from '../utils/theme';
-
 const Navbar = styled.div`
-  font-family: ${theme.primaryFontFamily}!important;
+  font-family: ${props => props.theme.primaryFontFamily}!important;
   padding-bottom: 1rem;
   .navbar-item img {
     max-height: 107px;
   }
   .is-active {
-    color: ${theme.secondaryColor}!important;
+    color: ${props => props.theme.secondaryColor}!important;
     @media only screen and (max-width: 768px) {
       color: black !important;
     }
@@ -20,11 +18,11 @@ const Navbar = styled.div`
     transition: color 0.2s;
     :hover {
       background: transparent;
-      color: ${theme.hovercolor}!important;
+      color: ${props => props.theme.hovercolor}!important;
     }
     :focus-within {
       background: transparent;
-      color: ${theme.primaryColor};
+      color: ${props => props.theme.primaryColor};
     }
   }
   .navbar-end {
@@ -41,8 +39,8 @@ const Navbar = styled.div`
 `;
 
 const LinkStyled = styled(Link)`
-  color: ${theme.primaryColor};
-  font-size: ${theme.fontSize};
+  color: ${props => props.theme.primaryColor};
+  font-size: ${props => props.theme.fontSize};
 `;
 
 export default class Header extends React.Component {

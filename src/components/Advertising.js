@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
-
 const Conatiner = styled.div`
-  font-family: ${theme.primaryFontFamily};
-  background-color: ${theme.secondaryColor};
+  font-family: ${props => props.theme.primaryFontFamily};
+  background-color: ${props => props.theme.secondaryColor};
   .columns {
     margin-left: 0rdem !important;
     margin-right: 0rem !important;

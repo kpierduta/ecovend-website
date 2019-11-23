@@ -2,12 +2,11 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
 import ContactForm from './ContactForm';
 
 const Container = styled.section`
   position: relative;
-  font-family: ${theme.primaryFontFamily} !important;
+  font-family: ${props => props.theme.primaryFontFamily} !important;
   background-color: #ffff !important;
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -16,38 +15,38 @@ const Container = styled.section`
     margin-bottom: -2rem;
   }
   .text {
-    color: ${theme.secondaryColor};
+    color: ${props => props.theme.secondaryColor};
     letter-spacing: 0.1rem;
     line-height: 1.5rem;
   }
   .input {
     height: 2.5rem;
-    border-bottom: 1px solid ${theme.secondaryColor} !important;
+    border-bottom: 1px solid ${props => props.theme.secondaryColor} !important;
     background-color: #fff;
     border-color: #fff;
     box-shadow: none;
     ::placeholder {
-      color: ${theme.secondaryColor};
+      color: ${props => props.theme.secondaryColor};
       opacity: 1;
     }
   }
   textarea {
-    border-bottom: 1px solid ${theme.secondaryColor} !important;
+    border-bottom: 1px solid ${props => props.theme.secondaryColor} !important;
     background-color: #fff;
     border-color: #fff;
     border-radius: none;
     box-shadow: none;
     ::placeholder {
-      color: ${theme.secondaryColor};
+      color: ${props => props.theme.secondaryColor};
       opacity: 1;
     }
   }
   .button {
     font-weight: 400;
-    background-color: ${theme.secondaryColor};
+    background-color: ${props => props.theme.secondaryColor};
     transition: opacity 0.2s;
     :hover {
-      background-color: ${theme.secondaryColor};
+      background-color: ${props => props.theme.secondaryColor};
       color: #fff;
       opacity: 0.6;
     }
@@ -86,7 +85,7 @@ const Contact = () => {
       <div className="container">
         <div className="columns">
           <div className="column has-text-centered">
-            <h2 className="title is-2 is-spaced has-text-weight-medium">
+            <h2 className="title is-3 is-spaced has-text-weight-medium">
               {contentfulContact.title}
             </h2>
             <h6 className="subtitle is-6 text">

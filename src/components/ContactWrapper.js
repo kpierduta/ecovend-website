@@ -8,7 +8,7 @@ import MyMapComponent from './GoogleMap';
 const Container = styled.section`
   position: relative;
   background-color: #e1eff2 !important;
-  font-family: ${theme.primaryFontFamily} !important;
+  font-family: ${props => props.theme.primaryFontFamily} !important;
   .;
 `;
 

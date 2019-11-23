@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
-
 const Section = styled.section`
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${props => props.theme.primaryFontFamily};
   padding: 0rem 0.5rem 2rem 0.5rem;
   .text {
-    color: ${theme.secondaryColor};
+    color: ${props => props.theme.secondaryColor};
     font-size: 1rem;
   }
 `;

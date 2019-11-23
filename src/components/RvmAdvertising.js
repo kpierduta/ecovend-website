@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
-
 const Container = styled.section`
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${props => props.theme.primaryFontFamily};
   .container {
     padding-bottom: 6rem;
-    border-bottom: 5px solid ${theme.secondaryColor};
+    border-bottom: 5px solid ${props => props.theme.secondaryColor};
   }
   .columns {
     margin-left: 0rem !important;
@@ -19,7 +17,7 @@ const Container = styled.section`
   .title {
     color: #f26a16;
     margin-bottom: 0.5rem;
-    color: ${theme.secondaryColor} !important;
+    color: ${props => props.theme.secondaryColor} !important;
     @media only screen and (max-width: 768px) {
       margin-top: 0rem;
     }
@@ -27,7 +25,7 @@ const Container = styled.section`
   .subtitle {
     margin-top: 0.25rem !important;
     color: #f26a16;
-    font-size: ${theme.fontSizeLarge};
+    font-size: ${props => props.theme.fontSizeLarge};
     font-weight: 300;
     letter-spacing: 1.2px;
   }

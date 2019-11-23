@@ -1,20 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
 import Stepscard from './StepsCard';
 import IconCard from './IconCard';
 
 const Container = styled.div`
   background-color: #f1f1f1;
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${props => props.theme.primaryFontFamily};
   padding-bottom: 5rem;
   .columns {
     margin-left: 0rem !important;
     margin-right: 0rem !important;
   }
   .title.is-2 {
-    color: ${theme.primaryColor};
+    color: ${props => props.theme.primaryColor};
     font-weight: 400;
   }
   .heading {
@@ -23,7 +22,7 @@ const Container = styled.div`
   }
   .para {
     padding: 1rem 0rem 8rem 0rem;
-    color: ${theme.primaryColor};
+    color: ${props => props.theme.primaryColor};
   }
   .rev {
     @media only screen and (max-width: 768px) {

@@ -1,15 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
 import firstVideo from '../../static/videos/Section 3 - RVM Sales Video.mp4';
 
 const Conatiner = styled.div`
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${props => props.theme.primaryFontFamily};
   padding-bottom: 1rem;
 
   .title {
-    color: ${theme.primaryColor};
+    color: ${props => props.theme.primaryColor};
     font-weight: 400;
   }
   video {

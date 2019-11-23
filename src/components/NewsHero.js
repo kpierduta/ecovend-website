@@ -2,14 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-import theme from '../utils/theme';
 import BreadCrumbs from './BreadCrumbs';
 import BlogCard from './BlogCard';
 import NewsPosts from './NewsPosts';
 import HelpCard from './HelpCard';
 
 const Section = styled.section`
-  font-family: ${theme.primaryFontFamily} !important;
+  font-family: ${props => props.theme.primaryFontFamily} !important;
   margin-bottom: 4rem;
   .input {
     border-radius: 2rem;
@@ -18,13 +17,13 @@ const Section = styled.section`
     font-size: 0.92rem;
   }
   .button {
-    font-family: ${theme.primaryFontFamily}
+    font-family: ${props => props.theme.primaryFontFamily}
     font-size: 1rem;
     color: #fff;
-    background-color: ${theme.secondaryColor};
+    background-color: ${props => props.theme.secondaryColor};
     transition: opacity 0.2s;
     :hover {
-      background-color: ${theme.secondaryColor};
+      background-color: ${props => props.theme.secondaryColor};
       color: #fff;
       opacity: 0.6;
     }
@@ -44,7 +43,7 @@ const Section = styled.section`
     transition: border-left 0.5s, padding-left 0.5s;
     :hover {
       padding-left: 0.5rem;
-      border-left: 5px solid ${theme.secondaryColor};
+      border-left: 5px solid ${props => props.theme.secondaryColor};
     }
   }
   .image.is-64x64 {

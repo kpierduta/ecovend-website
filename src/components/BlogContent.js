@@ -1,17 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
 import BreadCrumbs from './BreadCrumbs';
 
 const Container = styled.section`
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${props => props.theme.primaryFontFamily};
   .columns {
     margin-top: 1rem;
   }
   .title.is-3 {
     padding-top: 2rem;
-    color: ${theme.secondaryColor};
+    color: ${props => props.theme.secondaryColor};
   }
   .para {
     padding: 0rem 0rem 1rem 0rem;

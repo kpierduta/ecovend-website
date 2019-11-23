@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
-
 const Conatiner = styled.div`
   background-color: #f1f1f1;
   margin-top: 2rem;
-  font-family: ${theme.secondaryFontFamily};
+  font-family: ${props => props.theme.secondaryFontFamily};
   .title,
   .subtitle {
     color: white !important;
@@ -16,7 +14,7 @@ const Conatiner = styled.div`
     padding: 4rem 0rem;
   }
   .first {
-    background-color: ${theme.secondaryColor};
+    background-color: ${props => props.theme.secondaryColor};
   }
   .second {
     background-color: #c1c107;

@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
 import BreadCrumbs from './BreadCrumbs';
 
 const Container = styled.section`
-  font-family: ${theme.primaryFontFamily};
+  font-family: ${props => props.theme.primaryFontFamily};
   .hero-body {
     padding: 3rem 0rem;
   }
