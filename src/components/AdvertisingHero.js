@@ -23,8 +23,8 @@ class Advertising extends React.Component {
           <section className="hero">
             <div className="hero-body">
               <div className="container">
-                <h2 className="title is-3">{adv.title}</h2>
-                <h5 className="subtitle is-5">
+                <h1 className="title is-3">{adv.title}</h1>
+                <h5 className="subtitle is-6">
                   {adv.introParagrpah.introParagrpah}
                 </h5>
               </div>

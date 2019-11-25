@@ -4,23 +4,31 @@ import { Link } from 'gatsby';
 
 const Section = styled.section`
   padding: 0rem 0.5rem 4.5rem 0.5rem;
+
   img {
     border-radius: 1rem;
   }
+
   .card {
     box-shadow: none;
   }
+
+  .card-content {
+    padding: 0rem 0rem 0rem 1.5rem;
+  }
+
   .text {
     color: ${props => props.theme.secondaryColor};
   }
-  .is-5 {
+
+  .title.is-4 {
+    margin: 1rem 0rem 2rem 0rem !important;
     transition: color 0.2s;
     :hover {
       color: ${props => props.theme.secondaryColor};
     }
   }
-  .button {
-  }
+
   .icon {
     margin-left: 0rem !important;
   }
@@ -49,14 +57,12 @@ const BlogCard = props => (
               <div className="media">
                 <div className="media-content">
                   <div className="content">
-                    <p>
+                    <p className="subtitle is-6">
                       <span className="text">{props.category}</span> /{' '}
                       {props.date}
                     </p>
-                    <h5 className="title is-5 has-text-weight-semibold">
-                      {props.title}
-                    </h5>
-                    <p>{props.para}</p>
+                    <h1 className="title is-4">{props.title}</h1>
+                    <p className="subtitle is-6">{props.para}</p>
                     <LinkStyled to={props.to} className="button is-rounded">
                       Learn More
                       <span className="icon">

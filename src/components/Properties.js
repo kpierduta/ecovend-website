@@ -6,21 +6,12 @@ const Container = styled.div`
   font-size: ${props => props.theme.fontSizeMedium};
   margin-bottom: 0.75rem !important;
   padding: 0.25rem 0rem 0rem 0rem !important;
-  .subtext {
-    font-size: ${props => props.theme.fontSizeMedium};
-    color: ${props => props.theme.secondaryColor};
-    font-weight: 600;
-    letter-spacing: 1.1px;
-    line-height: 36px;
-    text-transform: uppercase;
-    margin-bottom: 0px;
-  }
 `;
 
 const Properties = props => (
   <Container className="columns is-gapless">
     <div className="column is-4">
-      <h1 className="subtext">{props.value}</h1>
+      <h1 className="subtitle is-5">{props.value}</h1>
     </div>
     <div className="column">
       <p className="subtitle is-6">{props.description}</p>

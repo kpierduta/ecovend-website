@@ -10,15 +10,18 @@ const Container = styled.section`
   background-color: #ffff !important;
   padding-top: 3rem;
   padding-bottom: 3rem;
+
   @media only screen and (max-width: 768px) {
     padding-bottom: 3rem;
     margin-bottom: -2rem;
   }
+
   .text {
     color: ${props => props.theme.secondaryColor};
     letter-spacing: 0.1rem;
     line-height: 1.5rem;
   }
+
   .input {
     height: 2.5rem;
     border-bottom: 1px solid ${props => props.theme.secondaryColor} !important;
@@ -30,6 +33,7 @@ const Container = styled.section`
       opacity: 1;
     }
   }
+
   textarea {
     border-bottom: 1px solid ${props => props.theme.secondaryColor} !important;
     background-color: #fff;
@@ -41,6 +45,7 @@ const Container = styled.section`
       opacity: 1;
     }
   }
+
   .button {
     font-weight: 400;
     background-color: ${props => props.theme.secondaryColor};
@@ -51,16 +56,19 @@ const Container = styled.section`
       opacity: 0.6;
     }
   }
+
   .control {
     padding: 1rem;
     :hover {
       border-color: #fff;
     }
   }
+
   form,
   .field {
     width: 100%;
   }
+
   .icon {
     margin-left: 0rem !important;
     margin-right: 0.25rem !important;
@@ -85,9 +93,7 @@ const Contact = () => {
       <div className="container">
         <div className="columns">
           <div className="column has-text-centered">
-            <h2 className="title is-3 is-spaced has-text-weight-medium">
-              {contentfulContact.title}
-            </h2>
+            <h2 className="title is-3 is-spaced">{contentfulContact.title}</h2>
             <h6 className="subtitle is-6 text">
               <span className="icon">
                 <i className="fas fa-map-marker-alt" />

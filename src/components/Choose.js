@@ -1,15 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../utils/theme';
-
 const Conatiner = styled.div`
   font-family: ${props => props.theme.primaryFontFamily};
   background-color: #e90700;
-  .columns {
-    margin-left: 0rem !important;
-    margin-right: 0rem !important;
-  }
+
   .section {
     padding: 8rem 0rem;
   }
@@ -28,7 +23,7 @@ class Choose extends React.Component {
           <div className="container">
             <div className="columns is-centered">
               <div className="column">
-                <h1 className="title is-1 has-text-white has-text-centered">
+                <h1 className="title is-3 has-text-white has-text-centered">
                   {home.chooseTitle}
                 </h1>
                 <div className="columns">

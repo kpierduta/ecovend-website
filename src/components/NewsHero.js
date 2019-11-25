@@ -10,12 +10,15 @@ import HelpCard from './HelpCard';
 const Section = styled.section`
   font-family: ${props => props.theme.primaryFontFamily} !important;
   margin-bottom: 4rem;
+
   .input {
     border-radius: 2rem;
   }
+
   p {
     font-size: 0.92rem;
   }
+
   .button {
     font-family: ${props => props.theme.primaryFontFamily}
     font-size: 1rem;
@@ -46,12 +49,15 @@ const Section = styled.section`
       border-left: 5px solid ${props => props.theme.secondaryColor};
     }
   }
+
   .image.is-64x64 {
     margin: 0rem 1rem 0rem 0rem;
   }
+
   .pagination {
     margin-top: 3rem;
   }
+  
   .test{
     margin-bottom:5rem;
   }

@@ -47,7 +47,7 @@ class FaqItem extends React.Component {
         <div className="columns">
           <div className="column is-10">
             <TitleWrapper>
-              <h1>{questions}</h1>
+              <h1 className="subtitle is-6">{questions}</h1>
             </TitleWrapper>
           </div>
           <div className="column">
@@ -58,7 +58,7 @@ class FaqItem extends React.Component {
         </div>
         {show && (
           <AnswerContainer>
-            <p>{answer}</p>
+            <p className="subtitle is-6">{answer}</p>
           </AnswerContainer>
         )}
       </Container>

@@ -1,35 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 import Properties from './Properties';
 
 const Container = styled.section`
   font-family: ${props => props.theme.primaryFontFamily};
+
   .subtitle.is-5 {
-    margin: 4rem 0rem;
-  }
-  .text {
-    font-size: ${props => props.theme.fontSizeMedium};
     color: ${props => props.theme.secondaryColor};
-    padding-right: 1rem;
-    line-height: unset;
-    margin-bottom: 0px;
-    font-weight: 600;
-    letter-spacing: 1.1px;
-    line-height: 2;
     text-transform: uppercase;
+    margin-bottom: 0px;
   }
 
-  .is-4 {
-    margin: 5rem 0rem;
+  .title.is-5 {
+    margin-bottom: 4rem;
   }
+
   span {
     color: ${props => props.theme.secondaryColor};
   }
+
   .icon {
     padding-left: 1rem;
     color: #ffff;
   }
+
   .button {
     margin-top: 2rem;
     font-family: ${props => props.theme.primaryFontFamily};
@@ -42,6 +38,11 @@ const Container = styled.section`
       opacity: 0.6;
     }
   }
+
+  .new {
+    margin-top: 5rem;
+  }
+
   .end {
     padding-bottom: 0.25rem;
     margin-bottom: 0.75rem;
@@ -53,9 +54,9 @@ const Machines = () => (
   <Container className="section">
     <div className="container">
       <div className="columns is-multiline">
+        {/** ** **************** first machine ************************************ */}
         <div className="column is-8">
-          {/** ** **************** first machine ************************************ */}
-          <h1 className="subtitle is-5">
+          <h1 className="title is-5">
             <span>SPECIFICATIONS - </span>MODEL:ECOVEND RVM 100/200/300
           </h1>
           <Properties
@@ -64,7 +65,7 @@ const Machines = () => (
           />
           <div className="columns is-gapless">
             <div className="column is-4">
-              <h1 className="subtitle text">DIMENSIONS:</h1>
+              <h1 className="subtitle is-5">DIMENSIONS:</h1>
             </div>
             <div className="column is-6">
               <p className="subtitle is-6">
@@ -80,7 +81,7 @@ const Machines = () => (
           </div>
           <div className="columns is-gapless">
             <div className="column is-4">
-              <h1 className="subtitle text">SCREEN Size:</h1>
+              <h1 className="subtitle is-5">SCREEN SIZE:</h1>
             </div>
             <div className="column is-6">
               <p className="subtitle is-6">10 in</p>
@@ -134,15 +135,15 @@ const Machines = () => (
             description="up to 30 unites per min"
           />
           <Properties value="IP RATING:" description="IP53" />
-          <button type="submit" className="button is-rounded is-medium">
+          <Link to="/contact" className="button is-rounded is-medium">
             ENQUIRY
             <span className="icon">
               <i className="fas fa-chevron-right" />
             </span>
-          </button>
+          </Link>
         </div>
         <div className="column is-4 has-text-centered">
-          <h1 className="subtitle is-4">
+          <h1 className="title is-5">
             <span>MODEL: ECOVEND RVM 100/200/300 </span>
           </h1>
           <img
@@ -150,8 +151,9 @@ const Machines = () => (
             alt="recycle machine"
           />
         </div>
-        <div className="column is-5 has-text-centered">
-          <h1 className="subtitle is-4">
+        {/* ********************** second machine ******************************* */}
+        <div className="column is-5 has-text-centered new">
+          <h1 className="title is-5">
             <span>MODEL: ECOVEND RVM 350 </span>
           </h1>
           <img
@@ -159,9 +161,8 @@ const Machines = () => (
             alt="recycle machine"
           />
         </div>
-        <div className="column  ">
-          <h1 className="subtitle is-5">
-            {/* ********************** second machine ******************************* */}
+        <div className="column new">
+          <h1 className="title is-5">
             <span>SPECIFICATIONS -</span> MODEL: ECOVEND 350
           </h1>
           <Properties
@@ -219,16 +220,16 @@ const Machines = () => (
             description="up to 30 unites per min"
           />
           <Properties value="IP RATING:" description="IP40" />
-          <button type="submit" className="button is-rounded is-medium">
+          <Link to="/contact" className="button is-rounded is-medium">
             ENQUIRY
             <span className="icon">
               <i className="fas fa-chevron-right" />
             </span>
-          </button>
+          </Link>
         </div>
-        <div className="column is-7">
-          {/* ******************** third machine ******************* */}
-          <h1 className="subtitle is-5">
+        {/* ******************** third machine ******************* */}
+        <div className="column is-7 new">
+          <h1 className="title is-5">
             <span>SPECIFICATIONS -</span>MODEL: ECOVEND RVM 400
           </h1>
           <Properties
@@ -284,15 +285,15 @@ const Machines = () => (
             description="up to 30 unites per min"
           />
           <Properties value="IP RATING:" description="IP40" />
-          <button type="submit" className="button is-rounded is-medium">
+          <Link to="/contact" className="button is-rounded is-medium">
             ENQUIRY
             <span className="icon">
               <i className="fas fa-chevron-right" />
             </span>
-          </button>
+          </Link>
         </div>
-        <div className="column is-5 has-text-centered">
-          <h1 className="subtitle is-4">
+        <div className="column is-5 has-text-centered new">
+          <h1 className="title is-5">
             <span>MODEL: ECOVEND RVM 400 </span>
           </h1>
           <img

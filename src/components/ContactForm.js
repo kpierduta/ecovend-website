@@ -119,7 +119,8 @@ const ContactForm = props => {
           type="submit"
           className="button  is-medium is-link is-fullwidth"
           disabled={isSubmitting}
-          style={{ marginTop: '1.5rem' }}>
+          style={{ marginTop: '1.5rem' }}
+        >
           Submit Now
         </button>
       </div>

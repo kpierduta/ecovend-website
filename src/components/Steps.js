@@ -12,18 +12,16 @@ const Container = styled.div`
     margin-left: 0rem !important;
     margin-right: 0rem !important;
   }
-  .title.is-2 {
+  .title.is-3 {
     color: ${props => props.theme.primaryColor};
-    font-weight: 400;
-  }
-  .heading {
     padding-top: 8rem;
-    font-weight: 500;
   }
+
   .para {
     padding: 1rem 0rem 8rem 0rem;
     color: ${props => props.theme.primaryColor};
   }
+
   .rev {
     @media only screen and (max-width: 768px) {
       flex-direction: column-reverse;
@@ -41,8 +39,8 @@ class Steps extends React.Component {
           <div className="column is-three-quarters">
             <div className="container">
               <div className="has-text-centered">
-                <h2 className="title is-2 heading">{home.stepTitle}</h2>
-                <h5 className="subtitle is-5 para">
+                <h1 className="title is-3 heading">{home.stepTitle}</h1>
+                <h5 className="subtitle is-6 para">
                   {home.stepsSectionParagraph.internal.content}
                 </h5>
               </div>

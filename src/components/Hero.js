@@ -10,8 +10,8 @@ const Container = styled.section`
   .title {
     color: #f26a16;
     font-size: 72px;
-    font-weight: 400;
     margin-top: 4rem;
+    line-height: normal !important;
     @media only screen and (max-width: 768px) {
       margin-top: 0rem;
       font-size: 50px;
@@ -20,7 +20,6 @@ const Container = styled.section`
   .subtitle {
     margin-top: 0.25rem !important;
     color: #f26a16;
-    font-weight: 300;
     letter-spacing: 1.2px;
   }
 `;
@@ -33,8 +32,12 @@ class Hero extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column">
-              <h1 className="title is-capitalized">{home.title}</h1>
-              <h5 className="subtitle is-size-5">{home.subtitle}</h5>
+              <h1 className="title has-text-weight-normal is-capitalized">
+                {home.title}
+              </h1>
+              <h5 className="subtitle is-size-5 has-text-weight-light">
+                {home.subtitle}
+              </h5>
             </div>
             <div className="column has-text-right is-hidden-mobile">
               <img

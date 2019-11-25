@@ -4,23 +4,23 @@ import styled from 'styled-components';
 const Conatiner = styled.div`
   font-family: ${props => props.theme.primaryFontFamily};
   background-color: ${props => props.theme.secondaryColor};
-  .columns {
-    margin-left: 0rdem !important;
-    margin-right: 0rem !important;
-  }
+
   .section {
     padding: 3rem 1.5rem 0rem 1.5rem;
   }
+
   .top {
     margin: 4rem;
   }
+
   .text {
     margin-top: 3rem !important;
-    line-height: 2 !important;
   }
+
   .photos {
     margin-top: 3.5rem !important;
   }
+
   img {
     height: 104%;
     object-fit: cover;
@@ -37,7 +37,7 @@ class Advertisment extends React.Component {
           <div className="container">
             <div className="columns is-centered">
               <div className="column is-three-quarters has-text-centered has-text-white top">
-                <h1 className="title is-1 has-text-white has-text-weight-medium">
+                <h1 className="title is-3 has-text-white has-text-weight-medium">
                   {home.marketingTitle}
                 </h1>
                 <h5 className="subtitle is-6 has-text-white text">

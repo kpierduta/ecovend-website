@@ -6,26 +6,26 @@ const Conatiner = styled.div`
   color: ${props => props.theme.primaryColor};
   padding-bottom: 10rem;
 
-  .columns {
-    margin-left: 0rem !important;
-    margin-right: 0rem !important;
-  }
   .text {
     color: ${props => props.theme.primaryColor};
     margin-top: 7rem;
-    font-weight: 500;
     @media only screen and (max-width: 768px) {
       margin-top: 5rem;
     }
   }
-  .first {
+
+  .subtitle.is-6 {
     color: ${props => props.theme.primaryColor};
+  }
+
+  .first {
     margin-top: 3.95rem !important;
   }
+
   .second {
-    color: ${props => props.theme.primaryColor};
     margin-top: 2rem !important;
   }
+
   video {
     width: 61.3125rem;
     height: 34.875rem;

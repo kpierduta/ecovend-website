@@ -33,8 +33,7 @@ const GlobalStyle = createGlobalStyle`
   .title{
     font-weight: 600;
     letter-spacing: 1.1px;
-    line-height: 2;
-
+    line-height:2;
   }
 
   .subtitle.is-5{
@@ -49,6 +48,11 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400 !important;
     letter-spacing: 1.1px;
     line-height:2;
+  }
+
+  .columns {
+    margin-left: 0rem !important;
+    margin-right: 0rem !important;
   }
 `;
 

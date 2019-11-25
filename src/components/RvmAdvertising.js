@@ -3,20 +3,19 @@ import styled from 'styled-components';
 
 const Container = styled.section`
   font-family: ${props => props.theme.primaryFontFamily};
+
   .container {
     padding-bottom: 6rem;
     border-bottom: 5px solid ${props => props.theme.secondaryColor};
   }
-  .columns {
-    margin-left: 0rem !important;
-    margin-right: 0rem !important;
-  }
+
   .text {
     margin-top: 7.5rem;
   }
+
   .title {
-    color: #f26a16;
     margin-bottom: 0.5rem;
+    line-height: normal !important;
     color: ${props => props.theme.secondaryColor} !important;
     @media only screen and (max-width: 768px) {
       margin-top: 0rem;
@@ -24,14 +23,13 @@ const Container = styled.section`
   }
   .subtitle {
     margin-top: 0.25rem !important;
-    color: #f26a16;
-    font-size: ${props => props.theme.fontSizeLarge};
-    font-weight: 300;
-    letter-spacing: 1.2px;
+    color: ${props => props.theme.secondaryColor} !important;
   }
+
   .is-size-5 {
     margin: 1.5rem 0rem 4rem 0rem;
   }
+
   video {
     margin-top: 5rem;
     width: 100%;
@@ -84,7 +82,7 @@ class Rvm extends React.Component {
               />
             </div>
           </div>
-          <h5 className="is-size-5 has-text-centered">{adv.videoTitle}</h5>
+          <h5 className="subtitle is-6 has-text-centered">{adv.videoTitle}</h5>
           <h4 className="is-size-4 has-text-weight-semibold has-text-centered">
             Click to view the video
           </h4>
