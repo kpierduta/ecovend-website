@@ -5,20 +5,12 @@ import { Link } from 'gatsby';
 import Properties from './Properties';
 
 const Container = styled.section`
-  font-family: ${props => props.theme.primaryFontFamily};
-
   .subtitle.is-5 {
     color: ${props => props.theme.secondaryColor};
-    text-transform: uppercase;
-    margin-bottom: 0px;
   }
 
   .title.is-5 {
     margin-bottom: 4rem;
-  }
-
-  span {
-    color: ${props => props.theme.secondaryColor};
   }
 
   .icon {
@@ -28,15 +20,6 @@ const Container = styled.section`
 
   .button {
     margin-top: 2rem;
-    font-family: ${props => props.theme.primaryFontFamily};
-    color: #fff;
-    background-color: ${props => props.theme.secondaryColor};
-    transition: opacity 0.2s;
-    :hover {
-      background-color: ${props => props.theme.secondaryColor};
-      color: #fff;
-      opacity: 0.6;
-    }
   }
 
   .new {
@@ -56,7 +39,7 @@ const Machines = () => (
       <div className="columns is-multiline">
         {/** ** **************** first machine ************************************ */}
         <div className="column is-8">
-          <h1 className="title is-5">
+          <h1 className="title is-5 has-text-danger">
             <span>SPECIFICATIONS - </span>MODEL:ECOVEND RVM 100/200/300
           </h1>
           <Properties
@@ -143,7 +126,7 @@ const Machines = () => (
           </Link>
         </div>
         <div className="column is-4 has-text-centered">
-          <h1 className="title is-5">
+          <h1 className="title is-5 has-text-danger">
             <span>MODEL: ECOVEND RVM 100/200/300 </span>
           </h1>
           <img
@@ -153,7 +136,7 @@ const Machines = () => (
         </div>
         {/* ********************** second machine ******************************* */}
         <div className="column is-5 has-text-centered new">
-          <h1 className="title is-5">
+          <h1 className="title is-5 has-text-danger">
             <span>MODEL: ECOVEND RVM 350 </span>
           </h1>
           <img
@@ -227,9 +210,9 @@ const Machines = () => (
             </span>
           </Link>
         </div>
-        {/* ******************** third machine ******************* */}
+        {/* ******************** third machine ***************************************** */}
         <div className="column is-7 new">
-          <h1 className="title is-5">
+          <h1 className="title is-5 has-text-danger">
             <span>SPECIFICATIONS -</span>MODEL: ECOVEND RVM 400
           </h1>
           <Properties
@@ -293,7 +276,7 @@ const Machines = () => (
           </Link>
         </div>
         <div className="column is-5 has-text-centered new">
-          <h1 className="title is-5">
+          <h1 className="title is-5 has-text-danger">
             <span>MODEL: ECOVEND RVM 400 </span>
           </h1>
           <img

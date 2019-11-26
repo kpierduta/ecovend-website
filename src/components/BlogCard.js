@@ -35,13 +35,7 @@ const Section = styled.section`
 `;
 
 const LinkStyled = styled(Link)`
-  font-weight: 400;
   background-color: ${props => props.theme.secondaryColor};
-  transition: opacity 0.2s;
-  :hover {
-    color: #fff;
-    opacity: 0.6;
-  }
 `;
 
 const BlogCard = props => (
@@ -58,8 +52,8 @@ const BlogCard = props => (
                 <div className="media-content">
                   <div className="content">
                     <p className="subtitle is-6">
-                      <span className="text">{props.category}</span> /{' '}
-                      {props.date}
+                      <span className="has-text-danger">{props.category}</span>{' '}
+                      / {props.date}
                     </p>
                     <h1 className="title is-4">{props.title}</h1>
                     <p className="subtitle is-6">{props.para}</p>

@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Conatiner = styled.div`
-  font-family: ${props => props.theme.primaryFontFamily};
   background-color: #e90700;
 
   .section {

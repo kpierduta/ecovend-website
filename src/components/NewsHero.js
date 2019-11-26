@@ -8,38 +8,16 @@ import NewsPosts from './NewsPosts';
 import HelpCard from './HelpCard';
 
 const Section = styled.section`
-  font-family: ${props => props.theme.primaryFontFamily} !important;
   margin-bottom: 4rem;
 
-  .input {
-    border-radius: 2rem;
-  }
-
-  p {
-    font-size: 0.92rem;
-  }
-
-  .button {
-    font-family: ${props => props.theme.primaryFontFamily}
-    font-size: 1rem;
-    color: #fff;
-    background-color: ${props => props.theme.secondaryColor};
-    transition: opacity 0.2s;
-    :hover {
-      background-color: ${props => props.theme.secondaryColor};
-      color: #fff;
-      opacity: 0.6;
-    }
-  }
-  .search {
-    padding: 2rem;
-  }
   .posts {
     margin-top: 4rem;
   }
+
   .menu-list li ul {
     border-left: none !important;
   }
+
   .menu-list li ul li {
     font-size: 1rem;
     border-left: 4px solid #dbdbdb;
@@ -57,9 +35,9 @@ const Section = styled.section`
   .pagination {
     margin-top: 3rem;
   }
-  
-  .test{
-    margin-bottom:5rem;
+
+  .test {
+    margin-bottom: 5rem;
   }
 `;
 

@@ -6,7 +6,6 @@ import ContactForm from './ContactForm';
 
 const Container = styled.section`
   position: relative;
-  font-family: ${props => props.theme.primaryFontFamily} !important;
   background-color: #ffff !important;
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -14,12 +13,6 @@ const Container = styled.section`
   @media only screen and (max-width: 768px) {
     padding-bottom: 3rem;
     margin-bottom: -2rem;
-  }
-
-  .text {
-    color: ${props => props.theme.secondaryColor};
-    letter-spacing: 0.1rem;
-    line-height: 1.5rem;
   }
 
   .input {
@@ -43,17 +36,6 @@ const Container = styled.section`
     ::placeholder {
       color: ${props => props.theme.secondaryColor};
       opacity: 1;
-    }
-  }
-
-  .button {
-    font-weight: 400;
-    background-color: ${props => props.theme.secondaryColor};
-    transition: opacity 0.2s;
-    :hover {
-      background-color: ${props => props.theme.secondaryColor};
-      color: #fff;
-      opacity: 0.6;
     }
   }
 
@@ -93,28 +75,22 @@ const Contact = () => {
         <div className="columns has-text-centered">
           <div className="column">
             <h2 className="title is-3 is-spaced">{contentfulContact.title}</h2>
-            <h6 className="subtitle is-6 text">
-              <div>
-                <span className="icon">
-                  <i className="fas fa-map-marker-alt" />
-                </span>
-              </div>
+            <span className="icon has-text-danger">
+              <i className="fas fa-map-marker-alt" />
+            </span>
+            <h6 className="subtitle is-6 has-text-danger">
               {contentfulContact.location}
             </h6>
-            <h6 className="subtitle is-6 text">
-              <div>
-                <span className="icon">
-                  <i className="fas fa-envelope" />
-                </span>
-              </div>
+            <span className="icon has-text-danger">
+              <i className="fas fa-envelope" />
+            </span>
+            <h6 className="subtitle is-6 has-text-danger">
               {contentfulContact.email}
             </h6>
-            <h6 className="subtitle is-6 text">
-              <div>
-                <span className="icon">
-                  <i className="fas fa-phone" />
-                </span>
-              </div>
+            <span className="icon">
+              <i className="fas fa-phone has-text-danger" />
+            </span>
+            <h6 className="subtitle is-6 has-text-danger">
               {contentfulContact.mobileNumber}
             </h6>
           </div>

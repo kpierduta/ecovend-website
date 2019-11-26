@@ -2,20 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Conatiner = styled.div`
-  font-family: ${props => props.theme.secondaryFontFamily};
-  color: ${props => props.theme.primaryColor};
   padding-bottom: 10rem;
 
   .title.is-4 {
-    color: ${props => props.theme.primaryColor};
     margin-top: 7rem;
     @media only screen and (max-width: 768px) {
       margin-top: 5rem;
     }
-  }
-
-  .subtitle.is-6 {
-    color: ${props => props.theme.primaryColor};
   }
 
   .first {
@@ -43,15 +36,17 @@ class DrsInfo extends React.Component {
       <Conatiner className="container">
         <div className="columns  has-text-centered">
           <div className="column">
-            <h4 className="title is-4 is-capitalized">{home.orangeTitle}</h4>
-            <h6 className="subtitle is-6 first">
+            <h4 className="title is-4 is-capitalized has-text-primary">
+              {home.orangeTitle}
+            </h4>
+            <h6 className="subtitle is-6 has-text-primary first">
               {home.orangeParagraph.internal.content}
             </h6>
-            <h6 className="subtitle is-6 second">
+            <h6 className="subtitle is-6 has-text-primary second">
               {' '}
               {home.orangeSecondPara.internal.content}
             </h6>
-            <h6 className="subtitle is-6 second">
+            <h6 className="subtitle is-6 has-text-primary second">
               {' '}
               {home.orangeThirdPara.internal.content}
             </h6>

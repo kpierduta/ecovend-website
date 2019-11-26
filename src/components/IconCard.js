@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  font-family: ${props => props.theme.primaryFontFamily};
   margin: 1rem 0rem;
+
   .card {
     height: 15rem;
     width: 100% @media only screen and (max-width: 768px) {
@@ -11,6 +11,7 @@ const Container = styled.div`
       width: auto;
     }
   }
+
   img {
     height: 13rem;
   }

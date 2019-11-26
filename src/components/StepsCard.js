@@ -6,6 +6,7 @@ const Container = styled.div`
   @media only screen and (max-width: 768px) {
     padding-top: 2rem;
   }
+
   .card {
     height: 15rem;
     width: 100%;
@@ -21,11 +22,6 @@ const Container = styled.div`
       padding: 5rem 2rem 0rem 1rem;
     }
   }
-
-  .card-para {
-    font-weight: 400;
-    color: ${props => props.theme.primaryColor};
-  }
 `;
 
 const StepsCard = ({ title, description }) => (
@@ -33,8 +29,8 @@ const StepsCard = ({ title, description }) => (
     <div className="card">
       <div className="card-content">
         <div className="has-text-centered">
-          <h3 className="subtitle is-6 card-para">{title}</h3>
-          <h4 className="subtitle is-6 card-para">{description}</h4>
+          <h3 className="subtitle is-5 has-text-primary">{title}</h3>
+          <h4 className="subtitle is-6 has-text-primary">{description}</h4>
         </div>
       </div>
     </div>

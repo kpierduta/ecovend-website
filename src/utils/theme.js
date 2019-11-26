@@ -50,6 +50,26 @@ const GlobalStyle = createGlobalStyle`
     line-height:2;
   }
 
+  .has-text-primary	{
+    color:${theme.primaryColor} !important;
+  }
+  
+  .has-text-danger{
+    color:${theme.secondaryColor} !important;
+  }
+
+.button{
+  font-weight: 400 !important;
+  background-color: ${props => props.theme.secondaryColor} !important;
+  color: #fff !important;
+  transition: opacity 0.2s !important;
+  :hover {
+    background-color: ${props => props.theme.secondaryColor} !important;
+    color: #fff !important;
+    opacity: 0.6 !important;
+  }
+}
+
   .columns {
     margin-left: 0rem !important;
     margin-right: 0rem !important;

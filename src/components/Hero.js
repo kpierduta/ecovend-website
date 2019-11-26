@@ -2,13 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.section`
-  font-family: ${props => props.theme.primaryFontFamily};
-  .columns {
-    margin-left: 0rem !important;
-    margin-right: 0rem !important;
-  }
   .title {
-    color: #f26a16;
     font-size: 72px;
     margin-top: 4rem;
     line-height: normal !important;
@@ -17,10 +11,9 @@ const Container = styled.section`
       font-size: 50px;
     }
   }
+
   .subtitle {
     margin-top: 0.25rem !important;
-    color: #f26a16;
-    letter-spacing: 1.2px;
   }
 `;
 
@@ -32,10 +25,10 @@ class Hero extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column">
-              <h1 className="title has-text-weight-normal is-capitalized">
+              <h1 className="title has-text-weight-normal is-capitalized has-text-primary">
                 {home.title}
               </h1>
-              <h5 className="subtitle is-size-5 has-text-weight-light">
+              <h5 className="subtitle is-size-5  has-text-primary">
                 {home.subtitle}
               </h5>
             </div>

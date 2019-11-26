@@ -6,20 +6,17 @@ import IconCard from './IconCard';
 
 const Container = styled.div`
   background-color: #f1f1f1;
-  font-family: ${props => props.theme.primaryFontFamily};
   padding-bottom: 5rem;
   .columns {
     margin-left: 0rem !important;
     margin-right: 0rem !important;
   }
   .title.is-3 {
-    color: ${props => props.theme.primaryColor};
     padding-top: 8rem;
   }
 
   .para {
     padding: 1rem 0rem 8rem 0rem;
-    color: ${props => props.theme.primaryColor};
   }
 
   .rev {
@@ -39,8 +36,10 @@ class Steps extends React.Component {
           <div className="column is-three-quarters">
             <div className="container">
               <div className="has-text-centered">
-                <h1 className="title is-3 heading">{home.stepTitle}</h1>
-                <h5 className="subtitle is-6 para">
+                <h1 className="title is-3 has-text-primary">
+                  {home.stepTitle}
+                </h1>
+                <h5 className="subtitle is-6 has-text-primary para">
                   {home.stepsSectionParagraph.internal.content}
                 </h5>
               </div>

@@ -4,14 +4,8 @@ import { Link } from 'gatsby';
 
 const Container = styled.div`
   margin-top: 1rem;
-  font-family: ${props => props.theme.primaryFontFamily};
   background-color: #aabcbf;
   padding-bottom: 2rem;
-
-  .columns {
-    margin-left: 0rem !important;
-    margin-right: 0rem !important;
-  }
 
   .text {
     margin-top: 1rem;
@@ -23,7 +17,6 @@ const Container = styled.div`
 `;
 
 const LinkStyled = styled(Link)`
-  font-family: ${props => props.theme.primaryFontFamily};
   background: transparent;
   border: none;
 `;

@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.section`
-  font-family: ${props => props.theme.primaryFontFamily};
-
   .container {
     padding-bottom: 6rem;
     border-bottom: 5px solid ${props => props.theme.secondaryColor};
@@ -16,14 +14,12 @@ const Container = styled.section`
   .title {
     margin-bottom: 0.5rem;
     line-height: normal !important;
-    color: ${props => props.theme.secondaryColor} !important;
     @media only screen and (max-width: 768px) {
       margin-top: 0rem;
     }
   }
   .subtitle {
     margin-top: 0.25rem !important;
-    color: ${props => props.theme.secondaryColor} !important;
   }
 
   .is-size-5 {
@@ -48,22 +44,22 @@ class Rvm extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column">
-              <h3 className="title is-3 is-capitalized text has-text-weight-light">
+              <h3 className="title is-3 is-capitalized text has-text-weight-light has-text-danger">
                 large intergral
               </h3>
-              <h3 className="title is-3 is-capitalized has-text-weight-light">
+              <h3 className="title is-3 is-capitalized has-text-weight-light has-text-danger">
                 audio-video screen and
               </h3>
-              <h3 className="title is-3 is-capitalized has-text-weight-light">
+              <h3 className="title is-3 is-capitalized has-text-weight-light has-text-danger">
                 light box panels for
               </h3>
-              <h3 className="title is-3 is-capitalized has-text-weight-medium">
+              <h3 className="title is-3 is-capitalized has-text-weight-medium has-text-danger">
                 instanr revenue from
               </h3>
-              <h3 className="title is-3 is-capitalized has-text-weight-medium">
+              <h3 className="title is-3 is-capitalized has-text-weight-medium has-text-danger">
                 branding and
               </h3>
-              <h3 className="title is-3 is-capitalized has-text-weight-medium">
+              <h3 className="title is-3 is-capitalized has-text-weight-medium has-text-danger">
                 advertising
               </h3>
             </div>
@@ -82,7 +78,9 @@ class Rvm extends React.Component {
               />
             </div>
           </div>
-          <h5 className="subtitle is-6 has-text-centered">{adv.videoTitle}</h5>
+          <h5 className="subtitle is-6 has-text-centered has-text-danger">
+            {adv.videoTitle}
+          </h5>
           <h4 className="is-size-4 has-text-weight-semibold has-text-centered">
             Click to view the video
           </h4>
