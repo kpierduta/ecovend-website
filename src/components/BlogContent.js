@@ -36,16 +36,22 @@ class BlogContent extends React.Component {
               <h4 className="subtitle is-4">
                 {news.shortDescription.internal.content}
               </h4>
-              <p className="para">{news.description.internal.content}</p>
+              <p className="para subtitle is-6">
+                {news.description.internal.content}
+              </p>
             </div>
             <div className="column is-4">
               <img src={news.image.file.url} alt="news" />
             </div>
             <div className="column is-12">
-              <p className="para">{news.description.internal.content}</p>
+              <p className="para subtitle is-6">
+                {news.description.internal.content}
+              </p>
               <div className="author">
-                <p className="has-text-weight-bold">Author: EcoVend</p>
-                <p>Published: {news.date}</p>
+                <p className="subtitle is-size-6 has-text-weight-bold">
+                  Author: EcoVend
+                </p>
+                <p className="is-size-6">Published: {news.date}</p>
               </div>
             </div>
           </div>

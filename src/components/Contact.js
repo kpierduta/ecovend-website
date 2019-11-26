@@ -70,8 +70,7 @@ const Container = styled.section`
   }
 
   .icon {
-    margin-left: 0rem !important;
-    margin-right: 0.25rem !important;
+    margin: 0rem 0.25rem 1rem 0rem !important;
   }
 `;
 
@@ -91,29 +90,38 @@ const Contact = () => {
   return (
     <Container className="section">
       <div className="container">
-        <div className="columns">
-          <div className="column has-text-centered">
+        <div className="columns has-text-centered">
+          <div className="column">
             <h2 className="title is-3 is-spaced">{contentfulContact.title}</h2>
             <h6 className="subtitle is-6 text">
-              <span className="icon">
-                <i className="fas fa-map-marker-alt" />
-              </span>
+              <div>
+                <span className="icon">
+                  <i className="fas fa-map-marker-alt" />
+                </span>
+              </div>
               {contentfulContact.location}
             </h6>
             <h6 className="subtitle is-6 text">
-              <span className="icon">
-                <i className="fas fa-envelope" />
-              </span>
+              <div>
+                <span className="icon">
+                  <i className="fas fa-envelope" />
+                </span>
+              </div>
               {contentfulContact.email}
             </h6>
             <h6 className="subtitle is-6 text">
-              <span className="icon">
-                <i className="fas fa-phone" />
-              </span>
+              <div>
+                <span className="icon">
+                  <i className="fas fa-phone" />
+                </span>
+              </div>
               {contentfulContact.mobileNumber}
             </h6>
           </div>
           <div className="column is-7">
+            <h2 className="title is-3 is-spaced">
+              Get in touch to find out more
+            </h2>
             <div className="field is-horizontal">
               <div className="field-body">
                 <ContactForm />

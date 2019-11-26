@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
   ${reset};
   
   body {
-    font-family: ${theme.secondaryFontFamily};
+    font-family: ${theme.primaryFontFamily};
   }
 
   .title{

@@ -6,7 +6,7 @@ const Conatiner = styled.div`
   color: ${props => props.theme.primaryColor};
   padding-bottom: 10rem;
 
-  .text {
+  .title.is-4 {
     color: ${props => props.theme.primaryColor};
     margin-top: 7rem;
     @media only screen and (max-width: 768px) {
@@ -27,6 +27,7 @@ const Conatiner = styled.div`
   }
 
   video {
+    margin-top: 5rem !important;
     width: 61.3125rem;
     height: 34.875rem;
     @media only screen and (max-width: 768px) {
@@ -40,11 +41,9 @@ class DrsInfo extends React.Component {
     const { home } = this.props;
     return (
       <Conatiner className="container">
-        <div className="columns  is-centered is-multiline has-text-centered">
-          <div className="column is-8">
-            <h4 className="title is-4 is-capitalized text">
-              {home.orangeTitle}
-            </h4>
+        <div className="columns  has-text-centered">
+          <div className="column">
+            <h4 className="title is-4 is-capitalized">{home.orangeTitle}</h4>
             <h6 className="subtitle is-6 first">
               {home.orangeParagraph.internal.content}
             </h6>
@@ -52,15 +51,19 @@ class DrsInfo extends React.Component {
               {' '}
               {home.orangeSecondPara.internal.content}
             </h6>
+            <h6 className="subtitle is-6 second">
+              {' '}
+              {home.orangeThirdPara.internal.content}
+            </h6>
           </div>
-        </div>
-        <div className="has-text-centered">
-          <video width="560" height="415" controls>
-            <source
-              src="/videos/ACM_Reverse_Vending_on_the_BBC.mp4"
-              type="video/mp4"
-            />
-          </video>
+          <div className="column">
+            <video width="560" height="415" controls>
+              <source
+                src="/videos/ACM_Reverse_Vending_on_the_BBC.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
         </div>
       </Conatiner>
     );

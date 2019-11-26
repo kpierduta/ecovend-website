@@ -49,6 +49,11 @@ export const indexQuery = graphql`
           content
         }
       }
+      orangeThirdPara {
+        internal {
+          content
+        }
+      }
       stepTitle
       stepsSectionParagraph {
         internal {

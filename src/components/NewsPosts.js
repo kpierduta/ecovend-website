@@ -8,6 +8,14 @@ const Section = styled.section`
     color: ${props => props.theme.secondaryColor};
     font-size: 1rem;
   }
+
+  .subtitle.is-5 {
+    line-height: normal;
+  }
+
+  .subtitle.is-6 {
+    line-height: normal;
+  }
 `;
 
 const NewsPosts = props => (
@@ -21,10 +29,12 @@ const NewsPosts = props => (
         </figure>
         <div className="media-content">
           <div className="content">
-            <p className="text has-text-weight-bold">
+            <h1 className="subtitle is-5 text has-text-weight-bold">
               Liberalisation of air cargo
-            </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </h1>
+            <h2 className="subtitle is-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </h2>
           </div>
         </div>
       </article>

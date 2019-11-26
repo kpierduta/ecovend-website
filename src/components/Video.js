@@ -36,7 +36,7 @@ class Video extends React.Component {
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           /> */}
-          <video width="560" height="615" controls>
+          <video width="560" height="615" controls autoplay="autoplay">
             <source src={firstVideo} type="video/mp4" />
           </video>
         </section>
