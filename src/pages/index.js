@@ -82,36 +82,36 @@ export const indexQuery = graphql`
       stepThreeTitle
       stepThreeText
       chooseTitle
-      iconOne {
-        file {
-          url
-        }
-      }
-      iconOneText
-      iconTwo {
-        file {
-          url
-        }
-      }
-      iconTwoText
-      iconThree {
-        file {
-          url
-        }
-      }
-      iconThreeText
-      iconFour {
-        file {
-          url
-        }
-      }
-      iconFourText
-      iconFive {
-        file {
-          url
-        }
-      }
-      iconFiveText
+      # iconOne {
+      #   file {
+      #     url
+      #   }
+      # }
+      # iconOneText
+      # iconTwo {
+      #   file {
+      #     url
+      #   }
+      # }
+      # iconTwoText
+      # iconThree {
+      #   file {
+      #     url
+      #   }
+      # }
+      # iconThreeText
+      # iconFour {
+      #   file {
+      #     url
+      #   }
+      # }
+      # iconFourText
+      # iconFive {
+      #   file {
+      #     url
+      #   }
+      # }
+      # iconFiveText
       prImage {
         file {
           url
@@ -179,7 +179,7 @@ export default class IndexPage extends React.Component {
                 <DrsInfo home={home} />
                 <Steps home={home} />
                 <Choose home={home} choose={choose.edges} />
-                {/** 
+                {/**
                 <Customer home={home} />
                 */}
                 <Advertisment home={home} />
