@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Container = styled.section`
-  .container {
-    padding-bottom: 6rem;
-    border-bottom: 5px solid ${props => props.theme.secondaryColor};
-  }
+import ResultStep from './ResultStep';
+import ResultCounter from './ResultCounter';
 
+const Container = styled.section`
   .text {
     margin-top: 7.5rem;
   }
@@ -43,6 +41,11 @@ const ContainerInner = styled.div`
   .head {
     padding-bottom: 3rem;
   }
+`;
+
+const Bottom = styled.div`
+  margin-top: 2rem;
+  padding-bottom: 2rem;
 `;
 class Rvm extends React.Component {
   render() {
@@ -116,6 +119,25 @@ class Rvm extends React.Component {
               </video>
             </div>
           </div>
+
+          <Bottom className="columns">
+            <div className="column is-3">
+              <ResultCounter text="1" />
+              <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
+            </div>
+            <div className="column is-3">
+              <ResultCounter text="2" />
+              <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
+            </div>
+            <div className="column is-3">
+              <ResultCounter text="3" />
+              <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
+            </div>
+            <div className="column is-3">
+              <ResultCounter text="4" />
+              <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
+            </div>
+          </Bottom>
         </div>
       </Container>
     );
