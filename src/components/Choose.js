@@ -7,6 +7,9 @@ const Conatiner = styled.div`
   .section {
     padding: 8rem 0rem;
   }
+  .container {
+    padding: 7rem 0rem 7rem 0rem;
+  }
 `;
 
 const ImageWrapper = styled.img`
