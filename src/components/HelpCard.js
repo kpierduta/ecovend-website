@@ -36,7 +36,7 @@ const HelpCard = () => (
         </div>
         <div className="card-content has-text-white">
           <h2 className="subtitle is-6 has-text-white">
-            Have a question, or need more infotrmation?
+            Have a question, or need more information?
           </h2>
           <h2 className="subtitle is-6 has-text-white">Get in touch today</h2>
           <Link to="/contact" className="button is-rounded is-inverted">

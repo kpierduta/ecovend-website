@@ -117,8 +117,7 @@ class NewsConetnt extends React.Component {
               to="/"
               className="pagination-previous"
               title="This is the first page"
-              disabled
-            >
+              disabled>
               Previous
             </Link>
             <Link to="/" className="pagination-next">
@@ -130,8 +129,7 @@ class NewsConetnt extends React.Component {
                   to="/"
                   className="pagination-link is-current"
                   aria-label="Page 1"
-                  aria-current="page"
-                >
+                  aria-current="page">
                   1
                 </Link>
               </li>
@@ -139,8 +137,7 @@ class NewsConetnt extends React.Component {
                 <Link
                   to="/"
                   className="pagination-link"
-                  aria-label="Goto page 2"
-                >
+                  aria-label="Goto page 2">
                   2
                 </Link>
               </li>
@@ -148,8 +145,7 @@ class NewsConetnt extends React.Component {
                 <Link
                   to="/"
                   className="pagination-link"
-                  aria-label="Goto page 3"
-                >
+                  aria-label="Goto page 3">
                   3
                 </Link>
               </li>
