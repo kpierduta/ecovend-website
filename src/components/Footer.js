@@ -54,7 +54,7 @@ const Footer = () => (
             <div className="column">
               <h1 className="title is-5 is-spaced has-text-white">CONTACT</h1>
               <LinkStyled to="/" className="subtitle is-6">
-                8700777555
+                08700 777 555
               </LinkStyled>
               <LinkStyled to="/" className="subtitle is-6">
                 info@eco-vend.co.uk
