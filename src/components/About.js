@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Container = styled.div`
   margin-top: 1rem;
@@ -16,7 +16,7 @@ const Container = styled.div`
   }
 `;
 
-const LinkStyled = styled(Link)`
+const AnchorStyled = styled(AnchorLink)`
   background: transparent;
   border: none;
 `;
@@ -38,9 +38,12 @@ class About extends React.Component {
               <h6 className="subtitle is-6 has-text-white text sub-text">
                 {home.greyBlockSecondPara.internal.content}
               </h6>
-              <LinkStyled to="/contact" className="title is-5 has-text-white">
+
+              <AnchorStyled
+                href="#contact"
+                className="title is-5 has-text-white">
                 Contact
-              </LinkStyled>
+              </AnchorStyled>
             </div>
           </div>
         </section>

@@ -70,7 +70,7 @@ const Contact = () => {
     `,
   );
   return (
-    <Container className="section">
+    <Container id="contact" className="section">
       <div className="container">
         <div className="columns has-text-centered">
           <div className="column">

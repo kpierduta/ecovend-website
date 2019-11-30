@@ -32,6 +32,10 @@ const Section = styled.section`
   .icon {
     margin-left: 0rem !important;
   }
+
+  .column:last-child {
+    margin-top: -0.7rem;
+  }
 `;
 
 const LinkStyled = styled(Link)`

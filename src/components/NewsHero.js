@@ -10,10 +10,6 @@ import HelpCard from './HelpCard';
 const Section = styled.section`
   margin-bottom: 4rem;
 
-  .posts {
-    margin-top: 4rem;
-  }
-
   .menu-list li ul {
     border-left: none !important;
   }
@@ -38,6 +34,16 @@ const Section = styled.section`
 
   .test {
     margin-bottom: 5rem;
+  }
+  .heading {
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    line-height: 2;
+    font-size: 1.5rem;
+  }
+  .icon {
+    color: ${props => props.theme.primaryColor};
+    margin-right: 1rem;
   }
 `;
 
@@ -64,21 +70,15 @@ class NewsConetnt extends React.Component {
               ))}
             </div>
             <div className="column is-4">
-              {/*
-              <h1 className="title is-5">Search</h1>
-              <div className="field has-addons">
-                <div className="control is-expanded">
-                  <input className="input" type="text" placeholder="Search " />
-                </div>
-                <div className="control">
-                  <button className="button is-rounded" type="button">
-                    <span className="icon">
-                      <i className="fas fa-search" />
-                    </span>
-                  </button>
-                </div>
+              <div className="">
+                <h5 className="heading">Follow Us</h5>
+                <Link to="/" className="icon is-size-4">
+                  <i className="fab fa-linkedin-in"></i>
+                </Link>
+                <Link to="/" className="icon is-size-5">
+                  <i className="fab fa-twitter"></i>
+                </Link>
               </div>
-            */}
               <div className="posts">
                 <h5 className="title is-4">Recent Posts</h5>
                 <aside className="menu">
@@ -110,35 +110,6 @@ class NewsConetnt extends React.Component {
               <div className="posts">
                 <HelpCard />
               </div>
-              {/*
-              <div className="posts">
-                <h5 className="title is-5">Our Photostream</h5>
-                <figure className="image is-64x64 is-inline-block">
-                  <img src="/images/stream/first.jpg" alt="" />
-                </figure>
-                <figure className="image is-64x64 is-inline-block">
-                  <img src="/images/stream/second.jpg" alt="" />
-                </figure>
-                <figure className="image is-64x64 is-inline-block">
-                  <img src="/images/stream/three.jpg" alt="" />
-                </figure>
-                <figure className="image is-64x64 is-inline-block">
-                  <img src="/images/stream/four.jpg" alt="" />
-                </figure>
-                <figure className="image is-64x64 is-inline-block">
-                  <img src="/images/stream/five.jpg" alt="" />
-                </figure>
-                <figure className="image is-64x64 is-inline-block">
-                  <img src="/images/stream/seven.jpg" alt="" />
-                </figure>
-                <figure className="image is-64x64 is-inline-block">
-                  <img src="/images/stream/eight.jpg" alt="" />
-                </figure>
-                <figure className="image is-64x64 is-inline-block">
-                  <img src="/images/stream/nine.jpg" alt="" />
-                </figure>
-              </div>
-              */}
             </div>
           </div>
           <nav className="pagination" role="navigation" aria-label="pagination">
@@ -146,8 +117,7 @@ class NewsConetnt extends React.Component {
               to="/"
               className="pagination-previous"
               title="This is the first page"
-              disabled
-            >
+              disabled>
               Previous
             </Link>
             <Link to="/" className="pagination-next">
@@ -159,8 +129,7 @@ class NewsConetnt extends React.Component {
                   to="/"
                   className="pagination-link is-current"
                   aria-label="Page 1"
-                  aria-current="page"
-                >
+                  aria-current="page">
                   1
                 </Link>
               </li>
@@ -168,8 +137,7 @@ class NewsConetnt extends React.Component {
                 <Link
                   to="/"
                   className="pagination-link"
-                  aria-label="Goto page 2"
-                >
+                  aria-label="Goto page 2">
                   2
                 </Link>
               </li>
@@ -177,8 +145,7 @@ class NewsConetnt extends React.Component {
                 <Link
                   to="/"
                   className="pagination-link"
-                  aria-label="Goto page 3"
-                >
+                  aria-label="Goto page 3">
                   3
                 </Link>
               </li>
