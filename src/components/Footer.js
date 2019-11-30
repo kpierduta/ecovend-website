@@ -37,7 +37,12 @@ const LinkStyled = styled(Link)`
   display: block;
   :hover {
     color: #fff;
-  
+`;
+
+const PaddingContainer = styled.div`
+  @media only screen and (max-width: 1500px) {
+    padding: 0rem 2rem 0rem 7rem;
+  }
 `;
 
 const Footer = () => (
@@ -55,7 +60,10 @@ const Footer = () => (
                 info@eco-vend.co.uk
               </LinkStyled>
               <LinkStyled to="/" className="subtitle is-6">
-                ECO House, Lea Road, Waltham Abbey, Hertfordshire, EN9 1AS
+                ECO House, Lea Road, Waltham Abbey,
+              </LinkStyled>
+              <LinkStyled to="/" className="subtitle is-6">
+                Hertfordshire, EN9 1AS
               </LinkStyled>
             </div>
             <div className="column">
