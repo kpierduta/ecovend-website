@@ -10,7 +10,6 @@ import Video from '../components/Video';
 import DrsInfo from '../components/DrsInfo';
 import Steps from '../components/Steps';
 import Choose from '../components/Choose';
-import Customer from '../components/Customer';
 import Advertisment from '../components/Advertising';
 import ContactWrapper from '../components/ContactWrapper';
 
