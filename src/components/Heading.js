@@ -3,9 +3,6 @@ import styled from 'styled-components';
 
 const HeadingStyled = styled.div`
   margin-top: 2rem;
-  .tabs {
-    padding-left: 1rem;
-  }
   .tabs ul {
     padding-bottom: 2.3rem;
     border-bottom: 1.25px solid ${props => props.theme.primaryColor};

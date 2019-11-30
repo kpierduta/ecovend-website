@@ -43,6 +43,9 @@ const LinkStyled = styled(Link)`
   font-size: ${props => props.theme.fontSize};
 `;
 
+const Logo = styled.a`
+  padding: 0 !important;
+`;
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -65,9 +68,9 @@ export default class Header extends React.Component {
       <Navbar className="navbar" role="navigation" aria-label="main navigation">
         <div className="container">
           <div className="navbar-brand">
-            <a href="/" className="navbar-item">
+            <Logo href="/" className="navbar-item">
               <img className="logo" src="/images/logo.png" alt="ecovend-logo" />
-            </a>
+            </Logo>
             <a
               className={view ? 'navbar-burger is-active' : 'navbar-burger '}
               aria-label="menu"
