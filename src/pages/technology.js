@@ -70,10 +70,7 @@ export default class Technology extends React.Component {
                     <Steps home={home} />
                   </TextWrapper>
                   <TechnologyItem title="How the machine operates" />
-                  <TechnologyItem
-                    title="Software Updates
-                  "
-                  />
+                  <TechnologyItem title="Software Updates" />
                   <TechnologyItem title="Technical Support" />
                   <TechnologyItem title="Remote User Platform" />
                   <TechnologyItem title="Tickets" />

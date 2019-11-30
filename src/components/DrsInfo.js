@@ -5,7 +5,7 @@ const Conatiner = styled.div`
   padding-bottom: 10rem;
 
   .title.is-4 {
-    margin-top: 7rem;
+    margin-top: 1rem;
     @media only screen and (max-width: 768px) {
       margin-top: 5rem;
     }
@@ -20,13 +20,20 @@ const Conatiner = styled.div`
   }
 
   video {
-    margin-top: 5rem !important;
+    margin-top: 5rem;
     width: 61.3125rem;
     height: 34.875rem;
     @media only screen and (max-width: 768px) {
       height: auto;
     }
   }
+  .columns:first-child {
+  }
+`;
+
+const ColumnWrapper = styled.div`
+  background: #eff2f3;
+  color: #000;
 `;
 
 class DrsInfo extends React.Component {
@@ -36,22 +43,6 @@ class DrsInfo extends React.Component {
       <Conatiner className="container">
         <div className="columns  has-text-centered">
           <div className="column">
-            <h4 className="title is-4 is-capitalized has-text-primary">
-              {home.orangeTitle}
-            </h4>
-            <h6 className="subtitle is-6 has-text-primary first">
-              {home.orangeParagraph.internal.content}
-            </h6>
-            <h6 className="subtitle is-6 has-text-primary second">
-              {' '}
-              {home.orangeSecondPara.internal.content}
-            </h6>
-            <h6 className="subtitle is-6 has-text-primary second">
-              {' '}
-              {home.orangeThirdPara.internal.content}
-            </h6>
-          </div>
-          <div className="column">
             <video width="560" height="415" controls>
               <source
                 src="/videos/ACM_Reverse_Vending_on_the_BBC.mp4"
@@ -59,6 +50,20 @@ class DrsInfo extends React.Component {
               />
             </video>
           </div>
+          <ColumnWrapper className="column">
+            <h4 className="title is-4 is-capitalized">{home.orangeTitle}</h4>
+            <h6 className="subtitle is-6 first">
+              {home.orangeParagraph.internal.content}
+            </h6>
+            <h6 className="subtitle is-6 second">
+              {' '}
+              {home.orangeSecondPara.internal.content}
+            </h6>
+            <h6 className="subtitle is-6 second">
+              {' '}
+              {home.orangeThirdPara.internal.content}
+            </h6>
+          </ColumnWrapper>
         </div>
       </Conatiner>
     );
