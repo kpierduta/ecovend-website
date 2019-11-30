@@ -27,15 +27,23 @@ const Container = styled.section`
   }
 
   video {
-    margin-top: 5rem;
-    width: 100%;
-    height: 34.875rem;
+    padding-left: 5rem;
+    height: auto;
     @media only screen and (max-width: 768px) {
       height: auto;
     }
   }
 `;
 
+const ContainerInner = styled.div`
+  background-color: #eff2f3;
+  padding: 3rem 3rem 0rem 2rem;
+  justify-content: space-between;
+  display: grid;
+  .head {
+    padding-bottom: 3rem;
+  }
+`;
 class Rvm extends React.Component {
   render() {
     const { adv } = this.props;
@@ -78,17 +86,35 @@ class Rvm extends React.Component {
               />
             </div>
           </div>
-          <h5 className="subtitle is-6 has-text-centered has-text-danger">
-            {adv.videoTitle}
-          </h5>
-          <h4 className="is-size-4 has-text-weight-semibold has-text-centered">
-            Click to view the video
-          </h4>
-          <div className="has-text-centered">
-            <video controls autoplay="autoplay">
-              <source src="/videos/TERMINATOR.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+          <div className="columns">
+            <ContainerInner className="column is-7">
+              <div>
+                <h4 className="title is-4 head is-uppercase has-text-centered has-text-danger">
+                  Audio-Visual enabled RVMS
+                </h4>
+                <h5 className="subtitle is-6 has-text-centered has-text-danger">
+                  {adv.videoTitle}
+                </h5>
+              </div>
+              <h4 className="is-size-4 has-text-weight-semibold has-text-centered">
+                Click to view the video
+              </h4>
+              <div>
+                <h4 className="title head is-4 has-text-centered has-text-danger">
+                  Want something a bit different?
+                </h4>
+                <h5 className="subtitle is-6 has-text-centered has-text-danger">
+                  We offer wrapping and branding options to suit your specific
+                  requirements.
+                </h5>
+              </div>
+            </ContainerInner>
+            <div className="has-text-centered">
+              <video controls autoPlay="autoplay">
+                <source src="/videos/TERMINATOR.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
       </Container>
