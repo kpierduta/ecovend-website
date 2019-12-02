@@ -31,6 +31,11 @@ const Container = styled.section`
       height: auto;
     }
   }
+
+  img {
+    height: auto;
+    width: 70%;
+  }
 `;
 
 const ContainerInner = styled.div`
@@ -74,7 +79,7 @@ class Rvm extends React.Component {
                 advertising
               </h3>
             </div>
-            <div className="column has-text-right is-hidden-mobile">
+            <div className="column image has-text-right is-hidden-mobile">
               <img
                 className="has-text-right"
                 src={adv.heroImage.file.url}

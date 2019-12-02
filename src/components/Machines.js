@@ -31,6 +31,11 @@ const Container = styled.section`
     margin-bottom: 0.75rem;
     border-bottom: 2px solid ${props => props.theme.secondaryColor} !important;
   }
+
+  .image {
+    height: auto;
+    width: 70%;
+  }
 `;
 
 const Machines = () => (
@@ -280,6 +285,7 @@ const Machines = () => (
             <span>MODEL: ECOVEND RVM 400 </span>
           </h1>
           <img
+            className="image"
             src="/images/machines/ecovend-machine_400.png"
             alt="Recycling Machine"
           />

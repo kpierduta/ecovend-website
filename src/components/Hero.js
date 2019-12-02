@@ -15,6 +15,11 @@ const Container = styled.section`
   .subtitle {
     margin-top: 0.25rem !important;
   }
+
+  img {
+    height: auto;
+    width: 70%;
+  }
 `;
 
 class Hero extends React.Component {
