@@ -16,6 +16,7 @@ const Container = styled.section`
   }
 
   .input {
+    padding: 0;
     height: 2.5rem;
     border-bottom: 1px solid ${props => props.theme.secondaryColor} !important;
     background-color: #fff;
@@ -40,7 +41,7 @@ const Container = styled.section`
   }
 
   .control {
-    padding: 1rem;
+    padding: 0.5rem;
     :hover {
       border-color: #fff;
     }
