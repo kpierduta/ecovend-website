@@ -63,21 +63,23 @@ export default class Technology extends React.Component {
           render={data => {
             const { contentfulHomepage: home } = data;
             return (
-              <section className="section">
-                <div className="container">
-                  <BreadCrumbs undelineText="Tech" simpleText="nology" />
-                  <TextWrapper>
-                    <Steps home={home} />
-                  </TextWrapper>
-                  <TechnologyItem title="How the machine operates" />
-                  <TechnologyItem title="Software Updates" />
-                  <TechnologyItem title="Technical Support" />
-                  <TechnologyItem title="Remote User Platform" />
-                  <TechnologyItem title="Tickets" />
-                  <TechnologyItem title="Upcoming Features" />
-                  <Contact />
-                </div>
-              </section>
+              <React.Fragment>
+                <BreadCrumbs undelineText="Tech" simpleText="nology" />
+                <TextWrapper>
+                  <Steps home={home} />
+                </TextWrapper>
+                <section className="section">
+                  <div className="container">
+                    <TechnologyItem title="How the machine operates" />
+                    <TechnologyItem title="Software Updates" />
+                    <TechnologyItem title="Technical Support" />
+                    <TechnologyItem title="Remote User Platform" />
+                    <TechnologyItem title="Tickets" />
+                    <TechnologyItem title="Upcoming Features" />
+                    <Contact />
+                  </div>
+                </section>
+              </React.Fragment>
             );
           }}
         />

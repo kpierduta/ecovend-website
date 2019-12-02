@@ -12,10 +12,14 @@ const Container = styled.h1`
 `;
 
 const BreadCrumbs = ({ undelineText, simpleText }) => (
-  <Container className="has-text-weight-medium">
-    <span className="text">{undelineText}</span>
-    {simpleText}
-  </Container>
+  <section className="section">
+    <div className="container">
+      <Container className="has-text-weight-medium">
+        <span className="text">{undelineText}</span>
+        {simpleText}
+      </Container>
+    </div>
+  </section>
 );
 
 export default BreadCrumbs;
