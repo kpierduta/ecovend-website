@@ -13,18 +13,16 @@ class Question extends React.Component {
   render() {
     const { faq } = this.props;
     return (
-      <div className="columns">
-        <div className="column is-12">
-          {faq.map(item => (
-            <CardWrapper>
-              <FaqItem
-                questions={item.node.question.question}
-                answer={item.node.answer.answer}
-              />
-            </CardWrapper>
-          ))}
-        </div>
-      </div>
+      <React.Fragment>
+        {faq.map(item => (
+          <CardWrapper>
+            <FaqItem
+              questions={item.node.question.question}
+              answer={item.node.answer.answer}
+            />
+          </CardWrapper>
+        ))}
+      </React.Fragment>
     );
   }
 }
