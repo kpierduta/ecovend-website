@@ -19,7 +19,7 @@ const Container = styled.div`
   .card-content {
     padding-top: 3.5rem;
     @media only screen and (max-width: 768px) {
-      padding: 5rem 2rem 0rem 1rem;
+      padding: 3rem 2rem 0rem 1rem;
     }
   }
 `;

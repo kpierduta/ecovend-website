@@ -40,32 +40,34 @@ class DrsInfo extends React.Component {
   render() {
     const { home } = this.props;
     return (
-      <Conatiner className="container">
-        <div className="columns  has-text-centered">
-          <div className="column">
-            <video width="560" height="415" controls>
-              <source
-                src="/videos/ACM_Reverse_Vending_on_the_BBC.mp4"
-                type="video/mp4"
-              />
-            </video>
+      <section className="section">
+        <Conatiner className="container">
+          <div className="columns  has-text-centered">
+            <div className="column">
+              <video width="560" height="415" controls>
+                <source
+                  src="/videos/ACM_Reverse_Vending_on_the_BBC.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <ColumnWrapper className="column">
+              <h4 className="title is-4 is-capitalized">{home.orangeTitle}</h4>
+              <h6 className="subtitle is-6 first">
+                {home.orangeParagraph.internal.content}
+              </h6>
+              <h6 className="subtitle is-6 second">
+                {' '}
+                {home.orangeSecondPara.internal.content}
+              </h6>
+              <h6 className="subtitle is-6 second">
+                {' '}
+                {home.orangeThirdPara.internal.content}
+              </h6>
+            </ColumnWrapper>
           </div>
-          <ColumnWrapper className="column">
-            <h4 className="title is-4 is-capitalized">{home.orangeTitle}</h4>
-            <h6 className="subtitle is-6 first">
-              {home.orangeParagraph.internal.content}
-            </h6>
-            <h6 className="subtitle is-6 second">
-              {' '}
-              {home.orangeSecondPara.internal.content}
-            </h6>
-            <h6 className="subtitle is-6 second">
-              {' '}
-              {home.orangeThirdPara.internal.content}
-            </h6>
-          </ColumnWrapper>
-        </div>
-      </Conatiner>
+        </Conatiner>
+      </section>
     );
   }
 }
