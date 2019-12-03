@@ -14,6 +14,10 @@ const Section = styled.section`
     border-left: none !important;
   }
 
+  .column:first-child {
+    padding: 0;
+  }
+
   .menu-list li ul li {
     font-size: 1rem;
     border-left: 4px solid #dbdbdb;
@@ -51,108 +55,116 @@ class NewsConetnt extends React.Component {
   render() {
     const { news } = this.props;
     return (
-      <Section className="section">
-        <div className="container">
-          <div className="test">
-            <BreadCrumbs undelineText="News" />
-          </div>
-          <div className="columns">
-            <div className="column">
-              {news.map(item => (
-                <BlogCard
-                  category={item.node.newsCategory}
-                  date={item.node.date}
-                  image={item.node.image.file.url}
-                  title={item.node.newsTitle}
-                  para={item.node.shortDescription.internal.content}
-                  to={`/blog/${item.node.slug}`}
-                />
-              ))}
+      <React.Fragment>
+        <BreadCrumbs undelineText="News" />
+        <Section className="section">
+          <div className="container">
+            <div className="columns">
+              <div className="column">
+                {news.map(item => (
+                  <BlogCard
+                    category={item.node.newsCategory}
+                    date={item.node.date}
+                    image={item.node.image.file.url}
+                    title={item.node.newsTitle}
+                    para={item.node.shortDescription.internal.content}
+                    to={`/blog/${item.node.slug}`}
+                  />
+                ))}
+              </div>
+              <div className="column is-4">
+                <div className="">
+                  <h5 className="heading">Follow Us</h5>
+                  <Link to="/" className="icon is-size-4">
+                    <i className="fab fa-linkedin-in"></i>
+                  </Link>
+                  <Link to="/" className="icon is-size-5">
+                    <i className="fab fa-twitter"></i>
+                  </Link>
+                </div>
+                <div className="posts">
+                  <h5 className="title is-4">Categories</h5>
+                  <aside className="menu">
+                    <ul className="menu-list">
+                      <li>
+                        <ul>
+                          <li>
+                            <Link to="/">Recent</Link>
+                          </li>
+                          <li>
+                            <Link to="/"> Business</Link>
+                          </li>
+                          <li>
+                            <Link to="/"> PR</Link>
+                          </li>
+                          <li>
+                            <Link to="/"> Projects</Link>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </aside>
+                </div>
+                <div className="posts">
+                  <h5 className="title is-4">Recent Posts</h5>
+                  <NewsPosts image="/images/news/four.jpg" />
+                  <NewsPosts image="/images/news/three.jpg" />
+                </div>
+                <div className="posts">
+                  <HelpCard />
+                </div>
+              </div>
             </div>
-            <div className="column is-4">
-              <div className="">
-                <h5 className="heading">Follow Us</h5>
-                <Link to="/" className="icon is-size-4">
-                  <i className="fab fa-linkedin-in"></i>
-                </Link>
-                <Link to="/" className="icon is-size-5">
-                  <i className="fab fa-twitter"></i>
-                </Link>
-              </div>
-              <div className="posts">
-                <h5 className="title is-4">Categories</h5>
-                <aside className="menu">
-                  <ul className="menu-list">
-                    <li>
-                      <ul>
-                        <li>
-                          <Link to="/">Recent</Link>
-                        </li>
-                        <li>
-                          <Link to="/"> Business</Link>
-                        </li>
-                        <li>
-                          <Link to="/"> PR</Link>
-                        </li>
-                        <li>
-                          <Link to="/"> Projects</Link>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </aside>
-              </div>
-              <div className="posts">
-                <h5 className="title is-4">Recent Posts</h5>
-                <NewsPosts image="/images/news/four.jpg" />
-                <NewsPosts image="/images/news/three.jpg" />
-              </div>
-              <div className="posts">
-                <HelpCard />
-              </div>
-            </div>
+            <nav
+              className="pagination"
+              role="navigation"
+              aria-label="pagination"
+            >
+              <Link
+                to="/"
+                className="pagination-previous"
+                title="This is the first page"
+                disabled
+              >
+                Previous
+              </Link>
+              <Link to="/" className="pagination-next">
+                Next page
+              </Link>
+              <ul className="pagination-list">
+                <li>
+                  <Link
+                    to="/"
+                    className="pagination-link is-current"
+                    aria-label="Page 1"
+                    aria-current="page"
+                  >
+                    1
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="pagination-link"
+                    aria-label="Goto page 2"
+                  >
+                    2
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="pagination-link"
+                    aria-label="Goto page 3"
+                  >
+                    3
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <nav className="pagination" role="navigation" aria-label="pagination">
-            <Link
-              to="/"
-              className="pagination-previous"
-              title="This is the first page"
-              disabled>
-              Previous
-            </Link>
-            <Link to="/" className="pagination-next">
-              Next page
-            </Link>
-            <ul className="pagination-list">
-              <li>
-                <Link
-                  to="/"
-                  className="pagination-link is-current"
-                  aria-label="Page 1"
-                  aria-current="page">
-                  1
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="pagination-link"
-                  aria-label="Goto page 2">
-                  2
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="pagination-link"
-                  aria-label="Goto page 3">
-                  3
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </Section>
+        </Section>
+      </React.Fragment>
     );
   }
 }

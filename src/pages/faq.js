@@ -47,12 +47,8 @@ export default class FaqPage extends React.Component {
             const { allContentfulFaqPage: faq } = data;
             return (
               <React.Fragment>
-                <Container className="section">
-                  <div className="container">
-                    <BreadCrumbs undelineText="FAQ" simpleText="s" />
-                    <Question faq={faq.edges} />
-                  </div>
-                </Container>
+                <BreadCrumbs undelineText="FAQ" simpleText="s" />
+                <Question faq={faq.edges} />
               </React.Fragment>
             );
           }}
