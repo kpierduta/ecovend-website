@@ -9,7 +9,7 @@ const Container = styled.section`
 
 const RangeHero = () => (
   <React.Fragment>
-    <BreadCrumbs undelineText="Our" simpleText="Range" />
+    <BreadCrumbs undelineText="Our" simpleText=" Range" />
     <Container className="section">
       <div className="container">
         <h6 className="subtitle is-6 Para">
