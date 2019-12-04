@@ -26,6 +26,7 @@ export const advertQuery = graphql`
           url
         }
       }
+      sideTitle
     }
   }
 `;

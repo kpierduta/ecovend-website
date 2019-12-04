@@ -5,10 +5,6 @@ import { Link } from 'gatsby';
 import Properties from './Properties';
 
 const Container = styled.section`
-  .subtitle.is-5 {
-    color: ${props => props.theme.secondaryColor};
-  }
-
   .title.is-5 {
     margin-bottom: 4rem;
   }

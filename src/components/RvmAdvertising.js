@@ -5,10 +5,6 @@ import ResultStep from './ResultStep';
 import ResultCounter from './ResultCounter';
 
 const Container = styled.section`
-  .text {
-    margin-top: 7.5rem;
-  }
-
   .title {
     margin-bottom: 0.5rem;
     line-height: normal !important;
@@ -38,6 +34,14 @@ const Container = styled.section`
   }
 `;
 
+const RvmType = styled.div`
+  padding: 0rem 29rem 0rem 0rem;
+  padding-bottom: 10rem;
+  @media only screen and (max-width: 768px) {
+    padding: 0;
+  }
+`;
+
 const ContainerInner = styled.div`
   background-color: #eff2f3;
   padding: 3rem 3rem 0rem 2rem;
@@ -59,26 +63,11 @@ class Rvm extends React.Component {
       <Container className="section">
         <div className="container">
           <div className="columns">
-            <div className="column">
-              <h3 className="title is-3 is-capitalized text has-text-weight-light has-text-danger">
-                large intergral
-              </h3>
+            <RvmType className="column">
               <h3 className="title is-3 is-capitalized has-text-weight-light has-text-danger">
-                audio-video screen and
+                {adv.sideTitle}
               </h3>
-              <h3 className="title is-3 is-capitalized has-text-weight-light has-text-danger">
-                light box panels for
-              </h3>
-              <h3 className="title is-3 is-capitalized has-text-weight-medium has-text-danger">
-                instanr revenue from
-              </h3>
-              <h3 className="title is-3 is-capitalized has-text-weight-medium has-text-danger">
-                branding and
-              </h3>
-              <h3 className="title is-3 is-capitalized has-text-weight-medium has-text-danger">
-                advertising
-              </h3>
-            </div>
+            </RvmType>
             <div className="column image has-text-right is-hidden-mobile">
               <img
                 className="has-text-right"
