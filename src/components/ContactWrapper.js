@@ -6,6 +6,7 @@ import MyMapComponent from './GoogleMap';
 
 const Container = styled.section`
   position: relative;
+  background: #e2eff2;
 `;
 
 const ContactWrapper = () => (

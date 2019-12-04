@@ -51,10 +51,10 @@ class Advertisment extends React.Component {
             <img src="/images/advertisment-one.jpg" alt="#" />
           </div>
           <div className="column is-4">
-            <img src="/images/advertisment-two.jpg" alt="#" />
+            <img src="/images/ad-two.jpg" alt="#" />
           </div>
           <div className="column is-4">
-            <img src="/images/advertisment-three.jpg" alt="#" />
+            <img src="/images/Ad-three.jpg" alt="#" />
           </div>
           <div className="column is-4">
             <img src="/images/advertisment-four.jpg" alt="#" />
