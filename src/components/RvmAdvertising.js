@@ -58,7 +58,7 @@ const Bottom = styled.div`
 `;
 class Rvm extends React.Component {
   render() {
-    const { adv } = this.props;
+    const { adv, advSteps } = this.props;
     return (
       <Container className="section">
         <div className="container">
@@ -87,22 +87,21 @@ class Rvm extends React.Component {
             <ContainerInner className="column is-7">
               <div>
                 <h4 className="title is-4 head is-uppercase has-text-centered has-text-danger">
-                  Audio-Visual enabled RVMS
+                  {adv.visualTitle}
                 </h4>
                 <h5 className="subtitle is-6 has-text-centered has-text-danger">
                   {adv.videoTitle}
                 </h5>
               </div>
               <h4 className="is-size-4 has-text-weight-semibold has-text-centered">
-                Click to view the video
+                {adv.videoClick}
               </h4>
               <div>
                 <h4 className="title head is-4 has-text-centered has-text-danger">
-                  Want something a bit different?
+                  {adv.visualSubtitle}
                 </h4>
                 <h5 className="subtitle is-6 has-text-centered has-text-danger">
-                  We offer wrapping and branding options to suit your specific
-                  requirements.
+                  {adv.visualParagraph}
                 </h5>
               </div>
             </ContainerInner>
@@ -115,22 +114,12 @@ class Rvm extends React.Component {
           </div>
 
           <Bottom className="columns">
-            <div className="column is-3">
-              <ResultCounter text="1" />
-              <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
-            </div>
-            <div className="column is-3">
-              <ResultCounter text="2" />
-              <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
-            </div>
-            <div className="column is-3">
-              <ResultCounter text="3" />
-              <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
-            </div>
-            <div className="column is-3">
-              <ResultCounter text="4" />
-              <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
-            </div>
+            {advSteps.map(item => (
+              <div className="column is-3">
+                <ResultCounter text={item.node.listingOrder} />
+                <ResultStep text={item.node.description} />
+              </div>
+            ))}
           </Bottom>
         </div>
       </Container>

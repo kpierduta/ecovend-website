@@ -12,6 +12,10 @@ export const advertQuery = graphql`
   query advert {
     contentfulAdvertisingPage {
       title
+      visualTitle
+      visualSubtitle
+      visualParagraph
+      videoClick
       introParagrpah {
         introParagrpah
       }
@@ -28,6 +32,14 @@ export const advertQuery = graphql`
       }
       sideTitle
     }
+    allContentfulAdvertisingStep(sort: { order: ASC, fields: listingOrder }) {
+      edges {
+        node {
+          listingOrder
+          description
+        }
+      }
+    }
   }
 `;
 
@@ -43,11 +55,14 @@ export default class AdvertisingPage extends React.Component {
         <StaticQuery
           query={advertQuery}
           render={data => {
-            const { contentfulAdvertisingPage: adv } = data;
+            const {
+              contentfulAdvertisingPage: adv,
+              allContentfulAdvertisingStep: advSteps,
+            } = data;
             return (
               <React.Fragment>
                 <Advertising adv={adv} />
-                <Rvm adv={adv} />
+                <Rvm adv={adv} advSteps={advSteps.edges} />
                 <Contact />
               </React.Fragment>
             );
