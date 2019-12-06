@@ -95,7 +95,7 @@ const Contact = () => {
               {contentfulContact.mobileNumber}
             </h6>
           </div>
-          <div className="column is-7">
+          <div className="column is-6">
             <h2 className="title is-3 is-spaced">
               Get in touch to find out more
             </h2>
