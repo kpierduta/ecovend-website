@@ -6,7 +6,7 @@ import ContactForm from './ContactForm';
 
 const Container = styled.section`
   position: relative;
-  background-color: #ffff !important;
+  background: #e2eff2;
   padding-top: 3rem;
   padding-bottom: 3rem;
 

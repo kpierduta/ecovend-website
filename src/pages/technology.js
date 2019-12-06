@@ -76,9 +76,9 @@ export default class Technology extends React.Component {
                     <TechnologyItem title="Remote User Platform" />
                     <TechnologyItem title="Tickets" />
                     <TechnologyItem title="Upcoming Features" />
-                    <Contact />
                   </div>
                 </section>
+                <Contact />
               </React.Fragment>
             );
           }}
