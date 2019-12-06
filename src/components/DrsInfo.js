@@ -32,6 +32,7 @@ const Conatiner = styled.div`
 `;
 
 const ColumnWrapper = styled.div`
+  padding: 3rem 1.5rem;
   background: #eff2f3;
   color: #000;
 `;

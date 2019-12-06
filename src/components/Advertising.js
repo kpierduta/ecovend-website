@@ -10,6 +10,9 @@ const Conatiner = styled.div`
 
   .top {
     margin: 4rem;
+    @media only screen and (max-width: 768px) {
+      margin: 0;
+    }
   }
 
   .text {
