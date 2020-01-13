@@ -4,28 +4,15 @@ import { Link } from 'gatsby';
 
 import BreadCrumbs from './BreadCrumbs';
 import BlogCard from './BlogCard';
-import NewsPosts from './NewsPosts';
+import Followus from './FollowUs';
+import RecentPost from './RecentPost';
 import HelpCard from './HelpCard';
 
 const Section = styled.section`
   margin-bottom: 4rem;
 
-  .menu-list li ul {
-    border-left: none !important;
-  }
-
   .column:first-child {
     padding: 0;
-  }
-
-  .menu-list li ul li {
-    font-size: 1rem;
-    border-left: 4px solid #dbdbdb;
-    transition: border-left 0.5s, padding-left 0.5s;
-    :hover {
-      padding-left: 0.5rem;
-      border-left: 5px solid ${props => props.theme.secondaryColor};
-    }
   }
 
   .image.is-64x64 {
@@ -39,12 +26,7 @@ const Section = styled.section`
   .test {
     margin-bottom: 5rem;
   }
-  .heading {
-    font-weight: 600;
-    letter-spacing: 1.1px;
-    line-height: 2;
-    font-size: 1.5rem;
-  }
+
   .icon {
     color: ${props => props.theme.primaryColor};
     margin-right: 1rem;
@@ -73,43 +55,8 @@ class NewsConetnt extends React.Component {
                 ))}
               </div>
               <div className="column is-4">
-                <div className="">
-                  <h5 className="heading">Follow Us</h5>
-                  <Link to="/" className="icon is-size-4">
-                    <i className="fab fa-linkedin-in"></i>
-                  </Link>
-                  <Link to="/" className="icon is-size-5">
-                    <i className="fab fa-twitter"></i>
-                  </Link>
-                </div>
-                <div className="posts">
-                  <h5 className="title is-4">Categories</h5>
-                  <aside className="menu">
-                    <ul className="menu-list">
-                      <li>
-                        <ul>
-                          <li>
-                            <Link to="/">Recent</Link>
-                          </li>
-                          <li>
-                            <Link to="/"> Business</Link>
-                          </li>
-                          <li>
-                            <Link to="/"> PR</Link>
-                          </li>
-                          <li>
-                            <Link to="/"> Projects</Link>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </aside>
-                </div>
-                <div className="posts">
-                  <h5 className="title is-4">Recent Posts</h5>
-                  <NewsPosts image="/images/news/four.jpg" />
-                  <NewsPosts image="/images/news/three.jpg" />
-                </div>
+                <Followus />
+                <RecentPost />
                 <div className="posts">
                   <HelpCard />
                 </div>

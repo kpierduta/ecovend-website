@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 const Section = styled.section`
-  padding: 0rem 0.5rem 4.5rem 0.5rem;
+  padding: 1.75rem 0.5rem 4.5rem 0.5rem;
 
   img {
     border-radius: 1rem;
