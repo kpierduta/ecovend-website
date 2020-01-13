@@ -5,7 +5,6 @@ import Stepscard from './StepsCard';
 import IconCard from './IconCard';
 
 const Container = styled.div`
-  background-color: #f1f1f1;
   padding-bottom: 5rem;
   .columns {
     margin-left: 0rem !important;
@@ -14,16 +13,8 @@ const Container = styled.div`
   .title.is-3 {
     padding-top: 8rem;
   }
-
   .para {
-    padding: 1rem 0rem 8rem 0rem;
-  }
-
-  .rev {
-    @media only screen and (max-width: 768px) {
-      flex-direction: column-reverse;
-      display: flex;
-    }
+    padding: 1rem 0rem 4rem 0rem;
   }
 `;
 
@@ -45,23 +36,23 @@ class Steps extends React.Component {
               </div>
             </div>
             <div className="columns is-centered is-variable is-6">
-              <div className="column rev is-4">
-                <IconCard Link={home.stepOneIcon.file.url} />
+              <div className="column is-4">
                 <Stepscard
+                  link={home.stepOneIcon.file.url}
                   title={home.stepOneTitle}
                   description={home.stepOneText}
                 />
               </div>
               <div className="column is-4">
                 <Stepscard
+                  link={home.stepTwoIcon.file.url}
                   title={home.stepTwoTitle}
                   description={home.stepTwoText}
                 />
-                <IconCard Link={home.stepTwoIcon.file.url} />
               </div>
-              <div className="column rev is-4">
-                <IconCard Link={home.stepThreeIcon.file.url} />
+              <div className="column is-4">
                 <Stepscard
+                  link={home.stepThreeIcon.file.url}
                   title={home.stepThreeTitle}
                   description={home.stepThreeText}
                 />
