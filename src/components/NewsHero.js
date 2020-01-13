@@ -20,10 +20,11 @@ const Section = styled.section`
   }
 
   .menu-list li ul {
+    padding: 0rem;
     border-left: none !important;
   }
 
-  .menu-list li ul li {
+  .menu-list li {
     font-size: 1rem;
     border-left: 4px solid #dbdbdb;
     transition: border-left 0.5s, padding-left 0.5s;
@@ -32,21 +33,21 @@ const Section = styled.section`
       border-left: 5px solid ${props => props.theme.secondaryColor};
     }
   }
-  .post-list {
-    margin-top: 1rem;
+
+  .text {
+    margin-top: 1.5rem;
   }
 
   .pagination {
     margin-top: 3rem;
   }
 
-  .test {
-    margin-bottom: 5rem;
-  }
-
   .icon {
     color: ${props => props.theme.primaryColor};
     margin-right: 1rem;
+  }
+  .columns.is-variable.is-8 {
+    --columnGap: 4rem;
   }
 `;
 
@@ -58,8 +59,8 @@ class NewsConetnt extends React.Component {
         <BreadCrumbs undelineText="News" />
         <Section className="section">
           <div className="container">
-            <div className="columns">
-              <div className="column">
+            <div className="columns is-variable is-8">
+              <div className="column is-7">
                 {news.map(item => (
                   <BlogCard
                     category={item.node.newsCategory}
@@ -71,24 +72,20 @@ class NewsConetnt extends React.Component {
                   />
                 ))}
               </div>
-              <div className="column is-4">
+              <div className="column">
                 <Followus />
                 <div className="post-list">
-                  <h5 className="title is-4">Categories</h5>
+                  <h5 className="title is-4 text">Categories</h5>
                   <aside className="menu">
                     <ul className="menu-list">
                       <li>
-                        <ul>
-                          <li>
-                            <Link to="/"> Business</Link>
-                          </li>
-                          <li>
-                            <Link to="/"> PR</Link>
-                          </li>
-                          <li>
-                            <Link to="/"> Projects</Link>
-                          </li>
-                        </ul>
+                        <Link to="/"> Business</Link>
+                      </li>
+                      <li>
+                        <Link to="/"> PR</Link>
+                      </li>
+                      <li>
+                        <Link to="/"> Projects</Link>
                       </li>
                     </ul>
                   </aside>

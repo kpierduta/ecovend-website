@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import NewsPosts from './NewsPosts';
 
 const Container = styled.div`
-  margin-top: 5rem;
+  margin-top: 2rem;
 `;
 
 const RecentPost = () => (
