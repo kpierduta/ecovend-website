@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 const Section = styled.div`
+  margin-top: 2.75rem;
   .title.is-4 {
     margin-bottom: 0.5rem;
   }

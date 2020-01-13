@@ -19,6 +19,23 @@ const Section = styled.section`
     margin: 0rem 1rem 0rem 0rem;
   }
 
+  .menu-list li ul {
+    border-left: none !important;
+  }
+
+  .menu-list li ul li {
+    font-size: 1rem;
+    border-left: 4px solid #dbdbdb;
+    transition: border-left 0.5s, padding-left 0.5s;
+    :hover {
+      padding-left: 0.5rem;
+      border-left: 5px solid ${props => props.theme.secondaryColor};
+    }
+  }
+  .post-list {
+    margin-top: 1rem;
+  }
+
   .pagination {
     margin-top: 3rem;
   }
@@ -56,6 +73,26 @@ class NewsConetnt extends React.Component {
               </div>
               <div className="column is-4">
                 <Followus />
+                <div className="post-list">
+                  <h5 className="title is-4">Categories</h5>
+                  <aside className="menu">
+                    <ul className="menu-list">
+                      <li>
+                        <ul>
+                          <li>
+                            <Link to="/"> Business</Link>
+                          </li>
+                          <li>
+                            <Link to="/"> PR</Link>
+                          </li>
+                          <li>
+                            <Link to="/"> Projects</Link>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </aside>
+                </div>
                 <RecentPost />
                 <div className="posts">
                   <HelpCard />
