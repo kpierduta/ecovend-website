@@ -48,7 +48,6 @@ const ContactForm = props => {
           </div>
         </div>
       </div>
-
       <div className="is-flex">
         <div className="field">
           <div className="control">
@@ -113,11 +112,9 @@ const ContactForm = props => {
             <p className="help is-danger">{errors.message}</p>
           )}
         </div>
-      </div>
-      <div className="has-text-centered">
         <button
           type="submit"
-          className="button  is-medium is-link is-fullwidth"
+          className="button  is-medium is-link"
           disabled={isSubmitting}
           style={{ marginTop: '1.5rem' }}
         >

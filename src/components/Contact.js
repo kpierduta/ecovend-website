@@ -6,13 +6,16 @@ import ContactForm from './ContactForm';
 
 const Container = styled.section`
   position: relative;
-  background: #e2eff2;
   padding-top: 3rem;
   padding-bottom: 3rem;
 
   @media only screen and (max-width: 768px) {
     padding-bottom: 3rem;
     margin-bottom: -2rem;
+  }
+
+  .first {
+    padding-left: 0rem !important;
   }
 
   .input {
@@ -29,7 +32,6 @@ const Container = styled.section`
   }
 
   textarea {
-    border-bottom: 1px solid ${props => props.theme.secondaryColor} !important;
     background-color: #fff;
     border-color: #fff;
     border-radius: none;
@@ -37,6 +39,9 @@ const Container = styled.section`
     ::placeholder {
       color: ${props => props.theme.secondaryColor};
       opacity: 1;
+    }
+    :hover {
+      border-color: #fff;
     }
   }
 
@@ -46,14 +51,16 @@ const Container = styled.section`
       border-color: #fff;
     }
   }
+  .button {
+    margin: 0rem 0.75rem;
+  }
 
   form,
   .field {
     width: 100%;
   }
-
-  .icon {
-    margin: 0rem 0.25rem 1rem 0rem !important;
+  .form-box {
+    border: 2px solid ${props => props.theme.secondaryColor};
   }
 `;
 
@@ -71,39 +78,33 @@ const Contact = () => {
     `,
   );
   return (
-    <Container id="contact" className="section">
-      <div className="container">
-        <div className="columns has-text-centered">
-          <div className="column">
-            <h2 className="title is-3 is-spaced">{contentfulContact.title}</h2>
-            <span className="icon has-text-danger">
-              <i className="fas fa-map-marker-alt" />
-            </span>
-            <h6 className="subtitle is-6 has-text-danger">
-              {contentfulContact.location}
-            </h6>
-            <span className="icon has-text-danger">
-              <i className="fas fa-envelope" />
-            </span>
-            <h6 className="subtitle is-6 has-text-danger">
-              {contentfulContact.email}
-            </h6>
-            <span className="icon">
-              <i className="fas fa-phone has-text-danger" />
-            </span>
-            <h6 className="subtitle is-6 has-text-danger">
-              {contentfulContact.mobileNumber}
-            </h6>
-          </div>
-          <div className="column is-6">
-            <h2 className="title is-3 is-spaced">
-              Get in touch to find out more
-            </h2>
-            <div className="field is-horizontal">
-              <div className="field-body">
-                <ContactForm />
-              </div>
-            </div>
+    <Container className="columns">
+      <div className="column first">
+        <h2 className="title is-3 is-spaced">{contentfulContact.title}</h2>
+        <span className="icon has-text-danger">
+          <i className="fas fa-map-marker-alt" />
+        </span>
+        <h6 className="subtitle is-6 has-text-danger">
+          {contentfulContact.location}
+        </h6>
+        <span className="icon has-text-danger">
+          <i className="fas fa-envelope" />
+        </span>
+        <h6 className="subtitle is-6 has-text-danger">
+          {contentfulContact.email}
+        </h6>
+        <span className="icon">
+          <i className="fas fa-phone has-text-danger" />
+        </span>
+        <h6 className="subtitle is-6 has-text-danger">
+          {contentfulContact.mobileNumber}
+        </h6>
+      </div>
+      <div className="column is-6 form-box">
+        <h2 className="title is-3 is-spaced">Get in touch to find out more</h2>
+        <div className="field is-horizontal">
+          <div className="field-body">
+            <ContactForm />
           </div>
         </div>
       </div>
