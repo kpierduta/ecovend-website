@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
+import firstVideo from '../../static/videos/Section 3 - RVM Sales Video.mp4';
+
 import Player from './Player';
 
 const Section = styled.section`
@@ -41,7 +43,7 @@ class About extends React.Component {
               </AnchorStyled>
             </div>
             <div className="column">
-              <Player />
+              <Player src={firstVideo} width="35rem" />
             </div>
           </div>
         </div>

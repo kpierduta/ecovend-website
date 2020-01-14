@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 import styled from 'styled-components';
@@ -18,15 +19,12 @@ const Section = styled.section`
   }
 `;
 
-const Player = () => {
+const Player = props => {
   const [play, change] = useState(false);
   return (
     <Section className="has-text-centered">
       <div className="test">
-        <ReactPlayer
-          url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-          playing={play}
-        />
+        <ReactPlayer url={props.src} playing={play} width={props.width} />
       </div>
       <button
         className={play ? 'is-hidden' : 'button is-large'}
