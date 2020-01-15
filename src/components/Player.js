@@ -22,6 +22,7 @@ const Section = styled.section`
 
 const Player = props => {
   const [play, change] = useState(false);
+
   return (
     <Section className="has-text-centered">
       <div className="test">

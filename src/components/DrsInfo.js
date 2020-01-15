@@ -22,6 +22,7 @@ const AnchorStyled = styled(AnchorLink)`
 class DrsInfo extends React.Component {
   render() {
     const { home } = this.props;
+
     return (
       <Section className="section">
         <div className="container">

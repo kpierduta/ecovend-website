@@ -41,6 +41,7 @@
     "react-google-maps": "^9.4.5",
     "react-helmet": "^5.2.0",
     "react-player": "^1.14.2",
+    "react-waypoint": "^9.0.2",
     "recompose": "^0.30.0",
     "styled-components": "^4.4.0",
     "styled-reset-advanced": "^1.0.2",
