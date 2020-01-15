@@ -10,11 +10,11 @@ import DrsInfo from '../components/DrsInfo';
 import Steps from '../components/Steps';
 import Choose from '../components/Choose';
 import Advertisment from '../components/Advertising';
-import ContactWrapper from '../components/ContactWrapper';
+import Contact from '../components/Contact';
 
 export const indexQuery = graphql`
   query Home {
-    contentfulHomepage {
+    contentfulHomePage {
       title
       subtitle
       headerimage {
@@ -91,6 +91,11 @@ export const indexQuery = graphql`
       marketingPara {
         marketingPara
       }
+      imageGrid {
+        file {
+          url
+        }
+      }
     }
   }
 `;
@@ -107,10 +112,7 @@ export default class IndexPage extends React.Component {
         <StaticQuery
           query={indexQuery}
           render={data => {
-            const {
-              contentfulHomepage: home,
-              contentfulContact: contact,
-            } = data;
+            const { contentfulHomePage: home } = data;
             return (
               <React.Fragment>
                 <Hero home={home} />
@@ -121,8 +123,12 @@ export default class IndexPage extends React.Component {
                 {/**
                 <Customer home={home} />
                 */}
-                <Advertisment home={home} />
-                <ContactWrapper contact={contact} />
+                <Advertisment home={home} data={home.imageGrid} />
+                <section className="section">
+                  <div className="container">
+                    <Contact />
+                  </div>
+                </section>
               </React.Fragment>
             );
           }}

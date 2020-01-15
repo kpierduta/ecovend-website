@@ -11,7 +11,6 @@ const Container = styled.div`
       margin: 0;
     }
   }
-
   .text {
     margin-top: 3rem !important;
   }
@@ -19,7 +18,7 @@ const Container = styled.div`
 
 class Advertisment extends React.Component {
   render() {
-    const { home } = this.props;
+    const { home, data } = this.props;
     return (
       <Container>
         <section className="section has-text-centered block">
@@ -31,6 +30,17 @@ class Advertisment extends React.Component {
               {home.marketingPara.marketingPara}
             </h5>
             <button className="button is-link is-large">Find out more</button>
+          </div>
+        </section>
+        <section className="section has-text-centered">
+          <div className="container">
+            <div className="columns">
+              {data.map(item => (
+                <div className="column">
+                  <img src={item.file.url} />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       </Container>

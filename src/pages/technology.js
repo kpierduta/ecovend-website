@@ -16,7 +16,7 @@ const TextWrapper = styled.div`
 
 export const techQuery = graphql`
   query Tech {
-    contentfulHomepage {
+    contentfulHomePage {
       stepTitle
       stepsSectionParagraph {
         internal {
@@ -61,7 +61,7 @@ export default class Technology extends React.Component {
         <StaticQuery
           query={techQuery}
           render={data => {
-            const { contentfulHomepage: home } = data;
+            const { contentfulHomePage: home } = data;
             return (
               <React.Fragment>
                 <BreadCrumbs undelineText="Tech" simpleText="nology" />

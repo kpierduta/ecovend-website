@@ -25,7 +25,7 @@ class Choose extends React.Component {
       <Section className="section">
         <div className="container has-text-centered">
           <h1 className="title is-4">{home.chooseTitle}</h1>
-          <h1 className="subtitle is-4 has-text-weight-normal">
+          <h1 className="subtitle is-5 has-text-weight-normal">
             {home.chooseSubtitle}
           </h1>
           <div className="columns">
@@ -33,7 +33,7 @@ class Choose extends React.Component {
               <div className="column has-text-centered">
                 <div className="card">
                   <div className="card-image">
-                    <img src={item.file.url} alt="Save Earth" />
+                    <img src={item.file.url} alt="/" />
                   </div>
                   <div className="card-content">
                     <h5 className="subtitle is-5 has-text-weight-medium">
