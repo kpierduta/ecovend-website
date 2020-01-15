@@ -22,14 +22,11 @@ class Steps extends React.Component {
     const { home } = this.props;
     return (
       <Section class="section">
-        <div className="container">
-          <div className="has-text-centered">
-            <h1 className="title is-3 has-text-primary">{home.stepTitle}</h1>
-            <h5 className="subtitle is-6 has-text-primary para">
-              {home.stepsSectionParagraph.internal.content}
-            </h5>
-          </div>
-
+        <div className="container has-text-centered">
+          <h1 className="title is-3 has-text-primary">{home.stepTitle}</h1>
+          <h5 className="subtitle is-6 has-text-primary para">
+            {home.stepsSectionParagraph.internal.content}
+          </h5>
           <div className="columns is-centered">
             <div className="column is-4">
               <Stepscard

@@ -80,6 +80,13 @@ export const indexQuery = graphql`
       stepThreeTitle
       stepThreeText
       chooseTitle
+      chooseSubtitle
+      chooseIcons {
+        title
+        file {
+          url
+        }
+      }
       prImage {
         file {
           url
@@ -94,19 +101,6 @@ export const indexQuery = graphql`
       marketingTitle
       marketingPara {
         marketingPara
-      }
-    }
-    allContentfulHomepageChoose(sort: { fields: listingOrder }) {
-      edges {
-        node {
-          title
-          image {
-            title
-            file {
-              url
-            }
-          }
-        }
       }
     }
   }
@@ -126,7 +120,6 @@ export default class IndexPage extends React.Component {
           render={data => {
             const {
               contentfulHomepage: home,
-              allContentfulHomepageChoose: choose,
               contentfulContact: contact,
             } = data;
             return (
@@ -135,7 +128,7 @@ export default class IndexPage extends React.Component {
                 <About home={home} />
                 <DrsInfo home={home} />
                 <Steps home={home} />
-                <Choose home={home} choose={choose.edges} />
+                <Choose home={home} choose={home.chooseIcons} />
                 {/**
                 <Customer home={home} />
                 */}
