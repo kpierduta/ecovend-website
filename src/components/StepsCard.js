@@ -3,24 +3,23 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   box-shadow: none;
-  img {
-    border: 2px solid ${props => props.theme.secondaryColor};
+  .card-content {
+    background-color: transparent;
+    padding: 0rem;
   }
-  .image.is-128x128 {
-    margin-left: 5rem;
+  img {
+    height: 17rem;
   }
 `;
 
 const StepsCard = props => (
-  <Container className="card">
+  <Container className="card  has-text-centered">
     <div className="card-image">
-      <figure className="image is-128x128">
-        <img className="is-rounded" src={props.link} alt={props.alt} />
-      </figure>
+      <img className="is-rounded" src={props.link} alt={props.alt} />
     </div>
-    <div className="card-content has-text-centered">
+    <div className="card-content">
       <h3 className="subtitle is-5 has-text-primary">{props.title}</h3>
-      <h4 className="subtitle is-6 has-text-primary">{props.description}</h4>
+      <h4 className="subtitle is-5 has-text-primary">{props.description}</h4>
     </div>
   </Container>
 );
