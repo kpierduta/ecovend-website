@@ -8,7 +8,7 @@ const Container = styled.div`
     padding: 0rem;
   }
   img {
-    height: 17rem;
+    height: 11rem;
   }
 `;
 

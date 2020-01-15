@@ -33,24 +33,6 @@ class Advertisment extends React.Component {
             <button className="button is-link is-large">Find out more</button>
           </div>
         </section>
-        <section className="section">
-          <div className="container">
-            <div className="columns is-multiline photos">
-              <div className="column is-3">
-                <img src="/images/advertisment-one.jpg" alt="#" />
-              </div>
-              <div className="column is-3">
-                <img src="/images/ad-two.jpg" alt="#" />
-              </div>
-              <div className="column is-3">
-                <img src="/images/Ad-three.jpg" alt="#" />
-              </div>
-              <div className="column is-3">
-                <img src="/images/advertisment-four.jpg" alt="#" />
-              </div>
-            </div>
-          </div>
-        </section>
       </Container>
     );
   }

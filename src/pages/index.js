@@ -87,17 +87,6 @@ export const indexQuery = graphql`
           url
         }
       }
-      prImage {
-        file {
-          url
-        }
-      }
-      differenceTitle
-      differencePara
-      firstPoint
-      secondPoint
-      thirdPoint
-      fourthPoint
       marketingTitle
       marketingPara {
         marketingPara
