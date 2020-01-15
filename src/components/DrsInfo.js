@@ -5,6 +5,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Player from './Player';
 
 const Section = styled.section`
+  background-color: #ededed;
   margin-top: 1rem;
   padding-bottom: 2rem;
 
@@ -28,7 +29,7 @@ class DrsInfo extends React.Component {
             <div className="column is-6">
               <Player
                 src="/videos/ACM_Reverse_Vending_on_the_BBC.mp4"
-                width="34rem"
+                width="34.5rem"
               />
             </div>
             <div className="column">

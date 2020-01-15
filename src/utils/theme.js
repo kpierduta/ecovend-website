@@ -58,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
     color:${theme.secondaryColor} !important;
   }
 
-.button{
+.button.is-primary{
   font-weight: 400 !important;
   background-color: ${props => props.theme.secondaryColor} !important;
   color: #fff !important;
@@ -66,6 +66,18 @@ const GlobalStyle = createGlobalStyle`
   :hover {
     background-color: ${props => props.theme.secondaryColor} !important;
     color: #fff !important;
+    opacity: 0.6 !important;
+  }
+}
+
+.button.is-link{
+  font-weight: 600 !important;
+  background-color: #fff  !important;
+  color:  ${props => props.theme.secondaryColor} !important;
+  transition: opacity 0.2s !important;
+  :hover {
+    color: ${props => props.theme.secondaryColor} !important;
+    background-color: #fff !important;
     opacity: 0.6 !important;
   }
 }

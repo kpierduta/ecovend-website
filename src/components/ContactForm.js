@@ -114,7 +114,7 @@ const ContactForm = props => {
         </div>
         <button
           type="submit"
-          className="button  is-medium is-link"
+          className="button  is-medium is-primary"
           disabled={isSubmitting}
           style={{ marginTop: '1.5rem' }}
         >

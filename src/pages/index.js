@@ -6,7 +6,6 @@ import Seo from '../components/Seo';
 import config from '../utils/config';
 import Hero from '../components/Hero';
 import About from '../components/About';
-import Video from '../components/Video';
 import DrsInfo from '../components/DrsInfo';
 import Steps from '../components/Steps';
 import Choose from '../components/Choose';
@@ -81,36 +80,6 @@ export const indexQuery = graphql`
       stepThreeTitle
       stepThreeText
       chooseTitle
-      # iconOne {
-      #   file {
-      #     url
-      #   }
-      # }
-      # iconOneText
-      # iconTwo {
-      #   file {
-      #     url
-      #   }
-      # }
-      # iconTwoText
-      # iconThree {
-      #   file {
-      #     url
-      #   }
-      # }
-      # iconThreeText
-      # iconFour {
-      #   file {
-      #     url
-      #   }
-      # }
-      # iconFourText
-      # iconFive {
-      #   file {
-      #     url
-      #   }
-      # }
-      # iconFiveText
       prImage {
         file {
           url

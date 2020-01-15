@@ -4,8 +4,9 @@ import ReactPlayer from 'react-player';
 import styled from 'styled-components';
 
 const Section = styled.section`
+  padding: 1rem 0rem;
   .test {
-    background: black;
+    background: ${props => props.theme.primaryColor};
   }
   .button {
     border-radius: 3rem;
