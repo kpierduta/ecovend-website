@@ -42,10 +42,10 @@ const Footer = () => (
               info@eco-vend.co.uk
             </LinkStyled>
             <LinkStyled to="/" className="subtitle is-6">
-              ECO House, Lea Road, Waltham Abbey,
+              ECO House, Lea Road, Waltham Abbey, EN9 1AS
             </LinkStyled>
             <LinkStyled to="/" className="subtitle is-6">
-              Hertfordshire, EN9 1AS
+              Hertfordshire
             </LinkStyled>
           </div>
           <div className="column">

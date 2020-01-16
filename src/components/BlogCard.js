@@ -61,7 +61,10 @@ const BlogCard = props => (
                     </p>
                     <h1 className="title is-4">{props.title}</h1>
                     <p className="subtitle is-6">{props.para}</p>
-                    <LinkStyled to={props.to} className="button is-rounded">
+                    <LinkStyled
+                      to={props.to}
+                      className="button is-rounded has-text-white"
+                    >
                       Learn More
                       <span className="icon">
                         <i className="fas fa-chevron-right" />

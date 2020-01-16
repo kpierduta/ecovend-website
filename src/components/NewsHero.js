@@ -49,6 +49,10 @@ const Section = styled.section`
   .columns.is-variable.is-8 {
     --columnGap: 4rem;
   }
+  .pagination-link.is-current {
+    background-color: ${props => props.theme.primaryColor};
+    border-color: ${props => props.theme.primaryColor};
+  }
 `;
 
 class NewsConetnt extends React.Component {

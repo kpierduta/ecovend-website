@@ -30,7 +30,7 @@ class DrsInfo extends React.Component {
             <div className="column is-6">
               <Player
                 src="/videos/ACM_Reverse_Vending_on_the_BBC.mp4"
-                width="34.5rem"
+                width="100%"
               />
             </div>
             <div className="column">

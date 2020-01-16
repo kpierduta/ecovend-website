@@ -43,7 +43,7 @@ class About extends React.Component {
               </AnchorStyled>
             </div>
             <div className="column">
-              <Player src={firstVideo} width="35rem" />
+              <Player src={firstVideo} width="100%" />
             </div>
           </div>
         </div>
