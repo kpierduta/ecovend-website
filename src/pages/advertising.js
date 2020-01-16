@@ -6,6 +6,7 @@ import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import Advertising from '../components/AdvertisingHero';
 import Rvm from '../components/RvmAdvertising';
+import Infographic from '../components/Infographic';
 import Contact from '../components/Contact';
 
 export const advertQuery = graphql`
@@ -63,6 +64,7 @@ export default class AdvertisingPage extends React.Component {
               <React.Fragment>
                 <Advertising adv={adv} />
                 <Rvm adv={adv} advSteps={advSteps.edges} />
+                <Infographic />
                 <section className="section">
                   <div className="container">
                     <Contact />

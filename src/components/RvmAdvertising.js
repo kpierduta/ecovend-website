@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ResultStep from './ResultStep';
-import ResultCounter from './ResultCounter';
-
 const Container = styled.section`
   .title {
     margin-bottom: 0.5rem;
@@ -50,11 +47,6 @@ const ContainerInner = styled.div`
   .head {
     padding-bottom: 3rem;
   }
-`;
-
-const Bottom = styled.div`
-  margin-top: 2rem;
-  padding-bottom: 2rem;
 `;
 class Rvm extends React.Component {
   render() {
@@ -112,15 +104,6 @@ class Rvm extends React.Component {
               </video>
             </div>
           </div>
-
-          <Bottom className="columns">
-            {advSteps.map(item => (
-              <div className="column is-3">
-                <ResultCounter text={item.node.listingOrder} />
-                <ResultStep text={item.node.description} />
-              </div>
-            ))}
-          </Bottom>
         </div>
       </Container>
     );

@@ -4,10 +4,10 @@ import config from '../utils/config';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import RangeHero from '../components/RangeHero';
-import Product from '../components/Product';
+import Machines from '../components/Machines';
 import Contact from '../components/Contact';
 
-export default class OurProduct extends React.Component {
+export default class OurRange extends React.Component {
   render() {
     return (
       <Layout>
@@ -16,8 +16,7 @@ export default class OurProduct extends React.Component {
           description="Our Products"
           url={`${config.siteUrl}`}
         />
-        <RangeHero />
-        <Product />
+        <Machines />
         <section className="section">
           <div className="container">
             <Contact />

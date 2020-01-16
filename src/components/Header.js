@@ -75,7 +75,8 @@ export default class Header extends React.Component {
               className={view ? 'navbar-burger is-active' : 'navbar-burger '}
               aria-label="menu"
               aria-expanded="false"
-              onClick={() => this.Menu()}>
+              onClick={() => this.Menu()}
+            >
               <span aria-hidden="true" />
               <span aria-hidden="true" />
               <span aria-hidden="true" />
@@ -83,7 +84,8 @@ export default class Header extends React.Component {
           </div>
           <div
             id="navbarBasicExample"
-            className={view ? 'navbar-menu is-active' : 'navbar-menu '}>
+            className={view ? 'navbar-menu is-active' : 'navbar-menu '}
+          >
             <div className="navbar-end">
               <LinkStyled to="/" className="navbar-item is-size-6">
                 Home
