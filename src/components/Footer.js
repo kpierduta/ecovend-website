@@ -72,7 +72,7 @@ const Footer = () => (
           </div>
         </div>
         <p className="subtitle is-6 has-text-white has-text-centered">
-          ©2019 by EcoVend Reverse Vending.
+          ©2020 by EcoVend Reverse Vending.
         </p>
       </div>
     </div>

@@ -77,6 +77,7 @@ const Contact = () => {
       }
     `,
   );
+
   return (
     <Container className="columns">
       <div className="column first">
@@ -85,7 +86,14 @@ const Contact = () => {
           <i className="fas fa-map-marker-alt" />
         </span>
         <h6 className="subtitle is-6 has-text-danger">
+          <span className="is-block">ECO House,</span>
+          <span className="is-block">Lea Road,</span>
+          <span className="is-block">Waltham Abbey,</span>
+          <span className="is-block">Hertfordshire,</span>
+          <span>EN9 1AS</span>
+          {/*
           {contentfulContact.location}
+          */}
         </h6>
         <span className="icon has-text-danger">
           <i className="fas fa-envelope" />

@@ -18,7 +18,11 @@ export default class OurRange extends React.Component {
         />
         <RangeHero />
         <Machines />
-        <Contact />
+        <section className="section">
+          <div className="container">
+            <Contact />
+          </div>
+        </section>
       </Layout>
     );
   }

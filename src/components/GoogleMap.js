@@ -23,7 +23,7 @@ const MyMapComponent = compose(
         style={{
           background: '#e1eff2',
           height: `40rem`,
-          padding: '0.4rem 0rem',
+          padding: '0rem',
         }}
       />
     ),
@@ -34,7 +34,8 @@ const MyMapComponent = compose(
 )(props => (
   <GoogleMap
     defaultZoom={19}
-    defaultCenter={{ lat: 51.685733, lng: -0.012903 }}>
+    defaultCenter={{ lat: 51.685733, lng: -0.012903 }}
+  >
     {props.isMarkerShown && (
       <Marker position={{ lat: 51.685733, lng: -0.012903 }} />
     )}

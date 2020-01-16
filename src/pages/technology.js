@@ -78,7 +78,11 @@ export default class Technology extends React.Component {
                     <TechnologyItem title="Upcoming Features" />
                   </div>
                 </section>
-                <Contact />
+                <section className="section">
+                  <div className="container">
+                    <Contact />
+                  </div>
+                </section>
               </React.Fragment>
             );
           }}
