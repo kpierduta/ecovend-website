@@ -11,11 +11,11 @@ class Infographic extends React.Component {
     return (
       <Container className="section">
         <div className="container">
-          <div className="columns is-gapless">
-            <InfoCard background="/images/circles/one.png" />
-            <InfoCard background="/images/circles/two.png" />
-            <InfoCard background="/images/circles/three.png" />
-            <InfoCard background="/images/circles/four.png" />
+          <div className="columns is-variable is-0">
+            <InfoCard background="/images/circles/one.jpg" />
+            <InfoCard background="/images/circles/two.jpg" />
+            <InfoCard background="/images/circles/three.jpg" />
+            <InfoCard background="/images/circles/four.jpg" />
           </div>
         </div>
       </Container>
