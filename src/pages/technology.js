@@ -70,12 +70,14 @@ export default class Technology extends React.Component {
                 </TextWrapper>
                 <section className="section">
                   <div className="container">
-                    <TechnologyItem title="How the machine operates" />
-                    <TechnologyItem title="Software Updates" />
-                    <TechnologyItem title="Technical Support" />
-                    <TechnologyItem title="Remote User Platform" />
-                    <TechnologyItem title="Tickets" />
-                    <TechnologyItem title="Upcoming Features" />
+                    <div className="columns is-multiline">
+                      <TechnologyItem title="How the machine operates" />
+                      <TechnologyItem title="Software Updates" />
+                      <TechnologyItem title="Technical Support" />
+                      <TechnologyItem title="Remote User Platform" />
+                      <TechnologyItem title="Tickets" />
+                      <TechnologyItem title="Upcoming Features" />
+                    </div>
                   </div>
                 </section>
                 <section className="section">
