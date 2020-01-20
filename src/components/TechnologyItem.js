@@ -3,7 +3,10 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   .box {
-    height: 18rem;
+    height: 20rem;
+  }
+  .is-spaced {
+    height: 3rem;
   }
 `;
 
