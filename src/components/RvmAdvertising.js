@@ -9,13 +9,6 @@ const Container = styled.section`
       margin-top: 0rem;
     }
   }
-  .subtitle {
-    margin-top: 0.25rem !important;
-  }
-
-  .is-size-5 {
-    margin: 1.5rem 0rem 4rem 0rem;
-  }
 
   video {
     padding-left: 5rem;
@@ -40,17 +33,14 @@ const RvmType = styled.div`
 `;
 
 const ContainerInner = styled.div`
-  background-color: #eff2f3;
-  padding: 3rem 3rem 0rem 2rem;
-  justify-content: space-between;
-  display: grid;
+  background-color: ${props => props.theme.lightBackground};
   .head {
-    padding-bottom: 3rem;
+    padding: 3rem;
   }
 `;
 class Rvm extends React.Component {
   render() {
-    const { adv, advSteps } = this.props;
+    const { adv } = this.props;
     return (
       <Container className="section">
         <div className="container">
@@ -85,9 +75,6 @@ class Rvm extends React.Component {
                   {adv.videoTitle}
                 </h5>
               </div>
-              <h4 className="is-size-4 has-text-weight-semibold has-text-centered">
-                {adv.videoClick}
-              </h4>
               <div>
                 <h4 className="title head is-4 has-text-centered has-text-danger">
                   {adv.visualSubtitle}

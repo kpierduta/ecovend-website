@@ -16,7 +16,6 @@ export const advertQuery = graphql`
       visualTitle
       visualSubtitle
       visualParagraph
-      videoClick
       introParagrpah {
         introParagrpah
       }

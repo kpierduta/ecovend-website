@@ -5,12 +5,14 @@ const brandColor = '#f38044';
 const darkShade = '#F26F1E';
 const lightShade = '#b5b5b5';
 const secondaryBackground = '#e0e0e0';
+const lightBackground = '#eff2f3';
 
 export const theme = {
   brandColor,
   darkShade,
   lightShade,
   secondaryBackground,
+  lightBackground,
   primaryFontFamily: "'Raleway', sans-serif",
   secondaryFontFamily: "'font36452', sans-serif",
   primaryColor: brandColor,

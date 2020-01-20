@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const Container = styled.div`
   .block {
@@ -29,7 +30,9 @@ class Advertisment extends React.Component {
             <h5 className="subtitle is-6 has-text-white text">
               {home.marketingPara.marketingPara}
             </h5>
-            <button className="button is-link is-large">Find out more</button>
+            <Link to="/advertising" className="button is-link is-large">
+              Find out more
+            </Link>
           </div>
         </section>
         <section className="section has-text-centered">

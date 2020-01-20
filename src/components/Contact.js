@@ -79,7 +79,7 @@ const Contact = () => {
   );
 
   return (
-    <Container className="columns">
+    <Container className="columns" id="contact">
       <div className="column first">
         <h2 className="title is-3 is-spaced">{contentfulContact.title}</h2>
         <span className="icon has-text-danger">

@@ -11,19 +11,17 @@ class Advertising extends React.Component {
   render() {
     const { adv } = this.props;
     return (
-      <React.Fragment>
+      <Container className="hero">
         <BreadCrumbs undelineText="Ad" simpleText="vertising" />
-        <section className="hero">
-          <div className="hero-body">
-            <div className="container">
-              <h1 className="subtitle is-6">{adv.title}</h1>
-              <h5 className="subtitle is-6">
-                {adv.introParagrpah.introParagrpah}
-              </h5>
-            </div>
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="subtitle is-6">{adv.title}</h1>
+            <h5 className="subtitle is-6">
+              {adv.introParagrpah.introParagrpah}
+            </h5>
           </div>
-        </section>
-      </React.Fragment>
+        </div>
+      </Container>
     );
   }
 }
