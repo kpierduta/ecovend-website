@@ -47,7 +47,7 @@ class DrsInfo extends React.Component {
                 {home.orangeThirdPara.internal.content}
               </h6>
               <AnchorStyled href="#contact" className="title is-5">
-                <span className="has-text-danger">Get in Touch </span> to learn
+                <span className="has-text-danger">Get in touch </span> to learn
                 more
               </AnchorStyled>
             </div>

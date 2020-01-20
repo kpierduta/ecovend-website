@@ -10,7 +10,7 @@ const Container = styled.div`
     background-repeat: no-repeat;
   }
   .card-content {
-    padding: 2rem 3rem 2rem 1.75rem;
+    padding: 2rem 3rem 2rem 1.2rem;
   }
   .icon {
     font-size: 3rem;

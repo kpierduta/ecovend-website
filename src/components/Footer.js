@@ -9,15 +9,20 @@ const Conatiner = styled.section`
     margin-top: 0rem;
   }
   .subtitle.is-6 {
+    font-size: 0.75rem !important;
     line-height: normal;
   }
   .is-size-6,
   .is-6 {
+    font-size: 0.75rem !important;
     margin: 0rem 0rem 0.75rem 0rem;
   }
   .is-inline {
-    margin: 0rem 0.5rem 0.75rem 0rem;
-    font-size: 2rem;
+    margin: 0.25rem 0.5rem 0.75rem 0rem;
+    font-size: 1rem;
+  }
+  .text {
+    margin-top: 0.35rem;
   }
 `;
 
@@ -32,7 +37,7 @@ const Footer = () => (
   <Conatiner className="section">
     <div className="columns is-centered">
       <div className="column  is-10">
-        <div className="columns second">
+        <div className="columns is-variable is-8 second">
           <div className="column">
             <h1 className="title is-5 is-spaced has-text-white">CONTACT</h1>
             <LinkStyled to="/" className="subtitle is-6">
@@ -42,10 +47,10 @@ const Footer = () => (
               info@eco-vend.co.uk
             </LinkStyled>
             <LinkStyled to="/" className="subtitle is-6">
-              ECO House, Lea Road, Waltham Abbey, EN9 1AS
+              ECO House, Lea Road, Waltham
             </LinkStyled>
             <LinkStyled to="/" className="subtitle is-6">
-              Hertfordshire
+              Abbey, Hertfordshire, EN9 1AS
             </LinkStyled>
           </div>
           <div className="column">
@@ -57,7 +62,7 @@ const Footer = () => (
               <i className="fab fa-twitter-square" />
             </LinkStyled>
 
-            <LinkStyled to="/" className="subtitle is-6">
+            <LinkStyled to="/" className="subtitle is-6 text">
               Follow us
             </LinkStyled>
           </div>

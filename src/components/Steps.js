@@ -10,7 +10,7 @@ const Section = styled.section`
     margin-right: 0rem !important;
   }
   .title.is-3 {
-    padding-top: 8rem;
+    padding-top: 4rem;
   }
   .para {
     padding: 1rem 0rem 4rem 0rem;
