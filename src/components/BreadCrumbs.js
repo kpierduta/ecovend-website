@@ -8,7 +8,7 @@ const Container = styled.section`
   color: #e71018 !important;
   .text {
     padding: 0.25rem 0rem;
-    border-bottom: 2px solid;
+    border-bottom: 2px solid ${props => props.theme.hovercolor};
   }
 `;
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './mapStyles';
 import { compose, withProps } from 'recompose';
 import {
   withScriptjs,
@@ -9,11 +10,6 @@ import {
 
 const MyMapComponent = compose(
   withProps({
-    /**
-     * Note: create and replace your own key in the Google console.
-     * https://console.developers.google.com/apis/dashboard
-     * The key "AIzaSyBkNaAGLEVq0YLQMi-PYEMabFeREadYe1Q" can be ONLY used in this sandbox (no forked).
-     */
     googleMapURL:
       'https://maps.googleapis.com/maps/api/js?key=AIzaSyACXe8HurUeBrn3796pbzGIr-KAT0StmNE',
     loadingElement: <div style={{ height: `100%` }} />,
@@ -33,8 +29,9 @@ const MyMapComponent = compose(
   withGoogleMap,
 )(props => (
   <GoogleMap
-    defaultZoom={19}
+    defaultZoom={17}
     defaultCenter={{ lat: 51.685733, lng: -0.012903 }}
+    options={{ styles }}
   >
     {props.isMarkerShown && (
       <Marker position={{ lat: 51.685733, lng: -0.012903 }} />
