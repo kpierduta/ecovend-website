@@ -10,6 +10,9 @@ const Container = styled.section`
     padding-bottom: 3rem;
     margin-bottom: -2rem;
   }
+  .text {
+    padding: 0rem 0.5rem;
+  }
 
   .input {
     padding: 0;
@@ -47,6 +50,10 @@ const Container = styled.section`
 
   .map {
     padding-bottom: 0rem;
+  }
+
+  .button {
+    margin-left: 0.5rem;
   }
 
   form,
@@ -107,7 +114,11 @@ const Contact = () => {
         <MyMapComponent isMarkerShown className="is-hidden-mobile" />
       </div>
       <div className="column  form-box">
-        <h2 className="title is-3 is-spaced">Get in touch to find out more</h2>
+        <div className="text">
+          <h2 className="title is-3 is-spaced">
+            Get in touch to find out more
+          </h2>
+        </div>
         <div className="field is-horizontal">
           <div className="field-body">
             <ContactForm />
