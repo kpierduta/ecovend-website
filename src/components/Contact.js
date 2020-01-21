@@ -56,6 +56,10 @@ const Container = styled.section`
     margin-left: 0.5rem;
   }
 
+  .textarea {
+    padding-left: 0rem;
+  }
+
   form,
   .field {
     width: 100%;

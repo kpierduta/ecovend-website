@@ -4,7 +4,6 @@ import config from '../utils/config';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import ContactHero from '../components/ConatctHero';
-import ContactWrapper from '../components/ContactWrapper';
 
 export default class ContactPage extends React.Component {
   render() {
