@@ -15,7 +15,6 @@ export default class ContactPage extends React.Component {
           url={`${config.siteUrl}`}
         />
         <ContactHero />
-        <ContactWrapper />
       </Layout>
     );
   }
