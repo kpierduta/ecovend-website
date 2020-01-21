@@ -3,7 +3,11 @@ import styled from 'styled-components';
 
 import InfoCard from './InfoCard';
 
-const Container = styled.section``;
+const Container = styled.section`
+  .bottom {
+    margin-top: -3px;
+  }
+`;
 
 class Infographic extends React.Component {
   render() {
@@ -33,13 +37,25 @@ class Infographic extends React.Component {
                 <img src="/images/Ad-three.jpg" alt="#" />
               </div>
               <div className="column is-4">
-                <img src="/images/advertisment-four.jpg" alt="#" />
+                <img
+                  className="bottom"
+                  src="/images/advertisment-four.jpg"
+                  alt="#"
+                />
               </div>
               <div className="column is-4">
-                <img src="/images/advertisment-five.jpg" alt="#" />
+                <img
+                  className="bottom"
+                  src="/images/advertisment-five.jpg"
+                  alt="#"
+                />
               </div>
               <div className="column is-4">
-                <img src="/images/advertisment-six.jpg" alt="#" />
+                <img
+                  className="bottom"
+                  src="/images/advertisment-six.jpg"
+                  alt="#"
+                />
               </div>
             </div>
           </div>
