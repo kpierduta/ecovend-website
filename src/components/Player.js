@@ -6,6 +6,7 @@ import styled from 'styled-components';
 const Section = styled.section`
   padding: 1rem 0rem;
   .frame {
+    padding: 0.5rem;
     background: ${props => props.theme.primaryColor};
   }
   .button {
@@ -21,25 +22,30 @@ const Section = styled.section`
 `;
 
 const Player = props => {
-  const [play, change] = useState(false);
+  const [active, changeActive] = useState(false);
 
   return (
     <Section className="">
       <div className="frame">
-        <ReactPlayer url={props.src} playing={play} width={props.width} />
+        <ReactPlayer
+          url={props.src}
+          playing={active}
+          width={props.width}
+          height="100%"
+        />
       </div>
       <div className="has-text-centered">
         <button
-          className={play ? 'is-hidden' : 'button is-large'}
-          onClick={() => change(!play)}
+          className={active ? 'is-hidden' : 'button is-large'}
+          onClick={() => changeActive(!active)}
         >
           <span className="icon has-text-danger">
             <i className="fas fa-play-circle"></i>
           </span>
         </button>
         <button
-          className={play ? 'button is-large' : 'is-hidden'}
-          onClick={() => change(!play)}
+          className={active ? 'button is-large' : 'is-hidden'}
+          onClick={() => changeActive(!active)}
         >
           <span className="icon has-text-danger">
             <i className="fas fa-pause-circle"></i>

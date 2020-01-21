@@ -12,7 +12,9 @@ const ContactWrapper = () => (
   <Container className="section">
     <div className="container">
       <Contact />
+      {/*
       <MyMapComponent isMarkerShown className="is-hidden-mobile" />
+      */}
     </div>
   </Container>
 );

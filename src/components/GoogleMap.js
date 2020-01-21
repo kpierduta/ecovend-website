@@ -179,7 +179,7 @@ const MyMapComponent = compose(
         className="section is-hidden-mobile"
         style={{
           background: '#e1eff2',
-          height: `40rem`,
+          height: `100%`,
           padding: '0rem',
         }}
       />

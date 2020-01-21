@@ -3,19 +3,12 @@ import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import ContactForm from './ContactForm';
+import MyMapComponent from './GoogleMap';
 
 const Container = styled.section`
-  position: relative;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-
   @media only screen and (max-width: 768px) {
     padding-bottom: 3rem;
     margin-bottom: -2rem;
-  }
-
-  .first {
-    padding-left: 0rem !important;
   }
 
   .input {
@@ -51,8 +44,9 @@ const Container = styled.section`
       border-color: #fff;
     }
   }
-  .button {
-    margin: 0rem 0.75rem;
+
+  .map {
+    padding-bottom: 0rem;
   }
 
   form,
@@ -60,6 +54,7 @@ const Container = styled.section`
     width: 100%;
   }
   .form-box {
+    margin-top: 0.75rem;
     border: 2px solid ${props => props.theme.secondaryColor};
   }
 `;
@@ -80,7 +75,7 @@ const Contact = () => {
 
   return (
     <Container className="columns" id="contact">
-      <div className="column first">
+      <div className="column is-3">
         <h2 className="title is-3 is-spaced">{contentfulContact.title}</h2>
         <span className="icon has-text-danger">
           <i className="fas fa-map-marker-alt" />
@@ -108,7 +103,10 @@ const Contact = () => {
           {contentfulContact.mobileNumber}
         </h6>
       </div>
-      <div className="column is-6 form-box">
+      <div className="column is-5 map">
+        <MyMapComponent isMarkerShown className="is-hidden-mobile" />
+      </div>
+      <div className="column  form-box">
         <h2 className="title is-3 is-spaced">Get in touch to find out more</h2>
         <div className="field is-horizontal">
           <div className="field-body">
