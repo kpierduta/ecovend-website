@@ -31,6 +31,7 @@ class DrsInfo extends React.Component {
               <Player
                 src="/videos/ACM_Reverse_Vending_on_the_BBC.mp4"
                 width="100%"
+                play={false}
               />
             </div>
             <div className="column">

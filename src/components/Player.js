@@ -15,23 +15,21 @@ const Section = styled.section`
     border: 1px solid ${props => props.theme.primaryColor};
     background-color: #fff !important;
     color: #fff !important;
-    :hover {
-      opacity: 1 !important;
-    }
   }
 `;
 
-const Player = props => {
-  const [active, changeActive] = useState(false);
+const Player = ({ src, width, play }) => {
+  const [active, changeActive] = useState(play);
 
   return (
     <Section className="">
       <div className="frame">
         <ReactPlayer
-          url={props.src}
+          url={src}
           playing={active}
-          width={props.width}
+          width={width}
           height="100%"
+          autoPlay={active}
         />
       </div>
       <div className="has-text-centered">
