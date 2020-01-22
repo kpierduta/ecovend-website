@@ -18,11 +18,7 @@ export default class OurProduct extends React.Component {
         />
         <RangeHero />
         <Product />
-        <section className="section">
-          <div className="container">
-            <Contact />
-          </div>
-        </section>
+        <Contact />
       </Layout>
     );
   }

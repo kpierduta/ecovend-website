@@ -124,11 +124,7 @@ export default class IndexPage extends React.Component {
                 <Customer home={home} />
                 */}
                 <Advertisment home={home} data={home.imageGrid} />
-                <section className="section">
-                  <div className="container">
-                    <Contact />
-                  </div>
-                </section>
+                <Contact />
               </React.Fragment>
             );
           }}

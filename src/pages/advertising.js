@@ -64,11 +64,7 @@ export default class AdvertisingPage extends React.Component {
                 <Advertising adv={adv} />
                 <Rvm adv={adv} advSteps={advSteps.edges} />
                 <Infographic />
-                <section className="section">
-                  <div className="container">
-                    <Contact />
-                  </div>
-                </section>
+                <Contact />
               </React.Fragment>
             );
           }}
