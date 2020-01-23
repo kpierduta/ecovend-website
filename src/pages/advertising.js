@@ -45,6 +45,12 @@ export const advertQuery = graphql`
 
 export default class AdvertisingPage extends React.Component {
   render() {
+    const {
+      data: {
+        contentfulAdvertisingPage: adv,
+        allContentfulAdvertisingStep: advSteps,
+      },
+    } = this.props;
     return (
       <Layout>
         <Seo
@@ -52,23 +58,9 @@ export default class AdvertisingPage extends React.Component {
           description="Advertising with us today!"
           url={`${config.siteUrl}`}
         />
-        <StaticQuery
-          query={advertQuery}
-          render={data => {
-            const {
-              contentfulAdvertisingPage: adv,
-              allContentfulAdvertisingStep: advSteps,
-            } = data;
-            return (
-              <React.Fragment>
-                <Advertising adv={adv} />
-                <Rvm adv={adv} advSteps={advSteps.edges} />
-                <Infographic />
-                <Contact />
-              </React.Fragment>
-            );
-          }}
-        />
+        <Advertising adv={adv} />
+        <Rvm adv={adv} advSteps={advSteps.edges} />
+        <Infographic />
       </Layout>
     );
   }

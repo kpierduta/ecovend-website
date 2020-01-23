@@ -51,6 +51,9 @@ export const techQuery = graphql`
 
 export default class Technology extends React.Component {
   render() {
+    const {
+      data: { contentfulHomePage: home },
+    } = this.props;
     return (
       <Layout>
         <Seo
@@ -58,33 +61,23 @@ export default class Technology extends React.Component {
           description="Technology we worked on!"
           url={`${config.siteUrl}`}
         />
-        <StaticQuery
-          query={techQuery}
-          render={data => {
-            const { contentfulHomePage: home } = data;
-            return (
-              <React.Fragment>
-                <BreadCrumbs undelineText="Tech" simpleText="nology" />
-                <TextWrapper>
-                  <Steps home={home} />
-                </TextWrapper>
-                <section className="section">
-                  <div className="container">
-                    <div className="columns is-multiline">
-                      <TechnologyItem title="How the machine operates" />
-                      <TechnologyItem title="Software Updates" />
-                      <TechnologyItem title="Technical Support" />
-                      <TechnologyItem title="Remote User Platform" />
-                      <TechnologyItem title="Tickets" />
-                      <TechnologyItem title="Upcoming Features" />
-                    </div>
-                  </div>
-                </section>
-                <Contact />
-              </React.Fragment>
-            );
-          }}
-        />
+        <BreadCrumbs undelineText="Tech" simpleText="nology" />
+        <TextWrapper>
+          <Steps home={home} />
+        </TextWrapper>
+        <section className="section">
+          <div className="container">
+            <div className="columns is-multiline">
+              <TechnologyItem title="How the machine operates" />
+              <TechnologyItem title="Software Updates" />
+              <TechnologyItem title="Technical Support" />
+              <TechnologyItem title="Remote User Platform" />
+              <TechnologyItem title="Tickets" />
+              <TechnologyItem title="Upcoming Features" />
+            </div>
+          </div>
+        </section>
+        <Contact />
       </Layout>
     );
   }

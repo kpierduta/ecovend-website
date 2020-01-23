@@ -39,24 +39,17 @@ export const newsQuery = graphql`
 
 export default class NewsPage extends React.Component {
   render() {
+    const {
+      data: { allContentfulNewsPage: news },
+    } = this.props;
     return (
       <Layout>
         <Seo
           title="News"
           description="News about Eco-vend"
           url={`${config.siteUrl}`}
-        />{' '}
-        <StaticQuery
-          query={newsQuery}
-          render={data => {
-            const { allContentfulNewsPage: news } = data;
-            return (
-              <React.Fragment>
-                <NewsHero news={news.edges} />
-              </React.Fragment>
-            );
-          }}
         />
+        <NewsHero news={news.edges} />
       </Layout>
     );
   }

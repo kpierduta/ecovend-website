@@ -66,14 +66,7 @@ class NewsConetnt extends React.Component {
             <div className="columns is-variable is-8">
               <div className="column is-7">
                 {news.map(item => (
-                  <BlogCard
-                    category={item.node.newsCategory}
-                    date={item.node.date}
-                    image={item.node.image.file.url}
-                    title={item.node.newsTitle}
-                    para={item.node.shortDescription.internal.content}
-                    to={`/blog/${item.node.slug}`}
-                  />
+                  <BlogCard item={item.node} />
                 ))}
               </div>
               <div className="column">

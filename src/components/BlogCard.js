@@ -42,12 +42,12 @@ const LinkStyled = styled(Link)`
   background-color: ${props => props.theme.secondaryColor};
 `;
 
-const BlogCard = props => (
-  <Section className="section" image={props.image}>
+const BlogCard = ({ item }) => (
+  <Section className="section" image={item.image.file.url}>
     <div className="container">
       <div className="columns is-gapless">
         <div className="column is-5">
-          <img src={props.image} />
+          <img src={item.image.file.url} alt="/" />
         </div>
         <div className="column">
           <div className="card">
@@ -56,13 +56,17 @@ const BlogCard = props => (
                 <div className="media-content">
                   <div className="content">
                     <p className="subtitle is-6">
-                      <span className="has-text-danger">{props.category}</span>{' '}
-                      / {props.date}
+                      <span className="has-text-danger">
+                        {item.newsCategory}
+                      </span>{' '}
+                      {item.date}
                     </p>
-                    <h1 className="title is-4">{props.title}</h1>
-                    <p className="subtitle is-6">{props.para}</p>
+                    <h1 className="title is-4">{item.newsTitle}</h1>
+                    <p className="subtitle is-6">
+                      {item.shortDescription.internal.content}
+                    </p>
                     <LinkStyled
-                      to={props.to}
+                      to={`/blog/${item.slug}`}
                       className="button is-rounded has-text-white"
                     >
                       Learn More

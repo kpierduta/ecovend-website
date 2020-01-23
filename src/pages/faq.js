@@ -34,6 +34,9 @@ export const faqQuery = graphql`
 
 export default class FaqPage extends React.Component {
   render() {
+    const {
+      data: { allContentfulFaqPage: faq },
+    } = this.props;
     return (
       <Layout>
         <Seo
@@ -41,18 +44,8 @@ export default class FaqPage extends React.Component {
           description="Ask your questions!"
           url={`${config.siteUrl}`}
         />
-        <StaticQuery
-          query={faqQuery}
-          render={data => {
-            const { allContentfulFaqPage: faq } = data;
-            return (
-              <React.Fragment>
-                <BreadCrumbs undelineText="FAQ" simpleText="s" />
-                <Question faq={faq.edges} />
-              </React.Fragment>
-            );
-          }}
-        />
+        <BreadCrumbs undelineText="FAQ" simpleText="s" />
+        <Question faq={faq.edges} />
       </Layout>
     );
   }
