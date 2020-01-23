@@ -13,8 +13,8 @@ export const theme = {
   lightShade,
   secondaryBackground,
   lightBackground,
-  primaryFontFamily: "'Raleway', sans-serif",
-  secondaryFontFamily: "'font36452', sans-serif",
+  primaryFontFamily: "'Abadi', sans-serif",
+  secondaryFontFamily: "'Abadi', sans-serif",
   primaryColor: brandColor,
   secondaryColor: darkShade,
   hovercolor: lightShade,
@@ -27,20 +27,35 @@ export const theme = {
 
 const GlobalStyle = createGlobalStyle`
   ${reset};
-  
+
+  @font-face {
+    font-family: Abadi;
+    src: url("../fonts/abadimtstd-opentype.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Abadi;
+  src: url("../fonts/abadimtstd-bold-opentype.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Abadi;
+  src: url("../fonts/abadimtstd-extralight-opentype.otf") format("opentype");
+}
+
   body {
     font-family: ${theme.primaryFontFamily};
   }
 
   .title{
-    font-weight: 600;
+    font-weight: 800 !important;
     letter-spacing: 1.1px;
     line-height:2;
   }
 
   .subtitle.is-5{
     font-size: 17px !important;
-    font-weight: 600;
+    font-weight: 800 !important;
     letter-spacing:1.1px;
     line-height: 2;
   }
@@ -55,9 +70,13 @@ const GlobalStyle = createGlobalStyle`
   .has-text-primary	{
     color:${theme.primaryColor} !important;
   }
-  
+
   .has-text-danger{
     color:${theme.secondaryColor} !important;
+  }
+
+  .has-text-weight-medium {
+    font-weight: 800 !important;
   }
 
 .button.is-primary{

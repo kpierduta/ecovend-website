@@ -30,7 +30,7 @@ class Hero extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column">
-              <h1 className="title has-text-weight-normal is-capitalized has-text-primary">
+              <h1 className="title  is-capitalized has-text-primary">
                 {home.title}
               </h1>
               <h5 className="subtitle is-size-5  has-text-primary">
