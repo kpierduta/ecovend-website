@@ -1,14 +1,19 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import config from '../utils/config';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import NewsHero from '../components/NewsHero';
+import Pagination from '../components/Pagination';
 
 export const newsQuery = graphql`
-  query news {
-    allContentfulNewsPage(sort: { fields: date, order: ASC }) {
+  query news($skip: Int!, $limit: Int!) {
+    allContentfulNewsPage(
+      sort: { fields: date, order: ASC }
+      skip: $skip
+      limit: $limit
+    ) {
       edges {
         node {
           slug
@@ -42,6 +47,9 @@ export default class NewsPage extends React.Component {
     const {
       data: { allContentfulNewsPage: news },
     } = this.props;
+    const { pageContext } = this.props;
+    const { previousPagePath, nextPagePath } = pageContext;
+
     return (
       <Layout>
         <Seo
@@ -50,6 +58,7 @@ export default class NewsPage extends React.Component {
           url={`${config.siteUrl}`}
         />
         <NewsHero news={news.edges} />
+        <Pagination pageContext={pageContext} />
       </Layout>
     );
   }

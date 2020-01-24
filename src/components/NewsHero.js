@@ -57,7 +57,8 @@ const Section = styled.section`
 
 class NewsConetnt extends React.Component {
   render() {
-    const { news } = this.props;
+    const { news, pageContext } = this.props;
+    console.log(pageContext);
     return (
       <React.Fragment>
         <BreadCrumbs undelineText="News" />
@@ -93,53 +94,6 @@ class NewsConetnt extends React.Component {
                 </div>
               </div>
             </div>
-            <nav
-              className="pagination"
-              role="navigation"
-              aria-label="pagination"
-            >
-              <Link
-                to="/"
-                className="pagination-previous"
-                title="This is the first page"
-                disabled
-              >
-                Previous
-              </Link>
-              <Link to="/" className="pagination-next">
-                Next page
-              </Link>
-              <ul className="pagination-list">
-                <li>
-                  <Link
-                    to="/"
-                    className="pagination-link is-current"
-                    aria-label="Page 1"
-                    aria-current="page"
-                  >
-                    1
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/"
-                    className="pagination-link"
-                    aria-label="Goto page 2"
-                  >
-                    2
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/"
-                    className="pagination-link"
-                    aria-label="Goto page 3"
-                  >
-                    3
-                  </Link>
-                </li>
-              </ul>
-            </nav>
           </div>
         </Section>
       </React.Fragment>
