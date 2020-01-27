@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import config from '../utils/config';
 import Seo from '../components/Seo';
@@ -7,7 +7,6 @@ import Layout from '../components/Layout';
 import Advertising from '../components/AdvertisingHero';
 import Rvm from '../components/RvmAdvertising';
 import Infographic from '../components/Infographic';
-import Contact from '../components/Contact';
 
 export const advertQuery = graphql`
   query advert {

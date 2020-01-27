@@ -10,6 +10,10 @@ const Container = styled.section`
     }
   }
 
+  ul {
+    list-style: inside;
+  }
+
   video {
     padding-left: 5rem;
     height: auto;
@@ -71,9 +75,33 @@ class Rvm extends React.Component {
                 <h4 className="title is-4 head is-uppercase has-text-centered has-text-danger">
                   {adv.visualTitle}
                 </h4>
-                <h5 className="subtitle is-6 has-text-centered has-text-danger">
-                  {adv.videoTitle}
-                </h5>
+                <ul className="subtitle is-6  has-text-danger">
+                  <li>
+                    Ecovend RVMs supply prime advertising space ideal for high
+                    footfall public areas
+                  </li>
+                  <li>
+                    The opportunity to run hi-res audio visual advertising
+                    content on up to 3 large screens in one location.
+                  </li>
+                  <li>
+                    The opportunity to run hi-res audio visual advertising
+                    content on up to 3 large screens in one location.
+                  </li>
+                  <li>
+                    RVMs engage not only 'walk by' but also ‘special visit’
+                    consumers
+                  </li>
+                  <li>
+                    Brands that advertise on RVMs align their brand with a
+                    commitment to sustainability and CSR
+                  </li>
+                  <li>
+                    The 'reward', typically discount vouchers or loyalty card
+                    points operated by retailers, help to drive consumers to
+                    'spend' more with the advertiser or the RVM owner.
+                  </li>
+                </ul>
               </div>
               <div>
                 <h4 className="title head is-4 has-text-centered has-text-danger">
