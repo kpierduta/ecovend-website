@@ -28,14 +28,12 @@ class About extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column is-6">
-              <h1 className="title is-4 is-capitalized">
-                {home.greyBlockTitle}
-              </h1>
+              <h1 className="title is-4 is-capitalized">{home.sectionTitle}</h1>
               <h6 className="subtitle is-6 text">
-                {home.greyBlockParagraph.internal.content}
+                {home.sectionFirstSubtitle.sectionFirstSubtitle}
               </h6>
               <h6 className="subtitle is-6 text sub-text">
-                {home.greyBlockSecondPara.internal.content}
+                {home.sectionSecondSubtitle}
               </h6>
               <AnchorStyled href="#contact" className="title is-5">
                 <span className="has-text-danger">Get in touch </span> to learn
@@ -43,7 +41,7 @@ class About extends React.Component {
               </AnchorStyled>
             </div>
             <div className="column">
-              <Player src={firstVideo} width="100%" play={true} />
+              <Player src={firstVideo} width="100%" play />
             </div>
           </div>
         </div>

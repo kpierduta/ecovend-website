@@ -23,35 +23,15 @@ export const indexQuery = graphql`
           url
         }
       }
-      greyBlockTitle
-      greyBlockParagraph {
-        internal {
-          content
-        }
+      sectionTitle
+      sectionFirstSubtitle {
+        sectionFirstSubtitle
       }
-      greyBlockSecondPara {
-        internal {
-          content
-        }
-      }
-      videoTitle
-      videoLink
-      orangeTitle
-      orangeParagraph {
-        internal {
-          content
-        }
-      }
-      orangeSecondPara {
-        internal {
-          content
-        }
-      }
-      orangeThirdPara {
-        internal {
-          content
-        }
-      }
+      sectionSecondSubtitle
+      bbcSectionTitle
+      newsSubtitle
+      firstPara
+      secondPara
       stepTitle
       stepsSectionParagraph {
         internal {
@@ -83,6 +63,7 @@ export const indexQuery = graphql`
       chooseSubtitle
       chooseIcons {
         title
+        description
         file {
           url
         }
@@ -102,6 +83,9 @@ export const indexQuery = graphql`
 
 export default class IndexPage extends React.Component {
   render() {
+    const {
+      data: { contentfulHomePage: home },
+    } = this.props;
     return (
       <Layout>
         <Seo
@@ -109,26 +93,16 @@ export default class IndexPage extends React.Component {
           description="Ecovend Reverse Vending"
           url={`${config.siteUrl}`}
         />
-        <StaticQuery
-          query={indexQuery}
-          render={data => {
-            const { contentfulHomePage: home } = data;
-            return (
-              <React.Fragment>
-                <Hero home={home} />
-                <About home={home} />
-                <DrsInfo home={home} />
-                <Steps home={home} />
-                <Choose home={home} choose={home.chooseIcons} />
-                {/**
+        <Hero home={home} />
+        <About home={home} />
+        <DrsInfo home={home} />
+        <Steps home={home} />
+        <Choose home={home} />
+        {/**
                 <Customer home={home} />
                 */}
-                <Advertisment home={home} data={home.imageGrid} />
-                <Contact />
-              </React.Fragment>
-            );
-          }}
-        />
+        <Advertisment home={home} data={home.imageGrid} />
+        <Contact />
       </Layout>
     );
   }

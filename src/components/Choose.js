@@ -10,7 +10,7 @@ const Section = styled.section`
     padding: 7rem 0rem 7rem 0rem;
   }
   .card {
-    min-height: 20rem;
+    min-height: 45rem;
     background: transparent;
     border: 1px solid black;
   }
@@ -21,7 +21,7 @@ const Section = styled.section`
 
 class Choose extends React.Component {
   render() {
-    const { home, choose } = this.props;
+    const { home } = this.props;
     return (
       <Section className="section">
         <div className="container has-text-centered">
@@ -30,16 +30,17 @@ class Choose extends React.Component {
             {home.chooseSubtitle}
           </h1>
           <div className="columns">
-            {choose.map(item => (
+            {home.chooseIcons.map(item => (
               <div className="column has-text-centered">
                 <div className="card">
                   <div className="card-image">
                     <img src={item.file.url} alt="/" />
                   </div>
                   <div className="card-content">
-                    <h5 className="subtitle is-5 has-text-weight-medium">
+                    <h5 className="subtitle is-5 has-text-weight-bold">
                       {item.title}
                     </h5>
+                    <p className="subtitle is-6">{item.description}</p>
                   </div>
                 </div>
               </div>

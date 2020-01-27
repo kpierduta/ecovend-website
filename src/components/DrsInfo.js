@@ -35,18 +35,12 @@ class DrsInfo extends React.Component {
               />
             </div>
             <div className="column">
-              <h4 className="title is-4 is-capitalized">{home.orangeTitle}</h4>
-              <h6 className="subtitle is-6 first">
-                {home.orangeParagraph.internal.content}
-              </h6>
-              <h6 className="subtitle is-6 second">
-                {' '}
-                {home.orangeSecondPara.internal.content}
-              </h6>
-              <h6 className="subtitle is-6 second">
-                {' '}
-                {home.orangeThirdPara.internal.content}
-              </h6>
+              <h4 className="title is-4 is-capitalized">
+                {home.bbcSectionTitle}
+              </h4>
+              <h6 className="subtitle is-6 first">{home.newsSubtitle}</h6>
+              <h6 className="subtitle is-6 second"> {home.firstPara}</h6>
+              <h6 className="subtitle is-6 second"> {home.secondPara}</h6>
               <AnchorStyled href="#contact" className="title is-5">
                 <span className="has-text-danger">Get in touch </span> to learn
                 more
