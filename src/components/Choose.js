@@ -10,11 +10,12 @@ const Section = styled.section`
     padding: 7rem 0rem 7rem 0rem;
   }
   .card {
-    min-height: 45rem;
+    min-height: 28rem;
     background: transparent;
     border: 1px solid black;
   }
   img {
+    margin-top: 0.5rem;
     height: 8rem;
   }
 `;
@@ -29,9 +30,9 @@ class Choose extends React.Component {
           <h1 className="subtitle is-5 has-text-weight-normal">
             {home.chooseSubtitle}
           </h1>
-          <div className="columns">
+          <div className="columns is-multiline">
             {home.chooseIcons.map(item => (
-              <div className="column has-text-centered">
+              <div className="column is-4 has-text-centered">
                 <div className="card">
                   <div className="card-image">
                     <img src={item.file.url} alt="/" />
