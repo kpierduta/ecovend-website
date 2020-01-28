@@ -7,21 +7,31 @@ const Container = styled.section`
   .table th {
     border: none;
   }
+
   .table.is-striped tbody tr:not(.is-selected):nth-child(odd) {
     background-color: #fafafa;
   }
+
   .table.is-striped tbody tr:not(.is-selected):nth-child(even) {
     background-color: #ffff !important;
   }
+
   .table tr.is-selected {
     background-color: #fde6d8 !important;
   }
-  .main {
+
+  .first-column {
     width: 25%;
   }
-  .content {
-    width: 47%;
+
+  .second-column {
+    width: 40%;
   }
+
+  .third-column {
+    width: 16%;
+  }
+
   .image {
     height: auto;
     width: 70%;
@@ -45,9 +55,9 @@ const Machines = ({ data }) => (
           <table className="table  is-fullwidth is-striped">
             <thead>
               <tr>
-                <th className="main"></th>
-                <th className="content"></th>
-                <th></th>
+                <th className="first-column"></th>
+                <th className="second-column"></th>
+                <th className="third-column"></th>
                 <th></th>
               </tr>
             </thead>
