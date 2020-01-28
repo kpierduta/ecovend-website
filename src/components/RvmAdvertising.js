@@ -51,7 +51,7 @@ class Rvm extends React.Component {
           <div className="columns">
             <RvmType className="column">
               <h3 className="title is-3 is-capitalized has-text-weight-light has-text-danger">
-                {adv.sideTitle}
+                {adv.heroTitle}
               </h3>
             </RvmType>
             <div className="column image has-text-right is-hidden-mobile">
@@ -73,42 +73,20 @@ class Rvm extends React.Component {
             <ContainerInner className="column is-7">
               <div>
                 <h4 className="title is-4 head is-uppercase has-text-centered has-text-danger">
-                  {adv.visualTitle}
+                  {adv.videoTitle}
                 </h4>
                 <ul className="subtitle is-6  has-text-danger">
-                  <li>
-                    Ecovend RVMs supply prime advertising space ideal for high
-                    footfall public areas
-                  </li>
-                  <li>
-                    The opportunity to run hi-res audio visual advertising
-                    content on up to 3 large screens in one location.
-                  </li>
-                  <li>
-                    The opportunity to run hi-res audio visual advertising
-                    content on up to 3 large screens in one location.
-                  </li>
-                  <li>
-                    RVMs engage not only 'walk by' but also ‘special visit’
-                    consumers
-                  </li>
-                  <li>
-                    Brands that advertise on RVMs align their brand with a
-                    commitment to sustainability and CSR
-                  </li>
-                  <li>
-                    The 'reward', typically discount vouchers or loyalty card
-                    points operated by retailers, help to drive consumers to
-                    'spend' more with the advertiser or the RVM owner.
-                  </li>
+                  {adv.advertisementPoints.map(items => (
+                    <li>{items}</li>
+                  ))}
                 </ul>
               </div>
               <div>
                 <h4 className="title head is-4 has-text-centered has-text-danger">
-                  {adv.visualSubtitle}
+                  {adv.videoSecondTitle}
                 </h4>
                 <h5 className="subtitle is-6 has-text-centered has-text-danger">
-                  {adv.visualParagraph}
+                  {adv.videoParagraph}
                 </h5>
               </div>
             </ContainerInner>

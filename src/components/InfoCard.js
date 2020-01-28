@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   .card {
+    min-height: 25rem;
     background: url(${props => props.background});
     background-size: cover;
     background-size: 100% 100%;
@@ -18,17 +19,17 @@ const Container = styled.div`
   }
 `;
 
-const InfoCard = ({ background }) => (
-  <Container className="column is-3 has-text-centered" background={background}>
+const InfoCard = ({ data, background }) => (
+  <Container
+    className="column is-3 has-text-centered"
+    background={data.file.url}
+  >
     <div className="card">
       <div className="card-content">
         <span className="icon">
           <i className="fas fa-search" />
         </span>
-        <h1 className="subtitle is-6">
-          In May 2017, Brakes and ACM are finalist for the MRW National
-          Recycling award for business partnership of the Year award
-        </h1>
+        <h1 className="subtitle is-6">{data.description}</h1>
       </div>
     </div>
   </Container>

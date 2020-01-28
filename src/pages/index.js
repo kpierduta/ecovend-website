@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
@@ -98,9 +98,9 @@ export default class IndexPage extends React.Component {
         <DrsInfo home={home} />
         <Steps home={home} />
         <Choose home={home} />
-        {/**
-                <Customer home={home} />
-                */}
+        {/*
+          <Customer home={home} />
+        */}
         <Advertisment home={home} data={home.imageGrid} />
         <Contact />
       </Layout>

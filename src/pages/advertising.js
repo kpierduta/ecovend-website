@@ -12,30 +12,29 @@ export const advertQuery = graphql`
   query advert {
     contentfulAdvertisingPage {
       title
-      visualTitle
-      visualSubtitle
-      visualParagraph
       introParagrpah {
         introParagrpah
       }
+      heroTitle
       heroImage {
         file {
           url
         }
       }
       videoTitle
-      videoPoster {
+      advertisementPoints
+      videoSecondTitle
+      videoParagraph
+      infoGraphics {
+        description
         file {
           url
         }
       }
-      sideTitle
-    }
-    allContentfulAdvertisingStep(sort: { order: ASC, fields: listingOrder }) {
-      edges {
-        node {
-          listingOrder
-          description
+      gallery {
+        title
+        file {
+          url
         }
       }
     }
@@ -45,10 +44,7 @@ export const advertQuery = graphql`
 export default class AdvertisingPage extends React.Component {
   render() {
     const {
-      data: {
-        contentfulAdvertisingPage: adv,
-        allContentfulAdvertisingStep: advSteps,
-      },
+      data: { contentfulAdvertisingPage: adv },
     } = this.props;
     return (
       <Layout>
@@ -58,8 +54,8 @@ export default class AdvertisingPage extends React.Component {
           url={`${config.siteUrl}`}
         />
         <Advertising adv={adv} />
-        <Rvm adv={adv} advSteps={advSteps.edges} />
-        <Infographic />
+        <Rvm adv={adv} />
+        <Infographic data={adv} />
       </Layout>
     );
   }

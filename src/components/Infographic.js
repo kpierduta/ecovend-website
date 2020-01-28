@@ -7,56 +7,33 @@ const Container = styled.section`
   .bottom {
     margin-top: -3px;
   }
+  img {
+    margin-top: -0.25rem;
+  }
 `;
 
 class Infographic extends React.Component {
   render() {
-    const { advSteps } = this.props;
+    const { data } = this.props;
     return (
       <Container>
         <div className="section">
           <div className="container">
             <div className="columns is-variable is-0">
-              <InfoCard background="/images/circles/one.jpg" />
-              <InfoCard background="/images/circles/two.jpg" />
-              <InfoCard background="/images/circles/three.jpg" />
-              <InfoCard background="/images/circles/four.jpg" />
+              {data.infoGraphics.map(items => (
+                <InfoCard data={items} />
+              ))}
             </div>
           </div>
         </div>
         <section className="section">
           <div className="container">
             <div className="columns is-multiline is-gapless">
-              <div className="column is-4">
-                <img src="/images/advertisment-one.jpg" alt="#" />
-              </div>
-              <div className="column is-4">
-                <img src="/images/ad-two.jpg" alt="#" />
-              </div>
-              <div className="column is-4">
-                <img src="/images/Ad-three.jpg" alt="#" />
-              </div>
-              <div className="column is-4">
-                <img
-                  className="bottom"
-                  src="/images/advertisment-four.jpg"
-                  alt="#"
-                />
-              </div>
-              <div className="column is-4">
-                <img
-                  className="bottom"
-                  src="/images/advertisment-five.jpg"
-                  alt="#"
-                />
-              </div>
-              <div className="column is-4">
-                <img
-                  className="bottom"
-                  src="/images/advertisment-six.jpg"
-                  alt="#"
-                />
-              </div>
+              {data.gallery.map(items => (
+                <div className="column is-4">
+                  <img src={items.file.url} alt={items.title} />
+                </div>
+              ))}
             </div>
           </div>
         </section>
