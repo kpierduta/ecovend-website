@@ -28,23 +28,19 @@ const Container = styled.section`
   }
 `;
 
-const Machines = () => (
+const Machines = ({ data }) => (
   <Container className="section">
     <div className="container">
       <div className="columns is-8 is-multiline">
-        {/** ** **************** first machine ************************************ */}
         <div className="column is-3 has-text-centered">
           <h1 className="subtitle is-4 has-text-danger has-text-light">
             SPECIFICATIONS
           </h1>
-          <img
-            src="/images/machines/ecovend-machine_100-200-300.png"
-            alt="recycle machine"
-          />
+          <img src={data.machineImage.file.url} alt={data.machineImage.title} />
         </div>
         <div className="column">
           <h1 className="title is-5 has-text-danger">
-            MODEL: ECOVEND RVM 100/200/300
+            MODEL: ECOVEND<span>{data.machineName}</span>
           </h1>
           <table className="table  is-fullwidth is-striped">
             <thead>
@@ -61,9 +57,7 @@ const Machines = () => (
                   <h1 className="subtitle is-6">LOCATION:</h1>
                 </td>
                 <td>
-                  <p className="subtitle is-6">
-                    internal or external (under cover)
-                  </p>
+                  <p className="subtitle is-6">{data.location}</p>
                 </td>
                 <td></td>
                 <td></td>
@@ -73,23 +67,17 @@ const Machines = () => (
                   <h1 className="subtitle is-6">DIMENSIONS::</h1>
                 </th>
                 <td>
-                  <p className="subtitle is-6">
-                    RVM 100 1850 (H) x 650 (W) x 850mm (D)
-                  </p>
-                  <p className="subtitle is-6">
-                    RVM 100 1850 (H) x 650 (W) x 850mm (D)
-                  </p>
-                  <p className="subtitle is-6">
-                    RVM 300 1850 (H) x 1100 (W) x 950mm (D)
-                  </p>
+                  {data.dimensions.map(items => (
+                    <p className="subtitle is-6">{items}</p>
+                  ))}
                 </td>
                 <td>
                   <h1 className="subtitle is-6">SCREEN SIZE:</h1>
                 </td>
                 <td>
-                  <p className="subtitle is-6">10 in</p>
-                  <p className="subtitle is-6">21 in</p>
-                  <p className="subtitle is-6">19in</p>
+                  {data.screenSize.map(items => (
+                    <p className="subtitle is-6">{items}</p>
+                  ))}
                 </td>
               </tr>
               <tr>
@@ -97,9 +85,7 @@ const Machines = () => (
                   <h1 className="subtitle is-6">TOUCH SCREEN:</h1>
                 </th>
                 <td>
-                  <p className="subtitle is-6">
-                    simple and intuitive user operation
-                  </p>
+                  <p className="subtitle is-6">{data.touchScreen}</p>
                 </td>
                 <td></td>
                 <td></td>
@@ -109,9 +95,7 @@ const Machines = () => (
                   <h1 className="subtitle is-6">REWARD SYSTEM:</h1>
                 </th>
                 <td>
-                  <p className="subtitle is-6">
-                    paper token (electronic / app system pending)
-                  </p>
+                  <p className="subtitle is-6">{data.rewardsSystems}</p>
                 </td>
               </tr>
               <tr className="is-selected">
@@ -119,9 +103,7 @@ const Machines = () => (
                   <h1 className="subtitle is-6">MATERIAL TYPES:</h1>
                 </th>
                 <td>
-                  <p className="subtitle is-6">
-                    plastic bottles & aluminium cans (glass - pending)
-                  </p>
+                  <p className="subtitle is-6">{data.materialTypes}</p>
                 </td>
                 <td></td>
                 <td></td>
@@ -131,10 +113,7 @@ const Machines = () => (
                   <h1 className="subtitle is-6">CAPACITY:</h1>
                 </th>
                 <td>
-                  <p className="subtitle is-6">
-                    "RVM 100 - 200 bottles or 300 cans (single chamber for a
-                    single material or two materials co-mingled)
-                  </p>
+                  <p className="subtitle is-6">{data.capacity}</p>
                 </td>
               </tr>
               <tr className="is-selected">
@@ -142,11 +121,7 @@ const Machines = () => (
                   <h1 className="subtitle is-6">AUTOMATION:</h1>
                 </th>
                 <td>
-                  <p className="subtitle is-6">
-                    barcode and weight sensors to accept only empty beverage
-                    containers automatically verified against the EcoVend
-                    database of 60,000 legitimate barcodes"
-                  </p>
+                  <p className="subtitle is-6">{data.automation}</p>
                 </td>
                 <td></td>
                 <td></td>
@@ -156,7 +131,7 @@ const Machines = () => (
                   <h1 className="subtitle is-6">MAX CONTAINER SIZE:</h1>
                 </th>
                 <td>
-                  <p className="subtitle is-6">3 litres</p>
+                  <p className="subtitle is-6">{data.maxContainerSize}</p>
                 </td>
               </tr>
               <tr className="is-selected">
@@ -167,7 +142,7 @@ const Machines = () => (
                 </th>
                 <td>
                   <p className="subtitle is-6">
-                    two integral compactor units, one for each material type
+                    {data.materialSortingCompaction}
                   </p>
                 </td>
                 <td></td>
@@ -178,10 +153,7 @@ const Machines = () => (
                   <h1 className="subtitle is-6">OUTPUTS:</h1>
                 </th>
                 <td>
-                  <p className="subtitle is-6">
-                    full description of each container for macro or micro
-                    analysis
-                  </p>
+                  <p className="subtitle is-6">{data.outputs}</p>
                 </td>
               </tr>
               <tr className="is-selected">
@@ -189,10 +161,7 @@ const Machines = () => (
                   <h1 className="subtitle is-6">REPORTING:</h1>
                 </th>
                 <td>
-                  <p className="subtitle is-6">
-                    full description of each container for macro or micro
-                    analysis
-                  </p>
+                  <p className="subtitle is-6">{data.reporting}</p>
                 </td>
                 <td></td>
                 <td></td>
@@ -202,7 +171,7 @@ const Machines = () => (
                   <h1 className="subtitle is-6">POWER SUPPLY:</h1>
                 </th>
                 <td>
-                  <p className="subtitle is-6">13 amp</p>
+                  <p className="subtitle is-6">{data.powerSupply}</p>
                 </td>
               </tr>
               <tr>
@@ -210,7 +179,7 @@ const Machines = () => (
                   <h1 className="subtitle is-6">Productivity:</h1>
                 </th>
                 <td>
-                  <p className="subtitle is-6">upto 30 units per min</p>
+                  <p className="subtitle is-6">{data.productivity}</p>
                 </td>
                 <td></td>
                 <td></td>
@@ -220,7 +189,7 @@ const Machines = () => (
                   <h1 className="subtitle is-6">IP RATING:</h1>
                 </th>
                 <td>
-                  <p className="subtitle is-6">IP53</p>
+                  <p className="subtitle is-6">{data.ipRating}</p>
                 </td>
               </tr>
             </tbody>

@@ -20,65 +20,35 @@ const Container = styled.section`
   }
 `;
 
-const Product = () => (
+const Product = ({ data }) => (
   <Container className="section">
     <div className="container">
       <div className="columns">
-        <div className="column">
-          <div className="box">
-            <img
-              src="/images/machines/ecovend-machine_100-200-300.png"
-              alt="recycle machine"
-            />
-            <h1 className="subtitle is-6 has-text-white">
-              <span>ECOVEND</span>
-            </h1>
-            <h1 className="subtitle is-6 has-text-danger">RVM 100/200/300</h1>
-            <Link to="/our-product" className="button is-rounded is-primary">
-              MORE INFO
-              <span className="icon">
-                <i className="fas fa-chevron-right" />
-              </span>
-            </Link>
+        {data.map(items => (
+          <div className="column is-4">
+            <div className="box">
+              <img
+                src={items.node.machineImage.file.url}
+                alt={items.node.machineImage.title}
+              />
+              <h1 className="subtitle is-6 has-text-white">
+                <span>ECOVEND</span>
+              </h1>
+              <h1 className="subtitle is-6 has-text-danger">
+                {items.node.machineName}
+              </h1>
+              <Link
+                to={`/machine/${items.node.slug}`}
+                className="button is-rounded is-primary"
+              >
+                MORE INFO
+                <span className="icon">
+                  <i className="fas fa-chevron-right" />
+                </span>
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="column">
-          <div className="box">
-            <img
-              src="/images/machines/ecovend-machine_350.png"
-              alt="recycle machine"
-            />
-            <h1 className="subtitle is-6 has-text-white">
-              <span>ECOVEND</span>
-            </h1>
-            <h1 className="subtitle is-6 has-text-danger">RVM 350</h1>
-            <Link to="/our-product" className="button is-rounded is-primary">
-              MORE INFO
-              <span className="icon">
-                <i className="fas fa-chevron-right" />
-              </span>
-            </Link>
-          </div>
-        </div>
-        <div className="column">
-          <div className="box">
-            <img
-              className="image"
-              src="/images/machines/ecovend-machine_400.png"
-              alt="Recycling Machine"
-            />
-            <h1 className="subtitle is-6 has-text-white">
-              <span>ECOVEND</span>
-            </h1>
-            <h1 className="subtitle is-6 has-text-danger">RVM 400</h1>
-            <Link to="/our-product" className="button is-rounded is-primary">
-              MORE INFO
-              <span className="icon">
-                <i className="fas fa-chevron-right" />
-              </span>
-            </Link>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </Container>

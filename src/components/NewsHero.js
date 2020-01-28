@@ -57,8 +57,7 @@ const Section = styled.section`
 
 class NewsConetnt extends React.Component {
   render() {
-    const { news, pageContext } = this.props;
-    console.log(pageContext);
+    const { news } = this.props;
     return (
       <React.Fragment>
         <BreadCrumbs undelineText="News" />
