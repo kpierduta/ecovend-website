@@ -48,8 +48,6 @@ export default class NewsPage extends React.Component {
       data: { allContentfulNewsPage: news },
     } = this.props;
     const { pageContext } = this.props;
-    const { previousPagePath, nextPagePath } = pageContext;
-
     return (
       <Layout>
         <Seo

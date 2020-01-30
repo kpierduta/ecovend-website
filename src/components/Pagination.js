@@ -9,45 +9,49 @@ const Section = styled.section`
   }
 `;
 
-const Pagination = ({ pageContext }) => (
-  <Section className="section">
-    <div className="container">
-      <nav className="pagination" role="navigation" aria-label="pagination">
-        <Link
-          to={pageContext.previousPagePath}
-          className="pagination-previous"
-          title="This is the first page"
-        >
-          Previous
-        </Link>
-        <Link to={pageContext.nextPagePath} className="pagination-next">
-          Next page
-        </Link>
-        <ul className="pagination-list">
-          <li>
-            <Link
-              to="/"
-              className="pagination-link is-current"
-              aria-label="Page 1"
-              aria-current="page"
-            >
-              1
-            </Link>
-          </li>
-          <li>
-            <Link to="/" className="pagination-link" aria-label="Goto page 2">
-              2
-            </Link>
-          </li>
-          <li>
-            <Link to="/" className="pagination-link" aria-label="Goto page 3">
-              3
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </Section>
-);
+const Pagination = ({ pageContext }) => {
+  const pages = [];
+
+  for (let i = 1; i <= pageContext.numberOfPages; i++) {
+    pages.push(i);
+  }
+
+  return (
+    <Section className="section">
+      <div className="container">
+        <nav className="pagination" role="navigation" aria-label="pagination">
+          <Link
+            to={pageContext.previousPagePath}
+            className="pagination-previous"
+            title="This is the first page"
+          >
+            Previous
+          </Link>
+          <Link to={pageContext.nextPagePath} className="pagination-next">
+            Next page
+          </Link>
+          <ul className="pagination-list">
+            {pages.map(items => (
+              <li>
+                <Link
+                  to={`/news/${items == 1 ? '' : items}`}
+                  className={
+                    pageContext.humanPageNumber == items
+                      ? 'pagination-link is-current'
+                      : 'pagination-link'
+                  }
+                  aria-label="Page 1"
+                  aria-current="page"
+                >
+                  {items}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </Section>
+  );
+};
 
 export default Pagination;

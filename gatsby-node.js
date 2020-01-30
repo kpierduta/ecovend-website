@@ -50,7 +50,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   });
 
   const newsPosts = result.data.allContentfulNewsPage.edges;
-  console.log('newsPosts', newsPosts.length);
   paginate({
     createPage,
     items: newsPosts,
@@ -59,6 +58,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // pageLength: 5,
     component: path.resolve('src/templates/news.js'),
   });
+
+  console.log();
 
   return true;
 };
