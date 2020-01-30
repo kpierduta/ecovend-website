@@ -22,6 +22,9 @@ export const newsQuery = graphql`
           date
           newsTitle
           shortDescription {
+            childMarkdownRemark {
+              excerpt
+            }
             internal {
               content
             }
@@ -48,6 +51,13 @@ export default class NewsPage extends React.Component {
       data: { allContentfulNewsPage: news },
     } = this.props;
     const { pageContext } = this.props;
+
+    const pages = [];
+
+    for (let i = 1; i <= pageContext.numberOfPages; i++) {
+      pages.push(i);
+    }
+
     return (
       <Layout>
         <Seo
@@ -56,7 +66,7 @@ export default class NewsPage extends React.Component {
           url={`${config.siteUrl}`}
         />
         <NewsHero news={news.edges} />
-        <Pagination pageContext={pageContext} />
+        <Pagination pageContext={pageContext} pages={pages} />
       </Layout>
     );
   }

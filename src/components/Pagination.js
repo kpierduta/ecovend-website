@@ -9,13 +9,7 @@ const Section = styled.section`
   }
 `;
 
-const Pagination = ({ pageContext }) => {
-  const pages = [];
-
-  for (let i = 1; i <= pageContext.numberOfPages; i++) {
-    pages.push(i);
-  }
-
+const Pagination = ({ pageContext, pages }) => {
   return (
     <Section className="section">
       <div className="container">

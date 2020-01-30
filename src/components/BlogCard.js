@@ -43,11 +43,13 @@ const LinkStyled = styled(Link)`
 `;
 
 const BlogCard = ({ item }) => (
-  <Section className="section" image={item.image.file.url}>
+  <Section className="section">
     <div className="container">
       <div className="columns is-gapless">
         <div className="column is-5">
-          <img src={item.image.file.url} alt="/" />
+          <figure className="image is-square">
+            <img src={item.image.file.url} alt="/" />
+          </figure>
         </div>
         <div className="column">
           <div className="card">
@@ -63,7 +65,7 @@ const BlogCard = ({ item }) => (
                     </p>
                     <h1 className="title is-4">{item.newsTitle}</h1>
                     <p className="subtitle is-6">
-                      {item.shortDescription.internal.content}
+                      {item.shortDescription.childMarkdownRemark.excerpt}
                     </p>
                     <LinkStyled
                       to={`/blog/${item.slug}`}

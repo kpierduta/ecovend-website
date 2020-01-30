@@ -55,11 +55,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     items: newsPosts,
     itemsPerPage: 4,
     pathPrefix: '/news',
-    // pageLength: 5,
     component: path.resolve('src/templates/news.js'),
   });
-
-  console.log();
 
   return true;
 };
