@@ -49,13 +49,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
 
-  const newsPosts = path.resolve(`src/templates/news.js`);
+  const newsPosts = result.data.allContentfulNewsPage.edges;
+  console.log('newsPosts', newsPosts.length);
   paginate({
     createPage,
     items: newsPosts,
     itemsPerPage: 4,
     pathPrefix: '/news',
-    pageLength: 5,
+    // pageLength: 5,
     component: path.resolve('src/templates/news.js'),
   });
 
