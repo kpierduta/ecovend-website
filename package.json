@@ -20,6 +20,7 @@
     "lint": "eslint --ignore-path .gitignore \"src/**/*.{js,jsx}\""
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
     "formik": "^1.5.8",
     "gatsby": "^2.3.3",
     "gatsby-awesome-pagination": "^0.3.5",

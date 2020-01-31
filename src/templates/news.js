@@ -10,33 +10,20 @@ import Pagination from '../components/Pagination';
 export const newsQuery = graphql`
   query news($skip: Int!, $limit: Int!) {
     allContentfulNewsPage(
-      sort: { fields: date, order: ASC }
+      sort: { fields: dateOfPublish, order: DESC }
       skip: $skip
       limit: $limit
     ) {
       edges {
         node {
           slug
-          order
-          newsCategory
-          date
+          dateOfPublish(formatString: "MMMM Do, YYYY,")
+          category
           newsTitle
-          shortDescription {
-            childMarkdownRemark {
-              excerpt
-            }
-            internal {
-              content
-            }
-          }
+          excerpt
           image {
             file {
               url
-            }
-          }
-          description {
-            internal {
-              content
             }
           }
         }

@@ -58,15 +58,11 @@ const BlogCard = ({ item }) => (
                 <div className="media-content">
                   <div className="content">
                     <p className="subtitle is-6">
-                      <span className="has-text-danger">
-                        {item.newsCategory}
-                      </span>{' '}
-                      {item.date}
+                      <span className="has-text-danger">{item.category}</span>{' '}
+                      {item.dateOfPublish}
                     </p>
                     <h1 className="title is-4">{item.newsTitle}</h1>
-                    <p className="subtitle is-6">
-                      {item.shortDescription.childMarkdownRemark.excerpt}
-                    </p>
+                    <p className="subtitle is-6">{item.excerpt}</p>
                     <LinkStyled
                       to={`/blog/${item.slug}`}
                       className="button is-rounded has-text-white"

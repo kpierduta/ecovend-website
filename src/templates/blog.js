@@ -11,40 +11,16 @@ export const pageQuery = graphql`
   query PageByPath($slug: String) {
     contentfulNewsPage(slug: { eq: $slug }) {
       slug
-      order
-      newsCategory
-      date
+      dateOfPublish(formatString: "MMMM Do, YYYY,")
+      category
       newsTitle
-      shortDescription {
-        internal {
-          content
-        }
-      }
       image {
         file {
           url
         }
       }
-      description {
-        internal {
-          content
-        }
-      }
-    }
-    allContentfulNewsPage(sort: { fields: date, order: ASC }) {
-      edges {
-        node {
-          slug
-          order
-          newsCategory
-          date
-          newsTitle
-          image {
-            file {
-              url
-            }
-          }
-        }
+      newsContent {
+        json
       }
     }
   }
@@ -53,13 +29,13 @@ export const pageQuery = graphql`
 export default class page extends React.Component {
   render() {
     const {
-      data: { contentfulNewsPage: news, allContentfulNewsPage: test },
+      data: { contentfulNewsPage: news },
     } = this.props;
     return (
       <Layout>
         <Seo title="Blog" description="Blog" url={`${config.siteUrl}`} />
         <BlogContent news={news} />
-        <NextBlog news={test} />
+        <NextBlog />
       </Layout>
     );
   }
