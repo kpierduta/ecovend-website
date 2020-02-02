@@ -1,14 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 
 import BreadCrumbs from './BreadCrumbs';
 import BlogCard from './BlogCard';
-import Followus from './FollowUs';
-import RecentPost from './RecentPost';
-import HelpCard from './HelpCard';
+import AsideMenu from './AsideMenu';
 
-const Section = styled.section`
+const Section = styled.div`
   margin-bottom: 4rem;
 
   .column:first-child {
@@ -19,84 +16,33 @@ const Section = styled.section`
     margin: 0rem 1rem 0rem 0rem;
   }
 
-  .menu-list li ul {
-    padding: 0rem;
-    border-left: none !important;
-  }
-
-  .menu-list li {
-    font-size: 1rem;
-    border-left: 4px solid #dbdbdb;
-    transition: border-left 0.5s, padding-left 0.5s;
-    :hover {
-      padding-left: 0.5rem;
-      border-left: 5px solid ${props => props.theme.secondaryColor};
-    }
-  }
-
-  .text {
-    margin-top: 1.5rem;
-  }
-
-  .pagination {
-    margin-top: 3rem;
-  }
-
-  .icon {
-    color: ${props => props.theme.primaryColor};
-    margin-right: 1rem;
-  }
   .columns.is-variable.is-8 {
     --columnGap: 4rem;
   }
-  .pagination-link.is-current {
-    background-color: ${props => props.theme.primaryColor};
-    border-color: ${props => props.theme.primaryColor};
-  }
 `;
 
-class NewsConetnt extends React.Component {
-  render() {
-    const { news } = this.props;
-    return (
-      <React.Fragment>
-        <BreadCrumbs undelineText="News" />
-        <Section className="section">
-          <div className="container">
-            <div className="columns is-variable is-8">
-              <div className="column is-7">
-                {news.map(item => (
-                  <BlogCard item={item.node} />
-                ))}
-              </div>
-              <div className="column">
-                <Followus />
-                <div className="post-list">
-                  <h5 className="title is-4 text">Categories</h5>
-                  <aside className="menu">
-                    <ul className="menu-list">
-                      <li>
-                        <Link to="/"> Business</Link>
-                      </li>
-                      <li>
-                        <Link to="/"> PR</Link>
-                      </li>
-                      <li>
-                        <Link to="/"> Projects</Link>
-                      </li>
-                    </ul>
-                  </aside>
-                </div>
-                <RecentPost />
-                <div className="posts">
-                  <HelpCard />
-                </div>
-              </div>
+const NewsConetnt = ({ news, category, onCategoryChange }) => {
+  return (
+    <Section>
+      <BreadCrumbs undelineText="News" />
+      <section className="section">
+        <div className="container">
+          <div className="columns is-variable is-8">
+            <div className="column is-7">
+              {news.map(({ node }) => {
+                if (node.category == category || category === 'all') {
+                  return <BlogCard item={node} />;
+                }
+              })}
+            </div>
+            <div className="column">
+              <AsideMenu onChange={onCategoryChange} />
             </div>
           </div>
-        </Section>
-      </React.Fragment>
-    );
-  }
-}
+        </div>
+      </section>
+    </Section>
+  );
+};
+
 export default NewsConetnt;

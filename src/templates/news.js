@@ -33,11 +33,22 @@ export const newsQuery = graphql`
 `;
 
 export default class NewsPage extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { category: 'all' };
+  }
+
+  onCategoryChange = category => {
+    this.setState({ category });
+  };
+
   render() {
     const {
       data: { allContentfulNewsPage: news },
+      pageContext,
     } = this.props;
-    const { pageContext } = this.props;
+    const { category } = this.state;
 
     const pages = [];
 
@@ -52,7 +63,11 @@ export default class NewsPage extends React.Component {
           description="News about Eco-vend"
           url={`${config.siteUrl}`}
         />
-        <NewsHero news={news.edges} />
+        <NewsHero
+          news={news.edges}
+          category={category}
+          onCategoryChange={this.onCategoryChange}
+        />
         <Pagination pageContext={pageContext} pages={pages} />
       </Layout>
     );
