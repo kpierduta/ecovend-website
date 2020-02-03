@@ -7,6 +7,7 @@ const Section = styled.section`
 
   img {
     border-radius: 1rem;
+    height: 18rem !important;
   }
 
   .card {

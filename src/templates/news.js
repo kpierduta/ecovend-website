@@ -26,6 +26,9 @@ export const newsQuery = graphql`
               url
             }
           }
+          newsContent {
+            json
+          }
         }
       }
     }

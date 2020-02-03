@@ -45,14 +45,20 @@ const AsideMenu = ({ onChange }) => (
       <aside className="menu">
         <ul className="menu-list">
           <li>
-            <button onClick={() => onChange('Business')}>Business</button>
+            <button type="button" onClick={() => onChange('Business')}>
+              Business
+            </button>
           </li>
           <li>
             {' '}
-            <button onClick={() => onChange('PR')}>PR </button>
+            <button type="button" onClick={() => onChange('PR')}>
+              PR{' '}
+            </button>
           </li>
           <li>
-            <button onClick={() => onChange('Projects')}>Projects</button>
+            <button type="button" onClick={() => onChange('Projects')}>
+              Projects
+            </button>
           </li>
         </ul>
       </aside>

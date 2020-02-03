@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import config from '../utils/config';

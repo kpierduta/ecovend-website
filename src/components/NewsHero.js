@@ -30,7 +30,7 @@ const NewsConetnt = ({ news, category, onCategoryChange }) => {
           <div className="columns is-variable is-8">
             <div className="column is-7">
               {news.map(({ node }) => {
-                if (node.category == category || category === 'all') {
+                if (node.category === category || category === 'all') {
                   return <BlogCard item={node} />;
                 }
               })}
