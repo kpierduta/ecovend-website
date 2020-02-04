@@ -1,14 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import InfoCard from './InfoCard';
-
 const Container = styled.section`
   .bottom {
     margin-top: -3px;
   }
   img {
     margin-top: -0.5rem;
+  }
+  .circle {
+    border: 2px solid ${props => props.theme.brandColor};
+    padding: 2rem 2.25rem;
+    border-radius: 100%;
   }
 `;
 
@@ -19,9 +22,13 @@ class Infographic extends React.Component {
       <Container>
         <div className="section">
           <div className="container">
-            <div className="columns is-variable is-0">
-              {data.infoGraphics.map(items => (
-                <InfoCard data={items} />
+            <div className="columns">
+              {data.infoGraphicsPoint.map(items => (
+                <div className="column is-3 has-text-centered">
+                  <div className="circle">
+                    <h1 className="subtitle is-5">{items}</h1>
+                  </div>
+                </div>
               ))}
             </div>
           </div>

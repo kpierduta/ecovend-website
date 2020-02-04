@@ -27,12 +27,7 @@ export const advertQuery = graphql`
       advertisementPoints
       videoSecondTitle
       videoParagraph
-      infoGraphics {
-        description
-        file {
-          url
-        }
-      }
+      infoGraphicsPoint
       gallery {
         title
         file {
