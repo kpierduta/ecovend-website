@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-
-5;
+import { FacebookShareButton, TwitterShareButton } from 'react-share';
+import config from '../utils/config';
 
 const Container = styled.section`
   font-family: ${props => props.theme.primaryFontFamily};
@@ -14,9 +14,10 @@ const Container = styled.section`
     padding-top: 2rem;
     color: ${props => props.theme.secondaryColor};
   }
-  .para {
-    padding: 0rem 0rem 1rem 0rem;
+  .social {
+    margin-top: 1.5rem !important;
   }
+
   img {
     height: 14rem;
     width: 19rem;
@@ -29,33 +30,56 @@ const Container = styled.section`
   }
 `;
 
-const NextBlog = ({ news }) => (
-  <Link to={`/blog/${news.slug}`}>
-    <Container className="container">
-      <div className="columns">
-        <div className="column first">
-          <h1 className="title is-5">SHARE THIS POST</h1>
-          <p className="title is-6">Facebook</p>
-          <p className="title is-6">Twitter</p>
-        </div>
-        <div className="column second">
-          <article className="media">
-            <figure className="media-left">
-              <p className="image">
-                <img src={news.thumbnail.file.url} alt={news.thumbnail.title} />
-              </p>
-            </figure>
-            <div className="media-content">
-              <div className="content">
-                <p className="subtitle is-3 has-text-white">Next Blog</p>
-                <p className="subtitle is-5 has-text-white">{news.newsTitle}</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </Container>
-  </Link>
-);
+const NextBlog = ({ news }) => {
+  const metaUrl = `${config.siteUrl}/blog/${news.slug}`;
+  const metaTitle = `Checkout ${news.newsTitle}`;
 
+  return (
+    <Link to={`/blog/${news.slug}`}>
+      <Container className="container">
+        <div className="columns">
+          <div className="column first">
+            <h1 className="title is-5">SHARE THIS POST</h1>
+            <FacebookShareButton
+              url={metaUrl}
+              quote={metaTitle}
+              hashtag="#eco-vend"
+            >
+              <p className="title is-6">Facebook</p>
+            </FacebookShareButton>
+            <div className="social">
+              <TwitterShareButton
+                url={metaUrl}
+                quote={metaTitle}
+                hashtag="#eco-vend"
+              >
+                <p className="title is-6">Twitter</p>
+              </TwitterShareButton>
+            </div>
+          </div>
+          <div className="column second">
+            <article className="media">
+              <figure className="media-left">
+                <p className="image">
+                  <img
+                    src={news.thumbnail.file.url}
+                    alt={news.thumbnail.title}
+                  />
+                </p>
+              </figure>
+              <div className="media-content">
+                <div className="content">
+                  <p className="subtitle is-4 has-text-white">Next Blog</p>
+                  <p className="subtitle is-4 has-text-white">
+                    {news.newsTitle}
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </Container>
+    </Link>
+  );
+};
 export default NextBlog;
