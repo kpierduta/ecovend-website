@@ -32,8 +32,10 @@ const Navbar = styled.div`
   }
   .navbar-dropdown {
     margin-top: -2rem;
+    margin-left: -12rem;
     @media only screen and (max-width: 768px) {
       margin-top: unset;
+      margin-left: unset;
     }
   }
 `;
@@ -96,9 +98,45 @@ export default class Header extends React.Component {
               <LinkStyled to="/technology" className="navbar-item is-size-6">
                 Technology
               </LinkStyled>
-              <LinkStyled to="/products" className="navbar-item is-size-6">
+              {/* <LinkStyled to="/products" className="navbar-item  is-size-6">
                 Products
-              </LinkStyled>
+              </LinkStyled> */}
+              <div className="navbar-item has-dropdown is-hoverable">
+                <LinkStyled to="/products" className="navbar-item  is-size-6">
+                  Products
+                </LinkStyled>
+                <div className="navbar-dropdown">
+                  <div className="columns">
+                    <div className="column">
+                      {' '}
+                      <LinkStyled
+                        to="/machine/RVM-100/200"
+                        className="navbar-item  is-size-6"
+                      >
+                        RVM-100/200
+                      </LinkStyled>
+                    </div>
+                    <div className="column">
+                      {' '}
+                      <LinkStyled
+                        to="/machine/Rvm-400"
+                        className="navbar-item  is-size-6"
+                      >
+                        Rvm-400
+                      </LinkStyled>
+                    </div>
+                    <div className="column">
+                      {' '}
+                      <LinkStyled
+                        to="/machine/RVM-500"
+                        className="navbar-item  is-size-6"
+                      >
+                        RVM-500
+                      </LinkStyled>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <LinkStyled to="/news" className="navbar-item is-size-6">
                 News
               </LinkStyled>

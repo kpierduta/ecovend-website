@@ -4,7 +4,7 @@ module.exports = {
   siteName: 'Ecovend Reverse Vending',
   author: 'Parminder Klair',
   description: '',
-  siteUrl: 'http://kickoff-gatsbyjs.netlify.com',
+  siteUrl: 'http://https://eco-vend.netlify.com/.com',
 
   twitter: '@NAME-HERE',
   fbUserId: '@NAME-HERE',
