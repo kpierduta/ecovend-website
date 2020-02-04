@@ -16,12 +16,14 @@ export const advertQuery = graphql`
         introParagrpah
       }
       heroTitle
-      heroImage {
-        file {
-          url
-        }
-      }
+      heroSubtitle
       videoTitle
+      videoFirstPara {
+        videoFirstPara
+      }
+      videoSecondPara {
+        videoSecondPara
+      }
       advertisementPoints
       videoSecondTitle
       videoParagraph
@@ -38,13 +40,20 @@ export const advertQuery = graphql`
         }
       }
     }
+    contentfulHomePage {
+      imageGrid {
+        file {
+          url
+        }
+      }
+    }
   }
 `;
 
 export default class AdvertisingPage extends React.Component {
   render() {
     const {
-      data: { contentfulAdvertisingPage: adv },
+      data: { contentfulAdvertisingPage: adv, contentfulHomePage: home },
     } = this.props;
     return (
       <Layout>
@@ -54,7 +63,7 @@ export default class AdvertisingPage extends React.Component {
           url={`${config.siteUrl}`}
         />
         <Advertising adv={adv} />
-        <Rvm adv={adv} />
+        <Rvm adv={adv} hero={home} />
         <Infographic data={adv} />
       </Layout>
     );

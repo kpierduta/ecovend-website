@@ -2,48 +2,40 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.section`
-  .title {
+  /* .title {
     margin-bottom: 0.5rem;
     line-height: normal !important;
     @media only screen and (max-width: 768px) {
       margin-top: 0rem;
     }
-  }
-
+  } */
   ul {
-    list-style: inside;
+    list-style: disc;
   }
 
-  video {
-    height: auto;
+  /* video {
+    height: 100%;
     @media only screen and (max-width: 768px) {
       height: auto;
     }
-  }
+  } */
 
-  .column {
+  /* .column {
     padding: 0rem;
+  } */
+  .background {
+    background-color: ${props => props.theme.lightBackground};
   }
   .second {
     padding: 0rem 0rem 0rem 1.5rem;
   }
-
-  img {
-    height: auto;
-    width: 70%;
-  }
-`;
-
-const RvmType = styled.div`
-  padding: 0rem 29rem 0rem 0rem;
-  padding-bottom: 10rem;
-  @media only screen and (max-width: 768px) {
-    padding: 0;
-  }
 `;
 
 const ContainerInner = styled.div`
-  padding: 2rem 4rem;
+  padding: 2rem 3rem;
+  .section {
+    padding: 1.75rem 1.5rem;
+  }
   .column.is-7 {
     background-color: ${props => props.theme.lightBackground};
   }
@@ -51,35 +43,38 @@ const ContainerInner = styled.div`
 class Rvm extends React.Component {
   render() {
     const { adv } = this.props;
+    const { hero } = this.props;
     return (
       <Container className="section">
         <div className="container">
-          {/* <div className="columns">
-            <RvmType className="column">
-              <h3 className="title is-3 is-capitalized has-text-weight-light has-text-danger">
+          <div className="columns is-centered">
+            <div className="column is-11 has-text-centered  background">
+              <h3 className="title is-5 is-spaced is-capitalized  has-text-danger">
                 {adv.heroTitle}
               </h3>
-            </RvmType>
-            <div className="column image has-text-right is-hidden-mobile">
-              <img
-                className="has-text-right"
-                src={adv.heroImage.file.url}
-                alt="vending machine"
-              />
+              <h3 className="subtitle is-5  has-text-danger">
+                {adv.heroSubtitle}
+              </h3>
+              <div className="columns">
+                {hero.imageGrid.map(item => (
+                  <div className="column is-3">
+                    <img src={item.file.url} />
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="column has-text-centered is-hidden-tablet">
-              <img
-                className="has-text-centered"
-                src={adv.heroImage.file.url}
-                alt="vending machine"
-              />
-            </div>
-          </div> */}
+          </div>
           <ContainerInner>
             <div className="columns">
               <div className="column is-7">
                 <div className="section">
-                  <h4 className="title is-4 is-spaced is-uppercase">
+                  <h5 className="subtitle is-6">
+                    {adv.videoFirstPara.videoFirstPara}
+                  </h5>
+                  <h5 className="subtitle is-6">
+                    {adv.videoSecondPara.videoSecondPara}
+                  </h5>
+                  <h4 className="title is-5 is-spaced is-uppercase">
                     {adv.videoTitle}
                   </h4>
                   <ul className="subtitle is-6">
@@ -88,7 +83,7 @@ class Rvm extends React.Component {
                     ))}
                   </ul>
                   <div>
-                    <h4 className="title head is-4 is-spaced">
+                    <h4 className="title head is-5 is-spaced">
                       {adv.videoSecondTitle}
                     </h4>
                     <h5 className="subtitle is-6">{adv.videoParagraph}</h5>
