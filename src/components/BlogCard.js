@@ -49,7 +49,7 @@ const BlogCard = ({ item }) => (
       <div className="columns is-gapless">
         <div className="column is-5">
           <figure className="image is-square">
-            <img src={item.image.file.url} alt="/" />
+            <img src={item.thumbnail.file.url} alt="/" />
           </figure>
         </div>
         <div className="column">

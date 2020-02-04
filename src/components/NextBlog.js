@@ -1,5 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';5
+import styled from 'styled-components';
+
+5;
 
 const Container = styled.section`
   font-family: ${props => props.theme.primaryFontFamily};
@@ -26,7 +28,7 @@ const Container = styled.section`
   }
 `;
 
-const NextBlog = () => (
+const NextBlog = ({ news }) => (
   <Container>
     <div className="container">
       <div className="columns">
@@ -39,15 +41,13 @@ const NextBlog = () => (
           <article className="media">
             <figure className="media-left">
               <p className="image">
-                <img src="/images/news/two.jpg" alt="Plastic Garbage" />
+                <img src={news.thumbnail.file.url} alt={news.thumbnail.title} />
               </p>
             </figure>
             <div className="media-content">
               <div className="content">
                 <p className="subtitle is-2 has-text-white">Next Blog</p>
-                <p className="subtitle is-4 has-text-white">
-                  Updates regarding EcoVend
-                </p>
+                <p className="subtitle is-4 has-text-white">{news.newsTitle}</p>
               </div>
             </div>
           </article>

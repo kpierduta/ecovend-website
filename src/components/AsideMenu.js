@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 import Followus from './FollowUs';
-import RecentPost from './RecentPost';
 import HelpCard from './HelpCard';
 
 const Container = styled.div`
@@ -63,7 +62,6 @@ const AsideMenu = ({ onChange }) => (
         </ul>
       </aside>
     </div>
-    <RecentPost />
     <div className="posts">
       <HelpCard />
     </div>

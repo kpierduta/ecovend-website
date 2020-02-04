@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 const Section = styled.section`
-  padding: 0rem 0.5rem;
+  margin-top: 3rem;
   .card {
     padding: 1rem 0rem;
     background-color: ${props => props.theme.secondaryColor};
