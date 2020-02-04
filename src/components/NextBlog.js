@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 5;
 
@@ -29,8 +30,8 @@ const Container = styled.section`
 `;
 
 const NextBlog = ({ news }) => (
-  <Container>
-    <div className="container">
+  <Link to={`/blog/${news.slug}`}>
+    <Container className="container">
       <div className="columns">
         <div className="column first">
           <h1 className="title is-5">SHARE THIS POST</h1>
@@ -46,15 +47,15 @@ const NextBlog = ({ news }) => (
             </figure>
             <div className="media-content">
               <div className="content">
-                <p className="subtitle is-2 has-text-white">Next Blog</p>
-                <p className="subtitle is-4 has-text-white">{news.newsTitle}</p>
+                <p className="subtitle is-3 has-text-white">Next Blog</p>
+                <p className="subtitle is-5 has-text-white">{news.newsTitle}</p>
               </div>
             </div>
           </article>
         </div>
       </div>
-    </div>
-  </Container>
+    </Container>
+  </Link>
 );
 
 export default NextBlog;
