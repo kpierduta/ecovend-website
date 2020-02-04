@@ -15,11 +15,17 @@ const Container = styled.section`
   }
 
   video {
-    padding-left: 5rem;
     height: auto;
     @media only screen and (max-width: 768px) {
       height: auto;
     }
+  }
+
+  .column {
+    padding: 0rem;
+  }
+  .second {
+    padding: 0rem 0rem 0rem 1.5rem;
   }
 
   img {
@@ -72,24 +78,24 @@ class Rvm extends React.Component {
           <ContainerInner>
             <div className="columns">
               <div className="column is-7">
-                <h4 className="title is-4 head is-uppercase has-text-centered has-text-danger">
-                  {adv.videoTitle}
-                </h4>
-                <ul className="subtitle is-6  has-text-danger">
-                  {adv.advertisementPoints.map(items => (
-                    <li>{items}</li>
-                  ))}
-                </ul>
-                <div>
-                  <h4 className="title head is-4 has-text-centered has-text-danger">
-                    {adv.videoSecondTitle}
+                <div className="section">
+                  <h4 className="title is-4 is-spaced is-uppercase">
+                    {adv.videoTitle}
                   </h4>
-                  <h5 className="subtitle is-6 has-text-centered has-text-danger">
-                    {adv.videoParagraph}
-                  </h5>
+                  <ul className="subtitle is-6">
+                    {adv.advertisementPoints.map(items => (
+                      <li>{items}</li>
+                    ))}
+                  </ul>
+                  <div>
+                    <h4 className="title head is-4 is-spaced">
+                      {adv.videoSecondTitle}
+                    </h4>
+                    <h5 className="subtitle is-6">{adv.videoParagraph}</h5>
+                  </div>
                 </div>
               </div>
-              <div className="has-text-centered">
+              <div className="column second">
                 <video controls autoPlay="autoplay">
                   <source src="/videos/TERMINATOR.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
