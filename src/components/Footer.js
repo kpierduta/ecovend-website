@@ -2,9 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-import PrivacyStatement from '../../static/pdf/GDPR-PRIVACY-STATEMENT.pdf';
-import PrivacyNotice from '../../static/pdf/Privacy-Notice.pdf';
-
 const Conatiner = styled.section`
   background-color: ${props => props.theme.secondaryColor};
   padding-bottom: 0.75rem;
@@ -79,29 +76,25 @@ const Footer = () => (
             <a
               href="../../static/pdf/Privacy-Notice.pdf"
               className="is-size-6"
-              download
-            >
+              download>
               POLICIES
             </a>
             <a
               href="../../static/pdf/GDPR-PRIVACY-STATEMENT.pdf"
               className="is-size-6"
-              download
-            >
+              download>
               PRIVACY STATEMENT
             </a>
             <a
               href="../../static/pdf/WEBSITE-TERMS-AND-CONDITIONS.pdf"
               className="is-size-6"
-              download
-            >
+              download>
               TERMS AND CONDITIONS
             </a>
             <a
               href="../../static/pdf/OPT-OUT-FORM.pdf"
               className="is-size-6"
-              download
-            >
+              download>
               FRANCHISE OPPORTIUNITY
             </a>
           </div>
