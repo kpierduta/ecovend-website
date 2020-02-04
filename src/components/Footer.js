@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
+import PrivacyStatement from '../../static/pdf/GDPR-PRIVACY-STATEMENT.pdf';
+import PrivacyNotice from '../../static/pdf/Privacy-Notice.pdf';
+
 const Conatiner = styled.section`
   background-color: ${props => props.theme.secondaryColor};
   padding-bottom: 0.75rem;
@@ -23,6 +26,12 @@ const Conatiner = styled.section`
   }
   .text {
     margin-top: 0.35rem;
+  }
+  a{
+    color: #fff;
+  display: block;
+  :hover {
+    color: #fff;
   }
 `;
 
@@ -61,19 +70,40 @@ const Footer = () => (
             <LinkStyled className="is-inline">
               <i className="fab fa-twitter-square" />
             </LinkStyled>
-
             <LinkStyled to="/" className="subtitle is-6 text">
               Follow us
             </LinkStyled>
           </div>
           <div className="column">
             <h1 className="title is-5 is-spaced has-text-white">LEGAL</h1>
-            <LinkStyled className="is-size-6">POLICIES</LinkStyled>
-            <LinkStyled className="is-size-6">PRIVACY STATEMENT</LinkStyled>
-            <LinkStyled className="is-size-6">TERMS AND CONDITIONS</LinkStyled>
-            <LinkStyled className="is-size-6">
+            <a
+              href="../../static/pdf/Privacy-Notice.pdf"
+              className="is-size-6"
+              download
+            >
+              POLICIES
+            </a>
+            <a
+              href="../../static/pdf/GDPR-PRIVACY-STATEMENT.pdf"
+              className="is-size-6"
+              download
+            >
+              PRIVACY STATEMENT
+            </a>
+            <a
+              href="../../static/pdf/WEBSITE-TERMS-AND-CONDITIONS.pdf"
+              className="is-size-6"
+              download
+            >
+              TERMS AND CONDITIONS
+            </a>
+            <a
+              href="../../static/pdf/OPT-OUT-FORM.pdf"
+              className="is-size-6"
+              download
+            >
               FRANCHISE OPPORTIUNITY
-            </LinkStyled>
+            </a>
           </div>
         </div>
         <p className="subtitle is-6 has-text-white has-text-centered">
