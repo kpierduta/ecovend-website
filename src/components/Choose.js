@@ -7,7 +7,7 @@ const Section = styled.section`
     padding: 8rem 0rem;
   }
   .container {
-    padding: 7rem 0rem 7rem 0rem;
+    padding: 4rem 0rem 7rem 0rem;
   }
   .card {
     min-height: 28rem;

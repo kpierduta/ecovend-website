@@ -37,9 +37,9 @@ const RvmType = styled.div`
 `;
 
 const ContainerInner = styled.div`
-  background-color: ${props => props.theme.lightBackground};
-  .head {
-    padding: 3rem;
+  padding: 2rem 4rem;
+  .column.is-7 {
+    background-color: ${props => props.theme.lightBackground};
   }
 `;
 class Rvm extends React.Component {
@@ -48,7 +48,7 @@ class Rvm extends React.Component {
     return (
       <Container className="section">
         <div className="container">
-          <div className="columns">
+          {/* <div className="columns">
             <RvmType className="column">
               <h3 className="title is-3 is-capitalized has-text-weight-light has-text-danger">
                 {adv.heroTitle}
@@ -68,10 +68,10 @@ class Rvm extends React.Component {
                 alt="vending machine"
               />
             </div>
-          </div>
-          <div className="columns">
-            <ContainerInner className="column is-7">
-              <div>
+          </div> */}
+          <ContainerInner>
+            <div className="columns">
+              <div className="column is-7">
                 <h4 className="title is-4 head is-uppercase has-text-centered has-text-danger">
                   {adv.videoTitle}
                 </h4>
@@ -80,23 +80,23 @@ class Rvm extends React.Component {
                     <li>{items}</li>
                   ))}
                 </ul>
+                <div>
+                  <h4 className="title head is-4 has-text-centered has-text-danger">
+                    {adv.videoSecondTitle}
+                  </h4>
+                  <h5 className="subtitle is-6 has-text-centered has-text-danger">
+                    {adv.videoParagraph}
+                  </h5>
+                </div>
               </div>
-              <div>
-                <h4 className="title head is-4 has-text-centered has-text-danger">
-                  {adv.videoSecondTitle}
-                </h4>
-                <h5 className="subtitle is-6 has-text-centered has-text-danger">
-                  {adv.videoParagraph}
-                </h5>
+              <div className="has-text-centered">
+                <video controls autoPlay="autoplay">
+                  <source src="/videos/TERMINATOR.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
-            </ContainerInner>
-            <div className="has-text-centered">
-              <video controls autoPlay="autoplay">
-                <source src="/videos/TERMINATOR.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
             </div>
-          </div>
+          </ContainerInner>
         </div>
       </Container>
     );

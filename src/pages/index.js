@@ -96,7 +96,9 @@ export default class IndexPage extends React.Component {
         <Hero home={home} />
         <About home={home} />
         <DrsInfo home={home} />
-        <Steps home={home} />
+        <section className="section">
+          <Steps home={home} />
+        </section>
         <Choose home={home} />
         {/*
           <Customer home={home} />

@@ -17,7 +17,6 @@ export const newsQuery = graphql`
       edges {
         node {
           slug
-          blogNumber
           dateOfPublish(formatString: "MMMM Do, YYYY,")
           category
           newsTitle

@@ -11,7 +11,6 @@ export const pageQuery = graphql`
   query PageByPath($slug: String) {
     contentfulNewsPage(slug: { eq: $slug }) {
       slug
-      blogNumber
       dateOfPublish(formatString: "MMMM Do, YYYY,")
       category
       newsTitle
