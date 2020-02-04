@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { findIndex } from 'lodash';
 
 import config from '../utils/config';
 import Seo from '../components/Seo';
@@ -28,19 +29,38 @@ export const pageQuery = graphql`
         json
       }
     }
+    allContentfulNewsPage(sort: { fields: dateOfPublish, order: DESC }) {
+      edges {
+        node {
+          slug
+          newsTitle
+          thumbnail {
+            file {
+              url
+            }
+          }
+        }
+      }
+    }
   }
 `;
 
 export default class page extends React.Component {
   render() {
     const {
-      data: { contentfulNewsPage: news, allContentfulNewsPage: data },
+      data: { contentfulNewsPage: news, allContentfulNewsPage: allPosts },
     } = this.props;
+
+    const currentPostIndex = findIndex(allPosts.edges, function(o) {
+      return o.node.slug === news.slug;
+    });
+    const nextPost = allPosts.edges[currentPostIndex + 1];
+
     return (
       <Layout>
         <Seo title="Blog" description="Blog" url={`${config.siteUrl}`} />
         <BlogContent news={news} />
-        <NextBlog news={news} />
+        {nextPost && <NextBlog news={nextPost.node} />}
       </Layout>
     );
   }
