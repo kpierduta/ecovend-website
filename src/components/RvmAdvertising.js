@@ -28,11 +28,17 @@ const Container = styled.section`
   }
   .second {
     padding: 0rem 0rem 0rem 1.5rem;
+    @media only screen and (max-width: 600px) {
+      padding: 0rem;
+    }
   }
 `;
 
 const ContainerInner = styled.div`
   padding: 2rem 3rem;
+  @media only screen and (max-width: 600px) {
+    padding: 0rem;
+  }
   .section {
     padding: 1.75rem 1.5rem;
   }

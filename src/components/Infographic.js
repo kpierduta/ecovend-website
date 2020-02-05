@@ -10,7 +10,7 @@ const Container = styled.section`
   }
   .circle {
     border: 2px solid #f38044;
-    min-height: 22.5rem;
+    min-height: 20.5rem;
     padding: 7rem 1rem 0rem 1rem;
     border-radius: 100%;
   }
