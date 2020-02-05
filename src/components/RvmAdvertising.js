@@ -78,13 +78,12 @@ class Rvm extends React.Component {
                   {/* <h5 className="subtitle is-6">
                     {adv.videoFirstPara.videoFirstPara}
                   </h5> */}
-                  <h5 className="subtitle is-6">
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: adv.videoSecondPara.childMarkdownRemark.html,
-                      }}
-                    />
-                  </h5>
+                  <div
+                    className="subtitle is-6"
+                    dangerouslySetInnerHTML={{
+                      __html: adv.videoSecondPara.childMarkdownRemark.html,
+                    }}
+                  />
                   <h4 className="title is-5 is-spaced text is-uppercase">
                     {adv.videoTitle}
                   </h4>
