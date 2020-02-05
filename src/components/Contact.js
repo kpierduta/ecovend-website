@@ -90,7 +90,7 @@ const Contact = () => {
       <div className="container">
         <div className="columns">
           <div className="column is-3 first">
-            <h2 className="title is-3 is-spaced">{contentfulContact.title}</h2>
+            <h2 className="title is-5 is-spaced">{contentfulContact.title}</h2>
             <span className="icon has-text-danger">
               <i className="fas fa-map-marker-alt" />
             </span>
@@ -122,7 +122,7 @@ const Contact = () => {
           </div>
           <div className="column  form-box">
             <div className="text">
-              <h2 className="title is-3 is-spaced">
+              <h2 className="title is-5 is-spaced">
                 Get in touch to find out more
               </h2>
             </div>
