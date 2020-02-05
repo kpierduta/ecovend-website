@@ -60,7 +60,7 @@ export default class page extends React.Component {
       <Layout>
         <Seo title="Blog" description="Blog" url={`${config.siteUrl}`} />
         <BlogContent news={news} />
-        {nextPost && <NextBlog news={nextPost.node} />}
+        {nextPost && <NextBlog news={nextPost.node} previous={news} />}
       </Layout>
     );
   }
