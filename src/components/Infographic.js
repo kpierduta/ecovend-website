@@ -9,8 +9,9 @@ const Container = styled.section`
     margin-top: -0.5rem;
   }
   .circle {
-    border: 2px solid ${props => props.theme.brandColor};
-    padding: 2rem 2.25rem;
+    border: 2px solid #f38044;
+    min-height: 22.5rem;
+    padding: 7rem 3rem;
     border-radius: 100%;
   }
 `;
@@ -24,7 +25,7 @@ class Infographic extends React.Component {
           <div className="container">
             <div className="columns">
               {data.infoGraphicsPoint.map(items => (
-                <div className="column is-3 has-text-centered">
+                <div className="column is-4 has-text-centered">
                   <div className="circle">
                     <h1 className="subtitle is-5">{items}</h1>
                   </div>
