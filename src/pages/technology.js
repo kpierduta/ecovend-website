@@ -8,7 +8,7 @@ import Layout from '../components/Layout';
 import Contact from '../components/Contact';
 import BreadCrumbs from '../components/BreadCrumbs';
 import Steps from '../components/Steps';
-import TechnologyItem from '../components/TechnologyItem';
+import Technology from '../components/Technology';
 
 export const techQuery = graphql`
   query Tech {
@@ -42,13 +42,24 @@ export const techQuery = graphql`
       stepThreeText
       chooseTitle
     }
+    allContentfulTechnologyCards(sort: { fields: order }) {
+      edges {
+        node {
+          order
+          title
+          subtitle {
+            subtitle
+          }
+        }
+      }
+    }
   }
 `;
 
-export default class Technology extends React.Component {
+export default class TechnologyPage extends React.Component {
   render() {
     const {
-      data: { contentfulHomePage: home },
+      data: { contentfulHomePage: home, allContentfulTechnologyCards: cards },
     } = this.props;
     return (
       <Layout>
@@ -59,18 +70,7 @@ export default class Technology extends React.Component {
         />
         <BreadCrumbs undelineText="Tech" simpleText="nology" />
         <Steps home={home} />
-        <section className="section">
-          <div className="container">
-            <div className="columns is-multiline">
-              <TechnologyItem title="How the machine operates" />
-              <TechnologyItem title="Software Updates" />
-              <TechnologyItem title="Technical Support" />
-              <TechnologyItem title="Remote User Platform" />
-              <TechnologyItem title="Tickets" />
-              <TechnologyItem title="Upcoming Features" />
-            </div>
-          </div>
-        </section>
+        <Technology items={cards.edges} />
         <Contact />
       </Layout>
     );
