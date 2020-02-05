@@ -71,8 +71,8 @@ const NextBlog = ({ news, previous }) => {
               </figure>
               <div className="media-content">
                 <div className="content">
-                  <p className="subtitle is-4 has-text-white">Next Blog</p>
-                  <p className="subtitle is-4 has-text-white">
+                  <p className="subtitle is-5 has-text-white">Next Blog</p>
+                  <p className="subtitle is-5 has-text-white">
                     {news.newsTitle}
                   </p>
                 </div>

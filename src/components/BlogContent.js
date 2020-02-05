@@ -27,7 +27,7 @@ class BlogContent extends React.Component {
           <BreadCrumbs undelineText="Bl" simpleText="og" />
           <div className="columns is-multiline">
             <div className="column is-8">
-              <h3 className="title is-3 is-spaced has-text-danger">
+              <h3 className="title is-5 is-spaced has-text-danger">
                 {news.newsTitle}
               </h3>
               <Content data={news.newsContent.json} />

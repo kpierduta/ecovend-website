@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const Section = styled.section`
   padding: 1rem 0rem;
   .frame {
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0.35rem 0.5rem;
     background: ${props => props.theme.primaryColor};
   }
   .button {

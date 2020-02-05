@@ -22,7 +22,7 @@ const Section = styled.section`
     color: ${props => props.theme.secondaryColor};
   }
 
-  .title.is-4 {
+  .title.is-5 {
     margin: 1rem 0rem 2rem 0rem !important;
     transition: color 0.2s;
     :hover {
@@ -62,7 +62,7 @@ const BlogCard = ({ item }) => (
                       <span className="has-text-danger">{item.category}</span>{' '}
                       {item.dateOfPublish}
                     </p>
-                    <h1 className="title is-4">{item.newsTitle}</h1>
+                    <h1 className="title is-5">{item.newsTitle}</h1>
                     <p className="subtitle is-6">{item.excerpt}</p>
                     <LinkStyled
                       to={`/blog/${item.slug}`}
