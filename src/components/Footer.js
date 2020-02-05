@@ -74,27 +74,31 @@ const Footer = () => (
           <div className="column">
             <h1 className="title is-5 is-spaced has-text-white">LEGAL</h1>
             <a
-              href="../../static/pdf/Privacy-Notice.pdf"
+              href="./pdf/Privacy-Notice.pdf"
+              target="_blank"
               className="is-size-6"
-              download>
+            >
               POLICIES
             </a>
             <a
-              href="../../static/pdf/GDPR-PRIVACY-STATEMENT.pdf"
+              href="./pdf/GDPR-PRIVACY-STATEMENT.pdf"
               className="is-size-6"
-              download>
+              target="_blank"
+            >
               PRIVACY STATEMENT
             </a>
             <a
-              href="../../static/pdf/WEBSITE-TERMS-AND-CONDITIONS.pdf"
+              href="./pdf/WEBSITE-TERMS-AND-CONDITIONS.pdf"
               className="is-size-6"
-              download>
+              target="_blank"
+            >
               TERMS AND CONDITIONS
             </a>
             <a
-              href="../../static/pdf/OPT-OUT-FORM.pdf"
+              href="./pdf/OPT-OUT-FORM.pdf"
               className="is-size-6"
-              download>
+              target="_blank"
+            >
               FRANCHISE OPPORTIUNITY
             </a>
           </div>
