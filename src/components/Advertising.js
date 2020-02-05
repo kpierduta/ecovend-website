@@ -17,7 +17,7 @@ const Container = styled.div`
   }
 `;
 
-class Advertisment extends React.Component {
+class AdvertismentHero extends React.Component {
   render() {
     const { home, data } = this.props;
     return (
@@ -51,4 +51,4 @@ class Advertisment extends React.Component {
   }
 }
 
-export default Advertisment;
+export default AdvertismentHero;

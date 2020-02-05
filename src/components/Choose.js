@@ -23,7 +23,7 @@ class Choose extends React.Component {
     return (
       <Section className="section">
         <div className="container has-text-centered">
-          <h1 className="title is-4">{home.chooseTitle}</h1>
+          <h1 className="title is-3">{home.chooseTitle}</h1>
           <h1 className="subtitle is-5 has-text-weight-normal">
             {home.chooseSubtitle}
           </h1>

@@ -10,10 +10,6 @@ import BreadCrumbs from '../components/BreadCrumbs';
 import Steps from '../components/Steps';
 import TechnologyItem from '../components/TechnologyItem';
 
-const TextWrapper = styled.div`
-  margin-top: 2rem;
-`;
-
 export const techQuery = graphql`
   query Tech {
     contentfulHomePage {
@@ -62,9 +58,7 @@ export default class Technology extends React.Component {
           url={`${config.siteUrl}`}
         />
         <BreadCrumbs undelineText="Tech" simpleText="nology" />
-        <TextWrapper>
-          <Steps home={home} />
-        </TextWrapper>
+        <Steps home={home} />
         <section className="section">
           <div className="container">
             <div className="columns is-multiline">

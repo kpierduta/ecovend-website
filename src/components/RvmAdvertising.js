@@ -13,13 +13,12 @@ const Container = styled.section`
     list-style: disc;
   }
 
-  video {
-    height: 58.2%;
-    position: absolute;
+  /* video {
+    height: auto;
     @media only screen and (max-width: 768px) {
       height: auto;
     }
-  }
+  } */
 
   /* .column {
     padding: 0rem;
@@ -29,12 +28,6 @@ const Container = styled.section`
   }
   .second {
     padding: 0rem 0rem 0rem 1.5rem;
-  }
-  strong {
-    color: ${props => props.theme.brandColor};
-  }
-  .text {
-    margin-top: 1rem !important;
   }
 `;
 
@@ -59,13 +52,11 @@ class Rvm extends React.Component {
               <h3 className="title is-5 is-spaced is-capitalized  has-text-danger">
                 {adv.heroTitle}
               </h3>
-              <h3 className="subtitle is-6  has-text-danger">
-                {adv.heroSubtitle}
-              </h3>
+              <h3 className="subtitle is-6">{adv.heroSubtitle}</h3>
               <div className="columns">
                 {hero.imageGrid.map(item => (
                   <div className="column is-3">
-                    <img src={item.file.url} />
+                    <img src={item.file.url} alt={item.file.title} />
                   </div>
                 ))}
               </div>
@@ -75,16 +66,13 @@ class Rvm extends React.Component {
             <div className="columns">
               <div className="column is-7">
                 <div className="section">
-                  {/* <h5 className="subtitle is-6">
-                    {adv.videoFirstPara.videoFirstPara}
-                  </h5> */}
-                  <div
+                  {/* <div
                     className="subtitle is-6"
                     dangerouslySetInnerHTML={{
                       __html: adv.videoSecondPara.childMarkdownRemark.html,
                     }}
-                  />
-                  <h4 className="title is-5 is-spaced text is-uppercase">
+                  /> */}
+                  <h4 className="title is-5 is-spaced is-uppercase">
                     {adv.videoTitle}
                   </h4>
                   <ul className="subtitle is-6">
@@ -92,12 +80,6 @@ class Rvm extends React.Component {
                       <li>{items}</li>
                     ))}
                   </ul>
-                  <div>
-                    {/* <h4 className="title head is-5 is-spaced">
-                      {adv.videoSecondTitle}
-                    </h4>
-                    <h5 className="subtitle is-6">{adv.videoParagraph}</h5> */}
-                  </div>
                 </div>
               </div>
               <div className="column second">

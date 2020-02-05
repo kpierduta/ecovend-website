@@ -4,12 +4,10 @@ import styled from 'styled-components';
 import Stepscard from './StepsCard';
 
 const Section = styled.section`
+  margin-bottom: 1rem;
   .columns {
     margin-left: 0rem !important;
     margin-right: 0rem !important;
-  }
-  .para {
-    padding: 1rem 0rem 4rem 0rem;
   }
 `;
 
@@ -18,7 +16,9 @@ class Steps extends React.Component {
     const { home } = this.props;
     return (
       <Section className="container has-text-centered">
-        <h1 className="title is-3 has-text-primary">{home.stepTitle}</h1>
+        <h1 className="title is-3 is-spaced has-text-primary">
+          {home.stepTitle}
+        </h1>
         <h5 className="subtitle is-6 has-text-primary para">
           {home.stepsSectionParagraph.internal.content}
         </h5>

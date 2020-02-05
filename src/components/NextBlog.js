@@ -19,8 +19,8 @@ const Container = styled.section`
   }
 
   img {
-    height: 14rem;
-    width: 19rem;
+    height: 15rem;
+    width: 15rem;
   }
   .first {
     background-color: #f7f7f7;
@@ -61,7 +61,7 @@ const NextBlog = ({ news, previous }) => {
           </div>
           <div className="column second">
             <article className="media">
-              <figure className="media-left">
+              <figure className=" media-left">
                 <p className="image">
                   <img
                     src={news.thumbnail.file.url}

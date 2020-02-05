@@ -5,6 +5,9 @@ import BreadCrumbs from './BreadCrumbs';
 
 const Container = styled.section`
   font-family: ${props => props.theme.primaryFontFamily};
+  strong {
+    color: ${props => props.theme.brandColor};
+  }
 `;
 
 class Advertising extends React.Component {
@@ -16,9 +19,12 @@ class Advertising extends React.Component {
         <div className="hero-body">
           <div className="container">
             <h1 className="subtitle is-6">{adv.title}</h1>
-            <h5 className="subtitle is-6">
-              {adv.introParagrpah.introParagrpah}
-            </h5>
+            <div
+              className="subtitle is-6"
+              dangerouslySetInnerHTML={{
+                __html: adv.introParagrpah.childMarkdownRemark.html,
+              }}
+            />
           </div>
         </div>
       </Container>
