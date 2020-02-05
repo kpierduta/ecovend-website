@@ -9,10 +9,6 @@ import Player from './Player';
 const Section = styled.section`
   margin-top: 1rem;
   padding-bottom: 2rem;
-
-  .text {
-    margin-top: 1rem;
-  }
 `;
 
 const AnchorStyled = styled(AnchorLink)`
@@ -28,7 +24,7 @@ class About extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column is-6">
-              <h1 className="title is-4 is-capitalized">{home.sectionTitle}</h1>
+              <h1 className="title is-5 is-capitalized">{home.sectionTitle}</h1>
               <h6 className="subtitle is-6 text">
                 {home.sectionFirstSubtitle.sectionFirstSubtitle}
               </h6>

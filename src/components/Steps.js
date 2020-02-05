@@ -16,7 +16,7 @@ class Steps extends React.Component {
     const { home } = this.props;
     return (
       <Section className="container has-text-centered">
-        <h1 className="title is-3 is-spaced has-text-primary">
+        <h1 className="title is-5 is-spaced has-text-primary">
           {home.stepTitle}
         </h1>
         <h5 className="subtitle is-6 has-text-primary para">

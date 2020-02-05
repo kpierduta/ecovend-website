@@ -6,14 +6,8 @@ const Container = styled.div`
   .block {
     background-color: ${props => props.theme.secondaryColor};
   }
-  .top {
-    margin: 4rem;
-    @media only screen and (max-width: 768px) {
-      margin: 0;
-    }
-  }
   .text {
-    margin-top: 3rem !important;
+    margin: 3rem 0rem !important;
   }
 `;
 
@@ -24,13 +18,13 @@ class AdvertismentHero extends React.Component {
       <Container>
         <section className="section has-text-centered block">
           <div className="container">
-            <h1 className="title is-3 has-text-white has-text-weight-medium">
+            <h1 className="title is-5 has-text-white has-text-weight-medium">
               {home.marketingTitle}
             </h1>
             <h5 className="subtitle is-6 has-text-white text">
               {home.marketingPara.marketingPara}
             </h5>
-            <Link to="/advertising" className="button is-link is-large">
+            <Link to="/advertising" className="button is-link">
               Find out more
             </Link>
           </div>

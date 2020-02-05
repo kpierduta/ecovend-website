@@ -8,10 +8,6 @@ const Section = styled.section`
   background-color: #ededed;
   margin-top: 1rem;
   padding-bottom: 2rem;
-
-  .text {
-    margin-top: 1rem;
-  }
 `;
 
 const AnchorStyled = styled(AnchorLink)`
@@ -35,7 +31,7 @@ class DrsInfo extends React.Component {
               />
             </div>
             <div className="column">
-              <h4 className="title is-4 is-capitalized">
+              <h4 className="title is-5 is-capitalized">
                 {home.bbcSectionTitle}
               </h4>
               <h6 className="subtitle is-6 first">{home.newsSubtitle}</h6>
