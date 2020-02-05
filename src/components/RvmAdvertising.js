@@ -52,7 +52,7 @@ class Rvm extends React.Component {
               <h3 className="title is-5 is-spaced is-capitalized  has-text-danger">
                 {adv.heroTitle}
               </h3>
-              <h3 className="subtitle is-5  has-text-danger">
+              <h3 className="subtitle is-6  has-text-danger">
                 {adv.heroSubtitle}
               </h3>
               <div className="columns">
@@ -68,12 +68,12 @@ class Rvm extends React.Component {
             <div className="columns">
               <div className="column is-7">
                 <div className="section">
-                  <h5 className="subtitle is-6">
+                  {/* <h5 className="subtitle is-6">
                     {adv.videoFirstPara.videoFirstPara}
                   </h5>
                   <h5 className="subtitle is-6">
                     {adv.videoSecondPara.videoSecondPara}
-                  </h5>
+                  </h5> */}
                   <h4 className="title is-5 is-spaced is-uppercase">
                     {adv.videoTitle}
                   </h4>
@@ -83,10 +83,10 @@ class Rvm extends React.Component {
                     ))}
                   </ul>
                   <div>
-                    <h4 className="title head is-5 is-spaced">
+                    {/* <h4 className="title head is-5 is-spaced">
                       {adv.videoSecondTitle}
                     </h4>
-                    <h5 className="subtitle is-6">{adv.videoParagraph}</h5>
+                    <h5 className="subtitle is-6">{adv.videoParagraph}</h5> */}
                   </div>
                 </div>
               </div>

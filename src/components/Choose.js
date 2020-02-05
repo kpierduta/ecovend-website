@@ -6,9 +6,6 @@ const Section = styled.section`
   .section {
     padding: 8rem 0rem;
   }
-  .container {
-    padding: 4rem 0rem 7rem 0rem;
-  }
   .card {
     min-height: 28rem;
     background: transparent;
