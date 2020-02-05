@@ -23,6 +23,9 @@ export const advertQuery = graphql`
       }
       videoSecondPara {
         videoSecondPara
+        childMarkdownRemark {
+          html
+        }
       }
       advertisementPoints
       videoSecondTitle

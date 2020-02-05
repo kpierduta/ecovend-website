@@ -13,12 +13,13 @@ const Container = styled.section`
     list-style: disc;
   }
 
-  /* video {
-    height: 100%;
+  video {
+    height: 58.2%;
+    position: absolute;
     @media only screen and (max-width: 768px) {
       height: auto;
     }
-  } */
+  }
 
   /* .column {
     padding: 0rem;
@@ -28,6 +29,12 @@ const Container = styled.section`
   }
   .second {
     padding: 0rem 0rem 0rem 1.5rem;
+  }
+  strong {
+    color: ${props => props.theme.brandColor};
+  }
+  .text {
+    margin-top: 1rem !important;
   }
 `;
 
@@ -70,11 +77,15 @@ class Rvm extends React.Component {
                 <div className="section">
                   {/* <h5 className="subtitle is-6">
                     {adv.videoFirstPara.videoFirstPara}
-                  </h5>
-                  <h5 className="subtitle is-6">
-                    {adv.videoSecondPara.videoSecondPara}
                   </h5> */}
-                  <h4 className="title is-5 is-spaced is-uppercase">
+                  <h5 className="subtitle is-6">
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: adv.videoSecondPara.childMarkdownRemark.html,
+                      }}
+                    />
+                  </h5>
+                  <h4 className="title is-5 is-spaced text is-uppercase">
                     {adv.videoTitle}
                   </h4>
                   <ul className="subtitle is-6">
