@@ -22,10 +22,12 @@ export default class Heading extends React.Component {
           <div className="tabs is-size-6">
             <ul>
               <li>
-                <a href="mailto:">{heading.email}</a>
+                <a href={`mailto:${heading.email}`}>{heading.email}</a>
               </li>
               <li>
-                <a href="tel:">{heading.mobileNumber}</a>
+                <a href={`tel:${heading.mobileNumber}`}>
+                  {heading.mobileNumber}
+                </a>
               </li>
             </ul>
           </div>

@@ -108,7 +108,7 @@ const Contact = () => {
               <i className="fas fa-envelope" />
             </span>
             <a
-              href="mailto:"
+              href={`mailto:${contentfulContact.email}`}
               className="subtitle is-6 has-text-danger is-block"
             >
               {contentfulContact.email}
@@ -116,7 +116,10 @@ const Contact = () => {
             <span className="icon">
               <i className="fas fa-phone has-text-danger" />
             </span>
-            <a href="tel:" className="subtitle is-6 has-text-danger is-block">
+            <a
+              href={`tel:${contentfulContact.mobileNumber}`}
+              className="subtitle is-6 has-text-danger is-block"
+            >
               {contentfulContact.mobileNumber}
             </a>
           </div>
