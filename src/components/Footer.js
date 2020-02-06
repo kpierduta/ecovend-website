@@ -46,12 +46,12 @@ const Footer = () => (
         <div className="columns is-variable is-8 second">
           <div className="column">
             <h1 className="title is-5 is-spaced has-text-white">CONTACT</h1>
-            <LinkStyled to="/" className="subtitle is-6">
+            <a href="tel:08700777555" className="subtitle is-6">
               08700 777 555
-            </LinkStyled>
-            <LinkStyled to="/" className="subtitle is-6">
+            </a>
+            <a href="mailto:info@eco-vend.co.uk" className="subtitle is-6">
               info@eco-vend.co.uk
-            </LinkStyled>
+            </a>
             <LinkStyled to="/" className="subtitle is-6">
               ECO House, Lea Road, Waltham
             </LinkStyled>

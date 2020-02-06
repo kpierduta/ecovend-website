@@ -100,9 +100,6 @@ const Contact = () => {
               <span className="is-block">Waltham Abbey,</span>
               <span className="is-block">Hertfordshire,</span>
               <span>EN9 1AS</span>
-              {/*
-          {contentfulContact.location}
-          */}
             </h6>
             <span className="icon has-text-danger">
               <i className="fas fa-envelope" />
