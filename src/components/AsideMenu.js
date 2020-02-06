@@ -40,7 +40,7 @@ const AsideMenu = ({ onChange }) => (
   <Container>
     <Followus />
     <div className="post-list">
-      <h5 className="title is-4">Categories</h5>
+      <h5 className="title is-5">Categories</h5>
       <aside className="menu">
         <ul className="menu-list">
           <li>

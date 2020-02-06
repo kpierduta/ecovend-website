@@ -11,7 +11,7 @@ const Section = styled.div`
 
 const FollowUs = () => (
   <Section>
-    <h5 className="title is-4">Follow Us</h5>
+    <h5 className="title is-5">Follow Us</h5>
     <Link to="/" className="icon is-size-4">
       <i className="fab fa-linkedin-in"></i>
     </Link>

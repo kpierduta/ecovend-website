@@ -107,15 +107,18 @@ const Contact = () => {
             <span className="icon has-text-danger">
               <i className="fas fa-envelope" />
             </span>
-            <h6 className="subtitle is-6 has-text-danger">
+            <a
+              href="mailto:"
+              className="subtitle is-6 has-text-danger is-block"
+            >
               {contentfulContact.email}
-            </h6>
+            </a>
             <span className="icon">
               <i className="fas fa-phone has-text-danger" />
             </span>
-            <h6 className="subtitle is-6 has-text-danger">
+            <a href="tel:" className="subtitle is-6 has-text-danger is-block">
               {contentfulContact.mobileNumber}
-            </h6>
+            </a>
           </div>
           <div className="column is-5 map">
             <MyMapComponent isMarkerShown className="is-hidden-mobile" />
