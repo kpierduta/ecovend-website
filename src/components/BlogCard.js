@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 
 const Section = styled.section`
   padding: 1.75rem 0.5rem 4.5rem 0.5rem;
-
   img {
     border-radius: 1rem;
     height: 18rem !important;
@@ -16,10 +15,6 @@ const Section = styled.section`
 
   .card-content {
     padding: 0rem 0rem 0rem 1.5rem;
-  }
-
-  .text {
-    color: ${props => props.theme.secondaryColor};
   }
 
   .title.is-5 {
@@ -39,40 +34,38 @@ const Section = styled.section`
   }
 `;
 
-const LinkStyled = styled(Link)`
-  background-color: ${props => props.theme.secondaryColor};
-`;
-
 const BlogCard = ({ item }) => (
-  <Section className="section">
-    <div className="container">
-      <div className="columns is-gapless">
-        <div className="column is-5">
-          <figure className="image is-square">
-            <img src={item.thumbnail.file.url} alt="/" />
-          </figure>
-        </div>
-        <div className="column">
-          <div className="card">
-            <div className="card-content">
-              <div className="media">
-                <div className="media-content">
-                  <div className="content">
-                    <p className="subtitle is-6">
-                      <span className="has-text-danger">{item.category}</span>{' '}
-                      {item.dateOfPublish}
-                    </p>
-                    <h1 className="title is-5">{item.newsTitle}</h1>
-                    <p className="subtitle is-6">{item.excerpt}</p>
-                    <LinkStyled
-                      to={`/blog/${item.slug}`}
-                      className="button is-rounded has-text-white"
-                    >
-                      Learn More
-                      <span className="icon">
-                        <i className="fas fa-chevron-right" />
-                      </span>
-                    </LinkStyled>
+  <Link to={`/blog/${item.slug}`}>
+    <Section className="section">
+      <div className="container">
+        <div className="columns is-gapless">
+          <div className="column is-5">
+            <figure className="image is-square">
+              <img src={item.thumbnail.file.url} alt="/" />
+            </figure>
+          </div>
+          <div className="column">
+            <div className="card">
+              <div className="card-content">
+                <div className="media">
+                  <div className="media-content">
+                    <div className="content">
+                      <p className="subtitle is-6">
+                        <span className="has-text-danger">{item.category}</span>{' '}
+                        {item.dateOfPublish}
+                      </p>
+                      <h1 className="title is-5">{item.newsTitle}</h1>
+                      <p className="subtitle is-6">{item.excerpt}</p>
+                      <Link
+                        to={`/blog/${item.slug}`}
+                        className="button is-primary is-rounded has-text-white "
+                      >
+                        Learn More
+                        <span className="icon">
+                          <i className="fas fa-chevron-right" />
+                        </span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -80,8 +73,8 @@ const BlogCard = ({ item }) => (
           </div>
         </div>
       </div>
-    </div>
-  </Section>
+    </Section>
+  </Link>
 );
 
 export default BlogCard;

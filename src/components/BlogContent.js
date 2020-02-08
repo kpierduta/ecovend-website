@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import BreadCrumbs from './BreadCrumbs';
 import Content from './Content';
 
-const Container = styled.section`
+const Section = styled.section`
   .columns {
     margin-top: 1rem;
   }
@@ -12,9 +12,8 @@ const Container = styled.section`
   img {
     margin-top: 3rem;
   }
-
   .author {
-    margin-top: 4rem;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -22,7 +21,7 @@ class BlogContent extends React.Component {
   render() {
     const { news } = this.props;
     return (
-      <Container className="section">
+      <Section className="section">
         <div className="container">
           <BreadCrumbs undelineText="Bl" simpleText="og" />
           <div className="columns is-multiline">
@@ -35,17 +34,13 @@ class BlogContent extends React.Component {
             <div className="column is-4">
               <img src={news.image.file.url} alt="news" />
             </div>
-            <div className="column is-12">
-              <div className="author">
-                <p className="subtitle is-size-6 has-text-weight-bold">
-                  Author: EcoVend
-                </p>
-                <p className="is-size-6">Published: {news.dateOfPublish}</p>
-              </div>
-            </div>
           </div>
+          <p className="is-size-6 has-text-weight-bold author">
+            Author: EcoVend
+          </p>
+          <p className="is-size-6">Published: {news.dateOfPublish}</p>
         </div>
-      </Container>
+      </Section>
     );
   }
 }

@@ -2,45 +2,35 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-const Container = styled.div`
-  .block {
-    background-color: ${props => props.theme.secondaryColor};
-  }
-  .text {
-    margin: 3rem 0rem !important;
+const Section = styled.section`
+  background-color: ${props => props.theme.secondaryColor};
+
+  .title {
+    margin-bottom: 0rem;
   }
 `;
 
 class AdvertismentHero extends React.Component {
   render() {
-    const { home, data } = this.props;
+    const { home } = this.props;
     return (
-      <Container>
-        <section className="section has-text-centered block">
-          <div className="container">
-            <h1 className="title is-5 has-text-white has-text-weight-medium">
-              {home.marketingTitle}
-            </h1>
-            <h5 className="subtitle is-6 has-text-white text">
-              {home.marketingPara.marketingPara}
-            </h5>
-            <Link to="/advertising" className="button is-link">
-              Find out more
-            </Link>
-          </div>
-        </section>
-        <section className="section has-text-centered">
-          <div className="container">
-            <div className="columns">
-              {data.map(item => (
-                <div className="column">
-                  <img src={item.file.url} />
-                </div>
-              ))}
+      <Section className="section has-text-centered">
+        <div className="container">
+          <h1 className="title is-5 has-text-white has-text-weight-medium">
+            {home.marketingTitle}
+          </h1>
+          <div className="hero">
+            <div className="hero-body">
+              <h5 className="subtitle is-6 has-text-white ">
+                {home.marketingPara.marketingPara}
+              </h5>
             </div>
           </div>
-        </section>
-      </Container>
+          <Link to="/advertising" className="button is-link">
+            Find out more
+          </Link>
+        </div>
+      </Section>
     );
   }
 }

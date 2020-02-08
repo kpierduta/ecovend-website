@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 
 import Followus from './FollowUs';
 import HelpCard from './HelpCard';
 
-const Container = styled.div`
+const Section = styled.div`
   .menu-list li ul {
     padding: 0rem;
     border-left: none !important;
@@ -26,46 +25,40 @@ const Container = styled.div`
     margin-top: 0.5rem;
   }
 
-  .title {
-    margin-top: 1.5rem;
-  }
-
   .icon {
     color: ${props => props.theme.primaryColor};
     margin-right: 1rem;
+    margin-bottom: 1.5rem;
   }
 `;
 
 const AsideMenu = ({ onChange }) => (
-  <Container>
+  <Section>
     <Followus />
-    <div className="post-list">
-      <h5 className="title is-5">Categories</h5>
-      <aside className="menu">
-        <ul className="menu-list">
-          <li>
-            <button type="button" onClick={() => onChange('Business')}>
-              Business
-            </button>
-          </li>
-          <li>
-            {' '}
-            <button type="button" onClick={() => onChange('PR')}>
-              PR{' '}
-            </button>
-          </li>
-          <li>
-            <button type="button" onClick={() => onChange('Projects')}>
-              Projects
-            </button>
-          </li>
-        </ul>
-      </aside>
-    </div>
+    <h5 className="title is-5">Categories</h5>
+    <aside className="menu">
+      <ul className="menu-list">
+        <li>
+          <button type="button" onClick={() => onChange('Business')}>
+            Business
+          </button>
+        </li>
+        <li>
+          <button type="button" onClick={() => onChange('PR')}>
+            PR
+          </button>
+        </li>
+        <li>
+          <button type="button" onClick={() => onChange('Projects')}>
+            Projects
+          </button>
+        </li>
+      </ul>
+    </aside>
     <div className="posts">
       <HelpCard />
     </div>
-  </Container>
+  </Section>
 );
 
 export default AsideMenu;

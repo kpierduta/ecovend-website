@@ -77,7 +77,8 @@ export default class Header extends React.Component {
               className={view ? 'navbar-burger is-active' : 'navbar-burger '}
               aria-label="menu"
               aria-expanded="false"
-              onClick={() => this.Menu()}>
+              onClick={() => this.Menu()}
+            >
               <span aria-hidden="true" />
               <span aria-hidden="true" />
               <span aria-hidden="true" />
@@ -85,7 +86,8 @@ export default class Header extends React.Component {
           </div>
           <div
             id="navbarBasicExample"
-            className={view ? 'navbar-menu is-active' : 'navbar-menu '}>
+            className={view ? 'navbar-menu is-active' : 'navbar-menu '}
+          >
             <div className="navbar-end">
               <LinkStyled to="/" className="navbar-item is-size-6">
                 Home
@@ -109,7 +111,8 @@ export default class Header extends React.Component {
                       {' '}
                       <LinkStyled
                         to="/machine/RVM-100/200"
-                        className="navbar-item  is-size-6">
+                        className="navbar-item  is-size-6"
+                      >
                         RVM-100/200
                       </LinkStyled>
                     </div>
@@ -117,7 +120,8 @@ export default class Header extends React.Component {
                       {' '}
                       <LinkStyled
                         to="/machine/Rvm-400"
-                        className="navbar-item  is-size-6">
+                        className="navbar-item  is-size-6"
+                      >
                         RVM-400
                       </LinkStyled>
                     </div>
@@ -125,7 +129,8 @@ export default class Header extends React.Component {
                       {' '}
                       <LinkStyled
                         to="/machine/RVM-500"
-                        className="navbar-item  is-size-6">
+                        className="navbar-item  is-size-6"
+                      >
                         RVM-500
                       </LinkStyled>
                     </div>

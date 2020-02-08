@@ -8,7 +8,6 @@ import Player from './Player';
 
 const Section = styled.section`
   margin-top: 1rem;
-  padding-bottom: 2rem;
 `;
 
 const AnchorStyled = styled(AnchorLink)`
