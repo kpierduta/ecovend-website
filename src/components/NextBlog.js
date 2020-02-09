@@ -30,9 +30,9 @@ const Section = styled.section`
   }
 `;
 
-const NextBlog = ({ news, previous }) => {
-  const metaUrl = `${config.siteUrl}/blog/${previous.slug}`;
-  const metaTitle = `Checkout ${previous.newsTitle}`;
+const NextBlog = ({ news, share }) => {
+  const metaUrl = `${config.siteUrl}/blog/${share.slug}`;
+  const metaTitle = `Checkout ${share.newsTitle}`;
 
   return (
     <Link to={`/blog/${news.slug}`}>
