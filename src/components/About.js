@@ -23,7 +23,9 @@ class About extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column is-6">
-              <h1 className="title is-5 is-capitalized">{home.sectionTitle}</h1>
+              <h1 className="title is-5 is-capitalized is-spaced">
+                {home.sectionTitle}
+              </h1>
               <h6 className="subtitle is-6 text">
                 {home.sectionFirstSubtitle.sectionFirstSubtitle}
               </h6>
