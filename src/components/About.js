@@ -11,6 +11,7 @@ const Section = styled.section`
 `;
 
 const AnchorStyled = styled(AnchorLink)`
+  margin-top: 2rem;
   background: transparent;
   border: none;
 `;
@@ -26,12 +27,10 @@ class About extends React.Component {
               <h1 className="title is-5 is-capitalized is-spaced">
                 {home.sectionTitle}
               </h1>
-              <h6 className="subtitle is-6 text">
+              <h6 className="subtitle is-6">
                 {home.sectionFirstSubtitle.sectionFirstSubtitle}
               </h6>
-              <h6 className="subtitle is-6 text sub-text">
-                {home.sectionSecondSubtitle}
-              </h6>
+              <h6 className="subtitle is-6">{home.sectionSecondSubtitle}</h6>
               <AnchorStyled href="#contact" className="title is-5">
                 <span className="has-text-danger">Get in touch </span> to learn
                 more
