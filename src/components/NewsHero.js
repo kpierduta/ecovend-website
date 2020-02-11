@@ -21,7 +21,7 @@ const Section = styled.div`
   }
 `;
 
-const NewsConetnt = ({ news, category, onCategoryChange }) => {
+const NewsHero = ({ news, category, onCategoryChange }) => {
   return (
     <Section>
       <BreadCrumbs undelineText="News" />
@@ -45,4 +45,4 @@ const NewsConetnt = ({ news, category, onCategoryChange }) => {
   );
 };
 
-export default NewsConetnt;
+export default NewsHero;
