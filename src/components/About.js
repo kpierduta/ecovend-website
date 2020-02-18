@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-import firstVideo from '../../static/videos/Section 3 - RVM Sales Video.mp4';
+import firstVideo from '../../static/videos/EcoVend - Sales.mp4';
 
 import Player from './Player';
 
