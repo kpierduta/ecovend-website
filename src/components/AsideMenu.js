@@ -34,7 +34,6 @@ const Section = styled.div`
 
 const AsideMenu = ({ onChange }) => (
   <Section>
-    <Followus />
     <h5 className="title is-5">Categories</h5>
     <aside className="menu">
       <ul className="menu-list">
@@ -55,6 +54,7 @@ const AsideMenu = ({ onChange }) => (
         </li>
       </ul>
     </aside>
+    <Followus />
     <div className="posts">
       <HelpCard />
     </div>
