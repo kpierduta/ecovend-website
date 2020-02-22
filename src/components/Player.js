@@ -18,8 +18,8 @@ const Section = styled.section`
   }
 `;
 
-const Player = ({ src, width, play }) => {
-  const [active, changeActive] = useState(play);
+const Player = ({ src, width }) => {
+  const [active, changeActive] = useState(false);
 
   return (
     <Section className="">
@@ -34,17 +34,17 @@ const Player = ({ src, width, play }) => {
       </div>
       <div className="has-text-centered">
         <button
+          type="button"
           className={active ? 'is-hidden' : 'button is-large'}
-          onClick={() => changeActive(!active)}
-        >
+          onClick={() => changeActive(!active)}>
           <span className="icon has-text-danger">
             <i className="fas fa-play-circle"></i>
           </span>
         </button>
         <button
+          type="button"
           className={active ? 'button is-large' : 'is-hidden'}
-          onClick={() => changeActive(!active)}
-        >
+          onClick={() => changeActive(!active)}>
           <span className="icon has-text-danger">
             <i className="fas fa-pause-circle"></i>
           </span>

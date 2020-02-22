@@ -89,7 +89,7 @@ class Rvm extends React.Component {
                 </div>
               </div>
               <div className="column second">
-                <video controls autoPlay="autoplay">
+                <video controls>
                   <source src="/videos/TERMINATOR.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
