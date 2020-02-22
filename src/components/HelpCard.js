@@ -16,6 +16,7 @@ const Section = styled.section`
   }
   .arrow {
     margin-left: 0rem !important;
+    margin-top: 1.5rem;
   }
   .is-rounded {
     padding: 0rem 1.5rem;
