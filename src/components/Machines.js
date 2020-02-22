@@ -48,15 +48,15 @@ const Machines = ({ data }) => (
   <Container className="section">
     <div className="container">
       <div className="columns is-multiline">
-        <div className="column is-3 has-text-centered">
-          <h1 className="subtitle is-4 has-text-danger has-text-light">
-            SPECIFICATIONS
+        <div className="column is-4 has-text-centered">
+          <h1 className="title is-5 has-text-danger">
+            MODEL:<span> {data.machineName}</span>
           </h1>
           <img src={data.machineImage.file.url} alt={data.machineImage.title} />
         </div>
         <div className="column">
-          <h1 className="title is-5 has-text-danger">
-            MODEL: ECOVEND<span>{data.machineName}</span>
+          <h1 className="subtitle is-4 has-text-danger has-text-light">
+            SPECIFICATIONS
           </h1>
           <div className="panel">
             <div className="panel-block">
