@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledCard = styled.div`
+  transition: transform 0.2s;
   .card {
     min-height: 28rem;
     background: transparent;
@@ -10,6 +11,9 @@ const StyledCard = styled.div`
   img {
     margin-top: 0.5rem;
     height: 8rem;
+  }
+  :hover {
+    transform: scale(1.05);
   }
 `;
 
