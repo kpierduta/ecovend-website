@@ -119,7 +119,7 @@ export default class Header extends React.Component {
                     <div className="column">
                       {' '}
                       <LinkStyled
-                        to="/machine/Rvm-400"
+                        to="/machine/RVM-400"
                         className="navbar-item  is-size-6"
                       >
                         RVM-400

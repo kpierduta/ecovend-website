@@ -9,6 +9,10 @@ const Container = styled.section`
     line-height: 34px;
   }
 
+  .table th {
+    font-weight: 600;
+  }
+
   .table.is-striped tbody tr:not(.is-selected):nth-child(odd) {
     background-color: #fafafa;
   }
@@ -26,12 +30,12 @@ const Container = styled.section`
     overflow-x: auto;
   }
 
-  .panel-block {
-    border: none;
-  }
-
   .data {
     width: 100%;
+  }
+
+  .panel-block {
+    border: none;
   }
 
   .image {
@@ -63,8 +67,6 @@ const Machines = ({ data }) => (
                       <tr>
                         <th>LOCATION:</th>
                         <td>{data.location}</td>
-                        <td></td>
-                        <td></td>
                       </tr>
                       <tr>
                         <th>DIMENSIONS:</th>
@@ -73,7 +75,9 @@ const Machines = ({ data }) => (
                             <span>{items}</span>
                           ))}
                         </td>
-                        <td>SCREEN SIZE:</td>
+                      </tr>
+                      <tr>
+                        <th>SCREEN SIZE:</th>
                         <td>
                           {data.screenSize.map(items => (
                             <span>{items}</span>
@@ -83,8 +87,6 @@ const Machines = ({ data }) => (
                       <tr>
                         <th>TOUCH SCREEN:</th>
                         <td>{data.touchScreen}</td>
-                        <td></td>
-                        <td></td>
                       </tr>
                       <tr>
                         <th>REWARD SYSTEM:</th>
@@ -93,8 +95,6 @@ const Machines = ({ data }) => (
                       <tr className="is-selected">
                         <th>MATERIAL TYPES:</th>
                         <td>{data.materialTypes}</td>
-                        <td></td>
-                        <td></td>
                       </tr>
                       <tr>
                         <th>CAPACITY:</th>
@@ -103,8 +103,6 @@ const Machines = ({ data }) => (
                       <tr className="is-selected">
                         <th>AUTOMATION:</th>
                         <td>{data.automation}</td>
-                        <td></td>
-                        <td></td>
                       </tr>
                       <tr>
                         <th>MAX CONTAINER SIZE:</th>
@@ -113,8 +111,6 @@ const Machines = ({ data }) => (
                       <tr className="is-selected">
                         <th>MATERIAL SORTING & COMPACTION:</th>
                         <td>{data.materialSortingCompaction}</td>
-                        <td></td>
-                        <td></td>
                       </tr>
                       <tr>
                         <th>OUTPUTS:</th>
@@ -123,8 +119,6 @@ const Machines = ({ data }) => (
                       <tr className="is-selected">
                         <th>REPORTING:</th>
                         <td>{data.reporting}</td>
-                        <td></td>
-                        <td></td>
                       </tr>
                       <tr>
                         <th>POWER SUPPLY:</th>
@@ -133,8 +127,6 @@ const Machines = ({ data }) => (
                       <tr>
                         <th>Productivity:</th>
                         <td>{data.productivity}</td>
-                        <td></td>
-                        <td></td>
                       </tr>
                       <tr>
                         <th>IP RATING:</th>
