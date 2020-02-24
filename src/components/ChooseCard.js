@@ -18,7 +18,7 @@ const StyledCard = styled.div`
 `;
 
 const ChooseCard = ({ data }) => (
-  <StyledCard className="column is-4 has-text-centered">
+  <StyledCard className="column is-4 has-text-centered is-flex">
     <div className="card">
       <div className="card-image">
         <img src={data.file.url} alt="/" />

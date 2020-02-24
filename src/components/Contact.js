@@ -10,64 +10,12 @@ const Container = styled.section`
     padding-bottom: 3rem;
     margin-bottom: -2rem;
   }
-  .text {
-    padding: 0rem 0.5rem;
-  }
-
-  .input {
-    padding: 0;
-    height: 2.5rem;
-    border-bottom: 1px solid ${props => props.theme.secondaryColor} !important;
-    background-color: #fff;
-    border-color: #fff;
-    box-shadow: none;
-    ::placeholder {
-      color: ${props => props.theme.secondaryColor};
-      opacity: 1;
-    }
-  }
-
-  textarea {
-    background-color: #fff;
-    border-color: #fff;
-    border-radius: none;
-    box-shadow: none;
-    ::placeholder {
-      color: ${props => props.theme.secondaryColor};
-      opacity: 1;
-    }
-    :hover {
-      border-color: #fff;
-    }
-  }
-
-  .control {
-    padding: 0.5rem;
-    :hover {
-      border-color: #fff;
-    }
-  }
-
-  .map {
-    padding-bottom: 0rem;
-  }
-
-  .button {
-    margin-left: 0.5rem;
-  }
-
-  .textarea,
-  .first {
-    padding-left: 0rem;
-  }
-
-  form,
-  .field {
-    width: 100%;
-  }
   .form-box {
     margin-top: 0.75rem;
     border: 2px solid ${props => props.theme.secondaryColor};
+  }
+  .text {
+    padding: 0rem 0.5rem;
   }
 `;
 

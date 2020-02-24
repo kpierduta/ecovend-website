@@ -2,9 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 import ChooseCard from './ChooseCard';
+import ContactForm from './ContactForm';
 
 const Section = styled.section`
   background-color: #f9f9f9;
+
+  .card {
+    margin-top: 0.75rem;
+    border: 2px solid ${props => props.theme.secondaryColor};
+  }
 `;
 
 class Choose extends React.Component {
@@ -21,6 +27,11 @@ class Choose extends React.Component {
             {home.chooseIcons.map(items => (
               <ChooseCard data={items} />
             ))}
+            <div className="column is-4 is-flex">
+              <div className="card">
+                <ContactForm />
+              </div>
+            </div>
           </div>
         </div>
       </Section>

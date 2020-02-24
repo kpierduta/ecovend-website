@@ -2,6 +2,61 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withFormik } from 'formik';
 import * as yup from 'yup';
+import styled from 'styled-components';
+
+const StyledFrom = styled.form`
+  .input {
+    padding: 0;
+    height: 2.5rem;
+    border-bottom: 1px solid ${props => props.theme.secondaryColor} !important;
+    background-color: #fff;
+    border-color: #fff;
+    box-shadow: none;
+    ::placeholder {
+      color: ${props => props.theme.secondaryColor};
+      opacity: 1;
+    }
+  }
+
+  textarea {
+    background-color: #fff;
+    border-color: #fff;
+    border-radius: none;
+    box-shadow: none;
+    ::placeholder {
+      color: ${props => props.theme.secondaryColor};
+      opacity: 1;
+    }
+    :hover {
+      border-color: #fff;
+    }
+  }
+
+  .control {
+    padding: 0.5rem;
+    :hover {
+      border-color: #fff;
+    }
+  }
+
+  .map {
+    padding-bottom: 0rem;
+  }
+
+  .button {
+    margin-left: 0.5rem;
+  }
+
+  .textarea,
+  .first {
+    padding-left: 0rem;
+  }
+
+  form,
+  .field {
+    width: 100%;
+  }
+`;
 
 const ContactForm = props => {
   const {
@@ -15,7 +70,7 @@ const ContactForm = props => {
   } = props;
 
   return (
-    <form onSubmit={handleSubmit}>
+    <StyledFrom onSubmit={handleSubmit}>
       <div className="is-flex">
         <div className="field">
           <div className="control">
@@ -121,7 +176,7 @@ const ContactForm = props => {
           Submit Now
         </button>
       </div>
-    </form>
+    </StyledFrom>
   );
 };
 
