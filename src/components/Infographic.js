@@ -8,11 +8,15 @@ const Container = styled.section`
   img {
     margin-top: -0.5rem;
   }
+
+  .column.is-4.is-flex {
+    height: 24rem;
+  }
   .circle {
-    border: 2px solid #f38044;
-    min-height: 20.5rem;
-    padding: 7rem 1rem 0rem 1rem;
-    border-radius: 100%;
+    padding: 6rem 2rem 1rem 3rem;
+    background-image: url(/images/circle-icon.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 `;
 
@@ -25,7 +29,7 @@ class Infographic extends React.Component {
           <div className="container">
             <div className="columns">
               {data.infoGraphicsPoint.map(items => (
-                <div className="column is-4 has-text-centered">
+                <div className="column is-4 has-text-centered is-flex">
                   <div className="circle">
                     <h1 className="subtitle is-5">{items}</h1>
                   </div>

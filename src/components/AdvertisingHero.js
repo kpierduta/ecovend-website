@@ -10,7 +10,7 @@ const Section = styled.section`
   }
 `;
 
-class Advertising extends React.Component {
+class AdvertisingHero extends React.Component {
   render() {
     const { adv } = this.props;
     return (
@@ -32,4 +32,4 @@ class Advertising extends React.Component {
   }
 }
 
-export default Advertising;
+export default AdvertisingHero;
