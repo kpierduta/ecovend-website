@@ -19,7 +19,7 @@ const Container = styled.section`
   }
 `;
 
-const Contact = () => {
+const Contact = ({ isHidden }) => {
   const { contentfulContact } = useStaticQuery(
     graphql`
       query {
@@ -68,10 +68,10 @@ const Contact = () => {
               {contentfulContact.mobileNumber}
             </a>
           </div>
-          <div className="column is-5 map">
+          <div className={isHidden ? 'column is-9 map' : 'column is-5 map'}>
             <MyMapComponent isMarkerShown className="is-hidden-mobile" />
           </div>
-          <div className="column  form-box">
+          <div className={isHidden ? 'is-hidden' : 'column  form-box'}>
             <div className="text">
               <h2 className="title is-5 is-spaced">
                 Get in touch to find out more

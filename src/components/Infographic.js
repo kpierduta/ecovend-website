@@ -13,7 +13,7 @@ const Container = styled.section`
     height: 24rem;
   }
   .circle {
-    padding: 6rem 2rem 1rem 3rem;
+    padding: 6rem 2rem 1rem 3.5rem;
     background-image: url(/images/circle-icon.jpg);
     background-size: contain;
     background-repeat: no-repeat;

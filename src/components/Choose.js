@@ -11,6 +11,9 @@ const Section = styled.section`
     margin-top: 0.75rem;
     border: 2px solid ${props => props.theme.secondaryColor};
   }
+  .text {
+    padding: 0rem 0.5rem;
+  }
 `;
 
 class Choose extends React.Component {
@@ -28,7 +31,10 @@ class Choose extends React.Component {
               <ChooseCard data={items} />
             ))}
             <div className="column is-4 is-flex">
-              <div className="card">
+              <div className="card has-text-left">
+                <h2 className="title is-5 text">
+                  Get in touch to find out more
+                </h2>
                 <ContactForm />
               </div>
             </div>

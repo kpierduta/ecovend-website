@@ -5,6 +5,7 @@ import * as yup from 'yup';
 import styled from 'styled-components';
 
 const StyledFrom = styled.form`
+  padding: 0.5rem 0rem;
   .input {
     padding: 0;
     height: 2.5rem;
@@ -15,6 +16,23 @@ const StyledFrom = styled.form`
     ::placeholder {
       color: ${props => props.theme.secondaryColor};
       opacity: 1;
+    }
+  }
+  .select:not(.is-multiple):not(.is-loading)::after {
+    border-color: ${props => props.theme.secondaryColor};
+  }
+
+  .select select {
+    color: ${props => props.theme.secondaryColor};
+    padding-left: 0.5rem;
+    background-color: #fff;
+    border-color: #fff;
+    border-bottom: 1px solid ${props => props.theme.secondaryColor} !important;
+
+    :active,
+    :focus {
+      box-shadow: none;
+      border: 1px solid ${props => props.theme.secondaryColor} !important;
     }
   }
 
@@ -77,7 +95,7 @@ const ContactForm = props => {
             <input
               className="input"
               name="name"
-              placeholder="Name"
+              placeholder="Name*"
               value={values.name}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -92,7 +110,7 @@ const ContactForm = props => {
             <input
               className="input"
               name="email"
-              placeholder="Your Email"
+              placeholder="Email*"
               value={values.email}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -110,7 +128,7 @@ const ContactForm = props => {
               className="input"
               type="number"
               name="phone"
-              placeholder="Phone"
+              placeholder="Telephone"
               value={values.phone}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -142,18 +160,48 @@ const ContactForm = props => {
           <input
             className="input"
             type="text"
-            name="subject"
-            placeholder="Subject"
-            value={values.subject}
+            name="company"
+            placeholder="Company*"
+            value={values.company}
             onChange={handleChange}
             onBlur={handleBlur}
           />
-          {errors.subject && touched.subject && (
-            <p className="help is-danger">{errors.subject}</p>
+          {errors.company && touched.company && (
+            <p className="help is-danger">{errors.company}</p>
           )}
         </div>
       </div>
       <div className="field">
+        <div className="control">
+          <div className="select">
+            <select>
+              <option>Select Sector</option>
+              <option>Sector 1</option>
+              <option>Sector 2</option>
+              <option>Sector 3</option>
+            </select>
+          </div>
+          {errors.select && touched.select && (
+            <p className="help is-danger">{errors.select}</p>
+          )}
+        </div>
+      </div>
+      <div className="field">
+        <div className="control">
+          <input
+            className="input"
+            name="find"
+            placeholder="How did you find us?*"
+            value={values.find}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
+          {errors.find && touched.find && (
+            <p className="help is-danger">{errors.find}</p>
+          )}
+        </div>
+      </div>
+      <div className="field has-text-left">
         <div className="control">
           <textarea
             className="textarea"
@@ -196,7 +244,8 @@ export default withFormik({
     email: '',
     phone: '',
     address: '',
-    subject: '',
+    company: '',
+    find: '',
     message: '',
   }),
   validationSchema: yup.object().shape({
@@ -207,7 +256,8 @@ export default withFormik({
       .required('Email is required!'),
     phone: yup.string().required('Phone Number is required!'),
     address: yup.string().required('Address is required!'),
-    subject: yup.string().required('Subject is required!'),
+    company: yup.string().required('company is required!'),
+    find: yup.string().required('required field'),
     message: yup.string().required('Message is required!'),
   }),
   handleSubmit: (values, { setSubmitting, props }) => {

@@ -180,7 +180,6 @@ const MyMapComponent = compose(
         style={{
           background: '#e1eff2',
           height: `100%`,
-          width: '85%',
           padding: '0rem',
         }}
       />

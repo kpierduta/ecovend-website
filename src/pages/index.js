@@ -106,7 +106,7 @@ export default class IndexPage extends React.Component {
         */}
         <Advertisment home={home} />
         <RvmImages images={home.imageGrid} />
-        <Contact />
+        <Contact isHidden />
       </Layout>
     );
   }
