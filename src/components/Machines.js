@@ -38,6 +38,10 @@ const Container = styled.section`
     border: none;
   }
 
+  .text {
+    padding-top: 0.25rem;
+  }
+
   .image {
     height: auto;
     width: 70%;
@@ -55,7 +59,7 @@ const Machines = ({ data }) => (
           <img src={data.machineImage.file.url} alt={data.machineImage.title} />
         </div>
         <div className="column">
-          <h1 className="subtitle is-4 has-text-danger has-text-light">
+          <h1 className="subtitle is-4 has-text-danger has-text-light text">
             SPECIFICATIONS
           </h1>
           <div className="panel">
@@ -72,7 +76,7 @@ const Machines = ({ data }) => (
                         <th>DIMENSIONS:</th>
                         <td>
                           {data.dimensions.map(items => (
-                            <span>{items}</span>
+                            <span className="is-block">{items}</span>
                           ))}
                         </td>
                       </tr>
@@ -80,7 +84,7 @@ const Machines = ({ data }) => (
                         <th>SCREEN SIZE:</th>
                         <td>
                           {data.screenSize.map(items => (
-                            <span>{items}</span>
+                            <span className="is-block">{items}</span>
                           ))}
                         </td>
                       </tr>

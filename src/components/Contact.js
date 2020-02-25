@@ -17,6 +17,9 @@ const Container = styled.section`
   .text {
     padding: 0rem 0.5rem;
   }
+  .map {
+    padding-bottom: 0rem !important;
+  }
 `;
 
 const Contact = ({ isHidden }) => {
