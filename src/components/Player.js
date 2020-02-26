@@ -19,6 +19,12 @@ const Section = styled.section`
   .react-player__preview {
     height: 20rem !important;
   }
+  .react-player__shadow {
+    background: none !important;
+  }
+  .react-player__play-icon {
+    border-style: none !important;
+  }
 `;
 
 const Player = ({ src, width, poster, play }) => {
@@ -42,7 +48,8 @@ const Player = ({ src, width, poster, play }) => {
           className={
             active === false || display ? 'button is-large' : 'is-hidden'
           }
-          onClick={() => changeActive(!active)}>
+          onClick={() => changeActive(!active)}
+        >
           <span className="icon has-text-danger">
             <i className="fas fa-play-circle"></i>
           </span>
@@ -53,7 +60,8 @@ const Player = ({ src, width, poster, play }) => {
           onClick={() => {
             changeActive(!active);
             changeDisplay(!display);
-          }}>
+          }}
+        >
           <span className="icon has-text-danger">
             <i className="fas fa-pause-circle"></i>
           </span>
