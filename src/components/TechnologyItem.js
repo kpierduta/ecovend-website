@@ -10,14 +10,14 @@ const Container = styled.div`
   }
 `;
 
-const TechnologyItem = ({ title, subtitle }) => (
+const TechnologyItem = ({ item }) => (
   <Container className="column is-4">
     <div className="box">
       <article className="media">
         <div className="media-content">
           <div className="content">
-            <h1 className="title is-5 is-spaced">{title}</h1>
-            <p className="subtitle is-6">{subtitle}</p>
+            <h1 className="title is-5 is-spaced">{item.title}</h1>
+            <p className="subtitle is-6">{item.subtitle.subtitle}</p>
           </div>
         </div>
       </article>

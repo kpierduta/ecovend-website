@@ -42,6 +42,14 @@ export const techQuery = graphql`
       stepThreeText
       chooseTitle
     }
+    contentfulTechnologyPage {
+      displayTechnologyCard
+      displayTechnologySection
+      title
+      subtitle {
+        subtitle
+      }
+    }
     allContentfulTechnologyCards(sort: { fields: order }) {
       edges {
         node {
@@ -59,7 +67,11 @@ export const techQuery = graphql`
 export default class TechnologyPage extends React.Component {
   render() {
     const {
-      data: { contentfulHomePage: home, allContentfulTechnologyCards: cards },
+      data: {
+        contentfulHomePage: home,
+        allContentfulTechnologyCards: cards,
+        contentfulTechnologyPage: technology,
+      },
     } = this.props;
     return (
       <Layout>
@@ -70,7 +82,7 @@ export default class TechnologyPage extends React.Component {
         />
         <BreadCrumbs undelineText="Tech" simpleText="nology" />
         <Steps home={home} />
-        <Technology items={cards.edges} />
+        <Technology items={cards.edges} technology={technology} />
         <Contact />
       </Layout>
     );
