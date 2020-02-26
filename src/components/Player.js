@@ -16,35 +16,46 @@ const Section = styled.section`
     background-color: #fff !important;
     color: #fff !important;
   }
+  .react-player__preview {
+    height: 20rem !important;
+  }
 `;
 
-const Player = ({ src, width }) => {
-  const [active, changeActive] = useState(false);
-
+const Player = ({ src, width, poster }) => {
+  const [active, changeActive] = useState(true);
+  const [display, changeDisplay] = useState(true);
   return (
     <Section className="">
       <div className="frame">
         <ReactPlayer
           url={src}
+          light={poster}
           playing={active}
           width={width}
           height="100%"
-          autoPlay={active}
+          onPlay={() => changeDisplay(false)}
         />
       </div>
       <div className="has-text-centered">
         <button
           type="button"
-          className={active ? 'is-hidden' : 'button is-large'}
-          onClick={() => changeActive(!active)}>
+          className={
+            active === false || display ? 'button is-large' : 'is-hidden'
+          }
+          onClick={() => changeActive(!active)}
+        >
           <span className="icon has-text-danger">
             <i className="fas fa-play-circle"></i>
           </span>
         </button>
         <button
           type="button"
-          className={active ? 'button is-large' : 'is-hidden'}
-          onClick={() => changeActive(!active)}>
+          className={display ? 'is-hidden' : 'button is-large'}
+          onClick={() => {
+            changeActive(!active);
+            changeDisplay(!display);
+          }}
+        >
           <span className="icon has-text-danger">
             <i className="fas fa-pause-circle"></i>
           </span>

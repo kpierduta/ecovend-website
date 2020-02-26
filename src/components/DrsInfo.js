@@ -22,10 +22,7 @@ class DrsInfo extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column is-6">
-              <Player
-                src="/videos/ACM_Reverse_Vending_on_the_BBC.mp4"
-                width="100%"
-              />
+              <Player src={home.secondVideo.file.url} width="100%" />
             </div>
             <div className="column">
               <h4 className="title is-5 is-capitalized">

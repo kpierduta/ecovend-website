@@ -20,6 +20,11 @@ export const advertQuery = graphql`
       }
       heroTitle
       heroSubtitle
+      video {
+        file {
+          url
+        }
+      }
       videoTitle
       videoFirstPara {
         videoFirstPara

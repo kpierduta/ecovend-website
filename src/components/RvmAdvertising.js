@@ -2,27 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.section`
-  /* .title {
-    margin-bottom: 0.5rem;
-    line-height: normal !important;
-    @media only screen and (max-width: 768px) {
-      margin-top: 0rem;
-    }
-  } */
   ul {
     list-style: disc;
   }
 
-  /* video {
-    height: auto;
-    @media only screen and (max-width: 768px) {
-      height: auto;
-    }
-  } */
-
-  /* .column {
-    padding: 0rem;
-  } */
   .background {
     background-color: ${props => props.theme.lightBackground};
   }
@@ -72,12 +55,6 @@ class Rvm extends React.Component {
             <div className="columns">
               <div className="column is-7">
                 <div className="section">
-                  {/* <div
-                    className="subtitle is-6"
-                    dangerouslySetInnerHTML={{
-                      __html: adv.videoSecondPara.childMarkdownRemark.html,
-                    }}
-                  /> */}
                   <h4 className="title is-5 is-spaced is-uppercase">
                     {adv.videoTitle}
                   </h4>
@@ -90,7 +67,7 @@ class Rvm extends React.Component {
               </div>
               <div className="column second">
                 <video controls>
-                  <source src="/videos/TERMINATOR.mp4" type="video/mp4" />
+                  <source src={adv.video.file.url} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>

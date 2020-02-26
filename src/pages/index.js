@@ -78,6 +78,16 @@ export const indexQuery = graphql`
           url
         }
       }
+      firstVideo {
+        file {
+          url
+        }
+      }
+      secondVideo {
+        file {
+          url
+        }
+      }
     }
   }
 `;

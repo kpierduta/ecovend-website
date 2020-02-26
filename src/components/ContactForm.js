@@ -176,42 +176,42 @@ const ContactForm = props => {
           <div className="select">
             <select>
               <option>Select Sector</option>
-              <option>1. Food manufacturing</option>
-              <option>2. Food distribution </option>
-              <option>3. Distribution</option>
-              <option>4. Leisure </option>
-              <option>5. Zoos</option>
-              <option>6. Leisure Centre</option>
-              <option>7. Hotels </option>
-              <option>8. Defence </option>
-              <option>9. Transport </option>
-              <option>10. Hospitality </option>
-              <option>11. Retail </option>
-              <option>12. Utilities </option>
-              <option>13. Telecoms</option>
-              <option>14. Power </option>
-              <option>15. Construction </option>
-              <option>16. Public services</option>
-              <option>17. Universities </option>
-              <option>18. Construction </option>
-              <option>19. Universities</option>
-              <option>20. Construction</option>
-              <option>21. Local Authority </option>
-              <option>22. Facilities Management</option>
-              <option>23. Cleaning</option>
-              <option>24. Property management </option>
-              <option>25. Shopping centres</option>
-              <option>26. Office blocks</option>
-              <option>27. Schools </option>
-              <option>28. Hospitals </option>
-              <option>29. Prisons </option>
-              <option>30. Leisure centres</option>
-              <option>31. Airports</option>
-              <option>32. Healthcare </option>
-              <option>33. Restaurants </option>
-              <option>34. Civil & infrastructure </option>
-              <option>35. Stadia </option>
-              <option>36. Other</option>
+              <option>Food manufacturing</option>
+              <option>Food distribution </option>
+              <option>Distribution</option>
+              <option>Leisure </option>
+              <option>Zoos</option>
+              <option>Leisure Centre</option>
+              <option>Hotels </option>
+              <option>Defence </option>
+              <option>Transport </option>
+              <option>Hospitality </option>
+              <option>Retail </option>
+              <option>Utilities </option>
+              <option>Telecoms</option>
+              <option>Power </option>
+              <option>Construction </option>
+              <option>Public services</option>
+              <option>Universities </option>
+              <option>Construction </option>
+              <option>Universities</option>
+              <option>Construction</option>
+              <option>Local Authority </option>
+              <option>Facilities Management</option>
+              <option>Cleaning</option>
+              <option>Property management </option>
+              <option>Shopping centres</option>
+              <option>Office blocks</option>
+              <option>Schools </option>
+              <option>Hospitals </option>
+              <option>Prisons </option>
+              <option>Leisure centres</option>
+              <option>Airports</option>
+              <option>Healthcare </option>
+              <option>Restaurants </option>
+              <option>Civil & infrastructure </option>
+              <option>Stadia</option>
+              <option>Other</option>
             </select>
           </div>
           {errors.select && touched.select && (

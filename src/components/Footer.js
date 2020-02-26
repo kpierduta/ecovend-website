@@ -46,8 +46,8 @@ const Footer = () => (
         <div className="columns is-variable is-8 second">
           <div className="column">
             <h1 className="title is-5 is-spaced has-text-white">CONTACT</h1>
-            <a href="tel:08700777555" className="subtitle is-6">
-              08700 777 555
+            <a href="tel:01992 765 206" className="subtitle is-6">
+              01992 765 206
             </a>
             <a href="mailto:info@eco-vend.co.uk" className="subtitle is-6">
               info@eco-vend.co.uk
