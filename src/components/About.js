@@ -36,6 +36,7 @@ class About extends React.Component {
             </div>
             <div className="column">
               <Player
+                play
                 src={home.firstVideo.file.url}
                 width="100%"
                 poster="images/thumbnail.jpg"

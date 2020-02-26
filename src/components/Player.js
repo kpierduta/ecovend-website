@@ -21,8 +21,8 @@ const Section = styled.section`
   }
 `;
 
-const Player = ({ src, width, poster }) => {
-  const [active, changeActive] = useState(true);
+const Player = ({ src, width, poster, play }) => {
+  const [active, changeActive] = useState(play);
   const [display, changeDisplay] = useState(true);
   return (
     <Section className="">
@@ -42,8 +42,7 @@ const Player = ({ src, width, poster }) => {
           className={
             active === false || display ? 'button is-large' : 'is-hidden'
           }
-          onClick={() => changeActive(!active)}
-        >
+          onClick={() => changeActive(!active)}>
           <span className="icon has-text-danger">
             <i className="fas fa-play-circle"></i>
           </span>
@@ -54,8 +53,7 @@ const Player = ({ src, width, poster }) => {
           onClick={() => {
             changeActive(!active);
             changeDisplay(!display);
-          }}
-        >
+          }}>
           <span className="icon has-text-danger">
             <i className="fas fa-pause-circle"></i>
           </span>
