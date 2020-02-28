@@ -38,10 +38,6 @@ const Container = styled.section`
     border: none;
   }
 
-  .text {
-    padding-top: 0.25rem;
-  }
-
   .image {
     height: auto;
     width: 70%;
@@ -59,9 +55,7 @@ const Machines = ({ data }) => (
           <img src={data.machineImage.file.url} alt={data.machineImage.title} />
         </div>
         <div className="column">
-          <h1 className="subtitle is-4 has-text-danger has-text-light text">
-            SPECIFICATIONS
-          </h1>
+          <h1 className="title is-5 has-text-danger">SPECIFICATIONS</h1>
           <div className="panel">
             <div className="panel-block">
               <div className="data">
