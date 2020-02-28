@@ -16,23 +16,26 @@ const Section = styled.section`
     background-color: #fff !important;
     color: #fff !important;
   }
+  .button.is-large {
+    /* z-index: -1; */
+  }
   .react-player__preview {
     height: 20rem !important;
+    align-items: flex-end !important;
   }
-  /* .react-player__shadow {
-    background: #fff !important;
-    margin-bottom: -1.65rem;
-    width: 50px !important;
-    height: 50px !important;
-    border: 2px solid ${props => props.theme.primaryColor} !important;
+  .react-player__shadow {
+    background: transparent !important;
+    width: 100px !important;
+    height: 100px !important;
+    z-index: 1 !important;
+    margin-bottom: -3.5rem !important;
   }
   .react-player__play-icon {
-    border-color: transparent transparent transparent
-      ${props => props.theme.primaryColor} !important;
-  } */
+    border-width: 0px !important;
+  }
 `;
 
-const Player = ({ src, width, poster, play }) => {
+const Player = ({ src, width, poster, play, button }) => {
   const [active, changeActive] = useState(play);
   const [display, changeDisplay] = useState(true);
   return (
@@ -57,6 +60,7 @@ const Player = ({ src, width, poster, play }) => {
             <i className="fas fa-play-circle"></i>
           </span>
         </button>
+
         <button
           type="button"
           className={display ? 'is-hidden' : 'button is-large'}
