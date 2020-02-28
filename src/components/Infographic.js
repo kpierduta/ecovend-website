@@ -13,10 +13,19 @@ const Container = styled.section`
     height: 24rem;
   }
   .circle {
-    padding: 6rem 2rem 1rem 3.5rem;
+    /* padding: 6rem 2rem 1rem 3.5rem; */
     background-image: url(/images/circle-icon.jpg);
     background-size: contain;
     background-repeat: no-repeat;
+  }
+  /* .hero.is-large .hero-body {
+    padding-top: 8rem !important;
+  } */
+  .hero-body {
+    padding: 8rem 2.5rem;
+    @media only screen and (max-width: 1024px) {
+      padding: 6.5rem 2.5rem;
+    }
   }
 `;
 
@@ -31,7 +40,13 @@ class Infographic extends React.Component {
               {data.infoGraphicsPoint.map(items => (
                 <div className="column is-4 has-text-centered is-flex">
                   <div className="circle">
-                    <h1 className="subtitle is-5">{items}</h1>
+                    <section className="hero">
+                      <div className="hero-body">
+                        <div className="container">
+                          <h1 className="subtitle is-5">{items}</h1>
+                        </div>
+                      </div>
+                    </section>
                   </div>
                 </div>
               ))}

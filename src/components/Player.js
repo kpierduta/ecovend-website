@@ -19,12 +19,17 @@ const Section = styled.section`
   .react-player__preview {
     height: 20rem !important;
   }
-  .react-player__shadow {
-    background: none !important;
+  /* .react-player__shadow {
+    background: #fff !important;
+    margin-bottom: -1.65rem;
+    width: 50px !important;
+    height: 50px !important;
+    border: 2px solid ${props => props.theme.primaryColor} !important;
   }
   .react-player__play-icon {
-    border-style: none !important;
-  }
+    border-color: transparent transparent transparent
+      ${props => props.theme.primaryColor} !important;
+  } */
 `;
 
 const Player = ({ src, width, poster, play }) => {
@@ -45,10 +50,8 @@ const Player = ({ src, width, poster, play }) => {
       <div className="has-text-centered">
         <button
           type="button"
-          className={
-            active === false || display ? 'button is-large' : 'is-hidden'
-          }
-          onClick={() => changeActive(!active)}
+          className={display ? 'button is-large' : 'is-hidden'}
+          onClick={() => changeActive(true)}
         >
           <span className="icon has-text-danger">
             <i className="fas fa-play-circle"></i>
