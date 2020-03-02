@@ -11,11 +11,11 @@ const Container = styled.section`
   }
 `;
 
-const BreadCrumbs = ({ undelineText, simpleText }) => (
+const BreadCrumbs = ({ underlineText, simpleText }) => (
   <Container className="section">
     <div className="container">
       <h1 className="is-size-4 has-text-weight-medium">
-        <span className="text">{undelineText}</span>
+        <span className="text">{underlineText}</span>
         {simpleText}
       </h1>
     </div>

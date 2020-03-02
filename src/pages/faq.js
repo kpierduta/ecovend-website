@@ -44,7 +44,7 @@ export default class FaqPage extends React.Component {
           description="Ask your questions!"
           url={`${config.siteUrl}`}
         />
-        <BreadCrumbs undelineText="FAQ" simpleText="s" />
+        <BreadCrumbs underlineText="FAQ" simpleText="s" />
         <Question faq={faq.edges} />
       </Layout>
     );

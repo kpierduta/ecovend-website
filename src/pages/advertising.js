@@ -11,6 +11,9 @@ import Infographic from '../components/Infographic';
 export const advertQuery = graphql`
   query advert {
     contentfulAdvertisingPage {
+      seoTitle
+      metaDescription
+      keywords
       title
       introParagrpah {
         introParagrpah
@@ -64,8 +67,9 @@ export default class AdvertisingPage extends React.Component {
     return (
       <Layout>
         <Seo
-          title="Advertising"
-          description="Advertising with us today!"
+          title={adv.seoTitle}
+          description={adv.metaDescription}
+          keywords={adv.keywords}
           url={`${config.siteUrl}`}
         />
         <AdvertisingHero adv={adv} />

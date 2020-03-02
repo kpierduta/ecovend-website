@@ -23,7 +23,7 @@ class BlogContent extends React.Component {
     return (
       <Section className="section">
         <div className="container">
-          <BreadCrumbs undelineText="Bl" simpleText="og" />
+          <BreadCrumbs underlineText="Bl" simpleText="og" />
           <div className="columns is-multiline">
             <div className="column is-8">
               <h3 className="title is-5 is-spaced has-text-danger">

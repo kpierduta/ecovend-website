@@ -10,6 +10,14 @@ import Contact from '../components/Contact';
 
 export const rangeQuery = graphql`
   query Range {
+    contentfulProductPage {
+      seoTitle
+      metaDescription
+      keywords
+      description {
+        description
+      }
+    }
     allContentfulEcoVendMachines(sort: { fields: order }) {
       edges {
         node {
@@ -31,16 +39,20 @@ export const rangeQuery = graphql`
 export default class OurProduct extends React.Component {
   render() {
     const {
-      data: { allContentfulEcoVendMachines: product },
+      data: {
+        contentfulProductPage: page,
+        allContentfulEcoVendMachines: product,
+      },
     } = this.props;
     return (
       <Layout>
         <Seo
-          title="Products"
-          description="Our Products"
+          title={page.seoTitle}
+          description={page.metaDescription}
+          keywords={page.keywords}
           url={`${config.siteUrl}`}
         />
-        <RangeHero />
+        <RangeHero subtitle={page.description.description} />
         <Product data={product.edges} />
         <Contact />
       </Layout>

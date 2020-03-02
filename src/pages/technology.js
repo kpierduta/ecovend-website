@@ -84,7 +84,7 @@ export default class TechnologyPage extends React.Component {
           keywords={technology.keywords}
           url={`${config.siteUrl}`}
         />
-        <BreadCrumbs undelineText="Tech" simpleText="nology" />
+        <BreadCrumbs underlineText="Tech" simpleText="nology" />
         <Steps home={home} />
         <Technology items={cards.edges} technology={technology} />
         <Contact />

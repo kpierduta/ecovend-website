@@ -28,7 +28,6 @@ const Contact = ({ isHidden }) => {
       query {
         contentfulContact {
           title
-          location
           email
           mobileNumber
         }

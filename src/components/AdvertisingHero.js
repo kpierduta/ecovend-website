@@ -15,7 +15,7 @@ class AdvertisingHero extends React.Component {
     const { adv } = this.props;
     return (
       <Section className="hero">
-        <BreadCrumbs undelineText="Ad" simpleText="vertising" />
+        <BreadCrumbs underlineText="Ad" simpleText="vertising" />
         <div className="hero-body">
           <div className="container">
             <h1 className="subtitle is-6">{adv.title}</h1>

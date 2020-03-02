@@ -10,6 +10,9 @@ import Contact from '../components/Contact';
 export const machineQuery = graphql`
   query Machine($slug: String) {
     contentfulEcoVendMachines(slug: { eq: $slug }) {
+      seoTitle
+      metaDescription
+      keywords
       machineName
       machineImage {
         title
@@ -44,8 +47,9 @@ export default class OurRange extends React.Component {
     return (
       <Layout>
         <Seo
-          title="Products"
-          description="Our Products"
+          title={machines.seoTitle}
+          description={machines.metaDescription}
+          keywords={machines.keywords}
           url={`${config.siteUrl}`}
         />
         <Machines data={machines} />

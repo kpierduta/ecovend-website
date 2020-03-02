@@ -29,9 +29,6 @@ export default class ContactPage extends React.Component {
     const {
       data: { contentfulContact: ContactData },
     } = this.props;
-
-    console.log(ContactData.mainTitle, 'd');
-
     return (
       <Layout>
         <Seo
@@ -39,7 +36,7 @@ export default class ContactPage extends React.Component {
           description="Contact us today!"
           url={`${config.siteUrl}`}
         />
-        <BreadCrumbs undelineText="Background" simpleText=" & Contact Us" />
+        <BreadCrumbs underlineText="Background" simpleText=" & Contact Us" />
         <ContactHero data={ContactData} />
         <Contact />
       </Layout>

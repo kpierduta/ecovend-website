@@ -11,7 +11,7 @@ const Container = styled.section``;
 const StudyHero = () => (
   <Container className="section">
     <div className="container">
-      <BreadCrumbs undelineText="Case" simpleText=" Studies" />
+      <BreadCrumbs underlineText="Case" simpleText=" Studies" />
       <div className="columns is-multiline">
         <div className="column is-4">
           <Link to="/case-study">

@@ -24,7 +24,7 @@ const Section = styled.div`
 const NewsHero = ({ news, category, onCategoryChange }) => {
   return (
     <Section>
-      <BreadCrumbs undelineText="News" />
+      <BreadCrumbs underlineText="News" />
       <section className="section">
         <div className="container">
           <div className="columns is-variable is-8">
