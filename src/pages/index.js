@@ -16,6 +16,9 @@ import Contact from '../components/Contact';
 export const indexQuery = graphql`
   query Home {
     contentfulHomePage {
+      seoTitle
+      metaDescription
+      keywords
       title
       subtitle
       headerimage {
@@ -100,8 +103,9 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <Seo
-          title="Home"
-          description="Ecovend Reverse Vending"
+          title={home.seoTitle}
+          description={home.metaDescription}
+          keywords={home.keywords}
           url={`${config.siteUrl}`}
         />
         <Hero home={home} />
