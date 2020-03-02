@@ -72,7 +72,7 @@ const Result = () => (
           </p>
           <p className="para">
             Through their forward-thinking and ongoing work at all 60 Brakes
-            Group sites across the country, ACM are able to work alongside
+            Group sites across the country, ACM are able to work along side
             Brakes to provide a fully managed, complete, single source waste and
             recycling solution for their business.
           </p>

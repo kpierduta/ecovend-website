@@ -20,6 +20,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
+      allContentfulCase {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
     }
   `);
 
@@ -43,6 +50,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     createPage({
       path: pagePath,
       component: path.resolve(`src/templates/our-machines.js`),
+      context: {
+        slug: node.slug,
+      },
+    });
+  });
+
+  result.data.allContentfulCase.edges.forEach(({ node }) => {
+    const pagePath = `case-study/${node.slug}`;
+    createPage({
+      path: pagePath,
+      component: path.resolve(`src/templates/case-study.js`),
       context: {
         slug: node.slug,
       },

@@ -14,13 +14,30 @@ export const caseQuery = graphql`
       keywords
       displayPage
     }
+    allContentfulCase(sort: { fields: order, order: ASC }) {
+      edges {
+        node {
+          slug
+          order
+          image {
+            file {
+              url
+            }
+          }
+          title
+          description {
+            description
+          }
+        }
+      }
+    }
   }
 `;
 
 export default class CasePage extends React.Component {
   render() {
     const {
-      data: { contentfulCaseStudyPage: page },
+      data: { contentfulCaseStudyPage: page, allContentfulCase: cases },
     } = this.props;
     return (
       <Layout>
@@ -30,7 +47,7 @@ export default class CasePage extends React.Component {
           keywords={page.keywords}
           url={`${config.siteUrl}`}
         />
-        <StudyHero />
+        <StudyHero data={cases.edges} />
       </Layout>
     );
   }

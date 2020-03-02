@@ -8,31 +8,16 @@ import BreadCrumbs from './BreadCrumbs';
 
 const Container = styled.section``;
 
-const StudyHero = () => (
+const StudyHero = ({ data }) => (
   <Container className="section">
     <div className="container">
       <BreadCrumbs underlineText="Case" simpleText=" Studies" />
       <div className="columns is-multiline">
-        <div className="column is-4">
-          <Link to="/case-study">
-            <StudyCard imageTag="/images/case/ceo.jpg" />
-          </Link>
-        </div>
-        <div className="column is-4">
-          <Link to="/case-study">
-            <StudyCard imageTag="/images/case/factory.jpg" />
-          </Link>
-        </div>
-        <div className="column is-4">
-          <Link to="/case-study">
-            <StudyCard imageTag="/images/case/user.jpg" />
-          </Link>
-        </div>
-        <div className="column is-4">
-          <Link to="/case-study">
-            <StudyCard imageTag="/images/case/truck.jpg" />
-          </Link>
-        </div>
+        {data.map(items => (
+          <div className="column is-4">
+            <StudyCard data={items.node} />
+          </div>
+        ))}
       </div>
     </div>
   </Container>
