@@ -22,6 +22,7 @@ const Section = styled.section`
   .react-player__preview {
     height: 20rem !important;
     align-items: flex-end !important;
+    margin-bottom: 0.12rem;
   }
   .react-player__shadow {
     background: transparent !important;
