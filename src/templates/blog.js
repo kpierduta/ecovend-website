@@ -11,6 +11,9 @@ import NextBlog from '../components/NextBlog';
 export const pageQuery = graphql`
   query PageByPath($slug: String) {
     contentfulNewsPage(slug: { eq: $slug }) {
+      seoTitle
+      metaDescription
+      keywords
       slug
       dateOfPublish(formatString: "MMMM Do, YYYY,")
       category
@@ -58,7 +61,12 @@ export default class page extends React.Component {
 
     return (
       <Layout>
-        <Seo title="Blog" description="Blog" url={`${config.siteUrl}`} />
+        <Seo
+          title={news.seoTitle}
+          description={news.metaDescription}
+          keywords={news.keywords}
+          url={`${config.siteUrl}`}
+        />
         <BlogContent news={news} />
         {nextPost && <NextBlog news={nextPost.node} share={news} />}
       </Layout>

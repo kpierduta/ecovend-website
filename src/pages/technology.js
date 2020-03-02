@@ -43,6 +43,9 @@ export const techQuery = graphql`
       chooseTitle
     }
     contentfulTechnologyPage {
+      seoTitle
+      metaDescription
+      keywords
       displayTechnologyCard
       displayTechnologySection
       title
@@ -76,8 +79,9 @@ export default class TechnologyPage extends React.Component {
     return (
       <Layout>
         <Seo
-          title="Technology"
-          description="Technology we worked on!"
+          title={technology.seoTitle}
+          description={technology.metaDescription}
+          keywords={technology.keywords}
           url={`${config.siteUrl}`}
         />
         <BreadCrumbs undelineText="Tech" simpleText="nology" />
