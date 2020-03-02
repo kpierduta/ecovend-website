@@ -16,6 +16,9 @@ const query = graphql`
       email
       mobileNumber
     }
+    contentfulCaseStudyPage {
+      displayPage
+    }
   }
 `;
 
@@ -33,10 +36,11 @@ const IndexLayout = ({ children }) => (
         query={query}
         render={data => {
           const heading = data.contentfulTopBar;
+          const caseStudy = data.contentfulCaseStudyPage;
           return (
             <div>
               <Heading heading={heading} />
-              <Header />
+              <Header display={caseStudy.displayPage} />
               <div>{children}</div>
               <Footer />
             </div>

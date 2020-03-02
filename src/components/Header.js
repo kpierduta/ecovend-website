@@ -66,6 +66,7 @@ export default class Header extends React.Component {
 
   render() {
     const { view } = this.state;
+    const { display } = this.props;
     return (
       <Navbar className="navbar" role="navigation" aria-label="main navigation">
         <div className="container">
@@ -98,9 +99,6 @@ export default class Header extends React.Component {
               <LinkStyled to="/technology" className="navbar-item is-size-6">
                 Technology
               </LinkStyled>
-              {/* <LinkStyled to="/products" className="navbar-item  is-size-6">
-                Products
-              </LinkStyled> */}
               <div className="navbar-item has-dropdown is-hoverable">
                 <LinkStyled to="/products" className="navbar-item  is-size-6">
                   Products
@@ -140,11 +138,11 @@ export default class Header extends React.Component {
               <LinkStyled to="/news" className="navbar-item is-size-6">
                 News
               </LinkStyled>
-              {/*
-              <LinkStyled to="/case" className="navbar-item is-size-6">
-                Case Studies
-              </LinkStyled>
-               */}
+              {display && (
+                <LinkStyled to="/case" className="navbar-item is-size-6">
+                  Case Studies
+                </LinkStyled>
+              )}
               <LinkStyled to="/faq" className="navbar-item is-size-6">
                 FAQ
               </LinkStyled>

@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ResultStep from './ResultStep';
-import ResultCounter from './ResultCounter';
-
 const Container = styled.section`
   font-family: ${props => props.theme.primaryFontFamily};
   .title.is-2 {
@@ -17,12 +14,6 @@ const Container = styled.section`
 
 const Wrapper = styled.div`
   border-top: 4px solid ${props => props.theme.secondaryColor};
-`;
-
-const Bottom = styled.div`
-  border-bottom: 4px solid ${props => props.theme.secondaryColor};
-  margin-top: 2rem;
-  padding-bottom: 2rem;
 `;
 
 const Result = () => (
@@ -87,24 +78,6 @@ const Result = () => (
           </p>
         </div>
       </Wrapper>
-      <Bottom className="columns">
-        <div className="column is-3">
-          <ResultCounter text="1" />
-          <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
-        </div>
-        <div className="column is-3">
-          <ResultCounter text="2" />
-          <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
-        </div>
-        <div className="column is-3">
-          <ResultCounter text="3" />
-          <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
-        </div>
-        <div className="column is-3">
-          <ResultCounter text="4" />
-          <ResultStep text="In May 2017, Brakes and ACM are finalist for the MRW National Recycling award for business partnership of the Year award" />
-        </div>
-      </Bottom>
     </div>
   </Container>
 );
