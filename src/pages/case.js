@@ -20,6 +20,7 @@ export const caseQuery = graphql`
           slug
           order
           image {
+            title
             file {
               url
             }

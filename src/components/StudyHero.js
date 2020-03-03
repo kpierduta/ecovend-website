@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 
 import StudyCard from './StudyCard';
 
@@ -12,7 +11,7 @@ const StudyHero = ({ data }) => (
   <Container className="section">
     <div className="container">
       <BreadCrumbs underlineText="Case" simpleText=" Studies" />
-      <div className="columns is-multiline">
+      <div className="columns is-multiline is-flex">
         {data.map(items => (
           <div className="column is-4">
             <StudyCard data={items.node} />
