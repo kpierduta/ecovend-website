@@ -6,7 +6,7 @@ import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import CaseStudyHero from '../components/CaseStudyHero';
 import CaseContent from '../components/CaseContent';
-import CaseCard from '../components/CaseCard';
+import CaseStats from '../components/CaseStats';
 import Approach from '../components/Approach';
 import Contact from '../components/Contact';
 import Result from '../components/Result';
@@ -88,7 +88,7 @@ export default class Case extends React.Component {
         />
         <CaseStudyHero />
         <CaseContent data={page} />
-        <CaseCard data={page.cards} />
+        <CaseStats data={page.cards} />
         <Approach data={page} />
         <Result data={page} />
         <Contact />

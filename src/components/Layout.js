@@ -9,6 +9,7 @@ import config from '../utils/config';
 import Heading from './Heading';
 import Header from './Header';
 import Footer from './Footer';
+import CookiesPopUp from './CookiesPopUp';
 
 const query = graphql`
   query LayoutQuery {
@@ -43,6 +44,7 @@ const IndexLayout = ({ children }) => (
               <Header display={caseStudy.displayPage} />
               <div>{children}</div>
               <Footer />
+              <CookiesPopUp />
             </div>
           );
         }}

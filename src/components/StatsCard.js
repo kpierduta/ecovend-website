@@ -1,16 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Conatiner = styled.div`
-  margin-left: 1rem;
+const Container = styled.div`
   padding: 4rem 0rem;
   background-color: ${props => props.background};
 `;
 
-const CaseCardConatiner = ({ title, subtitle, color }) => {
+const StatsCard = ({ title, subtitle, color }) => {
   let background;
-
-  console.log(typeof color);
   if (color == 'Orange') {
     background = '#F26F1E';
   } else if (color == 'Yellow Green') {
@@ -22,11 +19,11 @@ const CaseCardConatiner = ({ title, subtitle, color }) => {
   }
 
   return (
-    <Conatiner className="column" background={background}>
-      <h4 className="title is-4">{title}</h4>
-      <h3 className="subtitle is-3">{subtitle}</h3>
-    </Conatiner>
+    <Container background={background}>
+      <h4 className="title is-4 has-text-white">{title}</h4>
+      <h3 className="subtitle is-3 has-text-white">{subtitle}</h3>
+    </Container>
   );
 };
 
-export default CaseCardConatiner;
+export default StatsCard;
