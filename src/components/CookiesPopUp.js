@@ -23,9 +23,14 @@ const Container = styled.div`
 `;
 
 const CookiesPopUp = () => {
-  const [display, changeDisplay] = useState(true);
+  const [display, setDisplay] = useState(true);
 
-  if (localStorage.getItem('cookieAccepted')) {
+  const rememberME =
+    typeof window !== `undefined`
+      ? window.localStorage.getItem('cookieAccepted')
+      : null;
+
+  if (rememberME) {
     return null;
   }
   return (
@@ -38,8 +43,8 @@ const CookiesPopUp = () => {
         <button
           type="button"
           onClick={() => {
-            localStorage.setItem('cookieAccepted', true);
-            changeDisplay(false);
+            window.localStorage.setItem('cookieAccepted', true);
+            setDisplay(false);
           }}
           className="button is-warning is-rounded"
         >
