@@ -43,6 +43,7 @@ const LinkStyled = styled(Link)`
 
 const Footer = () => (
   <Container className="section">
+  <div class="container">
     <div className="columns is-centered">
       <div className="column  is-10">
         <div className="columns is-variable is-8 second">
@@ -109,6 +110,7 @@ const Footer = () => (
           ©2020 by EcoVend Reverse Vending.
         </p>
       </div>
+    </div>
     </div>
   </Container>
 );

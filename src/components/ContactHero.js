@@ -1,8 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Section = styled.div`
+  .column {
+    padding: 0rem !important;
+    :nth-child(even) {
+      text-align: right;
+    }
+  }
+`;
 
 const ContactHero = ({ data }) => {
   return (
-    <section className="section">
+    <Section className="section">
       <div className="container">
         <h5 className="title is-5 is-spaced">{data.mainTitle}</h5>
         <h5 className="subtitle is-6">{data.description.description}</h5>
@@ -14,7 +24,7 @@ const ContactHero = ({ data }) => {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
