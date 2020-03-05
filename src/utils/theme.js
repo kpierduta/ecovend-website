@@ -48,14 +48,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .title{
-    font-weight: 500 !important;
+   font-weight: 600 !important;
     letter-spacing: 1.1px;
     line-height:2;
   }
 
   .subtitle.is-5{
     font-size: 17px !important;
-    font-weight: 500 !important;
+   font-weight: 600 !important;
     letter-spacing:1.1px;
     line-height: 2;
   }
@@ -76,7 +76,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .has-text-weight-medium {
-    font-weight: 500 !important;
+   font-weight: 600 !important;
   }
 
 .button.is-primary{
