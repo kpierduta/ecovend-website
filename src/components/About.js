@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { Link } from 'gatsby';
 
 import Player from './Player';
 
@@ -8,7 +8,7 @@ const Section = styled.section`
   margin-top: 1rem;
 `;
 
-const AnchorStyled = styled(AnchorLink)`
+const AnchorStyled = styled(Link)`
   margin-top: 2rem;
   background: transparent;
   border: none;
@@ -29,7 +29,7 @@ class About extends React.Component {
                 {home.sectionFirstSubtitle.sectionFirstSubtitle}
               </h6>
               <h6 className="subtitle is-6">{home.sectionSecondSubtitle}</h6>
-              <AnchorStyled href="#contact" className="title is-5">
+              <AnchorStyled to="/contact" className="title is-5">
                 <span className="has-text-danger">Get in touch </span> to learn
                 more
               </AnchorStyled>

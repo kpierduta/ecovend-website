@@ -6,6 +6,7 @@ import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import AdvertisingHero from '../components/AdvertisingHero';
 import Rvm from '../components/RvmAdvertising';
+import AdvertisingVideo from '../components/AdvertisingVideo';
 import Infographic from '../components/Infographic';
 
 export const advertQuery = graphql`
@@ -74,6 +75,7 @@ export default class AdvertisingPage extends React.Component {
         />
         <AdvertisingHero adv={adv} />
         <Rvm adv={adv} hero={home} />
+        <AdvertisingVideo adv={adv} />
         <Infographic data={adv} />
       </Layout>
     );

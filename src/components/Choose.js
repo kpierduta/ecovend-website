@@ -14,6 +14,9 @@ const Section = styled.section`
   .text {
     padding: 0rem 0.5rem;
   }
+  .card.has-text-left {
+    width: 100%;
+  }
 `;
 
 class Choose extends React.Component {

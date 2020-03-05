@@ -11,7 +11,7 @@ const Container = styled.section`
 
   .column.is-4.is-flex {
     padding: 0rem !important;
-    height: 30rem;
+    height: 25rem;
   }
 
   .circle {
@@ -19,7 +19,7 @@ const Container = styled.section`
     background-image: url(/images/circle-icon.jpg);
     background-size: contain;
     background-repeat: no-repeat;
-    padding: 30% 20%;
+    padding: 32% 20%;
   }
 `;
 
