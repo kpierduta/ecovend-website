@@ -19,7 +19,7 @@ const Container = styled.section`
     background-image: url(/images/circle-icon.jpg);
     background-size: contain;
     background-repeat: no-repeat;
-    padding: 32% 20%;
+    padding: 32% 25% 32% 20%;
   }
 `;
 

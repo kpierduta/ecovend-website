@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
+  .columns {
+    margin-top: 5rem;
+  }
   .column {
     padding: 0rem !important;
     :nth-child(even) {
