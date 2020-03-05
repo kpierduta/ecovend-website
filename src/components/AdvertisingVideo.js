@@ -18,8 +18,8 @@ const Container = styled.div`
   .second {
     padding: 0rem 0rem 0rem 1.5rem;
     @media only screen and (max-width: 600px) {
-      padding: 0rem;
     }
+    text-align: right;
   }
 `;
 
