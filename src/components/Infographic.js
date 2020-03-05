@@ -24,7 +24,7 @@ const Container = styled.section`
   .hero-body {
     padding: 8rem 2.5rem;
     @media only screen and (max-width: 1024px) {
-      padding: 6.5rem 2.5rem;
+      padding: 5rem 3rem;
     }
   }
 `;
@@ -38,7 +38,7 @@ class Infographic extends React.Component {
           <div className="container">
             <div className="columns">
               {data.infoGraphicsPoint.map(items => (
-                <div className="column is-4 has-text-centered is-flex">
+                <div className="column is-4 has-text-centered">
                   <div className="circle">
                     <section className="hero">
                       <div className="hero-body">
