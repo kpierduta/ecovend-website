@@ -43,74 +43,74 @@ const LinkStyled = styled(Link)`
 
 const Footer = () => (
   <Container className="section">
-  <div class="container">
-    <div className="columns is-centered">
-      <div className="column  is-10">
-        <div className="columns is-variable is-8 second">
-          <div className="column">
-            <h1 className="title is-5 is-spaced has-text-white">CONTACT</h1>
-            <a href="tel:01992 765 206" className="subtitle is-6">
-              01992 765 206
-            </a>
-            <a href="mailto:info@eco-vend.co.uk" className="subtitle is-6">
-              info@eco-vend.co.uk
-            </a>
-            <LinkStyled to="/" className="subtitle is-6">
-              ECO House, Lea Road, Waltham
-            </LinkStyled>
-            <LinkStyled to="/" className="subtitle is-6">
-              Abbey, Hertfordshire, EN9 1AS
-            </LinkStyled>
+    <div className="container">
+      <div className="columns is-centered">
+        <div className="column  is-four-fifths">
+          <div className="columns   second">
+            <div className="column is-5">
+              <h1 className="title is-5 is-spaced has-text-white">CONTACT</h1>
+              <a href="tel:01992 765 206" className="subtitle is-6">
+                01992 765 206
+              </a>
+              <a href="mailto:info@eco-vend.co.uk" className="subtitle is-6">
+                info@eco-vend.co.uk
+              </a>
+              <LinkStyled to="/" className="subtitle is-6">
+                ECO House, Lea Road, Waltham
+              </LinkStyled>
+              <LinkStyled to="/" className="subtitle is-6">
+                Abbey, Hertfordshire, EN9 1AS
+              </LinkStyled>
+            </div>
+            <div className="column is-5">
+              <h1 className="title is-5 is-spaced has-text-white">SOCIAL</h1>
+              <LinkStyled className="is-inline">
+                <i className="fab fa-linkedin" />
+              </LinkStyled>
+              <LinkStyled className="is-inline">
+                <i className="fab fa-twitter-square" />
+              </LinkStyled>
+              <LinkStyled to="/" className="subtitle is-6 text">
+                Follow us
+              </LinkStyled>
+            </div>
+            <div className="column is-2">
+              <h1 className="title is-5 is-spaced has-text-white">LEGAL</h1>
+              <a
+                href="./pdf/Privacy-Notice.pdf"
+                target="_blank"
+                className="is-size-6"
+              >
+                POLICIES
+              </a>
+              <a
+                href="./pdf/GDPR-PRIVACY-STATEMENT.pdf"
+                className="is-size-6"
+                target="_blank"
+              >
+                PRIVACY STATEMENT
+              </a>
+              <a
+                href="./pdf/WEBSITE-TERMS-AND-CONDITIONS.pdf"
+                className="is-size-6"
+                target="_blank"
+              >
+                TERMS AND CONDITIONS
+              </a>
+              <a
+                href="./pdf/OPT-OUT-FORM.pdf"
+                className="is-size-6"
+                target="_blank"
+              >
+                FRANCHISE OPPORTIUNITY
+              </a>
+            </div>
           </div>
-          <div className="column">
-            <h1 className="title is-5 is-spaced has-text-white">SOCIAL</h1>
-            <LinkStyled className="is-inline">
-              <i className="fab fa-linkedin" />
-            </LinkStyled>
-            <LinkStyled className="is-inline">
-              <i className="fab fa-twitter-square" />
-            </LinkStyled>
-            <LinkStyled to="/" className="subtitle is-6 text">
-              Follow us
-            </LinkStyled>
-          </div>
-          <div className="column">
-            <h1 className="title is-5 is-spaced has-text-white">LEGAL</h1>
-            <a
-              href="./pdf/Privacy-Notice.pdf"
-              target="_blank"
-              className="is-size-6"
-            >
-              POLICIES
-            </a>
-            <a
-              href="./pdf/GDPR-PRIVACY-STATEMENT.pdf"
-              className="is-size-6"
-              target="_blank"
-            >
-              PRIVACY STATEMENT
-            </a>
-            <a
-              href="./pdf/WEBSITE-TERMS-AND-CONDITIONS.pdf"
-              className="is-size-6"
-              target="_blank"
-            >
-              TERMS AND CONDITIONS
-            </a>
-            <a
-              href="./pdf/OPT-OUT-FORM.pdf"
-              className="is-size-6"
-              target="_blank"
-            >
-              FRANCHISE OPPORTIUNITY
-            </a>
-          </div>
+          <p className="subtitle is-6 has-text-white has-text-centered">
+            ©2020 by EcoVend Reverse Vending.
+          </p>
         </div>
-        <p className="subtitle is-6 has-text-white has-text-centered">
-          ©2020 by EcoVend Reverse Vending.
-        </p>
       </div>
-    </div>
     </div>
   </Container>
 );
