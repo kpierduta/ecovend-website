@@ -13,8 +13,8 @@ export const theme = {
   lightShade,
   secondaryBackground,
   lightBackground,
-  primaryFontFamily: "'Abadi', sans-serif",
-  secondaryFontFamily: "'Abadi', sans-serif",
+  primaryFontFamily: "'Abadi'",
+  secondaryFontFamily: "'Abadi'",
   primaryColor: brandColor,
   secondaryColor: darkShade,
   hovercolor: lightShade,
@@ -48,14 +48,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .title{
-    font-weight: 800 !important;
+    font-weight: 600 !important;
     letter-spacing: 1.1px;
     line-height:2;
   }
 
   .subtitle.is-5{
     font-size: 17px !important;
-    font-weight: 800 !important;
+    font-weight: 600 !important;
     letter-spacing:1.1px;
     line-height: 2;
   }
@@ -76,7 +76,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .has-text-weight-medium {
-    font-weight: 800 !important;
+    font-weight: 600 !important;
   }
 
 .button.is-primary{
@@ -92,7 +92,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 .button.is-link{
-  font-weight: 600 !important;
+  font-weight: 400 !important;
   background-color: #fff  !important;
   color:  ${props => props.theme.secondaryColor} !important;
   transition: opacity 0.2s !important;

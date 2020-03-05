@@ -22,19 +22,19 @@ const Container = styled.section`
   .Heading {
     font-size: ${props => props.theme.fontSizeMedium};
     margin-bottom: 4rem;
-    font-weight: 500;
+    font-weight: 600;
     color: ${props => props.theme.secondaryColor};
   }
   .text {
     margin-top: 2rem;
     color: ${props => props.theme.secondaryColor};
-    font-weight: 200;
+    font-weight: 400;
     line-height: 1.5;
   }
   .content {
     margin-top: 2rem;
     color: ${props => props.theme.secondaryColor};
-    font-weight: 200;
+    font-weight: 400;
     padding-bottom: 10rem;
   }
   .content li {
