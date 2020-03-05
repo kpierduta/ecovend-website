@@ -9,22 +9,34 @@ const Container = styled.section`
     margin-top: -0.5rem;
   }
 
-  .column.is-4.is-flex {
-    height: 24rem;
-  }
   .circle {
     /* padding: 6rem 2rem 1rem 3.5rem; */
     background-image: url(/images/circle-icon.jpg);
     background-size: contain;
     background-repeat: no-repeat;
+    height: 22rem;
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation: Portrait) {
+      height: 20rem;
+      margin-left: 25%;
+      margin-right: 25%;
+    }
+    @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+      margin: 0rem;
+    }
   }
   /* .hero.is-large .hero-body {
     padding-top: 8rem !important;
   } */
-  .hero-body {
-    padding: 8rem 2.5rem;
+  .text {
+    padding: 8rem 3rem 8rem 3rem;
     @media only screen and (max-width: 1024px) {
-      padding: 5rem 3rem;
+      padding: 6rem 2.5rem 5rem 3rem;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation: Portrait) {
+      padding: 5rem 4rem 0rem 4rem;
+    }
+    @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+      padding: 4rem;
     }
   }
 `;
@@ -38,15 +50,11 @@ class Infographic extends React.Component {
           <div className="container">
             <div className="columns">
               {data.infoGraphicsPoint.map(items => (
-                <div className="column is-4 has-text-centered">
+                <div className="column is-4 has-text-centered is-flex">
                   <div className="circle">
-                    <section className="hero">
-                      <div className="hero-body">
-                        <div className="container">
-                          <h1 className="subtitle is-5">{items}</h1>
-                        </div>
-                      </div>
-                    </section>
+                    <div className="text">
+                      <h1 className="subtitle is-5">{items}</h1>
+                    </div>
                   </div>
                 </div>
               ))}
