@@ -31,6 +31,9 @@ const Container = styled.section`
       color: #fff;
     }
   }
+  .column.is-2 {
+    width: 17.66667% !important;
+  }
 `;
 
 const LinkStyled = styled(Link)`
