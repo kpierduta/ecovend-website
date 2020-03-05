@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const Container = styled.section`
   .background {
     background-color: ${props => props.theme.lightBackground};
-    padding-right: 0rem !important;
   }
   .video {
     width: 100% !important;

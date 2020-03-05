@@ -13,6 +13,7 @@ const Container = styled.div`
 
   .background {
     background-color: ${props => props.theme.lightBackground};
+    padding-right: 0rem !important;
   }
   .second {
     padding: 0rem 0rem 0rem 1.5rem;
