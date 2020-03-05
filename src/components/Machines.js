@@ -2,10 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.section`
+  .heading {
+    padding-left: 0.75rem;
+  }
   .table td,
   .table th {
     border: none;
-    padding: 1rem 0rem 1rem 1rem;
+    padding: 1rem 0.5rem 1rem 1rem;
     line-height: 34px;
   }
 
@@ -18,12 +21,7 @@ const Container = styled.section`
   }
 
   .table.is-striped tbody tr:not(.is-selected):nth-child(even) {
-    background-color: #ffff !important;
-  }
-
-  .table tr.is-selected {
     background-color: #fde6d8 !important;
-    color: #000000 !important;
   }
 
   .table__wrapper {
@@ -55,7 +53,7 @@ const Machines = ({ data }) => (
           <img src={data.machineImage.file.url} alt={data.machineImage.title} />
         </div>
         <div className="column">
-          <h1 className="title is-5 has-text-danger">SPECIFICATIONS</h1>
+          <h1 className="title is-5 has-text-danger heading">SPECIFICATIONS</h1>
           <div className="panel">
             <div className="panel-block">
               <div className="data">
@@ -90,7 +88,7 @@ const Machines = ({ data }) => (
                         <th>REWARD SYSTEM:</th>
                         <td>{data.rewardsSystems}</td>
                       </tr>
-                      <tr className="is-selected">
+                      <tr>
                         <th>MATERIAL TYPES:</th>
                         <td>{data.materialTypes}</td>
                       </tr>
@@ -98,7 +96,7 @@ const Machines = ({ data }) => (
                         <th>CAPACITY:</th>
                         <td>{data.capacity}</td>
                       </tr>
-                      <tr className="is-selected">
+                      <tr>
                         <th>AUTOMATION:</th>
                         <td>{data.automation}</td>
                       </tr>
@@ -106,7 +104,7 @@ const Machines = ({ data }) => (
                         <th>MAX CONTAINER SIZE:</th>
                         <td>{data.maxContainerSize}</td>
                       </tr>
-                      <tr className="is-selected">
+                      <tr>
                         <th>MATERIAL SORTING & COMPACTION:</th>
                         <td>{data.materialSortingCompaction}</td>
                       </tr>
@@ -114,7 +112,7 @@ const Machines = ({ data }) => (
                         <th>OUTPUTS:</th>
                         <td>{data.outputs}</td>
                       </tr>
-                      <tr className="is-selected">
+                      <tr>
                         <th>REPORTING:</th>
                         <td>{data.reporting}</td>
                       </tr>
@@ -123,7 +121,7 @@ const Machines = ({ data }) => (
                         <td>{data.powerSupply}</td>
                       </tr>
                       <tr>
-                        <th>Productivity:</th>
+                        <th>PRODUCTIVITY</th>
                         <td>{data.productivity}</td>
                       </tr>
                       <tr>

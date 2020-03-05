@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-const container = styled.section`
+const Container = styled.section`
   background-color: ${props => props.theme.secondaryColor};
   padding-bottom: 0.75rem;
   @media only screen and (max-width: 768px) {
@@ -24,11 +24,12 @@ const container = styled.section`
   .text {
     margin-top: 0.35rem;
   }
-  a{
+  a {
     color: #fff;
-  display: block;
-  :hover {
-    color: #fff;
+    display: block;
+    :hover {
+      color: #fff;
+    }
   }
 `;
 
@@ -37,10 +38,11 @@ const LinkStyled = styled(Link)`
   display: block;
   :hover {
     color: #fff;
+  }
 `;
 
 const Footer = () => (
-  <container className="section">
+  <Container className="section">
     <div className="columns is-centered">
       <div className="column  is-10">
         <div className="columns is-variable is-8 second">
@@ -108,7 +110,7 @@ const Footer = () => (
         </p>
       </div>
     </div>
-  </container>
+  </Container>
 );
 
 export default Footer;

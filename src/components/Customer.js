@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const container = styled.section`
+const Container = styled.section`
   font-family: ${props => props.theme.primaryFontFamily};
   font-size: 15px;
   background-color: #e1eff2;
@@ -51,7 +51,7 @@ class Customer extends React.Component {
   render() {
     const { home } = this.props;
     return (
-      <container image={home.prImage.file.url}>
+      <Container image={home.prImage.file.url}>
         <div className="columns">
           <div className="column">
             <section className="section">
@@ -71,7 +71,7 @@ class Customer extends React.Component {
           </div>
           <div className="column" />
         </div>
-      </container>
+      </Container>
     );
   }
 }
