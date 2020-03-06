@@ -45,7 +45,7 @@ const Footer = () => (
   <Container className="section">
     <div className="container">
       <div className="columns is-centered">
-        <div className="column  is-four-fifths">
+        <div className="column  is-10">
           <div className="columns   second">
             <div className="column is-5">
               <h1 className="title is-5 is-spaced has-text-white">CONTACT</h1>
@@ -74,7 +74,7 @@ const Footer = () => (
                 Follow us
               </LinkStyled>
             </div>
-            <div className="column is-2-desktop is-12-touch">
+            <div className="column is-3-desktop  is-12-touch">
               <h1 className="title is-5 is-spaced has-text-white">LEGAL</h1>
               <a
                 href="./pdf/Privacy-Notice.pdf"
