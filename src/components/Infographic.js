@@ -36,6 +36,9 @@ const Container = styled.section`
     @media only screen and (max-width: 1024px) and (min-width: 768px) {
       font-size: 14px !important;
     }
+    @media only screen and (max-width: 1366px) and (min-width: 1024px) {
+      font-size: 17px !important;
+    }
   }
 `;
 
