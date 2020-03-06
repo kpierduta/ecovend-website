@@ -4,9 +4,9 @@ import styled from 'styled-components';
 const StyledCard = styled.div`
   transition: transform 0.2s;
   .card {
-    min-height: 28rem;
     background: transparent;
     border: 1px solid black;
+    width: 100%;
   }
   img {
     margin-top: 0.5rem;

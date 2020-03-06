@@ -31,9 +31,6 @@ const Container = styled.section`
       color: #fff;
     }
   }
-  .column.is-2 {
-    width: 17.66667% !important;
-  }
 `;
 
 const LinkStyled = styled(Link)`
@@ -77,7 +74,7 @@ const Footer = () => (
                 Follow us
               </LinkStyled>
             </div>
-            <div className="column is-2">
+            <div className="column is-2-desktop is-12-touch">
               <h1 className="title is-5 is-spaced has-text-white">LEGAL</h1>
               <a
                 href="./pdf/Privacy-Notice.pdf"
