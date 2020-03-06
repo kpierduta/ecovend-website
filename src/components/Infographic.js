@@ -9,17 +9,33 @@ const Container = styled.section`
     margin-top: -0.5rem;
   }
 
+  .columns {
+    @media only screen and (max-width: 1024px) and (min-width: 768px) {
+      display: flex;
+    }
+  }
+
   .column.is-4.is-flex {
     padding: 0rem !important;
     height: 25rem;
   }
 
   .circle {
-    /* padding: 6rem 2rem 1rem 3.5rem; */
     background-image: url(/images/circle-icon.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     padding: 32% 23% 32% 21%;
+    @media only screen and (max-width: 1024px) and (min-width: 768px) {
+      padding: 27% 10% 31% 14%;
+    }
+    @media only screen and (max-width: 2900px) and (min-width: 1420px) {
+      padding: 30% 22% 25% 15%;
+    }
+  }
+  .subtitle.is-5 {
+    @media only screen and (max-width: 1024px) and (min-width: 768px) {
+      font-size: 14px !important;
+    }
   }
 `;
 

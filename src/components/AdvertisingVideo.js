@@ -1,12 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Container = styled.div`
-  padding: 2rem 3rem;
-  @media only screen and (max-width: 600px) {
-    padding: 0rem;
-  }
-
+const Container = styled.section`
   ul {
     list-style: disc;
   }
@@ -17,15 +12,17 @@ const Container = styled.div`
   }
   .second {
     padding: 0rem 0rem 0rem 1.5rem;
-    @media only screen and (max-width: 600px) {
-    }
     text-align: right;
+    @media only screen and (max-width: 1024px) and (min-width: 768px) {
+      adding: 0rem;
+      text-align: center;
+    }
   }
 `;
 
 const AdvertisingVideo = ({ adv }) => (
   <Container className="section">
-    <div className="container is-medium">
+    <div className="container">
       <div className="columns is-centered">
         <div className="column is-11 background">
           <div className="columns">
