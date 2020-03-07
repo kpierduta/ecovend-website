@@ -15,6 +15,9 @@ const Section = styled.section`
   .author {
     margin-bottom: 1rem;
   }
+  .is-size-6 {
+    padding-left: 0.65rem;
+  }
 `;
 
 class BlogContent extends React.Component {

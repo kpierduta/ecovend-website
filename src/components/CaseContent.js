@@ -5,12 +5,6 @@ const Container = styled.section`
   font-family: ${props => props.theme.primaryFontFamily};
   line-height: 34px;
   padding-top: 0rem !important;
-  .has-text-orange {
-    color: ${props => props.theme.secondaryColor};
-  }
-  .img {
-    height: 25rem;
-  }
   .para {
     padding: 2rem 0rem 0rem 0rem;
   }
@@ -28,35 +22,35 @@ const Container = styled.section`
 const CaseContent = ({ data }) => (
   <Container className="section">
     <div className="container">
-      <div className="columns is-multiline is-flex">
+      <div className="columns is-multiline">
         <div className="column is-7">
           <img src={data.mainImage.file.url} alt={data.mainImage.title} />
         </div>
         <div className="column is-5">
-          <h1 className="title is-4 has-text-orange">{data.title}</h1>
+          <h1 className="title is-4 has-text-danger">{data.title}</h1>
           <p>
-            <span className="has-text-weight-semibold	has-text-orange">
+            <span className="has-text-weight-semibold	has-text-danger">
               Industry:
             </span>{' '}
             {data.industry}
           </p>
           <p>
-            <span className="has-text-weight-semibold has-text-orange">
+            <span className="has-text-weight-semibold has-text-danger">
               Location:
             </span>
             {data.location}
           </p>
           <p>
-            <span className="has-text-weight-semibold	 has-text-orange">
+            <span className="has-text-weight-semibold	has-text-danger">
               Size:
             </span>
             {data.size}
           </p>
-          <h1 className="title is-5 para has-text-orange">Company Bio</h1>
+          <h1 className="title is-5 para has-text-danger">Company Bio</h1>
           <p>{data.companyBio.companyBio}</p>
         </div>
         <div className="column is-7">
-          <h1 className="subtitle is-3 comment has-text-orange">OVERVIEW</h1>
+          <h1 className="subtitle is-3 comment has-text-danger">OVERVIEW</h1>
           <h1 className="subtitle is-5 para has-text-dark has-text-weight-semibold">
             {data.overviewTitle}
           </h1>
@@ -66,7 +60,7 @@ const CaseContent = ({ data }) => (
           </p>
         </div>
         <div className="column is-5">
-          <p className="is-size-5 comment is-italic is-pulled-right-is-desktop has-text-orange text">
+          <p className="is-size-5 comment is-italic is-pulled-right-is-desktop has-text-danger">
             {data.comment}
           </p>
           <div className="is-italic is-pulled-right">
