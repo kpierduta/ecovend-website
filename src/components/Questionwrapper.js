@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import FaqItem from './FaqItem';
 
 const CardWrapper = styled.section`
-  margin: 2.5rem 0rem;
+  padding: 1.5rem 0.5rem;
   :first-child {
     margin-top: 6rem;
   }
@@ -18,7 +18,7 @@ class Question extends React.Component {
     return (
       <React.Fragment>
         {faq.map(item => (
-          <CardWrapper classNaame="section">
+          <CardWrapper className="section">
             <FaqItem
               questions={item.node.question.question}
               answer={item.node.answer.answer}

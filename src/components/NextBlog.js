@@ -21,6 +21,10 @@ const Section = styled.section`
   img {
     height: 15rem;
     width: 15rem;
+    margin-right: 1rem;
+    @media screen and (max-width: 768px) {
+      margin-right: 0rem;
+    }
   }
   .first {
     background-color: #f7f7f7;
@@ -59,17 +63,10 @@ const NextBlog = ({ news, share }) => {
               </div>
             </div>
             <div className="column second">
-              <article className="media">
-                <figure className=" media-left">
-                  <p className="image">
-                    <img
-                      src={news.thumbnail.file.url}
-                      alt={news.thumbnail.title}
-                    />
-                  </p>
-                </figure>
-                <div className="media-content">
-                  <div className="content">
+              <article className="media is-block-mobile has-text-centered-mobile">
+                <img src={news.thumbnail.file.url} alt={news.thumbnail.title} />
+                <div className="media-content ">
+                  <div className="content has-text-centered-mobile">
                     <p className="subtitle is-5 has-text-white">Next Blog</p>
                     <p className="subtitle is-5 has-text-white">
                       {news.newsTitle}

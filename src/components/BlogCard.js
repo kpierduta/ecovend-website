@@ -7,6 +7,9 @@ const Section = styled.section`
   img {
     border-radius: 1rem;
     height: 18rem !important;
+    @media only screen and (max-width: 1024px) and (min-width: 768px) {
+      height: 95% !important;
+    }
   }
 
   .card {

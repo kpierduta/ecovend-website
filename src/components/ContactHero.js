@@ -10,6 +10,9 @@ const Section = styled.div`
     :nth-child(even) {
       text-align: right;
     }
+    @media only screen and (max-width: 1024px) and (min-width: 768px) {
+      text-align: center !important;
+    }
   }
 `;
 

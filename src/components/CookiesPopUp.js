@@ -46,7 +46,8 @@ const CookiesPopUp = () => {
             window.localStorage.setItem('cookieAccepted', true);
             setDisplay(false);
           }}
-          className="button is-primary is-rounded">
+          className="button is-primary is-rounded"
+        >
           Agree
         </button>
       </div>

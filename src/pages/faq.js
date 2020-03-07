@@ -8,13 +8,6 @@ import Layout from '../components/Layout';
 import BreadCrumbs from '../components/BreadCrumbs';
 import Question from '../components/Questionwrapper';
 
-const Container = styled.section`
-  font-family: ${props => props.theme.primaryFontFamily}!important;
-  .title {
-    margin-bottom: 6rem;
-  }
-`;
-
 export const faqQuery = graphql`
   query faq {
     allContentfulFaqPage {
