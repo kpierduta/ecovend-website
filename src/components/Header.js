@@ -25,6 +25,11 @@ const Navbar = styled.div`
       color: ${props => props.theme.primaryColor};
     }
   }
+  .column {
+    @media only screen and (max-width: 768px) {
+      padding: 0rem !important;
+    }
+  }
   .navbar-end {
     @media only screen and (max-width: 768px) {
       text-align: center;
