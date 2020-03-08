@@ -18,7 +18,7 @@ class Question extends React.Component {
     return (
       <React.Fragment>
         {faq.map(item => (
-          <CardWrapper className="section">
+          <CardWrapper className="section has-text-centered-mobile">
             <FaqItem
               questions={item.node.question.question}
               answer={item.node.answer.answer}

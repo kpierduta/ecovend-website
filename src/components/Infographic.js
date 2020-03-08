@@ -25,6 +25,10 @@ const Container = styled.section`
     background-size: contain;
     background-repeat: no-repeat;
     padding: 32% 23% 32% 21%;
+    @media only screen and (max-width: 600px) {
+      padding: 35% 14% 32% 17%;
+    }
+
     @media only screen and (max-width: 1024px) and (min-width: 768px) {
       padding: 27% 10% 31% 14%;
     }
@@ -33,6 +37,9 @@ const Container = styled.section`
     }
   }
   .subtitle.is-5 {
+    @media only screen and (max-width: 600px) {
+      font-size: 14px !important;
+    }
     @media only screen and (max-width: 1024px) and (min-width: 768px) {
       font-size: 14px !important;
     }

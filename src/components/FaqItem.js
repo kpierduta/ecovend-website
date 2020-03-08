@@ -15,6 +15,9 @@ const Container = styled.div`
   .column:first-child {
     padding: 0.5rem 0rem 0rem;
   }
+  .is-flex-mobile {
+    justify-content: center;
+  }
 `;
 
 const TitleWrapper = styled.div`
@@ -53,7 +56,7 @@ class FaqItem extends React.Component {
               <h1 className="subtitle is-6">{questions}</h1>
             </TitleWrapper>
           </div>
-          <div className="column">
+          <div className="column is-flex-mobile">
             <a onClick={this.toggleDiv}>
               <i className="Icon fas fa-chevron-circle-down is-pulled-right" />
             </a>
