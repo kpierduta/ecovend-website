@@ -16,8 +16,8 @@ export const advertQuery = graphql`
       metaDescription
       keywords
       title
-      introParagrpah {
-        introParagrpah
+      introParagraph {
+        introParagraph
         childMarkdownRemark {
           html
         }
@@ -90,7 +90,6 @@ export default class AdvertisingPage extends React.Component {
         <AdvertisingHero adv={adv} />
         <Rvm adv={adv} hero={home} />
         <AdvertisingVideo adv={adv} />
-
         <Infographic data={adv} />
       </Layout>
     );

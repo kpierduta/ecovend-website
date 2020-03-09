@@ -22,7 +22,7 @@ class AdvertisingHero extends React.Component {
             <div
               className="subtitle is-6"
               dangerouslySetInnerHTML={{
-                __html: adv.introParagrpah.childMarkdownRemark.html,
+                __html: adv.introParagraph.childMarkdownRemark.html,
               }}
             />
           </div>
