@@ -5,6 +5,7 @@ import BreadCrumbs from './BreadCrumbs';
 
 const Section = styled.section`
   font-family: ${props => props.theme.primaryFontFamily};
+
   strong {
     color: ${props => props.theme.brandColor};
   }
