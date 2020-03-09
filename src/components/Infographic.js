@@ -26,7 +26,7 @@ const Container = styled.section`
     background-repeat: no-repeat;
     padding: 32% 23% 32% 21%;
     @media only screen and (max-width: 600px) {
-      padding: 35% 14% 32% 17%;
+      padding: 34.25% 14% 32% 17%;
     }
 
     @media only screen and (max-width: 1024px) and (min-width: 768px) {
