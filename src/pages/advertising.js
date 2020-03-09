@@ -42,7 +42,21 @@ export const advertQuery = graphql`
       advertisementPoints
       videoSecondTitle
       videoParagraph
-      infoGraphicsPoint
+      infoGraphicsFirstPoint {
+        childMarkdownRemark {
+          html
+        }
+      }
+      infoGraphicsSecondPoint {
+        childMarkdownRemark {
+          html
+        }
+      }
+      infoGraphicsThirdPoint {
+        childMarkdownRemark {
+          html
+        }
+      }
       gallery {
         title
         file {

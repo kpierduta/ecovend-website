@@ -8,6 +8,9 @@ const Container = styled.section`
   img {
     margin-top: -0.5rem;
   }
+  strong {
+    color: #e71018 !important;
+  }
 
   .columns {
     @media only screen and (max-width: 1024px) and (min-width: 768px) {
@@ -57,15 +60,39 @@ class Infographic extends React.Component {
         <div className="section">
           <div className="container">
             <div className="columns">
-              {data.infoGraphicsPoint.map(items => (
-                <div className="column is-4 is-flex">
-                  <div className="circle">
-                    <h1 className="subtitle is-5  has-text-centered">
-                      {items}
-                    </h1>
-                  </div>
+              <div className="column is-4 is-flex">
+                <div className="circle">
+                  <h1
+                    className="subtitle is-5  has-text-centered"
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        data.infoGraphicsFirstPoint.childMarkdownRemark.html,
+                    }}
+                  />
                 </div>
-              ))}
+              </div>
+              <div className="column is-4 is-flex">
+                <div className="circle">
+                  <h1
+                    className="subtitle is-5  has-text-centered"
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        data.infoGraphicsSecondPoint.childMarkdownRemark.html,
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="column is-4 is-flex">
+                <div className="circle">
+                  <h1
+                    className="subtitle is-5  has-text-centered"
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        data.infoGraphicsThirdPoint.childMarkdownRemark.html,
+                    }}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
