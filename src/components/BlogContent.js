@@ -41,7 +41,7 @@ class BlogContent extends React.Component {
               </div>
             </div>
             <p className="is-size-6 has-text-weight-bold author">
-              Author: EcoVend
+              Author: Ecovend
             </p>
             <p className="is-size-6">Published: {news.dateOfPublish}</p>
           </div>

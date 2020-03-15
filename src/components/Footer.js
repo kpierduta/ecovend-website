@@ -79,35 +79,31 @@ const Footer = () => (
               <a
                 href="./pdf/Privacy-Notice.pdf"
                 target="_blank"
-                className="is-size-6"
-              >
+                className="is-size-6">
                 POLICIES
               </a>
               <a
                 href="./pdf/GDPR-PRIVACY-STATEMENT.pdf"
                 className="is-size-6"
-                target="_blank"
-              >
+                target="_blank">
                 PRIVACY STATEMENT
               </a>
               <a
                 href="./pdf/WEBSITE-TERMS-AND-CONDITIONS.pdf"
                 className="is-size-6"
-                target="_blank"
-              >
+                target="_blank">
                 TERMS AND CONDITIONS
               </a>
               <a
                 href="./pdf/OPT-OUT-FORM.pdf"
                 className="is-size-6"
-                target="_blank"
-              >
+                target="_blank">
                 FRANCHISE OPPORTIUNITY
               </a>
             </div>
           </div>
           <p className="subtitle is-6 has-text-white has-text-centered">
-            ©2020 by EcoVend Reverse Vending.
+            ©2020 by Ecovend Reverse Vending.
           </p>
         </div>
       </div>
