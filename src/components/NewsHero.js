@@ -21,7 +21,7 @@ const Section = styled.div`
   }
 `;
 
-const NewsHero = ({ news, category, onCategoryChange }) => {
+const NewsHero = ({ news, category, onCategoryChange, icons }) => {
   return (
     <Section>
       <BreadCrumbs underlineText="News" />

@@ -37,6 +37,11 @@ export const newsQuery = graphql`
         }
       }
     }
+    contentfulHomePage {
+      socialIcons
+      linkedInLink
+      twitterLink
+    }
   }
 `;
 
@@ -53,7 +58,7 @@ export default class NewsPage extends React.Component {
 
   render() {
     const {
-      data: { allContentfulNewsPage: news },
+      data: { allContentfulNewsPage: news, contentfulHomePage: social },
       pageContext,
     } = this.props;
     const { category } = this.state;
@@ -75,6 +80,7 @@ export default class NewsPage extends React.Component {
           news={news.edges}
           category={category}
           onCategoryChange={this.onCategoryChange}
+          icons={social}
         />
         <Pagination pageContext={pageContext} pages={pages} />
       </Layout>

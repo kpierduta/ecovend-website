@@ -1,6 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import { Link, StaticQuery, graphql } from 'gatsby';
+
+export const footerQuery = graphql`
+  query socialIcon {
+    contentfulHomePage {
+      socialIcons
+      linkedInLink
+      twitterLink
+    }
+  }
+`;
 
 const Container = styled.section`
   background-color: ${props => props.theme.secondaryColor};
@@ -62,42 +72,61 @@ const Footer = () => (
                 Abbey, Hertfordshire, EN9 1AS
               </LinkStyled>
             </div>
-            <div className="column is-5">
-              <h1 className="title is-5 is-spaced has-text-white">SOCIAL</h1>
-              <LinkStyled className="is-inline">
-                <i className="fab fa-linkedin" />
-              </LinkStyled>
-              <LinkStyled className="is-inline">
-                <i className="fab fa-twitter-square" />
-              </LinkStyled>
-              <LinkStyled to="/" className="subtitle is-6 text">
-                Follow us
-              </LinkStyled>
-            </div>
+            <StaticQuery
+              query={footerQuery}
+              render={data => {
+                const { contentfulHomePage: icon } = data;
+                return (
+                  <div className="column is-5">
+                    <div
+                      className={icon.socialIcons ? 'is-display' : 'is-hidden'}
+                    >
+                      <h1 className="title is-5 is-spaced has-text-white">
+                        SOCIAL
+                      </h1>
+                      <a href={icon.linkedInLink} className="is-inline">
+                        <i className="fab fa-linkedin" />
+                      </a>
+                      <a href={icon.twitterLink} className="is-inline">
+                        <i className="fab fa-twitter-square" />
+                      </a>
+                      <h1 className="subtitle is-6 text has-text-white">
+                        Follow us
+                      </h1>
+                    </div>
+                  </div>
+                );
+              }}
+            />
+
             <div className="column is-3-desktop  is-12-touch">
               <h1 className="title is-5 is-spaced has-text-white">LEGAL</h1>
               <a
                 href="./pdf/Privacy-Notice.pdf"
                 target="_blank"
-                className="is-size-6">
+                className="is-size-6"
+              >
                 POLICIES
               </a>
               <a
                 href="./pdf/GDPR-PRIVACY-STATEMENT.pdf"
                 className="is-size-6"
-                target="_blank">
+                target="_blank"
+              >
                 PRIVACY STATEMENT
               </a>
               <a
                 href="./pdf/WEBSITE-TERMS-AND-CONDITIONS.pdf"
                 className="is-size-6"
-                target="_blank">
+                target="_blank"
+              >
                 TERMS AND CONDITIONS
               </a>
               <a
                 href="./pdf/OPT-OUT-FORM.pdf"
                 className="is-size-6"
-                target="_blank">
+                target="_blank"
+              >
                 FRANCHISE OPPORTIUNITY
               </a>
             </div>
