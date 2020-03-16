@@ -172,7 +172,7 @@ const styles = [
 const MyMapComponent = compose(
   withProps({
     googleMapURL:
-      'https://maps.googleapis.com/maps/api/js?key=AIzaSyACXe8HurUeBrn3796pbzGIr-KAT0StmNE',
+      'https://maps.googleapis.com/maps/api/js?key=AIzaSyAvLqdmDhitbJ4o041aQEbzb4Ti351Fk84',
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: (
       <div
@@ -192,7 +192,8 @@ const MyMapComponent = compose(
   <GoogleMap
     defaultZoom={17}
     defaultCenter={{ lat: 51.685733, lng: -0.012903 }}
-    options={{ styles }}>
+    options={{ styles }}
+  >
     {props.isMarkerShown && (
       <Marker position={{ lat: 51.685733, lng: -0.012903 }} />
     )}
