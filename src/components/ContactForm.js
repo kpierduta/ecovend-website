@@ -296,7 +296,7 @@ export default withFormik({
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact Form', values }),
+      body: encode({ 'form-name': 'contact Form', ...values }),
     });
     alert('done');
     console.log(values, 'vlaues');
