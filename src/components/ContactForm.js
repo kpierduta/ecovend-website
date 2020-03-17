@@ -76,6 +76,47 @@ const StyledFrom = styled.form`
   }
 `;
 
+const SectorList = [
+  'Food manufacturing',
+  'Food distribution',
+  'Distribution',
+  'Leisure',
+  'Zoos',
+  'Leisure Centre',
+  'Hotels',
+  'Defence',
+  'Transport',
+  'Hospitality',
+  'Retail',
+  'Utilities',
+  'Telecoms',
+  'Power',
+  'Construction',
+  'Public services',
+  'Universities',
+  'Local Authority',
+  'Facilities Management',
+  'Cleaning',
+  'Property management',
+  'Shopping centres',
+  'Office blocks',
+  'Schools',
+  'Hospitals',
+  'Prisons',
+  'Airports',
+  'Healthcare',
+  'Restaurants',
+  'Civil & infrastructure',
+  'Stadia',
+  'Other',
+];
+
+const encode = data => {
+  return Object.keys(data)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join('&');
+};
+
 const ContactForm = props => {
   const {
     values,
@@ -88,7 +129,7 @@ const ContactForm = props => {
   } = props;
 
   return (
-    <StyledFrom onSubmit={handleSubmit}>
+    <StyledFrom data-netlify="true" name="contact Form" onSubmit={handleSubmit}>
       <div className="is-flex">
         <div className="field">
           <div className="control">
@@ -133,9 +174,6 @@ const ContactForm = props => {
               onChange={handleChange}
               onBlur={handleBlur}
             />
-            {errors.phone && touched.phone && (
-              <p className="help is-danger">{errors.phone}</p>
-            )}
           </div>
         </div>
         <div className="field">
@@ -149,9 +187,6 @@ const ContactForm = props => {
               onChange={handleChange}
               onBlur={handleBlur}
             />
-            {errors.address && touched.address && (
-              <p className="help is-danger">{errors.address}</p>
-            )}
           </div>
         </div>
       </div>
@@ -174,49 +209,18 @@ const ContactForm = props => {
       <div className="field">
         <div className="control">
           <div className="select">
-            <select>
-              <option>Select Sector</option>
-              <option>Food manufacturing</option>
-              <option>Food distribution </option>
-              <option>Distribution</option>
-              <option>Leisure </option>
-              <option>Zoos</option>
-              <option>Leisure Centre</option>
-              <option>Hotels </option>
-              <option>Defence </option>
-              <option>Transport </option>
-              <option>Hospitality </option>
-              <option>Retail </option>
-              <option>Utilities </option>
-              <option>Telecoms</option>
-              <option>Power </option>
-              <option>Construction </option>
-              <option>Public services</option>
-              <option>Universities </option>
-              <option>Construction </option>
-              <option>Universities</option>
-              <option>Construction</option>
-              <option>Local Authority </option>
-              <option>Facilities Management</option>
-              <option>Cleaning</option>
-              <option>Property management </option>
-              <option>Shopping centres</option>
-              <option>Office blocks</option>
-              <option>Schools </option>
-              <option>Hospitals </option>
-              <option>Prisons </option>
-              <option>Leisure centres</option>
-              <option>Airports</option>
-              <option>Healthcare </option>
-              <option>Restaurants </option>
-              <option>Civil & infrastructure </option>
-              <option>Stadia</option>
-              <option>Other</option>
+            <select
+              value={values.sector}
+              onChange={handleChange}
+              name="sector"
+              onBlur={handleBlur}
+            >
+              <option value="">Select Sector</option>
+              {SectorList.map(items => (
+                <option value={items}>{items}</option>
+              ))}
             </select>
           </div>
-          {errors.select && touched.select && (
-            <p className="help is-danger">{errors.select}</p>
-          )}
         </div>
       </div>
       <div className="field">
@@ -244,9 +248,6 @@ const ContactForm = props => {
             onChange={handleChange}
             onBlur={handleBlur}
           />
-          {errors.message && touched.message && (
-            <p className="help is-danger">{errors.message}</p>
-          )}
         </div>
         <button
           type="submit"
@@ -276,6 +277,7 @@ export default withFormik({
     name: '',
     email: '',
     phone: '',
+    sector: '',
     address: '',
     company: '',
     find: '',
@@ -287,16 +289,20 @@ export default withFormik({
       .string()
       .email('Invalid email address')
       .required('Email is required!'),
-    phone: yup.string().required('Phone Number is required!'),
-    address: yup.string().required('Address is required!'),
     company: yup.string().required('company is required!'),
     find: yup.string().required('required field'),
-    message: yup.string().required('Message is required!'),
   }),
-  handleSubmit: (values, { setSubmitting, props }) => {
-    // console.log('handle submit', values, props);
-    props.addContact(values);
+  handleSubmit: (values, { setSubmitting, resetForm }) => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact Form', values }),
+    });
+    alert('done');
+    console.log(values, 'vlaues');
+    resetForm(false);
+    // props.addContact(values);
     setSubmitting(false);
   },
-  displayName: 'ContactUs', // helps with React DevTools
+  // displayName: 'ContactUs', // helps with React DevTools
 })(ContactForm);
