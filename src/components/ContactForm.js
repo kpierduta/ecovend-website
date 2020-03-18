@@ -298,11 +298,8 @@ export default withFormik({
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact Form', ...values }),
     });
-    alert('done');
-    console.log(values, 'vlaues');
+    alert('Submitted Succesfully');
     resetForm(false);
-    // props.addContact(values);
     setSubmitting(false);
   },
-  // displayName: 'ContactUs', // helps with React DevTools
 })(ContactForm);
