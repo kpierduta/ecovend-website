@@ -122,13 +122,6 @@ const Footer = () => (
               >
                 TERMS AND CONDITIONS
               </a>
-              <a
-                href="./pdf/OPT-OUT-FORM.pdf"
-                className="is-size-6"
-                target="_blank"
-              >
-                FRANCHISE OPPORTIUNITY
-              </a>
             </div>
           </div>
           <p className="subtitle is-6 has-text-white has-text-centered">
