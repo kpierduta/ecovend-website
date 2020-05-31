@@ -29,7 +29,7 @@ yarn install
 To start Development server.
 
 ```
-yarn start
+yarn start.
 ```
 
 ## Deployment
