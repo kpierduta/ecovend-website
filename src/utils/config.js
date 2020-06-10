@@ -18,4 +18,6 @@ module.exports = {
   google: {
     key: 'AIzaSyARq3lIWaDnlepdOd2alXdFzuTcd-PyGdY',
   },
+  contentfulSpaceId: 'sm4248dk8nsp',
+  contentfulAccessToken: 'uyO013mr1t94LW7CH1YwGkdxaIwVQFVNeNPo_fbC1Yk',
 };
