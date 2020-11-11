@@ -152,7 +152,9 @@ export default class Header extends React.Component {
                 FAQ
               </LinkStyled>
               <LinkStyled to="/contact" className="navbar-item is-size-6">
-                Contact
+                <button type="submit" className="button  is-medium is-primary">
+                  <span className="">Contact us</span>
+                </button>
               </LinkStyled>
             </div>
           </div>

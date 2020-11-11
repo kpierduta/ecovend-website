@@ -8,21 +8,21 @@ const Section = styled.section`
   h3,
   h4 {
     font-size: 24px;
-    line-height: 34px;
+    line-height: ${props => (props.lineHeight ? props.lineHeight : '34px')};
   }
   p {
     font-size: 17px;
-    line-height: 34px;
+    line-height: ${props => (props.lineHeight ? props.lineHeight : '34px')};
   }
 `;
 
 class Content extends React.Component {
   render() {
-    const { data } = this.props;
+    const { data, lineHeight } = this.props;
 
     const document = data;
     return (
-      <Section>
+      <Section lineHeight={lineHeight}>
         <div>{documentToReactComponents(document)}</div>
       </Section>
     );

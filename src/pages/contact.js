@@ -36,9 +36,9 @@ export default class ContactPage extends React.Component {
           description="Contact us today!"
           url={`${config.siteUrl}`}
         />
-        <BreadCrumbs underlineText="Background" simpleText=" & Contact Us" />
-        <ContactHero data={ContactData} />
+        <BreadCrumbs underlineText="Contact Us" simpleText="" />
         <Contact />
+        <ContactHero data={ContactData} />
       </Layout>
     );
   }

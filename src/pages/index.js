@@ -92,13 +92,22 @@ export const indexQuery = graphql`
         }
       }
     }
+    allContentfulHomePage {
+      edges {
+        node {
+          machineFeatures {
+            json
+          }
+        }
+      }
+    }
   }
 `;
 
 export default class IndexPage extends React.Component {
   render() {
     const {
-      data: { contentfulHomePage: home },
+      data: { contentfulHomePage: home, allContentfulHomePage: content },
     } = this.props;
     return (
       <Layout>
@@ -108,7 +117,7 @@ export default class IndexPage extends React.Component {
           keywords={home.keywords}
           url={`${config.siteUrl}`}
         />
-        <Hero home={home} />
+        <Hero home={home} content={content.edges[1]} />
         <About home={home} />
         <DrsInfo home={home} />
         <section className="section">
