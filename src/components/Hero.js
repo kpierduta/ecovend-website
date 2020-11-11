@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-import Content from './Content';
-
 const Container = styled.section`
   .title {
     font-size: 72px;
@@ -28,15 +26,12 @@ const Container = styled.section`
 const MachineFeature = styled.div`
   color: ${props => props.theme.primaryColor};
   line-height: 1;
-  p {
-    padding-bottom: 0.7rem;
-  }
+  padding-bottom: 0.9rem;
 `;
 
 class Hero extends React.Component {
   render() {
-    const { home, content } = this.props;
-    console.log(content, 'content');
+    const { home } = this.props;
     return (
       <Container className="section">
         <div className="container">
@@ -49,15 +44,13 @@ class Hero extends React.Component {
                 {home.subtitle}
               </h5>
               <MachineFeature className="is-size-5 has-text-weight-semibold">
-                <Content
-                  data={
-                    content &&
-                    content.node &&
-                    content.node.machineFeatures &&
-                    content.node.machineFeatures.json
-                  }
-                  lineHeight="25px"
-                />
+                {home.machineFeatureFirst}
+              </MachineFeature>
+              <MachineFeature className="is-size-5 has-text-weight-semibold">
+                {home.machineFeatureSecond}
+              </MachineFeature>
+              <MachineFeature className="is-size-5 has-text-weight-semibold">
+                {home.machineFeatureThird}
               </MachineFeature>
               <Link to="/contact">
                 <button

@@ -21,6 +21,9 @@ export const indexQuery = graphql`
       keywords
       title
       subtitle
+      machineFeatureFirst
+      machineFeatureSecond
+      machineFeatureThird
       headerimage {
         title
         file {
@@ -92,22 +95,13 @@ export const indexQuery = graphql`
         }
       }
     }
-    allContentfulHomePage {
-      edges {
-        node {
-          machineFeatures {
-            json
-          }
-        }
-      }
-    }
   }
 `;
 
 export default class IndexPage extends React.Component {
   render() {
     const {
-      data: { contentfulHomePage: home, allContentfulHomePage: content },
+      data: { contentfulHomePage: home },
     } = this.props;
     return (
       <Layout>
@@ -117,7 +111,7 @@ export default class IndexPage extends React.Component {
           keywords={home.keywords}
           url={`${config.siteUrl}`}
         />
-        <Hero home={home} content={content.edges[1]} />
+        <Hero home={home} />
         <About home={home} />
         <DrsInfo home={home} />
         <section className="section">
