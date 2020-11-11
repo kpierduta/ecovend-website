@@ -50,7 +50,12 @@ class Hero extends React.Component {
               </h5>
               <MachineFeature className="is-size-5 has-text-weight-semibold">
                 <Content
-                  data={content.node.machineFeatures.json}
+                  data={
+                    content &&
+                    content.node &&
+                    content.node.machineFeatures &&
+                    content.node.machineFeatures.json
+                  }
                   lineHeight="25px"
                 />
               </MachineFeature>
