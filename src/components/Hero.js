@@ -26,7 +26,6 @@ const Container = styled.section`
 const MachineFeature = styled.div`
   color: ${props => props.theme.primaryColor};
   line-height: 1;
-  padding-bottom: 0.9rem;
 `;
 
 class Hero extends React.Component {
@@ -43,13 +42,13 @@ class Hero extends React.Component {
               <h5 className="subtitle is-size-5  has-text-primary">
                 {home.subtitle}
               </h5>
-              <MachineFeature className="is-size-5 has-text-weight-semibold">
+              <MachineFeature className="is-6 subtitle">
                 {home.machineFeatureFirst}
               </MachineFeature>
-              <MachineFeature className="is-size-5 has-text-weight-semibold">
+              <MachineFeature className="is-6 subtitle">
                 {home.machineFeatureSecond}
               </MachineFeature>
-              <MachineFeature className="is-size-5 has-text-weight-semibold">
+              <MachineFeature className="is-6 subtitle">
                 {home.machineFeatureThird}
               </MachineFeature>
               <Link to="/contact">
