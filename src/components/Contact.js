@@ -39,7 +39,22 @@ const Contact = ({ isHidden }) => {
     <Container className="section" id="contact">
       <div className="container">
         <div className="columns">
-          <div className="column is-3 first">
+          <div className={isHidden ? 'is-hidden' : 'column form-box'}>
+            <div className="text">
+              <h2 className="title is-5 is-spaced">
+                Get in touch to find out more
+              </h2>
+            </div>
+            <div className="field is-horizontal">
+              <div className="field-body">
+                <ContactForm />
+              </div>
+            </div>
+          </div>
+          <div className={isHidden ? 'column is-9 map' : 'column is-5 map'}>
+            <MyMapComponent isMarkerShown className="is-hidden-mobile" />
+          </div>
+          <div className="column is-3 has-text-centered">
             <h2 className="title is-5 is-spaced">{contentfulContact.title}</h2>
             <span className="icon has-text-danger">
               <i className="fas fa-map-marker-alt" />
@@ -69,21 +84,6 @@ const Contact = ({ isHidden }) => {
             >
               {contentfulContact.mobileNumber}
             </a>
-          </div>
-          <div className={isHidden ? 'column is-9 map' : 'column is-5 map'}>
-            <MyMapComponent isMarkerShown className="is-hidden-mobile" />
-          </div>
-          <div className={isHidden ? 'is-hidden' : 'column  form-box'}>
-            <div className="text">
-              <h2 className="title is-5 is-spaced">
-                Get in touch to find out more
-              </h2>
-            </div>
-            <div className="field is-horizontal">
-              <div className="field-body">
-                <ContactForm />
-              </div>
-            </div>
           </div>
         </div>
       </div>
