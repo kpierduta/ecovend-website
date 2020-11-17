@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 const Container = styled.section`
+  padding: 1rem 1.5rem;
+
   .title {
     font-size: 36px;
-    padding-top: 2rem;
     line-height: normal !important;
     @media only screen and (max-width: 768px) {
       margin-top: 0rem;
@@ -19,7 +20,7 @@ const Container = styled.section`
 
   img {
     height: auto;
-    width: 60%;
+    width: 50%;
   }
 `;
 
@@ -39,7 +40,7 @@ class Hero extends React.Component {
               <h1 className="title is-capitalized has-text-primary">
                 {home.title}
               </h1>
-              <h5 className="subtitle is-size-4  has-text-primary">
+              <h5 className="subtitle is-size-4 has-text-primary">
                 {home.subtitle}
               </h5>
               <MachineFeature className="is-6 subtitle">
