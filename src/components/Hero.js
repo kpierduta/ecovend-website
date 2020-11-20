@@ -59,7 +59,7 @@ class Hero extends React.Component {
                 <button
                   type="submit"
                   className="button is-medium is-primary"
-                  style={{ marginTop: '1.5rem' }}
+                  style={{ marginTop: '0.5rem' }}
                 >
                   <span className="has-text-weight-bold">Contact us now</span>
                 </button>
