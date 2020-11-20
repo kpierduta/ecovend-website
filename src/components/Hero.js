@@ -6,7 +6,7 @@ const Container = styled.section`
   padding: 1rem 1.5rem;
 
   .title {
-    font-size: 36px;
+    font-size: 30px;
     line-height: normal !important;
     @media only screen and (max-width: 768px) {
       margin-top: 0rem;
@@ -20,13 +20,16 @@ const Container = styled.section`
 
   img {
     height: auto;
-    width: 50%;
+    width: 42%;
+  }
+  .column:first-child {
+    align-self: center;
   }
 `;
 
 const MachineFeature = styled.div`
   color: ${props => props.theme.primaryColor};
-  line-height: 1;
+  line-height: 1 !important;
 `;
 
 class Hero extends React.Component {
@@ -62,9 +65,9 @@ class Hero extends React.Component {
                 </button>
               </Link>
             </div>
-            <div className="column has-text-right is-hidden-mobile">
+            <div className="column has-text-centered is-hidden-mobile">
               <img
-                className="has-text-right"
+                className="has-text-centered"
                 src={home.headerimage.file.url}
                 alt={home.headerimage.title}
               />
