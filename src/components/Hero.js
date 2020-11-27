@@ -30,9 +30,10 @@ const Container = styled.section`
 
 const MachineFeature = styled.div`
   color: ${props => props.theme.primaryColor};
-  line-height: 1 !important;
+  line-height: 2 !important;
   font-weight: 900 !important;
   font-size: 17px;
+  letter-spacing: 1.1px;
 `;
 
 class Hero extends React.Component {
