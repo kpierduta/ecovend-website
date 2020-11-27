@@ -16,6 +16,7 @@ const Container = styled.section`
 
   .subtitle {
     margin-top: 0.25rem !important;
+    font-weight: 900 !important;
   }
 
   img {
@@ -30,6 +31,8 @@ const Container = styled.section`
 const MachineFeature = styled.div`
   color: ${props => props.theme.primaryColor};
   line-height: 1 !important;
+  font-weight: 900 !important;
+  font-size: 17px;
 `;
 
 class Hero extends React.Component {
@@ -46,13 +49,13 @@ class Hero extends React.Component {
               <h5 className="subtitle is-size-4 has-text-primary">
                 {home.subtitle}
               </h5>
-              <MachineFeature className="is-6 subtitle">
+              <MachineFeature className="subtitle">
                 {home.machineFeatureFirst}
               </MachineFeature>
-              <MachineFeature className="is-6 subtitle">
+              <MachineFeature className="subtitle">
                 {home.machineFeatureSecond}
               </MachineFeature>
-              <MachineFeature className="is-6 subtitle">
+              <MachineFeature className="subtitle">
                 {home.machineFeatureThird}
               </MachineFeature>
               <Link to="/contact">
