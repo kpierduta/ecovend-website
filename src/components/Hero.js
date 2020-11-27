@@ -21,7 +21,7 @@ const Container = styled.section`
 
   img {
     height: auto;
-    width: 42%;
+    width: 46%;
   }
   .column:first-child {
     align-self: center;
@@ -63,8 +63,7 @@ class Hero extends React.Component {
                 <button
                   type="submit"
                   className="button is-medium is-primary"
-                  style={{ marginTop: '0.5rem' }}
-                >
+                  style={{ marginTop: '0.5rem' }}>
                   <span className="has-text-weight-bold">Contact us now</span>
                 </button>
               </Link>
