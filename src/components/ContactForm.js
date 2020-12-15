@@ -213,8 +213,7 @@ const ContactForm = props => {
               value={values.sector}
               onChange={handleChange}
               name="sector"
-              onBlur={handleBlur}
-            >
+              onBlur={handleBlur}>
               <option value="">Select Sector</option>
               {SectorList.map(items => (
                 <option value={items}>{items}</option>
@@ -253,8 +252,7 @@ const ContactForm = props => {
           type="submit"
           className="button  is-medium is-primary"
           disabled={isSubmitting}
-          style={{ marginTop: '1.5rem' }}
-        >
+          style={{ marginTop: '1.5rem' }}>
           Submit Now
         </button>
       </div>
@@ -297,6 +295,10 @@ export default withFormik({
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact Form', ...values }),
+    });
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-856356844/63l5CPfs6LQBEOzvq5gD',
+      ...values,
     });
     alert('Submitted Succesfully');
     resetForm(false);
