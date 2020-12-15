@@ -40,13 +40,13 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "GA-TRACKING_ID", // Google Analytics / GA
-          "AW-856356844/63l5CPfs6LQBEOzvq5gD", // Google Ads / Adwords / AW
+          'GA-TRACKING_ID', // Google Analytics / GA
+          'AW-856356844/63l5CPfs6LQBEOzvq5gD', // Google Ads / Adwords / AW
         ],
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
         gtagConfig: {
-          optimize_id: "OPT_CONTAINER_ID",
+          optimize_id: 'OPT_CONTAINER_ID',
           anonymize_ip: true,
           cookie_expires: 0,
         },
@@ -57,10 +57,10 @@ module.exports = {
           // Setting this parameter is also optional
           respectDNT: true,
           // Avoids sending pageview hits from custom paths
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
+          exclude: ['/preview/**', '/do-not-track/me/too/'],
         },
       },
-    },ß
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
