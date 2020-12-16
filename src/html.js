@@ -23,6 +23,9 @@ export default class HTML extends React.Component {
             defer
             src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
           />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=AW-856356844"></script>
           {/* Add custom css or scripts here */}
 
           {this.props.headComponents}

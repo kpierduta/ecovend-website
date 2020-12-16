@@ -296,10 +296,14 @@ export default withFormik({
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact Form', ...values }),
     });
-    window.gtag('event', 'conversion', {
-      send_to: 'AW-856356844/63l5CPfs6LQBEOzvq5gD',
-      ...values,
-    });
+
+    if (typeof window !== 'undefined') {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-856356844/63l5CPfs6LQBEOzvq5gD',
+        ...values,
+        event_callback: () => console.log('i am trigerred'),
+      });
+    }
     alert('Submitted Succesfully');
     resetForm(false);
     setSubmitting(false);

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, StaticQuery, withPrefix } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle, { theme } from '../utils/theme';
@@ -31,6 +31,7 @@ const IndexLayout = ({ children }) => (
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta description={config.description} />
+        <script src={withPrefix('script.js')} type="text/javascript" />
       </Helmet>
       <GlobalStyle />
       <StaticQuery
