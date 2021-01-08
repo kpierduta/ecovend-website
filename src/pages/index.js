@@ -9,7 +9,7 @@ import About from '../components/About';
 import DrsInfo from '../components/DrsInfo';
 import Steps from '../components/Steps';
 import Choose from '../components/Choose';
-import Advertisment from '../components/Advertising';
+import AdvertisementHero from '../components/Advertising';
 import RvmImages from '../components/RvmImages';
 import Contact from '../components/Contact';
 
@@ -24,6 +24,7 @@ export const indexQuery = graphql`
       machineFeatureFirst
       machineFeatureSecond
       machineFeatureThird
+      hasBackGroundImage
       headerimage {
         title
         file {
@@ -121,7 +122,7 @@ export default class IndexPage extends React.Component {
         {/*
           <Customer home={home} />
         */}
-        <Advertisment home={home} />
+        <AdvertisementHero home={home} />
         <RvmImages images={home.imageGrid} />
         <Contact isHidden />
       </Layout>
