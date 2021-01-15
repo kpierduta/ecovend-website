@@ -17,38 +17,54 @@ const Container = styled.section`
       adding: 0rem;
       text-align: center;
     }
+    img {
+      object-fit: cover;
+    }
   }
 `;
 
-const AdvertisingVideo = ({ adv }) => (
-  <Container className="section">
-    <div className="container">
-      <div className="columns is-centered">
-        <div className="column is-11 background">
-          <div className="columns">
-            <div className="column is-6">
-              <div className="section">
-                <h4 className="title is-5 is-spaced is-uppercase">
-                  {adv.videoTitle}
-                </h4>
-                <ul className="subtitle is-6">
-                  {adv.advertisementPoints.map(items => (
-                    <li>{items}</li>
-                  ))}
-                </ul>
+const AdvertisingVideo = ({ adv }) => {
+  console.log(adv);
+  return (
+    <Container className="section">
+      <div className="container">
+        <div className="columns is-centered">
+          <div className="column is-11 background">
+            <div className="columns">
+              <div className="column is-6">
+                <div className="section">
+                  <h4 className="title is-5 is-spaced is-uppercase">
+                    {adv.videoTitle}
+                  </h4>
+                  <ul className="subtitle is-6">
+                    {adv.advertisementPoints.map(items => (
+                      <li key={items}>{items}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div className="column is-6 second">
-              <video controls>
-                <source src={adv.video.file.url} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <div className="column is-6 second">
+                {adv.hasVideo && (
+                  <video controls>
+                    <source src={adv.video.file.url} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
+                {!adv.hasVideo && (
+                  <figure className="image is-4by5">
+                    <img
+                      src={adv.advertisingImage.file.url}
+                      alt={adv.advertisingImage.title}
+                    />
+                  </figure>
+                )}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </Container>
-);
+    </Container>
+  );
+};
 
 export default AdvertisingVideo;

@@ -24,6 +24,13 @@ export const advertQuery = graphql`
       }
       heroTitle
       heroSubtitle
+      hasVideo
+      advertisingImage {
+        title
+        file {
+          url
+        }
+      }
       video {
         file {
           url
