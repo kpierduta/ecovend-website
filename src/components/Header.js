@@ -128,7 +128,7 @@ export default class Header extends React.Component {
                         RVM-400
                       </LinkStyled>
                     </div>
-                    <div className="column">
+                    {/* <div className="column">
                       {' '}
                       <LinkStyled
                         to="/machine/RVM-500"
@@ -136,7 +136,7 @@ export default class Header extends React.Component {
                       >
                         RVM-500
                       </LinkStyled>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
