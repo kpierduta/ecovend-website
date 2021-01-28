@@ -113,7 +113,9 @@ export default class Header extends React.Component {
                 <StaticQuery
                   query={graphql`
                     query HeadingQuery {
-                      allContentfulEcoVendMachines {
+                      allContentfulEcoVendMachines(
+                        sort: { fields: order, order: ASC }
+                      ) {
                         edges {
                           node {
                             id
