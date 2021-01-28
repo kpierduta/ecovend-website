@@ -135,7 +135,9 @@ export default class Header extends React.Component {
                               to={`/machine/${item.node.slug}`}
                               className="navbar-item  is-size-6"
                             >
-                              {item.node.machineName}
+                              {item.node.machineName
+                                .replace('ECOVEND', '')
+                                .replace('RVM', 'RVM -')}
                             </LinkStyled>
                           </div>
                         ))}
