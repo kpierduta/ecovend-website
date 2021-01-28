@@ -67,17 +67,19 @@ const Machines = ({ data }) => (
                       <tr>
                         <th>DIMENSIONS:</th>
                         <td>
-                          {data.dimensions.map(items => (
-                            <span className="is-block">{items}</span>
-                          ))}
+                          {data.dimensions &&
+                            data.dimensions.map(items => (
+                              <span className="is-block">{items}</span>
+                            ))}
                         </td>
                       </tr>
                       <tr>
                         <th>SCREEN SIZE:</th>
                         <td>
-                          {data.screenSize.map(items => (
-                            <span className="is-block">{items}</span>
-                          ))}
+                          {data.screenSize &&
+                            data.screenSize.map(items => (
+                              <span className="is-block">{items}</span>
+                            ))}
                         </td>
                       </tr>
                       <tr>

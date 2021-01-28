@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import { Link, StaticQuery, graphql } from 'gatsby';
 
 const Navbar = styled.div`
   font-family: ${props => props.theme.primaryFontFamily}!important;
@@ -37,7 +37,7 @@ const Navbar = styled.div`
   }
   .navbar-dropdown {
     margin-top: -2rem;
-    margin-left: -12rem;
+    margin-left: -20rem;
     @media only screen and (max-width: 768px) {
       margin-top: unset;
       margin-left: unset;
@@ -53,6 +53,7 @@ const LinkStyled = styled(Link)`
 const Logo = styled.a`
   padding: 0 !important;
 `;
+
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -72,6 +73,7 @@ export default class Header extends React.Component {
   render() {
     const { view } = this.state;
     const { display } = this.props;
+
     return (
       <Navbar className="navbar" role="navigation" aria-label="main navigation">
         <div className="container">
@@ -108,37 +110,37 @@ export default class Header extends React.Component {
                 <LinkStyled to="/products" className="navbar-item  is-size-6">
                   Products
                 </LinkStyled>
-                <div className="navbar-dropdown">
-                  <div className="columns">
-                    <div className="column">
-                      {' '}
-                      <LinkStyled
-                        to="/machine/RVM-100/200"
-                        className="navbar-item  is-size-6"
-                      >
-                        RVM-100/200
-                      </LinkStyled>
+                <StaticQuery
+                  query={graphql`
+                    query HeadingQuery {
+                      allContentfulEcoVendMachines {
+                        edges {
+                          node {
+                            id
+                            machineName
+                            slug
+                          }
+                        }
+                      }
+                    }
+                  `}
+                  render={data => (
+                    <div className="navbar-dropdown">
+                      <div className="columns">
+                        {data.allContentfulEcoVendMachines.edges.map(item => (
+                          <div className="column" key={item.node.id}>
+                            <LinkStyled
+                              to={`/machine/${item.node.slug}`}
+                              className="navbar-item  is-size-6"
+                            >
+                              {item.node.machineName}
+                            </LinkStyled>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                    <div className="column">
-                      {' '}
-                      <LinkStyled
-                        to="/machine/RVM-400"
-                        className="navbar-item  is-size-6"
-                      >
-                        RVM-400
-                      </LinkStyled>
-                    </div>
-                    {/* <div className="column">
-                      {' '}
-                      <LinkStyled
-                        to="/machine/RVM-500"
-                        className="navbar-item  is-size-6"
-                      >
-                        RVM-500
-                      </LinkStyled>
-                    </div> */}
-                  </div>
-                </div>
+                  )}
+                />
               </div>
               <LinkStyled to="/news" className="navbar-item is-size-6">
                 News
