@@ -37,7 +37,7 @@ const Navbar = styled.div`
   }
   .navbar-dropdown {
     margin-top: -2rem;
-    margin-left: -20rem;
+    margin-left: -12rem;
     @media only screen and (max-width: 768px) {
       margin-top: unset;
       margin-left: unset;
