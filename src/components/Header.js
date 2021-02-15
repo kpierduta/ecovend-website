@@ -37,7 +37,7 @@ const Navbar = styled.div`
   }
   .navbar-dropdown {
     margin-top: -2rem;
-    margin-right: 20rem;
+    /* margin-right: 20rem; */
     @media only screen and (max-width: 768px) {
       margin-top: unset;
       margin-left: unset;
@@ -128,22 +128,16 @@ export default class Header extends React.Component {
                   `}
                   render={data => (
                     <div className="navbar-dropdown">
-                      <div className="columns">
-                        <ul>
-                          {data.allContentfulEcoVendMachines.edges.map(item => (
-                            <li className="column" key={item.node.id}>
-                              <LinkStyled
-                                to={`/machine/${item.node.slug}`}
-                                className="navbar-item  is-size-6"
-                              >
-                                {item.node.machineName
-                                  .replace('ECOVEND', '')
-                                  .replace('RVM', 'RVM -')}
-                              </LinkStyled>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                      {data.allContentfulEcoVendMachines.edges.map(item => (
+                        <LinkStyled
+                          to={`/machine/${item.node.slug}`}
+                          className="navbar-item  is-size-6"
+                        >
+                          {item.node.machineName
+                            .replace('ECOVEND', '')
+                            .replace('RVM', 'RVM -')}
+                        </LinkStyled>
+                      ))}
                     </div>
                   )}
                 />
