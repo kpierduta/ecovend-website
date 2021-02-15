@@ -23,7 +23,7 @@ const Container = styled.section`
 const Product = ({ data }) => (
   <Container className="section">
     <div className="container">
-      <div className="columns">
+      <div className="columns is-multiline">
         {data.map(items => (
           <div className="column is-4">
             <div className="box">
