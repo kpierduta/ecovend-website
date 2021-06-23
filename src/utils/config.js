@@ -10,7 +10,8 @@ module.exports = {
   fbUserId: '@NAME-HERE',
   fbAppID: '@NAME-HERE',
   type: 'website',
-  googleAnalytics: '',
+  // googleAnalytics: 'G-P5F4FXWTR3',
+  pixelId: '1426593481023274',
 
   backgroundColor: '#e0e0e0',
   primaryColor: '#f38044',

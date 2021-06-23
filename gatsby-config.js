@@ -17,8 +17,17 @@ module.exports = {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
     //     trackingId: config.googleAnalytics,
+    //     head: false,
+    //     anonymize: true,
+    //     respectDNT: true,
     //   },
     // },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: config.pixelId,
+      },
+    },
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -40,6 +49,7 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
+          'G-P5F4FXWTR3', // Google Analytics / GA
           'AW-856356844', // Google Ads / Adwords / AW
         ],
         // This object gets passed directly to the gtag config command
