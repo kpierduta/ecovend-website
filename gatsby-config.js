@@ -49,16 +49,9 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          'G-P5F4FXWTR3', // Google Analytics / GA
-          'AW-856356844', // Google Ads / Adwords / AW
+          config.googleAnalytics, // Google Analytics / GA
+          config.googleAds, // Google Ads / Adwords / AW
         ],
-        // This object gets passed directly to the gtag config command
-        // This config will be shared across all trackingIds
-        gtagConfig: {
-          optimize_id: 'OPT_CONTAINER_ID',
-          anonymize_ip: true,
-          cookie_expires: 0,
-        },
         // This object is used for configuration specific to this plugin
         pluginConfig: {
           // Puts tracking script in the head instead of the body
@@ -80,6 +73,19 @@ module.exports = {
         theme_color: config.themeColor,
         display: 'minimal-ui',
         icon: './static/images/logo.png',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: config.googleTagManager,
+
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+
+        defaultDataLayer: { platform: 'gatsby' },
+
+        enableWebVitalsTracking: true,
       },
     },
     `gatsby-plugin-offline`,

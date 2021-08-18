@@ -5,12 +5,13 @@ module.exports = {
   author: 'Parminder Klair',
   description: '',
   siteUrl: 'https://eco-vend.netlify.com',
-
   twitter: '@NAME-HERE',
   fbUserId: '@NAME-HERE',
   fbAppID: '@NAME-HERE',
   type: 'website',
-  // googleAnalytics: 'G-P5F4FXWTR3',
+  googleAnalytics: 'G-P5F4FXWTR3',
+  googleAds: 'AW-856356844',
+  googleTagManager: 'GTM-WJDGM92',
   pixelId: '1426593481023274',
 
   backgroundColor: '#e0e0e0',

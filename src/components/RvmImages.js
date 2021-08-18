@@ -1,8 +1,6 @@
 import React from 'react';
 
 const RvmImages = ({ images }) => {
-  console.log(images, 'hello world');
-
   return (
     <section className="section has-text-centered">
       <div className="container">

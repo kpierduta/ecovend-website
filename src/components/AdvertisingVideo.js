@@ -24,7 +24,6 @@ const Container = styled.section`
 `;
 
 const AdvertisingVideo = ({ adv }) => {
-  console.log(adv);
   return (
     <Container className="section">
       <div className="container">
